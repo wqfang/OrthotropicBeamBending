@@ -3,10 +3,28 @@
 \begin_document
 \begin_header
 \save_transient_properties true
-\origin unavailable
-\textclass article
+\origin /Users/haneeshkesari/Downloads/temp/CurvilinearAnisotropyBeam/
+\textclass elsarticle
 \begin_preamble
-\usepackage[scr=boondoxo]{mathalfa}
+\usepackage{natbib}
+
+
+\usepackage{ulem}
+\usepackage{color,soul}
+
+\setul{0.5ex}{0.3ex}
+\definecolor{Green}{rgb}{0,1,0}
+\setulcolor{Green}
+
+
+\definecolor{Red}{rgb}{1,0.0,0.0}
+\setulcolor{Red}
+
+
+\definecolor{Blue}{rgb}{0,0.0,1}
+\setulcolor{Blue}
+
+\usepackage[cal=boondox,scr=boondoxo]{mathalfa}
 \DeclareFontEncoding{FML}{}{}
 \DeclareFontSubstitution{FML}{fncmi}{m}{it}
 \DeclareSymbolFont{fourierletters}{FML}{fncmi}{m}{it}
@@ -19,20 +37,17 @@
 \newcommand{\unit}[1]{\ensuremath{\, \mathrm{#1}}}
 
 
-\usepackage{amssymb,amsmath,yhmath, amsthm}
-\newtheorem{theorem}{Theorem}[section]
-\usepackage{bm}
-%\usepackage{lineno}
+\usepackage{gensymb}\usepackage{amsthm}\newtheorem{theorem}{Theorem}[section]
+\usepackage{lineno}
 %\linenumbers
 
 \usepackage{tabularx}
 \numberwithin{equation}{section}
-\usepackage{showkeys}
+% \usepackage{showkeys}
 
-\usepackage[T1]{fontenc}
 % \usepackage{cite}
 \usepackage{tikz}
-\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+\newcommand*{\circled}[1]{\tikz[baseline=(char.base)]{
 \node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
 
 
@@ -42,18 +57,21 @@
 \newcommand{\xmark}{\ding{55}}%
 \usepackage{epstopdf}
 \usepackage{xr}
-\usepackage{hyperref}
-\hypersetup{
-colorlinks = true,
-citecolor = blue,
-linkcolor = blue
-}
+
 
 \newcommand{\tbp}[1]{\tilde{{\mathpzc{#1}}}}
 \newcommand{\bp}[1]{{\mathpzc{#1}}}
 
 
+%\usepackage{breqn}
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\stophere}[2]{{\color{#1} $\blacksquare$  \color{#1}#2} }
+%\newcommand{\comment}[1]{}
 
+
+%\renewcommand{\comment}[2]{{\color{#1} $\blacksquare$ \footnote{\noindent \color{#1}#2} }}
+\newcommand{\commenti}[2]{{\color{#1} $\blacksquare$  \color{#1}#2} }
+\newcommand{\commentm}[2]{{\color{#1} $\blacksquare$  \marginpar{\color{#1}#2} }}
 
 
 
@@ -63,6 +81,7 @@ linkcolor = blue
 \newcommand{\physB}{\mathscr{b}} % Width of the thin film
 \newcommand{\physE}{{\mathpzc{E}}}
 \newcommand{\ndE}{E}
+\newcommand{\ndL}{L}
 \newcommand{\physI}{{\mathscr{I}}}
 \newcommand{\ndI}{I}
 \newcommand{\physkc}{\mathscr{k}_{\rm c}}
@@ -86,12 +105,12 @@ linkcolor = blue
 \renewcommand{\t}[1]{\tilde{#1}}
 \renewcommand{\b}[1]{\mathbb{#1}}
 \renewcommand{\c}[1]{\mathcal{#1}}
-\newcommand{\lsc}[2][\mathscr{l}]{{}^{ #1 }\! #2}
+\newcommand{\lsc}[2][\mathscrl]{{}^{ #1 }\! #2}
 \newcommand{\lscH}[1]{\lsc[H]{#1}}
-\newcommand{\dsf}[1]{\Delta\boldsymbol{\sf #1}}
-\newcommand{\tpsb}[1]{\left. #1 \right.^{\sf T}}
-\newcommand{\tps}[1]{\left( #1 \right)^{\sf T}}
-\newcommand{\usf}[1]{\u{\sf #1}}
+\newcommand{\dsf}[1]{\Delta\boldsymbol{\mathsf #1}}
+\newcommand{\tpsb}[1]{\left. #1 \right.^{\mathsf T}}
+\newcommand{\tps}[1]{\left( #1 \right)^{\mathsf T}}
+\newcommand{\usf}[1]{\u{\mathsf #1}}
 \newcommand{\busf}[1]{\bar{\usf{ #1}}}
 \newcommand{\tu}[1]{\tilde{\u{ #1}}}
 \newcommand{\tusf}[1]{\tilde{\usf{ #1}}}
@@ -135,6 +154,7 @@ linkcolor = blue
 
 
 
+
 % \usepackage{amsmath}
 % \usepackage[small]{eulervm}
   \DeclareMathAlphabet{\mathvz}{OT1}{LinuxBiolinumT-OsF}{m}{sl}
@@ -155,8 +175,9 @@ linkcolor = blue
 \usepackage{threeparttable}
 \usepackage{tabto}
 
+
 \usepackage{sectsty}
- \sectionfont{\fontsize{16}{16}\selectfont}
+\sectionfont{\fontsize{16}{16}\selectfont}
 
 %CUSTOM COMMANDS
 \newcommand{\norm}[1]{\ensuremath \lVert #1 \rVert}
@@ -191,28 +212,37 @@ linkcolor = blue
 
 
 \usepackage[obeyFinal]{todonotes}
-\setlength\marginparwidth{2.5in}
+\setlength{\marginparwidth}{2.5in}
 \renewcommand{\>}{$\Rightarrow$}
 
 
 %\usepackage[nomarkers,figuresonly]{endfloat}
 
-\usepackage{algorithm,,algorithmicx}
-\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{algorithmicx}\usepackage{algpseudocode}
 \usepackage[hang,flushmargin]{footmisc}
 \DeclareMathOperator*{\argmin}{arg\,min} % Jan Hlavacek
+
+
+\usepackage{xspace}
+\newcommand{\bmmax}{0}
+\usepackage{bm}
+
+
+%\journal{International Journal of Solids and Structures}
 \end_preamble
-\use_default_options true
+\options preprint,times
+\use_default_options false
 \maintain_unincluded_children false
 \language english
-\language_package default
-\inputencoding auto
-\fontencoding global
-\font_roman "times" "default"
+\language_package none
+\inputencoding utf8
+\fontencoding T1
+\font_roman "default" "default"
 \font_sans "default" "default"
-\font_typewriter "cmtl" "default"
+\font_typewriter "default" "default"
 \font_math "auto" "auto"
-\font_default_family rmdefault
+\font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
@@ -222,46 +252,48 @@ linkcolor = blue
 \use_dash_ligatures true
 \graphics default
 \default_output_format default
-\output_sync 1
-\bibtex_command bibtex
+\output_sync 0
+\bibtex_command default
 \index_command default
-\paperfontsize 11
+\paperfontsize 10
 \spacing single
-\use_hyperref false
-\papersize a4paper
+\use_hyperref true
+\pdf_bookmarks false
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref section
+\pdf_pdfusetitle false
+\pdf_quoted_options "citecolor=blue,linkcolor=blue"
+\papersize b4paper
 \use_geometry true
-\use_package amsmath 0
-\use_package amssymb 0
+\use_package amsmath 2
+\use_package amssymb 2
 \use_package cancel 0
-\use_package esint 0
+\use_package esint 1
 \use_package mathdots 0
 \use_package mathtools 0
 \use_package mhchem 0
 \use_package stackrel 0
 \use_package stmaryrd 0
 \use_package undertilde 0
-\cite_engine biblatex
-\cite_engine_type numerical
-\biblatex_bibstyle numeric
-\biblatex_citestyle numeric
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
-\suppress_date true
+\suppress_date false
 \justification true
-\use_refstyle 1
+\use_refstyle 0
 \use_minted 0
 \index Index
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 1in
-\topmargin 1in
-\rightmargin 1in
-\bottommargin 1in
-\headheight 0.1cm
-\headsep 0.1cm
-\footskip 0.1cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -287,40 +319,59 @@ linkcolor = blue
 status open
 
 \begin_layout Enumerate
-
-\strikeout on
-Should we use Einstein summation convention in equation 2?
-\strikeout default
- 
-\color blue
-WF: I think just writing all summations explicitly is easier to follow.
- 
+Need to get the Lyx file to compile.
 \end_layout
 
 \begin_layout Enumerate
-
-\strikeout on
-Figure 2(a) is not good.
- 
-\color blue
-WF: Editing the figure needs some time and I will do it later.
-\end_layout
-
-\begin_layout Enumerate
-As much as possible use same notation as use same notation as Sawtooth II.
+Bio-composites.
  
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
+Layerss
+\end_layout
 
-\strikeout on
-For examamples as per Sawtooth II 
+\begin_deeper
+\begin_layout Enumerate
+Flat-> can increase toughness
+\end_layout
+
+\begin_layout Enumerate
+Curved.->why? Nat Com.
+ Curved !Toughness.
+ Then ? Stiffness.
+ Why stiffness is important.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Key terms
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Osteons, Spicules, wood cells, arteries: Biological {{slender | hight aspect
+ ratio } structures | cables | colums | fibers} 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+cables: spicules, and arteries
+\end_layout
+
+\begin_layout Enumerate
+columns: woods cells , osteons, narwhall tusk, tree trunk.
+ 
+\end_layout
+
+\begin_layout Enumerate
+beam: 
 \begin_inset Preview
 
 \begin_layout Standard
-
-\strikeout on
 \begin_inset ERT
 status open
 
@@ -328,17 +379,7 @@ status open
 
 $
 \backslash
-{
-\backslash
-u{e}_r, 
-\backslash
-u{e}_{
-\backslash
-theta}, 
-\backslash
-u{e}_z
-\backslash
-}$
+approx$
 \end_layout
 
 \end_inset
@@ -348,62 +389,6030 @@ u{e}_z
 
 \end_inset
 
- would appears as 
-\begin_inset Preview
+ Tree trunks, spicules.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Biological XX can be descreibe a tight fitting assembly of co-axial tubes
+ and cylinders.
+ The tubes are often circular, as in spicules, and osteons, or they be rectangul
+ar as in wood cells walls.
+ Some case there is a single cylinder, such as narhwall tusk.
+ Without fail alsmost in case the material composing the "Biological XX"
+ is mechanically anisotropic.
+ The types of anisotropy that is found is quite distinct, at leasty in the
+ case where the tubes are circvulare the anisotropic can called cuvilinear
+ anisotropyc.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Plain Layout
+
+\size scriptsize
+\color red
+The material composing each of the layers is a cylindrically orthotropic
+ material.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrontmatter
+
+\end_layout
+
+\begin_layout Title
+Effective bending stiffness of multilayered composite cylinders with cylindrical
+ orthotropy
+\end_layout
+
+\begin_layout Author
+Wenqiang Fang, Weilin Deng, Haneesh Kesari
+\end_layout
+
+\begin_layout Address
+School of Engineering, Brown University, Providence, RI 02912
+\end_layout
+
+\begin_layout Abstract
+
+\color teal
+A wide range of structural biomaterials are multilayered composite cylinders
+ where each layer is made of cylindrical orthotropic materials
+\color inherit
+
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+
+\family sans
+A number of biogenic structures can be described as co-axial assemblies
+ of cylindrical layers, where the layers are composed of 
+\color red
+cylindrically orthotropic materials
+\color inherit
+.
+\end_layout
+
+\end_inset
+
+.
+ The paper presents analytical expressions for the 
+\uwave on
+asymptotic bending stiffness
+\uwave default
+
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+HK to WF: what does asymptotic bending stiffness mean? The asymptotic value
+ of the bending stiffness and the number of layers in the cylinder become
+ large.
+\end_layout
+
+\end_inset
+
+ of such 
+\color teal
+structures
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+What sttructure are we talking abiout here? We are taking about a composite
+ cylinder.
+ The composite cylinder can be described a tight fitting co-axial assembly
+ of cylindrical tubes; where each of the tubes is composed of a cylindrically
+ orthotropic material.
+ 
+\end_layout
+
+\end_inset
+
+
+\color inherit
+ by performing asymptotic analysis of the bending stiffness formula obtained
+ by Jolicoeur and Cardou [Jolicoeur, C., Cardou, A.
+ (1994): 
+\shape italic
+J.
+ Eng.
+ Mech.
+
+\shape default
+ 120, 25562574].
+ 
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+One potential advantage of this method ius that we get very good approximation
+ sfor the stiffness of a finite number of cylinders.
+ 
+\end_layout
+
+\end_inset
+
+In our analysis, different interfacial conditions between layers, such as
+ perfectly bonded and frictionless interfaces, are considered.
+ We also explore the effects of heterogeneity on the structure's bending
+ stiffness by altering the stacking orientations of the laminae of the structure.
+ Our studies reveal that the bending stiffness of perfectly bonded multilayered
+ cylindrical structures consisting of heterogeneous materials could be higher
+ than that of structures made up with the corresponding constituent material.
+ The results shed light on the role of multilayered structures with cylindrical
+ orthotropy in structural biomaterials.
+\end_layout
 
 \begin_layout Standard
-
-\strikeout on
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$(
+%% keywords here, in the form: keyword 
 \backslash
-physe_r, 
+sep keyword
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Keywords
+Multilayered composite structure 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sep
+\end_layout
+
+\end_inset
+
+ Cylindrical orthotropy 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sep
+\end_layout
+
+\end_inset
+
+ Effective bending stiffness 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sep
+\end_layout
+
+\end_inset
+
+ asymptotic analysis
+\end_layout
+
+\begin_layout EndFrontmatter
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:intro"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Structural biomaterials such as mother of pearl (nacre)
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "jackson1988mechanical"
+literal "false"
+
+\end_inset
+
+, spicules
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "monn2015new"
+literal "false"
+
+\end_inset
+
+, and bone osteon
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "wegst2015bioinspired"
+literal "false"
+
+\end_inset
+
+ 
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+...are an interesting class of composites
+\end_layout
+
+\end_inset
+
+ are an interesting class of composites in material and mechanics communities.
+ They are mainly consisted of a stiff mineral phase which is often in the
+ form of layers
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+maybe say 
+\shape italic
+layers 
+\shape default
+instead of
+\shape italic
+ platelets? 
+\shape default
+However, I don't know whether it would be technically correct to say that.
+ So, check that it would be technically correct to describe the various
+ biomaterials as being composed of mineral layers before changing platelets
+ to layers.
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "currey1977mechanical,meyers2008biological,espinosa2011tablet"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Aizenberg2005,zhang2011structure,li2015hierarchical"
+literal "false"
+
+\end_inset
+
+, and contributes to at least
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $90\%$
+\end_inset
+
+
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+HK to WF: need to be more precise here.
+ 95% in wich biomaterials.
+ It will be better to say xx% in spicules, yy% in nacre etc.
+ Instead of lumping all of them together under one biomaterials heading.
+\end_layout
+
+\end_inset
+
+ of the materials volumes.
+ 
+\color teal
+The layers are glued to each other
+\color inherit
+ through a compliant organic phase.
+ These natural composites are distinguished from their synthetic counterparts
+ by the fact that their effective properties at the macro scale, such as
+ failure strain and fracture toughness, are quite high despite the corresponding
+ properties of their constituent phases being poor.
+ For example, the bending failure strain of the spicules from the sponge
+ 
+\shape italic
+Euplectella aspergillum
+\shape default
+ is 140% higher than that of 
+\shape italic
+Tethya aurantia
+\shape default
+ spicules, which have a similar chemical composition to 
+\shape italic
+E.
+ aspergillum
+\shape default
+ spicules but have no internal architecture~
+\begin_inset CommandInset citation
+LatexCommand citet
+key "monn2017enhanced"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+HK to WF: need to revise English.
+\end_layout
+
+\begin_layout Plain Layout
+Hk to WF: Check with SK, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "walter2007mechanisms"
+literal "false"
+
+\end_inset
+
+ might not be a good paper.
+ You can alternately, refer to any of Max's papers, the one on Enhanced
+ bending failure strain in EA or enhanced buckling resistence in TA.
+ You need to perhaps reads to papers in order to comment about them here.
+\end_layout
+
+\end_inset
+
+ 
+\color teal
+Nacre can achieve relatively high fracture toughness an order of magnitude
+ that of pure aragonite
+\color inherit
+
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+HK to WF: Need to make this statement more quantitative.
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "tang2007elasto,barthelat2007experimental"
+literal "false"
+
+\end_inset
+
+.
+ With such remarkable mechanical property combinations
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+mechanical property combinations
+\end_layout
+
+\end_inset
+
+, structural biomaterials can serve as fascinating model material systems
+ for the discovery of new mechanics of materials principles.
+ 
+\end_layout
+
+\begin_layout Standard
+The remarkable enhancement in the structural biomaterials' macro-scale propertie
+s in comparison to their micro-scale properties is believed to be due to
+ the highly organized and quite elaborate architecture in which the mineral
+ 
+\color red
+phases is
+\color inherit
+ interlaid with the 
+\color red
+organics
+\color inherit
+ phase.
+\begin_inset Formula $\clubsuit$
+\end_inset
+
+ A number of studies have been performed to delineate the mechanical principles
+ that quantitatively capture the relationship between large-scale mechanical
+ properties and small-scale architecture.
+\begin_inset Formula $\clubsuit$
+\end_inset
+
+ In most of those studies the focus has been on the brick-mortar architecture
+ which can be described as a ordered stacking of thin flat platelets.
+\begin_inset Formula $\clubsuit$
+\end_inset
+
+ For example, Gao and co-workers
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "gao2006application,ji2010mechanical"
+literal "false"
+
+\end_inset
+
+ developed a multi-level staggered mechanical (tension-shear chain) model
+ for a self-similar bone to understand the role of hierarchical structures
+ of bone.
+\begin_inset Formula $\clubsuit$
+\end_inset
+
+ Bertoldi et al.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "bertoldi2008nacre"
+literal "false"
+
+\end_inset
+
+ derived the effective stiffness tensor of nacre based on the tension-shear
+ chain model through the homogenization technique and showed that nacre
+ was orthotropic and had different Young's modulus when in tension and compressi
+on.
+\begin_inset Formula $\clubsuit$
+\end_inset
+
+ Rim et al.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "rim2011dimensional"
+literal "false"
+
+\end_inset
+
+ performed a parametric analysis to investigate the effect of the microstructure
+ geometry on the nacre-inspired composite's strength and toughness.
+\begin_inset Formula $\clubsuit$
+\end_inset
+
+ Begley et al.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "begley2012micromechanical"
+literal "false"
+
+\end_inset
+
+ developed a micromechanical model to evaluate the effective properties
+ of the brick-mortar composite, such as elastic modulus, strength and work-to-fa
+ilure.
+ Shao et al.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "shao2012discontinuous"
+literal "false"
+
+\end_inset
+
+ presented a microstructure-based fracture mechanics model to study the
+ toughening effect due to the crack-bridging mechanism of platelets in nacre.
+\begin_inset Formula $\clubsuit$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+However, there exist a large number of structural biomaterials with cylindrical
+ structures and displaying a helical symmetry
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+large number of biomaterials in which the layers are not flat but curved.
+\end_layout
+
+\end_inset
+
+.
+\begin_inset Formula $\clubsuit$
+\end_inset
+
+ 
+\color teal
+Representative examples include the Ponderosa pine
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "leelavanichkul2004grain"
+literal "false"
+
+\end_inset
+
+, the sea sponge skeletons
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Aizenberg2005"
+literal "false"
+
+\end_inset
+
+
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+
+\color teal
+hk to WF: We can also refer to our own papers here.
+ 
+\end_layout
+
+\end_inset
+
+, and the tusk of the narwhal
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "kingsley1988spiral"
+literal "false"
+
+\end_inset
+
+, as shown in Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Laminatedbiomaterials"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\subf{A-C}$
+\end_inset
+
+.
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+
+\color teal
+HK to WF: The previous colored sentence can be deleted.
+ Or may be the introduction could be in the form of how many biological
+ materials are found in the structures that function as beams (support bending
+ momemnts) and columns (support axial loads).
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+
+\color teal
+HK to WF: I think cell walls (in wood) and osteons support compressive loads,
+ do you agree? And spicules support bending loads.
+ The arterial walls are more like a pressure vessel.
+ That is they support internal pressure.
+ It is also possible that there might be some axial loads on areteries.
+ However, it is unclear to me whether those loads or tensile or compressive.
+ If I have to guess I would guess that those loads are compressive.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Phantom VPhantom
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\color teal
+The point is that these structures all might look similar but support different
+ types of loads.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Phantom VPhantom
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\color teal
+Even so, I think the bending stiffness might be important in many of these
+ cases.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Phantom VPhantom
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\color teal
+In the spicule for a given curvature a higher bending stiffness would allow
+ greater load transmission.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Phantom VPhantom
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\color teal
+In the osteons and wood cell walls a higher bending stiffness might provide
+ better protection against buckling instability.
+ This is the same in the case of tree trunks as well.
+ Higher bending stiffness and the better the buckling strength.
+ 
+\begin_inset Preview
+
+\begin_layout Standard
+
+\color teal
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$E I/L^2$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ .
+ And also in the case of nahrwall tusk.
+\end_layout
+
+\end_inset
+
+
+\color inherit
+ Furthermore, some other helical structural biomaterials are often found
+ to have the architecture consisting of a co-axial array of thin annular
+ layers, which is referred to 
+\color teal
+multilayered composite structure
+\color inherit
+
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+how about "multilayered cylindrical beam," or "multilayered cylinder" instead
+ of "multilayered composite structure"?
+\end_layout
+
+\end_inset
+
+.
+ This multilayered helical structure is observed in the osteon of bone
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "wegst2015bioinspired"
+literal "false"
+
+\end_inset
+
+, the artery wall
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Gasser2006"
+literal "false"
+
+\end_inset
+
+, and the wood's cell wall
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Fratzl2007"
+literal "false"
+
+\end_inset
+
+ etc.
+ (see Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Laminatedbiomaterials"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\subf{D-F}$
+\end_inset
+
+).
+ Some engineering materials such as multiwalled carbon nanotube (see Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Laminatedbiomaterials"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\subf{G}$
+\end_inset
+
+) and filament-wound composite pipes have multilayered helical structure
+ as well.
+ Although the property-structure connection of biomaterials with brick-mortar
+ architecture has been extensively studied, the relationship between the
+ effective mechanical properties and the small-scale architectures for structura
+l biomaterials consisting of cylindrical layers with helical symmetries
+ is much elusive.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figure/Laminatedbiomaterials.pdf
+	width 90text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Representative examples of structures displaying a helical symmetry.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\subf{A}$
+\end_inset
+
+ Ponderosa pine (modified with permission from
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "leelavanichkul2004grain"
+literal "false"
+
+\end_inset
+
+), 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\subf{B}$
+\end_inset
+
+ the sea sponge skeletons (reprinted from
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "monn2015new"
+literal "false"
+
+\end_inset
+
+), 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\subf{C}$
+\end_inset
+
+ the tusk of the narwhal (image courtesy Glenn Williams), 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\subf{D}$
+\end_inset
+
+ the osteon microstructure of bone (modified with permission from
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Buckwalter1995Bone"
+literal "false"
+
+\end_inset
+
+), 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\subf{E}$
+\end_inset
+
+ the artery wall (modified with permission from
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Gasser2006"
+literal "false"
+
+\end_inset
+
+), 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\subf{F}$
+\end_inset
+
+ the wood's cell wall (modified with permission from
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Fratzl2007"
+literal "false"
+
+\end_inset
+
+), and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\subf{G}$
+\end_inset
+
+ multiwalled carbon nanotube (modified with permission from
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Delgado2008"
+literal "false"
+
+\end_inset
+
+).
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Laminatedbiomaterials"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Most of the multilayered structural biological and engineering composite
+ materials are essentially anisotropic and heterogeneous.
+ Moreover, the helical symmetric layers of the structures are cylindrical
+ orthotropic.
+ Understanding and analyzing the overall deformation of such materials with
+ multilayered anisotropic cylindrical microstructures requires the knowledge
+ of their effective (i.e., homogenized) elastic properties, which can be obtained
+ through the anisotropic elasticity theory and homogenization theory.
+ The theory of anisotropic elasticity in the cylindrical coordinates system
+ is developed and summarized in monographs by
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Lekhnitskii1981,Ting1996anisotropic"
+literal "false"
+
+\end_inset
+
+.
+ Analytical solutions for displacement and stress analysis of anisotropic
+ composite cylinders subjected to typical loading conditions such as tension,
+ shear, torsion, pressuring, thermal deformation and bending are extensively
+ studied, for example, see
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "kollar1992stress,kollar1992composite, Jolicoeur1994, ting1996pressuring, chen2000revisit, tarn2001laminated, huang2001analysis,xia2002bending,crossley2003analytical,tsukrov2010elastic"
+literal "false"
+
+\end_inset
+
+ etc.
+ Inspired by those analytical solutions, a recent study by Gnoli et al.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "gnoli2020homogenization"
+literal "false"
+
+\end_inset
+
+ compared the stiffnesses of the fiber-reinforced cylinder composite beams
+ with various lamination schemes.
+ One interesting observation is that all stiffness constants seem to become
+ stable when three or four layers are considered in the composite beams.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%One approach to investigate the macroscale effective properties is the
+ standard asymptotic homogenization method, a two-scale technique that uses
+ asymptotic expansions of displacement and stress fields and appropriate
+ variational principles to analyze characteristics of heterogeneous materials,
+ cf.
+ the monographs by~
+\backslash
+cite{bensoussan2011asymptotic} and~
+\backslash
+cite{sÃ¡nchez1980nonhomogeneous} and recent reviews by~
+\backslash
+cite{kalamkarov2009asymptotic},~
+\backslash
+cite{pindera2009micromechanics}, and~
+\backslash
+cite{charalambakis2010homogenization}.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+stophere{cyan}{Two ways to obtain homogenized bending stiffness: homogenized
+ elastic constants, or infinite layer numbers}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+stophere{cyan}{Literature survey on homogenization of composite materials.}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% %
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Regarding the homogenization of multilayered cylindrical structures, Chatzigeorg
+iou et al.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "chatzigeorgiou2008homogenization"
+literal "false"
+
+\end_inset
+
+ studied the homogenized elastic coefficients of an anisotropic hollow layered
+ tube with discontinuous elastic constants under axisymmetric loading condition.
+ They
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "chatzigeorgiou2012effective"
+literal "false"
+
+\end_inset
+
+ also proposed a modified asymptotic expansion homogenization method to
+ compute effective thermomechanical properties of composites with periodicity
+ in cylindrical coordinates.
+ By taking into account the discontinuous stress and strain distributions
+ in each layer, Sun et al.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "sun2014homogenization,sun2014stress"
+literal "false"
+
+\end_inset
+
+ proposed a force-displacement equivalence method to determine the homogenized
+ elastic constants of general multilayered composite cylindrical structures
+ with curvilinear orthotropy.
+ However, the lack of asymptotic analysis makes their method too complicated
+ to apply in practice since the formulations involves the number of layers
+ in the cylindrical composite.
+\end_layout
+
+\begin_layout Standard
+In this paper we derive analytical expressions for the asymptotic bending
+ stiffness of multilayered composite cylinderss with cylindrical orthotropy
+ by performing asymptotic analysis on the bending stiffness formula obtained
+ by Jolicoeur and Cardou
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Jolicoeur1994"
+literal "false"
+
+\end_inset
+
+.
+ Both the interfacial conditions between adjacent layers and the lamination
+ schemes of the layers are considered.
+ It is found that the effective bending stiffness of multilayered cylindrical
+ orthotropic structure with frictionless interfaces converges as the number
+ of layers become infinity.
+ Furthermore, the asymptotic bending stiffness of perfectly bonded multilayered
+ cylindrical structures consisting of heterogeneous materials is higher
+ than that of structures made of either constituent material.
+\end_layout
+
+\begin_layout Standard
+The paper is organized as follows:
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\S$
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:bending_model"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ describes the model problem of pure bending of multilayered cylindrical
+ structures and summaries the results obtained by Jolicoeur and Cardou.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\S$
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:limit_analysis"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ presents the asymptotic analysis procedures of bending stiffness of the
+ structure.
+ The expressions of asymptotic bending stiffness for different interfacial
+ conditions and lamination schemes are derived.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\S$
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:discussion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ illustrates the numerical examples and discussions of the results.
+ The final section includes the major conclusions.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Pure bending of multilayered composite cylinders with cylindrical orthotropy
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:bending_model"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We take
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mathbb{E}$
+\end_inset
+
+ to be a three dimensional, oriented, Hilbert space and introduce vectors
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $(\physe_{1},\physe_{2},\physe_{3})$
+\end_inset
+
+ to form a basis for
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mathbb{E}$
+\end_inset
+
+.
+ The vectors
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\physe_{1}$
+\end_inset
+
+,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\physe_{2}$
+\end_inset
+
+, and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\physe_{3}$
+\end_inset
+
+ are orthonormal, that is,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\physe_{i}\cdot\physe_{j}=\delta_{ij}$
+\end_inset
+
+, for
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $i$
+\end_inset
+
+,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $j\in(1,2,3)$
+\end_inset
+
+, where the Kronecker delta symbol
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\delta_{ij}$
+\end_inset
+
+ is defined as unity if
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $i=j$
+\end_inset
+
+ and zero otherwise.
+ We also introduce a set of orthonormal vectors
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $(\physe_{r},\physe_{\theta},\physe_{z})$
+\end_inset
+
+ as a basis for a global cylindrical coordinate system.
+ The dependence of
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $(\physe_{r},\physe_{\theta},\physe_{z})$
+\end_inset
+
+ on
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $(\physe_{1},\physe_{2},\physe_{3})$
+\end_inset
+
+ is given by 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations} 
+\backslash
+begin{align} 
+\backslash
+physe_{r} & = 
+\backslash
+cos(
+\backslash
+theta) 
+\backslash
+physe_1 + 
+\backslash
+sin(
+\backslash
+theta) 
+\backslash
+physe_2 , 
+\backslash
+
+\backslash
+ 
 \backslash
 physe_{
 \backslash
-theta},
+theta} & = -
 \backslash
-physe_{z})$
+sin(
+\backslash
+theta) 
+\backslash
+physe_1 + 
+\backslash
+cos(
+\backslash
+theta) 
+\backslash
+physe_2 , 
+\backslash
+
+\backslash
+ 
+\backslash
+physe_{z} & =  
+\backslash
+physe_3.
+ 
+\backslash
+end{align} 
+\backslash
+end{subequations}
 \end_layout
 
 \end_inset
 
 
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We consider a hollow composite cylinder, whose axis is aligned with
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\physe_{z}$
+\end_inset
+
+ and cross sections are in
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $(\physe_{r},\physe_{\theta})$
+\end_inset
+
+ plane (Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:schematic"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\subf{A}$
+\end_inset
+
+).
+ The inner and outer radius of the cylinder is
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $r_{0}$
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $r_{N}$
+\end_inset
+
+, respectively.
+ The cylinder consists of
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $N$
+\end_inset
+
+ co-axial cylindrical layers and each layer is cylindrical orthotropic with
+ different principal material property orientations (see Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:schematic"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\subf{B}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+For an individual layer of material, we construct a local cylindrical coordinate
+ system according to the principal material property orientation of the
+ layer.
+ We refer to the local cylindrical coordinate system as the material coordinate
+ system.
+ It is a rotation of the global cylindrical coordinate system through an
+ angle
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\varphi$
+\end_inset
+
+, the so-called helical angle, in clockwise direction with respect to the
+ axis
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\physe_{r}$
+\end_inset
+
+.
+ We denote the basis of the material coordinate system as
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $(\physe'_{r},\physe'_{\theta},\physe'_{z})$
+\end_inset
+
+, where 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations} 
+\backslash
+begin{align} 
+\backslash
+physe'_{r} & =  
+\backslash
+physe_r ,
+\backslash
+
+\backslash
+ 
+\backslash
+physe'_{
+\backslash
+theta} & = 
+\backslash
+cos(
+\backslash
+varphi) 
+\backslash
+physe_{
+\backslash
+theta} - 
+\backslash
+sin(
+\backslash
+varphi) 
+\backslash
+physe_z , 
+\backslash
+
+\backslash
+ 
+\backslash
+physe'_{z} & = 
+\backslash
+sin(
+\backslash
+varphi) 
+\backslash
+physe_{
+\backslash
+theta} + 
+\backslash
+cos(
+\backslash
+varphi) 
+\backslash
+physe_z .
+ 
+\backslash
+end{align} 
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% ,~$
+\backslash
+physe_3$ is the longitudinal direction making an angle~$
+\backslash
+varphi$, the so-called helical angle, with the cylinder axis, and the direction
+ perpendicular to~$
+\backslash
+physe_3$ and~$
+\backslash
+physe_1$ is defined as tangential direction~$
+\backslash
+physe_2$.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The solution of a single cylinder with cylindrical orthotropy subjected
+ to pure bending was obtained by Lekhnitskii
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Lekhnitskii1981"
+literal "false"
+
+\end_inset
+
+.
+ Jolicoeur and Cardou extended this method to a more general bending problem
+ of a co-axial array of
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $N$
+\end_inset
+
+ cylindrical layers with cylindrical orthotropy.
+ Each cylindrical layers have different helical angles (see Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:schematic"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\subf{B}$
+\end_inset
+
+).
+ The interfaces between adjacent layers could be either perfectly bonded
+ or frictionless.
+ The elastic problem is solved by using stress function method with assumptions
+ that the elastic cylinder is under small strains, the loads along
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $z$
+\end_inset
+
+-axis are constant, no shear load resultant, and stresses and strains only
+ depend on
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $r$
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\theta$
+\end_inset
+
+, which implies constant curvature of the bent cylinder.
+ In the following, we describe the generalized Hooke's law of cylindrical
+ orthotropy in
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\S$
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:MatrixTrans"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The results that are obtained by Jolicoeur and Cardou and relevant to the
+ puring bending problem are summarized in
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\S$
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:bending stiffness"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figure/schematic.pdf
+	width 100text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\subf{A}$
+\end_inset
+
+ A multilayered composite cylinder with cylindrical orthotropy subjected
+ to pure bending.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\subf{B}$
+\end_inset
+
+ The cross-section view showing the geometry and helical angles for each
+ layer.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:schematic"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Transformation of constitutive law
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:MatrixTrans"
+
+\end_inset
+
+ The generalized Hooke's law is 
+\begin_inset Formula 
+\begin{equation}
+\u{\sigma}=\mathbb{C}\,\u{\epsilon},\label{eq:GeneralizedHooke}
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\u{\sigma}$
+\end_inset
+
+,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\u{\epsilon}$
+\end_inset
+
+, and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mathbb{C}$
+\end_inset
+
+ are the Cauchy stress tensor, infinitesimal strain tensor and elastic stiffness
+ tensor, respectively.
+ Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:GeneralizedHooke"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ can be inverted as 
+\begin_inset Formula 
+\begin{equation}
+\u{\epsilon}=\mathbb{S}\,\u{\sigma},\label{eq:GeneralizedHookeInverse}
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mathbb{S}=\mathbb{C}^{-1}$
+\end_inset
+
+ is the elastic compliance tensor.
+\end_layout
+
+\begin_layout Standard
+In the material coordinate system, we rewrite Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:GeneralizedHookeInverse"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ with index notation as 
+\begin_inset Formula 
+\begin{equation}
+\epsilon'_{ij}=S'_{ijkl}\sigma'_{kl},\label{eq:GeneralizedHookeComponents}
+\end{equation}
+
+\end_inset
+
+where and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\epsilon'_{ij}$
+\end_inset
+
+,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $S'_{ijkl}$
+\end_inset
+
+, and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\sigma'_{kl}$
+\end_inset
+
+ are the components of
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\u{\sigma}$
+\end_inset
+
+,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mathbb{S}$
+\end_inset
+
+, and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\u{\epsilon}$
+\end_inset
+
+, respectively, with respect to the basis
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $(\physe'_{r},\physe'_{\theta},\physe'_{z})$
+\end_inset
+
+.
+ For helical fibers with cylindrical orthotropy, the elastic compliance
+ components,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $S'_{ijkl}$
+\end_inset
+
+, are constant from point to point in its material coordinate system.
+ In order to express Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:GeneralizedHookeComponents"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ in terms of matrices, we use Voigt notation.
+ We introduce elastic compliance matrix
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{S}=\pr{S_{ij}}_{i,j\in\mathcal{I}}$
+\end_inset
+
+, where
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mathcal{I}=\pr{1,\ldots,6}$
+\end_inset
+
+.
+ According to the convention of Voigt notation, the non-zero elements of
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{S}$
+\end_inset
+
+ are defined as 
+\begin_inset Formula 
+\begin{align*}
+ & S_{11}=S'_{rrrr},\quad S_{12}=S'_{rr\theta\theta},\quad S_{13}=S'_{rrzz},\\
+ & S_{22}=S'_{\theta\theta\theta\theta},\quad S_{23}=S'_{\theta\theta zz},\quad S_{33}=S'_{zzzz},\\
+ & S_{44}=2S'_{\theta z\theta z},\quad S_{55}=2S'_{rzrz},\quad S_{66}=2S'_{r\theta r\theta}.
+\end{align*}
+
+\end_inset
+
+We define engineering strain
+\end_layout
+
+\begin_layout Standard
+Therefore, we express Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:GeneralizedHookeComponents"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ as 
+\begin_inset Formula 
+\begin{equation}
+\left[\begin{array}{c}
+\epsilon'_{rr}\\
+\epsilon'_{\theta\theta}\\
+\epsilon'_{zz}\\
+2\epsilon'_{\theta z}\\
+2\epsilon'_{rz}\\
+2\epsilon'_{r\theta}
+\end{array}\right]=\left[\begin{array}{cccccc}
+S_{11} & S_{12} & S_{13} & 0 & 0 & 0\\
+S_{12} & S_{22} & S_{23} & 0 & 0 & 0\\
+S_{13} & S_{23} & S_{33} & 0 & 0 & 0\\
+0 & 0 & 0 & S_{44} & 0 & 0\\
+0 & 0 & 0 & 0 & S_{55} & 0\\
+0 & 0 & 0 & 0 & 0 & S_{66}
+\end{array}\right]\left[\begin{array}{c}
+\sigma'_{rr}\\
+\sigma'_{\theta\theta}\\
+\sigma'_{zz}\\
+\sigma'_{\theta z}\\
+\sigma'_{rz}\\
+\sigma'_{r\theta}
+\end{array}\right],
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It is desirable to carry out the analysis in the global cylindrical coordinate
+ system of the structure.
+ Therefore we need to transform the constitutive equation from the material
+ coordinate system to the global cylindrical coordinate system.
+ As discussed in
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\S$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:bending_model"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, The material coordinates are related to the global cylindrical coordinates
+ by a rotation of angle
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\varphi$
+\end_inset
+
+ about axis
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\physe_{r}$
+\end_inset
+
+.
+ Thus, through coordinate transformation, the compliance form of the generalized
+ Hooke's law in the global cylindrical coordinate system becomes 
+\begin_inset Formula 
+\begin{equation}
+\left[\begin{array}{c}
+\epsilon_{rr}\\
+\epsilon_{\theta\theta}\\
+\epsilon_{zz}\\
+2\epsilon_{\theta z}\\
+2\epsilon_{rz}\\
+2\epsilon_{r\theta}
+\end{array}\right]=\left[\begin{array}{cccccc}
+C_{11} & C_{12} & C_{13} & C_{14} & 0 & 0\\
+C_{12} & C_{22} & C_{23} & C_{24} & 0 & 0\\
+C_{13} & C_{23} & C_{33} & C_{34} & 0 & 0\\
+C_{14} & C_{24} & C_{34} & C_{44} & 0 & 0\\
+0 & 0 & 0 & 0 & C_{55} & C_{56}\\
+0 & 0 & 0 & 0 & C_{56} & C_{66}
+\end{array}\right]\left[\begin{array}{c}
+\sigma_{rr}\\
+\sigma_{\theta\theta}\\
+\sigma_{zz}\\
+\sigma_{\theta z}\\
+\sigma_{rz}\\
+\sigma_{r\theta}
+\end{array}\right],\label{eq:HookeGlobal}
+\end{equation}
+
+\end_inset
+
+where the transformed elastic compliance matrix
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\pr{C_{ij}}_{i,j\in\mathcal{I}}$
+\end_inset
+
+, denoted by
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{C}$
+\end_inset
+
+, should not be confused with the elastic stiffness tensor
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mathbb{C}$
+\end_inset
+
+.
+ The relation between
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{C}$
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{S}$
+\end_inset
+
+ is given by 
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations} 
+\backslash
+begin{equation} 
+\backslash
+usf{C}= 
+\backslash
+usf{R}^{-
+\backslash
+text{T}}
+\backslash
+usf{S}
+\backslash
+usf{R}^{-1}, 
+\backslash
+end{equation} where 
+\backslash
+begin{equation} 	
+\backslash
+usf{R} 	:= 	
+\backslash
+left[ 	
+\backslash
+begin{array}{cccccc} 	 1 & 0 & 0 & 0 & 0 & 0 
+\backslash
+
+\backslash
+ 	 0 & c^2 & s^2 & 2sc & 0 & 0 
+\backslash
+
+\backslash
+ 	 0 & s^2 & c^2 & -2sc & 0 & 0 
+\backslash
+
+\backslash
+ 	 0 & -sc & sc & c^2 - s^2 & 0 & 0 
+\backslash
+
+\backslash
+ 	 0 & 0 & 0 & 0 & c & -s 
+\backslash
+
+\backslash
+ 	 0 & 0 & 0 & 0 & s & c 
+\backslash
+
+\backslash
+ 	
+\backslash
+end{array} 	
+\backslash
+right], 
+\backslash
+end{equation} 
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+with
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $s=\sin\varphi$
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $c=\cos\varphi$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Bower2009"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+It should be noted that the thirteen non-zero constants
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $C_{ij}$
+\end_inset
+
+ are computed from the nine independent non-zero compliance constants
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $S_{ij}$
+\end_inset
+
+ and the helix angle
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\varphi$
+\end_inset
+
+.
+ Thus, they are not independent.
+ The reduced elastic constants
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\beta_{ij}$
+\end_inset
+
+ are also useful in the subsequent sections and they are defined in terms
+ of
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $C_{ij}$
+\end_inset
+
+ as 
+\begin_inset Formula 
+\begin{equation}
+\beta_{ij}=C_{ij}-\frac{C_{i3}C_{3j}}{C_{33}},
+\end{equation}
+
+\end_inset
+
+for
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $i,j\in\mathcal{I}$
+\end_inset
+
+.
+ It can be easily shown that
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\pr{\beta_{ij}}_{i,j\in\mathcal{I}}$
+\end_inset
+
+ is symmetric and the number of independent non-zero elements is nine.
+\end_layout
+
+\begin_layout Subsection
+Bending stiffness formula by Jolicoeur and Cardou
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:bending stiffness"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The bending stiffness of the
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $N$
+\end_inset
+
+-layer cylindrical composite is obtained by Jolicoeur and Cardou as 
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}EI= & \sum_{n=1}^{N}\left[\sum_{i\in\mathcal{J}}\alpha_{i,n}K_{i,n}(r_{n-1}^{m_{i,n}+2}-r_{n}^{m_{i,n}+2})+\gamma_{n}(r_{n-1}^{4}-r_{n}^{4})\right],\end{aligned}
+\label{eq:EI}
+\end{equation}
+
+\end_inset
+
+with
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations} 	
+\backslash
+begin{align} 	
+\backslash
+alpha_{i,n} & := 
+\backslash
+frac{
+\backslash
+pi}{C_{33,n}} 
+\backslash
+frac{  C_{13,n} + C_{23,n}(m_{i,n} + 1) - C_{34,n} g_{i,n} m_{i,n} }{m_{i,n}+2},
+ 
+\backslash
+
+\backslash
+ 	
+\backslash
+gamma_n & := 
+\backslash
+frac{
+\backslash
+pi}{C_{33,n}} 
+\backslash
+frac{ 
+\backslash
+mu_{1,n} (C_{13,n} + 3C_{23,n}) - 2
+\backslash
+mu_{2,n} C_{34,n} - 1  }{4}, 	
+\backslash
+end{align} 
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+where
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $N$
+\end_inset
+
+ denotes the total number of layers,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mathcal{J}=\pr{1,2,3,4}$
+\end_inset
+
+,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $r_{n-1}$
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $r_{n}$
+\end_inset
+
+ the internal and external radii of the
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $n^{\text{th}}$
+\end_inset
+
+ layer,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $m_{i,n}$
+\end_inset
+
+,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $g_{i,n}$
+\end_inset
+
+,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu_{1,n}$
+\end_inset
+
+, and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu_{2,n}$
+\end_inset
+
+ are material constants related with elastic constants of the
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $n^{\text{th}}$
+\end_inset
+
+ layer (see
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Appen:MatConst"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+The coefficients
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $K_{i,n}$
+\end_inset
+
+ are determined by the boundary conditions and continuity conditions of
+ displacement and stress at the interface.
+\end_layout
+
+\begin_layout Paragraph
+Boundary condition.
+\end_layout
+
+\begin_layout Standard
+The traction free boundaries at innermost radius
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $r_{0}$
+\end_inset
+
+ and outermost radius
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $r_{N}$
+\end_inset
+
+ require 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations} 	
+\backslash
+begin{align} 	
+\backslash
+sum_{i 
+\backslash
+in 
+\backslash
+mathcal{J}} K_{i,1} r_0^{m_{i,1}-2} & = -
+\backslash
+mu_{1,1}, 
+\backslash
+quad 	
+\backslash
+sum_{i 
+\backslash
+in 
+\backslash
+mathcal{J}} K_{i,1} g_{i,1} r_0^{m_{i,1}-2} = -
+\backslash
+mu_{2,1},
+\backslash
+
+\backslash
+ 	
+\backslash
+sum_{i 
+\backslash
+in 
+\backslash
+mathcal{J}} K_{i,N} r_N^{m_{i,N}-2} & = -
+\backslash
+mu_{1,N}, 
+\backslash
+quad 	
+\backslash
+sum_{i 
+\backslash
+in 
+\backslash
+mathcal{J}} K_{i,N} g_{i,N} r_N^{m_{i,N}-2} = -
+\backslash
+mu_{2,N}.
+ 	
+\backslash
+end{align} 	
+\backslash
+label{eq:boundary} 
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Interfacial condition: no friction.
+\end_layout
+
+\begin_layout Standard
+In the case of no friction interface,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $u_{r}$
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\sigma_{rr}$
+\end_inset
+
+ are continuous,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\tau_{r\theta}$
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\tau_{rz}$
+\end_inset
+
+ are zero at the interface.
+ Therefore
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $K_{i,n}$
+\end_inset
+
+ satisfy following equations 
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations} 	
+\backslash
+begin{align} 	
+\backslash
+sum_{i 
+\backslash
+in 
+\backslash
+mathcal{J}} K_{i,n} r_{n}^{m_{i,n}-2} & = -
+\backslash
+mu_{1,n}, 
+\backslash
+quad 	
+\backslash
+sum_{i 
+\backslash
+in 
+\backslash
+mathcal{J}} K_{i,n} g_{i,n} r_{n}^{m_{i,n}-2} = -
+\backslash
+mu_{2,n}, 
+\backslash
+
+\backslash
+ 	
+\backslash
+sum_{i 
+\backslash
+in 
+\backslash
+mathcal{J}} K_{i,n} r_{n-1}^{m_{i,n}-2} & = -
+\backslash
+mu_{1,n}, 
+\backslash
+quad 	
+\backslash
+sum_{i 
+\backslash
+in 
+\backslash
+mathcal{J}} K_{i,n} g_{i,n} r_{n-1}^{m_{i,n}-2} = -
+\backslash
+mu_{2,n}, 	
+\backslash
+end{align} 	
+\backslash
+label{eq:nofriction_interface} 
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ for
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $n=1,2,\dots,N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Interfacial condition: no slip.
+\end_layout
+
+\begin_layout Standard
+In the case of perfect bonding (no slip) interface between layers, the continuit
+y conditions of stresses
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\sigma_{rr}$
+\end_inset
+
+,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\tau_{r\theta}$
+\end_inset
+
+,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\tau_{rz}$
+\end_inset
+
+ and displacements
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $u_{r}$
+\end_inset
+
+,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $u_{\theta}$
+\end_inset
+
+,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $u_{z}$
+\end_inset
+
+ at the interface yields 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations} 	
+\backslash
+begin{align} 	& 
+\backslash
+sum_{i 
+\backslash
+in 
+\backslash
+mathcal{J}} 
+\backslash
+left( K_{i,n} r^{m_{i,n}-2} - K_{i,n+1} r^{m_{i,n+1}-2} 
+\backslash
+right) = 
+\backslash
+mu_{1,n+1} - 
+\backslash
+mu_{1,n}, 
+\backslash
+
+\backslash
+ 	& 
+\backslash
+sum_{i 
+\backslash
+in 
+\backslash
+mathcal{J}} 
+\backslash
+left( K_{i,n} g_{i,n} r^{m_{i,n}-2} - K_{i,n+1} g_{i,n+1} r^{m_{i,n+1}-2}
+ 
+\backslash
+right) = 
+\backslash
+mu_{2,n+1} - 
+\backslash
+mu_{2,n}, 
+\backslash
+
+\backslash
+ 	& 
+\backslash
+sum_{i 
+\backslash
+in 
+\backslash
+mathcal{J}} 
+\backslash
+left( K_{i,n} Q_{i,n} r^{m_{i,n}-2} - K_{i,n+1} Q_{i,n+1} r^{m_{i,n+1}-2}
+ 
+\backslash
+right) = Q_{5,n+1} - Q_{5,n}, 
+\backslash
+
+\backslash
+ 	& 
+\backslash
+sum_{i 
+\backslash
+in 
+\backslash
+mathcal{J}} 
+\backslash
+left( K_{i,n} W_{i,n} r^{m_{i,n}-2} - K_{i,n+1} W_{i,n+1} r^{m_{i,n+1}-2}
+ 
+\backslash
+right) = W_{5,n+1} - W_{5,n}, 	
+\backslash
+end{align} 	
+\backslash
+label{eq:noslip_interface} 
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+for
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $n=1,2,\dots,N-1$
+\end_inset
+
+, where
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $Q_{i}$
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $W_{i}$
+\end_inset
+
+ (
+\begin_inset Formula $i=$
+\end_inset
+
+1 to 5) are material constants (see
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Appen:MatConst"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Effective bending stiffness
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:limit_analysis"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+In this section, we derive the asymptotic bending stiffness of multilayer
+ cylindrical structure.
+ Specifically, for a given lamination scheme, we analyze the asymptotic
+ behavior of Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:EI"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ by limiting the total number of layers,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $N$
+\end_inset
+
+, to infinity.
+ The asymptotic expansion is performed under the following assumptions:
+ (i) We assume that the cross-section area of the structure is constant
+ and the thickness of each layer is equal and vanishing as
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $N$
+\end_inset
+
+ goes to infinity.
+ (ii) We also assume that the constitutive properties of all layers are
+ the same in their own material coordinate system.
+ But the principal material property orientations, i.e.
+ helical angles, of the layers may be different.
+\end_layout
+
+\begin_layout Standard
+We use the stacking-sequence notation to describe the spatial arrangement
+ of layers' helical angles.
+ As per stacking-sequence notation, we use
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $[\varphi_{0}]_{N}$
+\end_inset
+
+ to denote a lamination scheme consisting of
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $N$
+\end_inset
+
+ layers and all layers have same helical angle,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\varphi_{0}$
+\end_inset
+
+.
+ For this lamination scheme, the material property of a material point does
+ not change with its position in the cylinder.
+ Thus the material is essentially homogeneous.
+ We also consider cases where the helical angles are not uniform and the
+ composed material becomes heterogeneous.
+ We use
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $[\varphi_{I}/\varphi_{II}]_{N/2}$
+\end_inset
+
+ to denote a lamination scheme consisting of
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $N$
+\end_inset
+
+ layers where layers with helical angles
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\varphi_{I}$
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\varphi_{II}$
+\end_inset
+
+ are alternatively arranged.
+\end_layout
+
+\begin_layout Standard
+Based on the lamination schemes and interfacial conditions, we consider
+ three different scenarios here.
+ (i) Homogeneous material-No friction: the lamination scheme is
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $[\varphi_{0}]_{N}$
+\end_inset
+
+ and no friction exists between layers.
+ (ii) Heterogeneous material-No friction: the lamination scheme is
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $[\varphi_{I}/\varphi_{II}]_{N/2}$
+\end_inset
+
+ and the interfaces between layers is frictionless.
+ (iii) Heterogeneous material-No slip: the lamination scheme is
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $[\varphi_{I}/\varphi_{II}]_{N/2}$
+\end_inset
+
+ as well, but there is no slip between the interfaces.
+\end_layout
+
+\begin_layout Subsection
+Homogeneous material and no friction interface
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:1mat_no_friction"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+First we consider that the elastic property for each layer is the same.
+ The interfaces between layers are frictionless.
+ This is equivalent to the scenario where a homogeneous cylinder is cut
+ into layers with uniform thickness and there is no friction between the
+ layers.
+ In this case, we drop the subscript
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $n$
+\end_inset
+
+ of the material constants for the sake of simplicity.
+ To obtain the coefficients
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $K_{i,n}$
+\end_inset
+
+, we rewrite Eqns.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:boundary"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:nofriction_interface"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ as 
+\begin_inset Formula 
+\begin{equation}
+\begin{bmatrix}r_{n}^{m_{1}-2} & r_{n}^{m_{2}-2} & r_{n}^{m_{3}-2} & r_{n}^{m_{4}-2}\\
+g_{1}r_{n}^{m_{1}-2} & g_{2}r_{n}^{m_{2}-2} & g_{3}r_{n}^{m_{3}-2} & g_{4}r_{n}^{m_{4}-2}\\
+r_{n-1}^{m_{1}-2} & r_{n-1}^{m_{2}-2} & r_{n-1}^{m_{3}-2} & r_{n-1}^{m_{4}-2}\\
+g_{1}r_{n-1}^{m_{1}-2} & g_{2}r_{n-1}^{m_{2}-2} & g_{3}r_{n-1}^{m_{3}-2} & g_{4}r_{n-1}^{m_{4}-2}
+\end{bmatrix}\begin{bmatrix}K_{1,n}\\
+K_{2,n}\\
+K_{3,n}\\
+K_{4,n}
+\end{bmatrix}=\begin{bmatrix}-\mu_{1}\\
+-\mu_{2}\\
+-\mu_{1}\\
+-\mu_{2}
+\end{bmatrix},\label{eq:eqs of Kin_one_mat_no_friction}
+\end{equation}
+
+\end_inset
+
+for
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $n=1,2,\dots,N$
+\end_inset
+
+.
+ Let layer thickness
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\Delta r=\pr{r_{N}-r_{0}}/N$
+\end_inset
+
+, radius sequence
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $r_{n}=r_{0}+n\cdot\Delta r$
+\end_inset
+
+.
+ Applying Taylor series expansion on the inverse of the coefficient matrix
+ of
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $K_{i,n}$
+\end_inset
+
+ around
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $r_{n}$
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\begin{equation}
+K_{i,n}=P_{i}\cdot r_{n}^{-m_{i}+2}+O(\Delta r),\quad\text{for}\,i\in\mathcal{J},\label{eq:single_mat_Ks}
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $P_{i}$
+\end_inset
+
+ are material constants given in
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Appen:Pi"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Substituting Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:single_mat_Ks"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ into Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:EI"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}EI & =\sum_{n=1}^{N}\left[\sum_{i\in\mathcal{J}}\alpha_{i}\left(P_{i}r_{n}^{-m_{i}+2}+O(\Delta r)\right)(r_{n-1}^{m_{i,n}+2}-r_{n}^{m_{i}+2})\right]+\gamma(r_{0}^{4}-r_{N}^{4})\\
+ & \begin{split}=\sum_{n=1}^{N}\left[\sum_{i\in\mathcal{J}}\alpha_{i}\left(P_{i}r_{n}^{-m_{i}+2}+O(\Delta r)\right)(-r_{n}^{m_{i}+1}(m_{i}+2)\Delta r+O(\Delta r^{2}))\right]\\
++\gamma(r_{0}^{4}-r_{N}^{4})
+\end{split}
+\\
+ & =-\sum_{n=1}^{N}\left[\sum_{i\in\mathcal{J}}\left(\alpha_{i}P_{i}(m_{i}+2)r_{n}^{3}\cdot\Delta r\right)\right]+\gamma(r_{0}^{4}-r_{N}^{4})+O(\Delta r^{2}).
+\end{aligned}
+\label{eq:single_mat_EI}
+\end{equation}
+
+\end_inset
+
+Taking the limit
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $N\to\infty$
+\end_inset
+
+, according to the definition of Riemann integral, we convert the sum of
+ series in Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:single_mat_EI"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ into integral to derive the asymptotic bending stiffness as 
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}(EI)_{\infty} & =-\lim\limits _{N\to\infty}\sum_{n=1}^{N}\left[\sum_{i\in\mathcal{J}}\alpha_{i}P_{i}(m_{i}+2)r_{n}^{3}\Delta r\right]+\gamma(r_{0}^{4}-r_{N}^{4})+O(\Delta r^{2})\\
+ & =-\sum_{i\in\mathcal{J}}\left(\int_{r_{0}}^{r_{N}}\alpha_{i}P_{i}(m_{i}+2)r^{3}\,dr\right)+\gamma(r_{0}^{4}-r_{N}^{4})\\
+ & =-\frac{r_{N}^{4}-r_{0}^{4}}{4}\left[\sum_{i\in\mathcal{J}}\alpha_{i}P_{i}(m_{i}+2)+4\gamma\right].
+\end{aligned}
+\label{eq:single_mat_EI_final}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Heterogeneous material and no friction interface
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:2mat_no_friction"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+We consider the lamination scheme of the multilayered cylindrical composite
+ as
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $[\varphi_{I}/\varphi_{II}]_{N/2}$
+\end_inset
+
+.
+ That is, layers with helical angles
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\varphi_{I}$
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\varphi_{II}$
+\end_inset
+
+ are alternatively arranged from the core to the periphery of the cylinder.
+ We use
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $I$
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $II$
+\end_inset
+
+ as subscripts to denote material constants of layers with odd and even
+ layer numbers.
+ Under no friction interfacial condition
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:nofriction_interface"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and considering boundary condition
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:boundary"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $K_{i,n}$
+\end_inset
+
+ can be solved from the following equations 
+\begin_inset Formula 
+\begin{equation}
+\begin{bmatrix}r_{n}^{m_{1,n}-2} & r_{n}^{m_{2,n}-2} & r_{n}^{m_{3,n}-2} & r_{n}^{m_{4,n}-2}\\
+g_{1,n}r_{n}^{m_{1,n}-2} & g_{2,n}r_{n}^{m_{2,n}-2} & g_{3,n}r_{n}^{m_{3,n}-2} & g_{4,n}r_{n}^{m_{4,n}-2}\\
+r_{n-1}^{m_{1,n}-2} & r_{n-1}^{m_{2,n}-2} & r_{n-1}^{m_{3,n}-2} & r_{n-1}^{m_{4,n}-2}\\
+g_{1,n}r_{n-1}^{m_{1,n}-2} & g_{2,n}r_{n-1}^{m_{2,n}-2} & g_{3,n}r_{n-1}^{m_{3,n}-2} & g_{4,n}r_{n-1}^{m_{4,n}-2}
+\end{bmatrix}\begin{bmatrix}K_{1,n}\\
+K_{2,n}\\
+K_{3,n}\\
+K_{4,n}
+\end{bmatrix}=\begin{bmatrix}-\mu_{1,n}\\
+-\mu_{2,n}\\
+-\mu_{1,n}\\
+-\mu_{2,n}
+\end{bmatrix},\label{eq:eqs of Kin_two_mat_no_friction}
+\end{equation}
+
+\end_inset
+
+for
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $n=1,2,\dots,N$
+\end_inset
+
+.
+ In this case,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $K_{i,n}$
+\end_inset
+
+ of adjacent layers are not coupled with each other and thus can be obtained
+ by using the similar technique being used in the homogeneous material case.
+ Applying Taylor series expansion on the inverse of the coefficient matrix
+ of
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $K_{i,n}$
+\end_inset
+
+ around
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $r_{n}$
+\end_inset
+
+ gives 
+\begin_inset Formula 
+\begin{equation}
+K_{i,n}=P_{i,n}\cdot r_{n}^{-m_{i,n}+2}+O(\Delta r),\quad\text{for}\,i\in\mathcal{J},\label{eq:two_mat_no_friction_Ks}
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $P_{i,n}$
+\end_inset
+
+ are material constants of the
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $n^{\text{th}}$
+\end_inset
+
+ layer (see
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Appen:Pi"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Substituting Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:two_mat_no_friction_Ks"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ into Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:EI"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}\begin{split}EI & =\sum_{n=1}^{N}\bigg[\sum_{i\in\mathcal{J}}\alpha_{i,n}\left(P_{i,n}r_{n}^{-m_{i,n}+2}+O(\Delta r)\right)\cdot\\
+ & \qquad{}(-r_{n}^{m_{i,n}+1}(m_{i,n}+2)\Delta r+O(\Delta r^{2}))+\gamma_{n}(-4r_{n}^{3}\Delta r+O(\Delta r^{2}))\bigg]\\
+ & =-\sum_{n=1}^{N}\bigg[\sum_{i\in\mathcal{J}}\alpha_{i,n}P_{i,n}(m_{i,n}+2)+4\gamma_{n}\bigg]r_{n}^{3}\cdot\Delta r+O(\Delta r^{2}).
+\end{split}
+\end{aligned}
+\label{eq:two_mat_no_friction_EI_1}
+\end{equation}
+
+\end_inset
+
+Since the arrangement of material property is periodic, the odd layers share
+ the same material constants
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\alpha_{i,I}$
+\end_inset
+
+,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $P_{i,I}$
+\end_inset
+
+,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $m_{i,I}$
+\end_inset
+
+, and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\gamma_{I}$
+\end_inset
+
+ while the even layers share the same material constants
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\alpha_{i,II}$
+\end_inset
+
+,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $P_{i,II}$
+\end_inset
+
+,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $m_{i,II}$
+\end_inset
+
+, and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\gamma_{II}$
+\end_inset
+
+.
+ We rewrite Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:two_mat_no_friction_EI_1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ as 
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}EI & =-\sum_{\text{odd layers}}\bigg[\sum_{i\in\mathcal{J}}\alpha_{i,I}P_{i,I}(m_{i,I}+2)+4\gamma_{I}\bigg]r_{n}^{3}\cdot\Delta r\\
+ & \quad{}-\sum_{\text{even layers}}\bigg[\sum_{i\in\mathcal{J}}\alpha_{i,II}P_{i,II}(m_{i,II}+2)+4\gamma_{II}\bigg]r_{n}^{3}\cdot\Delta r+O(\Delta r^{2})\\
+ & =-\frac{1}{2}\bigg\lbrace\sum_{n=1}^{N}\bigg[\sum_{i\in\mathcal{J}}\alpha_{i,I}P_{i,I}(m_{i,I}+2)+4\gamma_{I}\bigg]r_{n}^{3}\cdot\Delta r\\
+ & \quad\qquad{}+\sum_{n=1}^{N}\bigg[\sum_{i\in\mathcal{J}}\alpha_{i,II}P_{i,II}(m_{i,II}+2)+4\gamma_{II}\bigg]r_{n}^{3}\cdot\Delta r\bigg\rbrace+O(\Delta r^{2}).
+\end{aligned}
+\label{eq:two_mat_no_friction_EI_2}
+\end{equation}
+
+\end_inset
+
+Taking the limit
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $N\to\infty$
+\end_inset
+
+, according to the definition of Riemann integral, the Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:two_mat_no_friction_EI_2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ becomes 
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}(EI)_{\infty} & =\frac{1}{2}\Biggl\{-\Biggl[\sum_{i\in\mathcal{J}}\alpha_{i,I}P_{i,I}(m_{i,I}+2)+4\gamma_{I}\Biggr]\int_{r_{0}}^{r_{N}}r^{3}\,dr\\
+ & \quad\qquad{}-\Biggl[\sum_{i\in\mathcal{J}}\alpha_{i,II}P_{i,II}(m_{i,II}+2)+4\gamma_{II}\Biggr]\int_{r_{0}}^{r_{N}}r^{3}\,dr\Biggl\}\\
+ & =\frac{1}{2}\left[(EI)_{I,\infty}+(EI)_{II,\infty}\right],
+\end{aligned}
+\label{eq:two_mat_no_friction_EI}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\begin{equation}
+(EI)_{j,\infty}=-\frac{r_{N}^{4}-r_{0}^{4}}{4}\left[\sum_{i\in\mathcal{J}}\alpha_{i,j}P_{i,j}(m_{i,j}+2)+4\gamma_{j}\right],\quad\text{for}\,j=I,II.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Heterogeneous material and no slip interface
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:2mat_no_slip"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+For the case that the lamination scheme of the multilayered cylindrical
+ composite is
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $[\varphi_{I}/\varphi_{II}]_{N/2}$
+\end_inset
+
+ under no slip interfacial condition, the
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $4N$
+\end_inset
+
+ unknowns
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $K_{i,n}$
+\end_inset
+
+ can be solved from the boundary conditions by Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:boundary"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and the interfacial conditions by Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:noslip_interface"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, which can be rewritten as 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{equation} 
+\backslash
+begin{aligned} & 
+\backslash
+begin{bmatrix} 	r_{n-1}^{m_{1,n-1}} & r_{n-1}^{m_{2,n-1}} & r_{n-1}^{m_{3,n-1}}
+ & r_{n-1}^{m_{4,n-1}} 
+\backslash
+
+\backslash
+ 	g_{1,n-1} r_{n-1}^{m_{1,n-1}} & g_{2,n-1} r_{n-1}^{m_{2,n-1}} & g_{3,n-1}
+ r_{n-1}^{m_{3,n-1}} & g_{4,n-1} r_{n-1}^{m_{4,n-1}} 
+\backslash
+
+\backslash
+ 	Q_{1,n-1} r_{n-1}^{m_{1,n-1}} & Q_{2,n-1} r_{n-1}^{m_{2,n-1}} & Q_{3,n-1}
+ r_{n-1}^{m_{3,n-1}} & Q_{4,n-1} r_{n-1}^{m_{4,n-1}} 
+\backslash
+
+\backslash
+ 	W_{1,n-1} r_{n-1}^{m_{1,n-1}} & W_{2,n-1} r_{n-1}^{m_{2,n-1}} & W_{3,n-1}
+ r_{n-1}^{m_{3,n-1}} & W_{4,n-1} r_{n-1}^{m_{4,n-1}} 
+\backslash
+end{bmatrix} 
+\backslash
+begin{bmatrix} 	K_{1,n-1} 
+\backslash
+
+\backslash
+ K_{2,n-1} 
+\backslash
+
+\backslash
+ K_{3,n-1} 
+\backslash
+
+\backslash
+ K_{4,n-1} 
+\backslash
+end{bmatrix}
+\backslash
+
+\backslash
+ & =   
+\backslash
+begin{bmatrix} 	r_{n-1}^{m_{1,n}} & r_{n-1}^{m_{2,n}} & r_{n-1}^{m_{3,n}}
+ & r_{n-1}^{m_{4,n}} 
+\backslash
+
+\backslash
+ 	g_{1,n} r_{n-1}^{m_{1,n}} & g_{2,n} r_{n-1}^{m_{2,n}} & g_{3,n} r_{n-1}^{m_{3,
+n}} & g_{4,n} r_{n-1}^{m_{4,n}} 
+\backslash
+
+\backslash
+ 	Q_{1,n} r_{n-1}^{m_{1,n}} & Q_{2,n} r_{n-1}^{m_{2,n}} & Q_{3,n} r_{n-1}^{m_{3,
+n}} & Q_{4,n} r_{n-1}^{m_{4,n}} 
+\backslash
+
+\backslash
+ 	W_{1,n} r_{n-1}^{m_{1,n}} & W_{2,n} r_{n-1}^{m_{2,n}} & W_{3,n} r_{n-1}^{m_{3,
+n}} & W_{4,n} r_{n-1}^{m_{4,n}}   
+\backslash
+end{bmatrix}   
+\backslash
+begin{bmatrix} 	K_{1,n} 
+\backslash
+
+\backslash
+ K_{2,n} 
+\backslash
+
+\backslash
+ K_{3,n} 
+\backslash
+
+\backslash
+ K_{4,n}   
+\backslash
+end{bmatrix} - 
+\backslash
+begin{bmatrix} 	D_{1,n} 
+\backslash
+
+\backslash
+ D_{2,n} 
+\backslash
+
+\backslash
+ D_{3,n} 
+\backslash
+
+\backslash
+ D_{4,n} 
+\backslash
+end{bmatrix}, 
+\backslash
+label{eq:eqs of Kin_two_mat_no_slip_original} 
+\backslash
+end{aligned} 
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+for
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $n=2,3,\dots,N$
+\end_inset
+
+, where 
+\begin_inset Formula 
+\begin{equation}
+\begin{bmatrix}D_{1,n}\\
+D_{2,n}\\
+D_{3,n}\\
+D_{4,n}
+\end{bmatrix}=-r_{n-1}^{2}\begin{bmatrix}\mu_{1,n}-\mu_{1,n-1}\\
+\mu_{2,n}-\mu_{2,n-1}\\
+Q_{5,n}-Q_{5,n-1}\\
+W_{5,n}-W_{5,n-1}
+\end{bmatrix}.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using bold san-serif font symbol to denote matrices, we rewrite Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:eqs of Kin_two_mat_no_slip_original"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ as 
+\begin_inset Formula 
+\begin{equation}
+\usf{B}_{n}\usf{K}_{n-1}=\usf{A}_{n}\usf{K}_{n}-\usf{D}_{n},\label{eq:eqs of Kin_two_mat_no_slip_np1}
+\end{equation}
+
+\end_inset
+
+for
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $n=2,3,\dots,N$
+\end_inset
+
+.
+ The matrices
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{K}_{n-1}$
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{K}_{n}$
+\end_inset
+
+ are coupled with each other in this case.
+ Therefore, each
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{K}_{n}$
+\end_inset
+
+ cannot be solved individually.
+\end_layout
+
+\begin_layout Standard
+We come up with a differential equation based asymptotic analysis method
+ to estimate
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{K}_{n}$
+\end_inset
+
+ as
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $N$
+\end_inset
+
+ approaches infinity.
+ For the sake of clarity, we only post essential steps of the derivation
+ in this section.
+ For the details of the complete derivation, we ask the readers to refer
+ to
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Appen:derivations"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We first substitute
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $n$
+\end_inset
+
+ as
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $n-1$
+\end_inset
+
+ into Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:eqs of Kin_two_mat_no_slip_np1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and combine the resulting equation with Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:eqs of Kin_two_mat_no_slip_np1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ to find out the relation between
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{K}_{n}$
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{K}_{n-2}$
+\end_inset
+
+ as 
+\begin_inset Formula 
+\begin{equation}
+\usf{A}_{n}\usf{K}_{n}=\usf{B}_{n}\usf{A}_{n-1}^{-1}\usf{B}_{n-1}\usf{K}_{n-2}+\usf{B}_{n}\usf{A}_{n-1}^{-1}\usf{D}_{n-1}+\usf{D}_{n}.\label{eq:knknm2}
+\end{equation}
+
+\end_inset
+
+In Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:knknm2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we take Taylor series expansion on
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{A}_{n-1}^{-1}$
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{B}_{n-1}$
+\end_inset
+
+ around
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $r_{n-1}$
+\end_inset
+
+ to obtain (see
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Appen:Eqn315"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ for details) 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations} 	
+\backslash
+begin{align} 	& 
+\backslash
+usf{B}_n 
+\backslash
+usf{A}^{-1}_{n-1} 
+\backslash
+usf{B}_{n-1} = 
+\backslash
+usf{A}_n + 
+\backslash
+frac{
+\backslash
+Delta r}{r_{n-1}} 
+\backslash
+left( 
+\backslash
+usf{B}_n 
+\backslash
+usf{m}_{n-1} 
+\backslash
+usf{B}^{-1}_n 
+\backslash
+usf{A}_n - 
+\backslash
+usf{A}_n 
+\backslash
+usf{m}_n 
+\backslash
+right)  + O(
+\backslash
+Delta r^2), 
+\backslash
+
+\backslash
+ 	& 
+\backslash
+usf{B}_n 
+\backslash
+usf{A}^{-1}_{n-1} 
+\backslash
+usf{D}_{n-1} + 
+\backslash
+usf{D}_n = 
+\backslash
+frac{
+\backslash
+Delta r}{r_{n-1}} 
+\backslash
+left( 2
+\backslash
+usf{D}_n + 
+\backslash
+usf{B}_n 
+\backslash
+usf{m}_{n-1} 
+\backslash
+usf{B}^{-1}_n 
+\backslash
+usf{D}_{n-1} 
+\backslash
+right) + O(
+\backslash
+Delta r^2), 	
+\backslash
+end{align} 	
+\backslash
+label{eq:bnanm1} 
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Then by substituting Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:bnanm1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ into Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:knknm2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we obtain 
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}\begin{split}\usf{A}_{n}\usf{K}_{n} & =\left[\usf{A}_{n}+\frac{\Delta r}{r_{n-1}}\left(\usf{B}_{n}\usf{m}_{n-1}\usf{B}_{n}^{-1}\usf{A}_{n}-\usf{A}_{n}\usf{m}_{n}\right)+O(\Delta r^{2})\right]\usf{K}_{n-2}\\
+ & \qquad+\frac{\Delta r}{r_{n-1}}\left(2\usf{D}_{n}+\usf{B}_{n}\usf{m}_{n-1}\usf{B}_{n}^{-1}\usf{D}_{n-1}\right)+O(\Delta r^{2}),
+\end{split}
+\end{aligned}
+\label{eq:knknm2appr1}
+\end{equation}
+
+\end_inset
+
+which gives the asymptotic relation between
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{K}_{n-2}$
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{K}_{n}$
+\end_inset
+
+.
+ From a set of representative plots for
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $K_{i}$
+\end_inset
+
+ versus
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $n$
+\end_inset
+
+ of a 100-layered structure (see Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:two_material_no_slip_Ks"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), we deduce that the
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $K_{i}$
+\end_inset
+
+ of odd (and even) layer numbers are continuous in the asymptotic sense
+ (for
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $N\to\infty$
+\end_inset
+
+), which are indicated by red dashed lines.
+ Hence, we approximate
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{K}_{n-2}$
+\end_inset
+
+ to the first order of
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\Delta r$
+\end_inset
+
+ as 
+\begin_inset Formula 
+\begin{equation}
+\usf{K}_{n-2}=\usf{K}_{n}-2\frac{d\usf{K}_{n}}{dr}\Delta r+O(\Delta r^{2}).\label{eq:knknm2appr2}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figure/two_material_no_slip_Ks.pdf
+	width 100text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A set of representative plots of
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $K_{i}$
+\end_inset
+
+ with layer number
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $n$
+\end_inset
+
+ for a cylindrical composite with lamination scheme
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $[-15\degree/25\degree]_{50}$
+\end_inset
+
+ under no slip interfacial condition.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:two_material_no_slip_Ks"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Substituting Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:knknm2appr2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ into Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:knknm2appr1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and making simplification (see
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Appen:GovernEqnKn"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ for details), we obtain a linear ordinary differential equation (ODE) system
+ of
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{K}_{n}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{equation}
+2r_{n}\frac{d(\usf{r}_{n,n}\usf{K}_{n})}{dr}=\left(\usf{M}_{n}+\usf{m}_{n}\right)\usf{r}_{n,n}\usf{K}_{n}+r_{n}^{2}\usf{F}_{n},\label{eq:GovernEqnKn}
+\end{equation}
+
+\end_inset
+
+with boundary conditions given by Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:boundary"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Solving this linear ODE system (see
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Appen:SolvingODE"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ for the details of the solution procedures), we obtain 
+\begin_inset Formula 
+\begin{equation}
+%K_{i,n}=r_{n}^{-m_{i,n}}\left(G_{i,n}^{0}r_{n}^{2}+G_{i,n}^{1}r_{n}^{\lambda_{1,n}}+G_{i,n}^{2}r_{n}^{\lambda_{2,n}}+G_{i,n}^{3}r_{n}^{\lambda_{3,n}}+G_{i,n}^{4}r_{n}^{\lambda_{4,n}}\right)
+K_{i,n}=r_{n}^{-m_{i,n}}\left(G_{i,n}^{0}r_{n}^{2}+\sum_{j\in\mathcal{J}}G_{i,n}^{j}r_{n}^{\lambda_{j,n}}\right),\quad\text{for}\,i\in\mathcal{J},\label{eq:two_mat_no_slip_Ks}
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $G_{i,n}^{j}$
+\end_inset
+
+ (
+\begin_inset Formula $j=\text{0 to 4}$
+\end_inset
+
+) and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\lambda_{j,n}$
+\end_inset
+
+ (
+\begin_inset Formula $j\in\mathcal{J}$
+\end_inset
+
+) given by Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Gjin"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ are constants related to material constants of the
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $n^{\text{th}}$
+\end_inset
+
+ layer.
+ Substituting Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:two_mat_no_slip_Ks"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ into Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:EI"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we obtain the bending stiffness as 
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}EI & =-\sum_{n=1}^{N}\left\lbrace \sum_{i\in\mathcal{J}}\alpha_{i,n}'\left(G_{i,n}^{0}r_{n}^{2}+\sum_{j\in\mathcal{J}}G_{i,n}^{j}r_{n}^{\lambda_{j,n}}\right)r_{n}+4\gamma_{n}r_{n}^{3}\right\rbrace +O(\Delta r)\\
+ & =-\sum_{n=1}^{N}\left\lbrace \left(\sum_{i\in\mathcal{J}}\alpha_{i,n}'G_{i,n}^{0}+4\gamma_{n}\right)r_{n}^{3}+\sum_{i\in\mathcal{J}}\sum_{j\in\mathcal{J}}\alpha_{i,n}'G_{i,n}^{j}r_{n}^{1+\lambda_{j,n}}\right\rbrace +O(\Delta r),
+\end{aligned}
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\alpha_{i,n}'=\alpha_{i,n}\left(m_{i,n}+2\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Since the material properties of the layers of the structure are alternately
+ arranged, the odd layers share the same material constants
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\alpha_{i,I}$
+\end_inset
+
+,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\gamma_{I}$
+\end_inset
+
+,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $m_{i,I}$
+\end_inset
+
+,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $G_{i,I}^{j}$
+\end_inset
+
+, and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\lambda_{j,I}$
+\end_inset
+
+, and the even layers have the same constants
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\alpha_{i,II}$
+\end_inset
+
+,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\gamma_{II}$
+\end_inset
+
+,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $m_{i,II}$
+\end_inset
+
+,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $G_{i,II}^{j}$
+\end_inset
+
+, and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\lambda_{j,II}$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}EI & =-\frac{1}{2}\sum_{n=1}^{N}\left[\left(\sum_{i\in\mathcal{J}}\alpha_{i,I}'G_{i,I}^{0}+4\gamma_{I}\right)r_{n}^{3}+\sum_{i\in\mathcal{J}}\sum_{j\in\mathcal{J}}\alpha_{i,I}'G_{i,I}^{j}r_{n}^{1+\lambda_{j,I}}\right]\\
+ & \quad-\frac{1}{2}\sum_{n=1}^{N}\biggr[\left(\sum_{i\in\mathcal{J}}\alpha_{i,II}'G_{i,II}^{0}+4\gamma_{II}\right)r_{n}^{3}\\
+ & \qquad\qquad\qquad\qquad+\sum_{i\in\mathcal{J}}\sum_{j\in\mathcal{J}}\alpha_{i,II}'G_{i,II}^{j}r_{n}^{1+\lambda_{j,II}}\biggr]+O(\Delta r).
+\end{aligned}
+\end{equation}
+
+\end_inset
+
+As
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $N\to\infty$
+\end_inset
+
+, we obtain the asymptotic bending stiffness as 
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}(EI)_{\infty} & =-\frac{1}{2}\left[\sum_{i\in\mathcal{J}}\left(\alpha_{i,I}'G_{i,I}^{0}+\alpha_{i,II}'G_{i,II}^{0}\right)+4\left(\gamma_{I}+\gamma_{II}\right)\right]\int_{r_{0}}^{r_{N}}r^{3}\,dr\\
+ & \quad-\frac{1}{2}\sum_{i\in\mathcal{J}}\sum_{j\in\mathcal{J}}\left[\int_{r_{0}}^{r_{N}}\left(\alpha_{i,I}'G_{i,I}^{j}r^{1+\lambda_{j,I}}+\alpha_{i,II}'G_{i,II}^{j}r^{1+\lambda_{j,II}}\right)\,dr\right]\\
+ & =-\frac{1}{8}\left[\sum_{i\in\mathcal{J}}\left(\alpha_{i,I}'G_{i,I}^{0}+\alpha_{i,II}'G_{i,II}^{0}\right)+4\left(\gamma_{I}+\gamma_{II}\right)\right]\left(r_{N}^{4}-r_{0}^{4}\right)\\
+ & \quad-\frac{1}{2}\sum_{i\in\mathcal{J}}\sum_{j\in\mathcal{J}}\biggr[\frac{\alpha_{i,I}'G_{i,I}^{j}}{2+\lambda_{j,I}}\left(r_{N}^{2+\lambda_{j,I}}-r_{0}^{2+\lambda_{j,I}}\right)\\
+ & \qquad\qquad\qquad\quad+\frac{\alpha_{i,II}'G_{i,II}^{j}}{2+\lambda_{j,II}}\left(r_{N}^{2+\lambda_{j,II}}-r_{0}^{2+\lambda_{j,II}}\right)\biggr].
+\end{aligned}
+\label{eq:two_mat_no_slip_EI}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Numerical examples and discussions
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:discussion"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+In this section, the bending stiffness of multilayered cylindrical structures
+ with different lamination schemes and interfacial conditions are numerical
+ studied and the asymptotic bending stiffness derived in
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\S$
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:limit_analysis"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ are validated.
+\end_layout
+
+\begin_layout Standard
+The the cylindrical composite is divided into
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $N$
+\end_inset
+
+ co-axial layers with constant thickness.
+ The innermost and outermost radii of the cylindrical structure are taken
+ to be
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $r_{0}=2$
+\end_inset
+
+ mm and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $r_{N}=14$
+\end_inset
+
+ mm, respectively.
+ Three different combinations of lamination schemes and interfacial conditions
+ are considered: (i)
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $[-15\degree]_{N}$
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $[25\degree]_{N}$
+\end_inset
+
+ with no friction interfacial condition, (ii)
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $[-15\degree/25\degree]_{N/2}$
+\end_inset
+
+ with no friction interfacial condition, (iii)
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $[-15\degree/25\degree]_{N/2}$
+\end_inset
+
+ with no slip interfacial condition.
+ In all three scenarios, the non-zero elastic compliance components of cylindric
+ally orthotropic material in each layer's in material coordinate system
+ are the same and provided in Tab.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:sij"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
 .
  
+\begin_inset Float table
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Elastic compliance components of cylindrically orthotropic material in material
+ coordinate system (
+\begin_inset Formula $10^{-10}$
+\end_inset
+
+ m
+\begin_inset Formula $^{2}$
+\end_inset
+
+/N)
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:sij"
+
+\end_inset
+
+ 
 \end_layout
 
-\end_deeper
-\begin_layout Enumerate
+\end_inset
 
-\strikeout on
-Eliminare curly braces everywhere.
- That is instead 
+ 
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="9">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $S_{11}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $S_{12}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $S_{13}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $S_{22}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $S_{23}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $S_{33}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $S_{44}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $S_{55}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $S_{66}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.05 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.0632 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.0842 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.18 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.0941 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.20 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.00 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.00 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.50 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The relation between bending stiffness and total layer number
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $N$
+\end_inset
+
+ for the structure consisting of homogeneous material with no friction interface
+ is shown as solid line in Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:asymptotic_EI"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\subf{A}$
+\end_inset
+
+.
+ The bending stiffnesses of one-layer cylinders are 881.47 N
+\begin_inset Formula $\cdot$
+\end_inset
+
+m
+\begin_inset Formula $^{2}$
+\end_inset
+
+ and 528.11 N
+\begin_inset Formula $\cdot$
+\end_inset
+
+m
+\begin_inset Formula $^{2}$
+\end_inset
+
+ for the materials with -15
+\begin_inset Formula $\degree$
+\end_inset
+
+ and 25
+\begin_inset Formula $\degree$
+\end_inset
+
+ helical angles, respectively.
+ As we increase the total layer number, for both materials, the bending
+ stiffness first decreases rapidly then becomes stable after
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $N$
+\end_inset
+
+ is greater than five.
+ Although the layer thickness approaches to zero as
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $N\to\infty$
+\end_inset
+
+, the bending stiffness converges to a non-zero constant, which is given
+ by Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:single_mat_EI_final"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The asymptotic bending stiffness of composite with lamination scheme
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $[-15\degree]_{\infty}$
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $[25\degree]_{\infty}$
+\end_inset
+
+ are 722.15 N
+\begin_inset Formula $\cdot$
+\end_inset
+
+m
+\begin_inset Formula $^{2}$
+\end_inset
+
+ and 412.13 N
+\begin_inset Formula $\cdot$
+\end_inset
+
+m
+\begin_inset Formula $^{2}$
+\end_inset
+
+, respectively (see Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:asymptotic_EI"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\subf{A}$
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+The relation between bending stiffness and total layer number for the heterogene
+ous layer properties with no friction interface is plotted as solid line
+ in Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:asymptotic_EI"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\subf{B}$
+\end_inset
+
+.
+ The lamination scheme for this case is
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $[-15\degree/25\degree]_{N/2}$
+\end_inset
+
+.
+ The bending stiffness oscillates as the total layer number increases due
+ to the alternated arrangement of the layer properties.
+ Eventually, it approaches to a non-zero constant as
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $N\to\infty$
+\end_inset
+
+, which is the asymptotic bending stiffness given by Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:two_mat_no_friction_EI"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The asymptotic homogenized bending stiffness of the heterogeneous structure
+ is 567.14 N
+\begin_inset Formula $\cdot$
+\end_inset
+
+m
+\begin_inset Formula $^{2}$
+\end_inset
+
+ (see Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:asymptotic_EI"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\subf{B}$
+\end_inset
+
+), which is equal to the average of those of two homogeneous materials.
+ 
+\end_layout
+
+\begin_layout Standard
+The plot of bending stiffness with total layer number for the heterogeneous
+ material and no slip interface case, in which the lamination scheme is
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $[-15\degree/25\degree]_{N/2}$
+\end_inset
+
+, is shown as solid line in Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:asymptotic_EI"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\subf{C}$
+\end_inset
+
+.
+ The bending stiffness oscillates as the total layer number increases and
+ approaches to a non-zero constant, which is the asymptotic bending stiffness
+ given by Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:two_mat_no_slip_EI"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Furthermore, it is interesting to note that the asymptotic bending stiffness
+ of heterogeneous structures exceeds the bending stiffness of both homogeneous
+ structures.
+ The maximum bending stiffness, 1093.12 N
+\begin_inset Formula $\cdot$
+\end_inset
+
+m
+\begin_inset Formula $^{2}$
+\end_inset
+
+, is achieved when the total layer number is five.
+ The asymptotic bending stiffness, 1046.94 N
+\begin_inset Formula $\cdot$
+\end_inset
+
+m
+\begin_inset Formula $^{2}$
+\end_inset
+
+, is higher than those of the structures consisting of homogeneous materials,
+ which are 881.47 N
+\begin_inset Formula $\cdot$
+\end_inset
+
+m
+\begin_inset Formula $^{2}$
+\end_inset
+
+ and 528.11 N
+\begin_inset Formula $\cdot$
+\end_inset
+
+m
+\begin_inset Formula $^{2}$
+\end_inset
+
+.
+ This implies that we could build up stiffer composite from compliant materials
+ by designing the spatial arrangements of laminae.
+ 
+\end_layout
+
+\begin_layout Standard
+The enhancement effect in bending stiffness of the heterogeneous structures
+ with no slip interface also sheds light on the role of multilayered cylindrical
+ orthotropic structures as observed in a number of structural biomaterials.
+ We believe this kind of internal structure is designed to enhance the effective
+ bending stiffness of the biomaterials to support external loads.
+ To see this, we also numerically studied the bending stiffness of the structure
+ made up with isotropic materials.
+ However we found that there is no enhancement in the asymptotic bending
+ stiffness when the alternative layers are made of isotropic materials.
+ The difference of cylindrical orthotropic and isotropic material lies in
+ the constitutive equations.
+ For the cylindrical orthotropic material, the elastic constants
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $C_{i4}$
+\end_inset
+
+ (
+\begin_inset Formula $i\in\mathcal{J}$
+\end_inset
+
+) is non-zero, which implies that the axis stress
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\sigma_{zz}$
+\end_inset
+
+ and shear strain
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\epsilon_{\theta z}$
+\end_inset
+
+ are coupled.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h!
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figure/combined_EI.pdf
+	lyxscale 40
+	width 50text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The variations of effective bending stiffness as the number of layers increases
+ (solid lines) and their asymptotic limits as the number of layers approach
+ infinity (dashed lines) under different combinations of lamination schemes
+ and interfacial properties:
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\subf{A}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $[-15\degree]_{N}$
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $[25\degree]_{N}$
+\end_inset
+
+ with no friction interfacial condition,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\subf{B}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $[-15\degree/25\degree]_{N/2}$
+\end_inset
+
+ with no friction interfacial condition,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\subf{C}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $[-15\degree/25\degree]_{N/2}$
+\end_inset
+
+ with no slip interfacial condition.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:asymptotic_EI"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Conclusions
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:conclusion"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+In order to obtain the asymptotic bending stiffness of multilayered composite
+ cylindrical structures with curvilinear orthotropy, we present a asymptotic
+ analysis of bending stiffness by considering infinite number of layers
+ in this paper.
+ Analytical expressions of asymptotic bending stiffness are obtained by
+ considering the no slip and no friction interfacial conditions and geometric
+ arrangement of layers with different material properties.
+ Although we only consider two materials properties for the heterogeneous
+ structure, we believe that the method used in this work can be extended
+ to multiple materials properties with similar analysis procedures.
+ We show that it is possible to create stiffer structures from compliant
+ materials by appropriate geometric arrangement, which provide guidance
+ in creating bio-inspired materials with desirable mechanical properties.
+\end_layout
+
+\begin_layout Section*
+Acknowledgements
+\end_layout
+
+\begin_layout Standard
+W.L.
+ Deng acknowledges the graduate fellowship from the China Scholarship Council.
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\start_of_appendix
+Material constants
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "Appen:MatConst"
+
+\end_inset
+
+ The material constants
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $m_{i}$
+\end_inset
+
+,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $g_{i}$
+\end_inset
+
+,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $Q_{i}$
+\end_inset
+
+,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $W_{i}$
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu_{i}$
+\end_inset
+
+ are dependent on elastic constants.
+ We calculate
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $m_{i}$
+\end_inset
+
+ as 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Preview
 
 \begin_layout Standard
-
-\strikeout on
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$
+
 \backslash
-{a,
+begin{subequations} 	
 \backslash
-ldots
+begin{align} 	 m_1 & =  
 \backslash
-}$
+sqrt{
+\backslash
+frac{-b +
+\backslash
+sqrt{b^2 - 4ac}}{2a}}, 
+\backslash
+
+\backslash
+ 	 m_2 & =  
+\backslash
+sqrt{
+\backslash
+frac{-b -
+\backslash
+sqrt{b^2 - 4ac}}{2a}}, 
+\backslash
+
+\backslash
+ 	 m_3 & =  -
+\backslash
+sqrt{
+\backslash
+frac{-b +
+\backslash
+sqrt{b^2 - 4ac}}{2a}}, 
+\backslash
+
+\backslash
+ 	 m_4 & =  -
+\backslash
+sqrt{
+\backslash
+frac{-b -
+\backslash
+sqrt{b^2 - 4ac}}{2a}}, 
+\backslash
+
+\backslash
+ 	
+\backslash
+intertext{where} 	 a & :=  
+\backslash
+beta_{22} 
+\backslash
+beta_{44} - 
+\backslash
+beta_{24}^2, 
+\backslash
+
+\backslash
+ 	
+\backslash
+begin{split} 	 b & := 
+\backslash
+beta_{24}(2
+\backslash
+beta_{14} + 
+\backslash
+beta_{24} + 2
+\backslash
+beta_{56}) + 
+\backslash
+beta_{14}^2 
+\backslash
+
+\backslash
+  	 & 
+\backslash
+quad - 
+\backslash
+beta_{44}(
+\backslash
+beta_{11} + 2
+\backslash
+beta_{12} + 
+\backslash
+beta_{22} + 
+\backslash
+beta_{66}) - 
+\backslash
+beta_{22} 
+\backslash
+beta_{55}, 	
+\backslash
+end{split} 
+\backslash
+
+\backslash
+ 	c & :=  
+\backslash
+beta_{55}(
+\backslash
+beta_{11} + 2
+\backslash
+beta_{12} + 
+\backslash
+beta_{22} + 
+\backslash
+beta_{66})-
+\backslash
+beta_{56}^2.
+ 	
+\backslash
+end{align} 
+\backslash
+end{subequations}
 \end_layout
 
 \end_inset
@@ -413,228 +6422,2315 @@ ldots
 
 \end_inset
 
- use 
+
+\end_layout
+
+\begin_layout Standard
+We calculate
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $g_{i}$
+\end_inset
+
+,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $Q_{i}$
+\end_inset
+
+,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $W_{i}$
+\end_inset
+
+ as 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Preview
 
 \begin_layout Standard
-
-\strikeout on
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$(
+
 \backslash
-physe_r, 
+begin{subequations} 	
 \backslash
-ldots)$
+begin{align} 	g_i & = 
+\backslash
+frac{
+\backslash
+beta_{24}m_i^2+(
+\backslash
+beta_{14} + 
+\backslash
+beta_{24})m_i - 
+\backslash
+beta_{56}}{
+\backslash
+beta_{44}m_i^2 - 
+\backslash
+beta_{55}}, 
+\backslash
+
+\backslash
+ 	Q_i & = 
+\backslash
+frac{1}{m_i} 
+\backslash
+pr{
+\backslash
+beta_{12}m_i + 
+\backslash
+beta_{22}m_i(m_i+1) - 
+\backslash
+beta_{24} g_i m_i^2}, 
+\backslash
+
+\backslash
+ 	W_i & = 
+\backslash
+frac{1}{m_i}
+\backslash
+pr{
+\backslash
+beta_{55} g_i - 
+\backslash
+beta_{56}}, 	
+\backslash
+end{align} 
+\backslash
+end{subequations}
 \end_layout
 
 \end_inset
 
 
 \end_layout
+
+\end_inset
+
+for
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $i\in\mathcal{J}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We calculate
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $Q_{5}$
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $W_{5}$
+\end_inset
+
+ as 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations} 	
+\backslash
+begin{align} 	Q_5 & = 
+\backslash
+mu_1(
+\backslash
+beta_{12} + 3
+\backslash
+beta_{22})-2
+\backslash
+mu_2
+\backslash
+beta_{24} + 
+\backslash
+frac{C_{23}}{C_{33}}, 
+\backslash
+
+\backslash
+ 	W_5 & = 
+\backslash
+frac{1}{2}(
+\backslash
+beta_{55}
+\backslash
+mu_2 - 
+\backslash
+beta_{56}
+\backslash
+mu_1), 	
+\backslash
+end{align} 	where 	
+\backslash
+begin{equation} 	
+\backslash
+begin{bmatrix} 		
+\backslash
+mu_1 
+\backslash
+
+\backslash
+ 
+\backslash
+mu_2 	
+\backslash
+end{bmatrix} := 	
+\backslash
+frac{1}{C_{33}} 	
+\backslash
+begin{bmatrix} 		-2
+\backslash
+beta_{14}-6
+\backslash
+beta_{24}+
+\backslash
+beta_{56} & 4
+\backslash
+beta_{44}-
+\backslash
+beta_{55} 
+\backslash
+
+\backslash
+ 		-
+\backslash
+beta_{11}-2
+\backslash
+beta_{12}+3
+\backslash
+beta_{22}-
+\backslash
+beta_{66} & 2
+\backslash
+beta_{14}-2
+\backslash
+beta_{24}+
+\backslash
+beta_{56} 	
+\backslash
+end{bmatrix}^{-1} 	
+\backslash
+begin{bmatrix} 			2C_{34} 
+\backslash
+
+\backslash
+ C_{13}-C_{23} 	
+\backslash
+end{bmatrix}.
+ 	
+\backslash
+end{equation} 
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Expressions of
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $P_{i}$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Appen:Pi"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+The expressions of
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $P_{i}$
+\end_inset
+
+ in Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:single_mat_Ks"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ are given by
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations} 
+\backslash
+begin{align} 	
+\backslash
+begin{split} 	P_1 & = -
+\backslash
+frac{1}{p} 
+\backslash
+left(
+\backslash
+left(g_2 g_3 (m_2 - m_3)(m_4 -2) + g_2 g_4 (m_4 - m_2)(m_3 - 2) 
+\backslash
+right.
+\backslash
+right.
+\backslash
+
+\backslash
+ 	&
+\backslash
+qquad{} 
+\backslash
+left.
+ + g_3 g_4 (m_3 - m_4)(m_2 -2) 
+\backslash
+right) 
+\backslash
+mu_1  + 
+\backslash
+left(g_2 (m_3 - m_4)(m_2 -2) 
+\backslash
+right.
+ 
+\backslash
+
+\backslash
+ 	&
+\backslash
+qquad{} 
+\backslash
+left.
+\backslash
+left.
+ + g_3(m_4 - m_2)(m_3 -2) + g_4 (m_2 - m_3)(m_4 -2) 
+\backslash
+right)
+\backslash
+mu_2 
+\backslash
+right) , 	
+\backslash
+end{split} 
+\backslash
+
+\backslash
+ 	
+\backslash
+begin{split} 	P_2 & = 
+\backslash
+frac{1}{p} 
+\backslash
+left(
+\backslash
+left( g_1 g_3 (m_1 - m_3)(m_4 -2) + g_1 g_4 (m_4 - m_1)(m_3 - 2)
+\backslash
+right.
+\backslash
+right.
+ 
+\backslash
+
+\backslash
+ 	&
+\backslash
+qquad{} 
+\backslash
+left.
+ + g_3 g_4 (m_3 - m_4)(m_1 -2)  
+\backslash
+right) 
+\backslash
+mu_1 + 
+\backslash
+left(g_1 (m_3 - m_4)(m_1 -2) 
+\backslash
+right.
+\backslash
+
+\backslash
+ 	&
+\backslash
+qquad{} 
+\backslash
+left.
+\backslash
+left.
+ + g_3(m_4 - m_1)(m_3 -2) + g_4 (m_1 - m_3)(m_4 -2)  
+\backslash
+right)
+\backslash
+mu_2  
+\backslash
+right), 	
+\backslash
+end{split} 
+\backslash
+
+\backslash
+ 	
+\backslash
+begin{split} 	P_3 & = -
+\backslash
+frac{1}{p} ((g_1 g_2 (m_1 - m_2)(m_4 -2) + g_1 g_4 (m_4 - m_1)(m_2 - 2)
+ 
+\backslash
+
+\backslash
+ &
+\backslash
+qquad{} + g_2 g_4 (m_2 - m_4)(m_1 -2) ) 
+\backslash
+mu_1 + (g_1 (m_2 - m_4)(m_1 -2) 
+\backslash
+
+\backslash
+  &
+\backslash
+qquad{} + g_2(m_4 - m_1)(m_2 -2) + g_4 (m_1 - m_2)(m_4 -2))
+\backslash
+mu_2), 	
+\backslash
+end{split} 
+\backslash
+
+\backslash
+ 	
+\backslash
+begin{split} 	P_4 & = 
+\backslash
+frac{1}{p} ((g_1 g_2 (m_1 - m_2)(m_3 -2) + g_1 g_3 (m_3 - m_1)(m_2 - 2)
+ 
+\backslash
+
+\backslash
+ &
+\backslash
+qquad{} + g_2 g_3 (m_2 - m_3)(m_1 -2)) 
+\backslash
+mu_1 +  (g_1 (m_2 - m_3)(m_1 -2) 
+\backslash
+
+\backslash
+  &
+\backslash
+qquad{} + g_2(m_3 - m_1)(m_2 -2) + g_3 (m_1 - m_2)(m_3 -2))
+\backslash
+mu_2), 	
+\backslash
+end{split} 	
+\backslash
+end{align} 
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}p= & g_{1}(g_{3}-g_{4})(m_{1}-m_{3})(m_{2}-m_{4})\\
+ & +g_{2}(g_{3}-g_{4})(m_{2}-m_{3})(m_{4}-m_{1})\\
+ & -(g_{1}g_{2}+g_{3}g_{4}-g_{1}g_{4}-g_{2}g_{4})(m_{1}-m_{2})(m_{3}-m_{4}).
+\end{aligned}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Derivations in
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\S$
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:2mat_no_slip"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Appen:derivations"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsection
+Derivations of Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:bnanm1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Appen:Eqn315"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+To obtain Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:bnanm1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, let
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations} 
+\backslash
+begin{align} 	
+\backslash
+tilde{
+\backslash
+usf{A}}_{n} 	& := 	
+\backslash
+begin{bmatrix} 		1 & 1 & 1 & 1 
+\backslash
+
+\backslash
+ 		g_{1,n} & g_{2,n} & g_{3,n} & g_{4,n} 
+\backslash
+
+\backslash
+ 		Q_{1,n} & Q_{2,n} & Q_{3,n} & Q_{4,n} 
+\backslash
+
+\backslash
+ 		W_{1,n} & W_{2,n} & W_{3,n} & W_{4,n} 	
+\backslash
+end{bmatrix}, 
+\backslash
+
+\backslash
+ 	
+\backslash
+tilde{
+\backslash
+usf{B}}_{n} 	& := 	
+\backslash
+begin{bmatrix} 		1 & 1 & 1 & 1 
+\backslash
+
+\backslash
+ 		g_{1,n-1} & g_{2,n-1} & g_{3,n-1} & g_{4,n-1} 
+\backslash
+
+\backslash
+ 		Q_{1,n-1} & Q_{2,n-1} & Q_{3,n-1} & Q_{4,n-1} 
+\backslash
+
+\backslash
+ 		W_{1,n-1} & W_{2,n-1} & W_{3,n-1} & W_{4,n-1} 	
+\backslash
+end{bmatrix}, 
+\backslash
+
+\backslash
+ 	
+\backslash
+usf{r}_{n-1,n} 	& := 	
+\backslash
+begin{bmatrix} 		r_{n-1}^{m_{1,n}} & 0 & 0 & 0 
+\backslash
+
+\backslash
+ 		0 & r_{n-1}^{m_{2,n}} & 0 & 0 
+\backslash
+
+\backslash
+ 		0 & 0 & r_{n-1}^{m_{3,n}} & 0 
+\backslash
+
+\backslash
+ 		0 & 0 & 0 & r_{n-1}^{m_{4,n}} 	
+\backslash
+end{bmatrix}, 
+\backslash
+
+\backslash
+ 	
+\backslash
+usf{m}_{n} 	& := 	
+\backslash
+begin{bmatrix} 		m_{1,n} & 0 & 0 & 0 
+\backslash
+
+\backslash
+ 		0 & m_{2,n} & 0 & 0 
+\backslash
+
+\backslash
+ 		0 & 0 & m_{3,n} & 0 
+\backslash
+
+\backslash
+ 		0 & 0 & 0 & m_{4,n} 	
+\backslash
+end{bmatrix}.
+ 	
+\backslash
+end{align} 	
+\backslash
+label{eq:C1} 
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It is noted that
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\tilde{\usf{A}}_{n}$
+\end_inset
+
+,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\tilde{\usf{B}}_{n}$
+\end_inset
+
+, and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{m}_{n}$
+\end_inset
+
+ are constant matrices.
+ The coefficient matrices
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{A}_{n}$
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{B}_{n}$
+\end_inset
+
+ in Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:eqs of Kin_two_mat_no_slip_original"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ can be written as 
+\begin_inset Formula 
+\begin{equation}
+\usf{A}_{n}=\tilde{\usf{A}}_{n}\usf{r}_{n-1,n},\quad\usf{B}_{n}=\tilde{\usf{B}}_{n}\usf{r}_{n-1,n-1}.
+\end{equation}
+
+\end_inset
+
+Approximating
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{A}_{n-1}$
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{B}_{n-1}$
+\end_inset
+
+ to the first order of
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\Delta r$
+\end_inset
+
+ around
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $r_{n-1}$
+\end_inset
+
+, we have 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations} 
+\backslash
+begin{align} 	
+\backslash
+usf{A}_{n-1} & = 
+\backslash
+usf{B}_{n} - 
+\backslash
+delta 
+\backslash
+usf{B}_{n} 
+\backslash
+Delta r + O(
+\backslash
+Delta r^2), 
+\backslash
+
+\backslash
+ 	
+\backslash
+usf{B}_{n-1} & = 
+\backslash
+usf{A}_{n} - 
+\backslash
+delta 
+\backslash
+usf{A}_{n} 
+\backslash
+Delta r + O(
+\backslash
+Delta r^2), 
+\backslash
+end{align} 
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+where
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations} 	
+\backslash
+begin{align} 	
+\backslash
+delta 
+\backslash
+usf{A}_{n} & = 
+\backslash
+frac{1}{r_{n-1}} 
+\backslash
+usf{A}_{n} 
+\backslash
+usf{m}_n = 
+\backslash
+frac{1}{r_{n-1}} 
+\backslash
+tilde{
+\backslash
+usf{A}}_{n} 
+\backslash
+usf{r}_{n-1,n} 
+\backslash
+usf{m}_n, 
+\backslash
+
+\backslash
+ 	
+\backslash
+delta 
+\backslash
+usf{B}_{n} & = 
+\backslash
+frac{1}{r_{n-1}} 
+\backslash
+usf{B}_{n} 
+\backslash
+usf{m}_{n-1} = 
+\backslash
+frac{1}{r_{n-1}} 
+\backslash
+tilde{
+\backslash
+usf{B}}_{n} 
+\backslash
+usf{r}_{n-1,n-1} 
+\backslash
+usf{m}_{n-1}.
+ 	
+\backslash
+end{align} 
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Therefore,
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations} 	
+\backslash
+begin{align} 	
+\backslash
+begin{split} 		
+\backslash
+usf{B}_n 
+\backslash
+usf{A}^{-1}_{n-1} 		& = 
+\backslash
+usf{B}_n 
+\backslash
+left[ 
+\backslash
+usf{B}_{n} - 
+\backslash
+delta 
+\backslash
+usf{B}_{n} 
+\backslash
+Delta r + O(
+\backslash
+Delta r^2) 
+\backslash
+right]^{-1} 
+\backslash
+
+\backslash
+ 		& = 
+\backslash
+usf{B}_n 
+\backslash
+left[ 
+\backslash
+usf{B}_{n} 
+\backslash
+left( 
+\backslash
+usf{I}- 
+\backslash
+frac{
+\backslash
+Delta r}{r_{n-1}} 
+\backslash
+usf{m}_{n-1} 
+\backslash
+right) + O(
+\backslash
+Delta r^2) 
+\backslash
+right]^{-1} 
+\backslash
+
+\backslash
+ 		& = 
+\backslash
+usf{B}_n 
+\backslash
+left[ 
+\backslash
+usf{I} - 
+\backslash
+frac{
+\backslash
+Delta r}{r_{n-1}} 
+\backslash
+usf{m}_{n-1} + O(
+\backslash
+Delta r^2) 
+\backslash
+right]^{-1} 
+\backslash
+usf{B}^{-1}_{n} 
+\backslash
+
+\backslash
+ 		& = 
+\backslash
+usf{I} + 
+\backslash
+frac{
+\backslash
+Delta r}{r_{n-1}} 
+\backslash
+usf{B}_n 
+\backslash
+usf{m}_{n-1} 
+\backslash
+usf{B}^{-1}_n + O(
+\backslash
+Delta r^2), 	
+\backslash
+end{split}
+\backslash
+
+\backslash
+ 	
+\backslash
+begin{split} 		
+\backslash
+usf{B}_n 
+\backslash
+usf{A}^{-1}_{n-1} 
+\backslash
+usf{B}_{n-1} 		& = 
+\backslash
+left[ 
+\backslash
+usf{I} + 
+\backslash
+frac{
+\backslash
+Delta r}{r_{n-1}} 
+\backslash
+usf{B}_n 
+\backslash
+usf{m}_{n-1} 
+\backslash
+usf{B}^{-1}_n + O(
+\backslash
+Delta r^2) 
+\backslash
+right] 
+\backslash
+cdot 
+\backslash
+
+\backslash
+ 		& 
+\backslash
+qquad 
+\backslash
+left[ 
+\backslash
+usf{A}_{n} - 
+\backslash
+frac{
+\backslash
+Delta r}{r_{n-1}} 
+\backslash
+usf{A}_n 
+\backslash
+usf{m}_n + O(
+\backslash
+Delta r^2) 
+\backslash
+right] 
+\backslash
+
+\backslash
+ 		& = 
+\backslash
+usf{A}_{n} + 
+\backslash
+frac{
+\backslash
+Delta r}{r_{n-1}} 
+\backslash
+left( 
+\backslash
+usf{B}_n 
+\backslash
+usf{m}_{n-1} 
+\backslash
+usf{B}^{-1}_n 
+\backslash
+usf{A}_{n} - 
+\backslash
+usf{A}_n 
+\backslash
+usf{m}_n 
+\backslash
+right) + O(
+\backslash
+Delta r^2), 	
+\backslash
+end{split} 
+\backslash
+
+\backslash
+ 	
+\backslash
+begin{split} 		
+\backslash
+usf{B}_n 
+\backslash
+usf{A}^{-1}_{n-1} 
+\backslash
+usf{D}_{n-1} + 
+\backslash
+usf{D}_n 		& = 
+\backslash
+left[ 
+\backslash
+usf{I} + 
+\backslash
+frac{
+\backslash
+Delta r}{r_{n-1}} 
+\backslash
+usf{B}_n 
+\backslash
+usf{m}_{n-1} 
+\backslash
+usf{B}^{-1}_n + O(
+\backslash
+Delta r^2) 
+\backslash
+right] 
+\backslash
+usf{D}_{n-1} + 
+\backslash
+usf{D}_n 
+\backslash
+
+\backslash
+ 		& = 
+\backslash
+usf{D}_{n-1} + 
+\backslash
+usf{D}_n + 
+\backslash
+frac{
+\backslash
+Delta r}{r_{n-1}} 
+\backslash
+usf{B}_n 
+\backslash
+usf{m}_{n-1} 
+\backslash
+usf{B}^{-1}_n 
+\backslash
+usf{D}_{n-1} + O(
+\backslash
+Delta r^2) 
+\backslash
+
+\backslash
+ 		& = 
+\backslash
+frac{
+\backslash
+Delta r}{r_{n-1}} 
+\backslash
+left( 2
+\backslash
+usf{D}_n + 
+\backslash
+usf{B}_n 
+\backslash
+usf{m}_{n-1} 
+\backslash
+usf{B}^{-1}_n 
+\backslash
+usf{D}_{n-1} 
+\backslash
+right) + O(
+\backslash
+Delta r^2).
+ 	
+\backslash
+end{split} 	
+\backslash
+end{align} 	
+\backslash
+label{eq:C5} 
+\backslash
+end{subequations} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Derivation of ODE system given by
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:GovernEqnKn"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:boundary"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Appen:GovernEqnKn"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Substituting Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:knknm2appr2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ into Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:knknm2appr1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we obtain 
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}r_{n-1}\frac{d\usf{K}_{n}}{dr}= & \left(\usf{A}_{n}^{-1}\usf{B}_{n}\usf{m}_{n-1}\usf{B}_{n}^{-1}\usf{A}_{n}-\usf{m}_{n}\right)\usf{K}_{n}\\
+ & +\usf{A}_{n}^{-1}\left(2\usf{D}_{n}+\usf{B}_{n}\usf{m}_{n-1}\usf{B}_{n}^{-1}\usf{D}_{n-1}\right)+O(\Delta r).
+\end{aligned}
+\label{eq:AppendKndr1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Taking the zero order of approximation of Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:AppendKndr1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ around
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $r_{n}$
+\end_inset
+
+ and noting that 
+\begin_inset Formula 
+\begin{equation}
+\usf{B}_{n}\usf{m}_{n-1}\usf{B}_{n}^{-1}=\tilde{\usf{B}}_{n}\usf{m}_{n-1}\tilde{\usf{B}}_{n}^{-1},
+\end{equation}
+
+\end_inset
+
+we have 
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}\begin{split}2r_{n}\frac{d\usf{K}_{n}}{dr}= & \left(\usf{r}_{n,n}^{-1}\tilde{\usf{A}}_{n}^{-1}\tilde{\usf{B}}_{n}\usf{m}_{n-1}\tilde{\usf{B}}_{n}^{-1}\tilde{\usf{A}}_{n}\usf{r}_{n,n}-\usf{m}_{n}\right)\usf{K}_{n}\\
+ & +r_{n}^{2}\usf{r}_{n,n}^{-1}\tilde{\usf{A}}_{n}^{-1}\left(-2\usf{I}+\tilde{\usf{B}}_{n}\usf{m}_{n-1}\tilde{\usf{B}}_{n}^{-1}\right)\tilde{\usf{D}}_{n}+O(\Delta r),
+\end{split}
+\end{aligned}
+\label{eq:AppendKndr2}
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\tilde{\usf{D}}_{n}$
+\end_inset
+
+ is a constant vector 
+\begin_inset Formula 
+\begin{equation}
+\tilde{\usf{D}}_{n}=\begin{bmatrix}\mu_{1,n}-\mu_{1,n-1}\\
+\mu_{2,n}-\mu_{2,n-1}\\
+Q_{5,n}-Q_{5,n-1}\\
+W_{5,n}-W_{5,n-1}
+\end{bmatrix}.
+\end{equation}
+
+\end_inset
+
+Let 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations} 	
+\backslash
+begin{align} 	
+\backslash
+usf{M}_n & := 
+\backslash
+tilde{
+\backslash
+usf{A}}^{-1}_n 
+\backslash
+tilde{
+\backslash
+usf{B}}_n 
+\backslash
+usf{m}_{n-1} 
+\backslash
+tilde{
+\backslash
+usf{B}}^{-1}_n 
+\backslash
+tilde{
+\backslash
+usf{A}}_n, 
+\backslash
+
+\backslash
+ 	
+\backslash
+usf{F}_n & := 
+\backslash
+tilde{
+\backslash
+usf{A}}^{-1}_n 
+\backslash
+left( -2
+\backslash
+usf{I} + 
+\backslash
+tilde{
+\backslash
+usf{B}}_n 
+\backslash
+usf{m}_{n-1} 
+\backslash
+tilde{
+\backslash
+usf{B}}^{-1}_n 
+\backslash
+right) 
+\backslash
+tilde{
+\backslash
+usf{D}}_n, 	
+\backslash
+end{align} 
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We rewrite Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:AppendKndr2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ as 
+\begin_inset Formula 
+\begin{equation}
+2r_{n}\frac{d\usf{K}_{n}}{dr}=\left(\usf{r}_{n,n}^{-1}\usf{M}_{n}\usf{r}_{n,n}+\usf{m}_{n}\right)\usf{K}_{n}+r_{n}^{2}\usf{r}_{n,n}^{-1}\usf{F}_{n}.\label{eq:AppendKndr}
+\end{equation}
+
+\end_inset
+
+Then multiplying Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:AppendKndr"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ by
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{r}_{n,n}$
+\end_inset
+
+ on both sides, we obtain a linear ODE system of
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{K}_{n}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{equation}
+2r_{n}\frac{d\pr{\usf{r}_{n,n}\usf{K}_{n}}}{dr}=\pr{\usf{M}_{n}+\usf{m}_{n}}\pr{\usf{r}_{n,n}\usf{K}_{n}}+r_{n}^{2}\usf{F}_{n},\label{eq:AppendKn}
+\end{equation}
+
+\end_inset
+
+with boundary conditions given by
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:boundary"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Subsection
+Solution procedures of ODE system given by
+\begin_inset space ~
+\end_inset
 
-\strikeout on
-Need to explain how 
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:GovernEqnKn"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:boundary"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "Appen:SolvingODE"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The ODE system of
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{K}_{n}$
+\end_inset
+
+ given by
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:GovernEqnKn"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:boundary"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is equivalent to 
+\begin_inset Formula 
+\begin{equation}
+2r_{n}\frac{d\usf{K}_{n}^{e}}{dr}=\usf{M}_{n}^{e}\usf{K}_{n}^{e}+r_{n}^{2}\usf{F}_{n},\label{eq:AppendKendr}
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{K}_{n}^{e}=\usf{r}_{n,n}\usf{K}_{n}$
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{M}_{n}^{e}=\usf{M}_{n}+\usf{m}_{n}$
+\end_inset
+
+.
+ with boundary conditions 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Preview
 
 \begin_layout Standard
-
-\strikeout on
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$S_{pq}$
-\end_layout
 
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
- are related to 
-\begin_inset Preview
-
-\begin_layout Standard
-
-\strikeout on
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$C_{ijkl}$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-, the components of the stiffness operator 
-\begin_inset Preview
-
-\begin_layout Standard
-
-\strikeout on
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$
 \backslash
-mathbb{C}$
+begin{subequations} 	
+\backslash
+begin{align} 	
+\backslash
+sum_{i 
+\backslash
+in 
+\backslash
+mathcal{J}} K^e_{i,1} r_0^{-2} & = -
+\backslash
+mu_{1,1}, 
+\backslash
+quad 	 
+\backslash
+sum_{i 
+\backslash
+in 
+\backslash
+mathcal{J}} K^e_{i,1} g_{i,1} r_0^{-2} = -
+\backslash
+mu_{2,1},
+\backslash
+
+\backslash
+ 	
+\backslash
+sum_{i 
+\backslash
+in 
+\backslash
+mathcal{J}} K^e_{i,N} r_N^{-2} & = -
+\backslash
+mu_{1,N}, 
+\backslash
+quad 	 
+\backslash
+sum_{i 
+\backslash
+in 
+\backslash
+mathcal{J}} K^e_{i,N} g_{i,N} r_N^{-2} = -
+\backslash
+mu_{2,N}.
+ 	
+\backslash
+end{align} 	
+\backslash
+label{eq:Appenboundary} 
+\backslash
+end{subequations}
 \end_layout
 
 \end_inset
 
 
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since the material properties of the multilayered material is alternately
+ arranged, the constant coefficient matrix
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{M}_{n}^{e}$
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{F}_{n}$
+\end_inset
+
+ for the odd (and even) layers are the same and are denoted as
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{M}_{I}^{e}$
+\end_inset
+
+,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{F}_{I}$
+\end_inset
+
+ (and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{M}_{II}^{e}$
+\end_inset
+
+,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{F}_{II}$
+\end_inset
+
+).
+ In the asymptotic sense (
+\begin_inset Formula $N\to\infty$
+\end_inset
+
+),
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{K}_{n}$
+\end_inset
+
+ of odd and even layers are continuous functions of the radius
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $r$
+\end_inset
+
+ (see Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:two_material_no_slip_Ks"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Then Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:AppendKendr"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ becomes 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations} 
+\backslash
+begin{align} 	2 r 
+\backslash
+frac{d
+\backslash
+usf{K}_n^e}{dr} & = 
+\backslash
+usf{M}_I^e 
+\backslash
+usf{K}_n^e + r^2 
+\backslash
+usf{F}_I, 
+\backslash
+quad 
+\backslash
+text{for odd~$n$}, 
+\backslash
+
+\backslash
+ 	2 r 
+\backslash
+frac{d
+\backslash
+usf{K}_n^e}{dr} & = 
+\backslash
+usf{M}_{II}^e 
+\backslash
+usf{K}_n^e + r^2 
+\backslash
+usf{F}_{II}, 
+\backslash
+quad 
+\backslash
+text{for even~$n$}.
+ 
+\backslash
+end{align} 
+\backslash
+label{eq:AppendKejdr} 
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ We can obtain
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{K}_{n}$
+\end_inset
+
+ of the odd and even layers by solving Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:AppendKejdr"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ separately.
+ The above two ODE systems have similar format.
+ For simplicity, we drop the subscripts
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $I$
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $II$
+\end_inset
+
+ that denote material constants of odd and even layers in the following
+ derivations.
+ We diagonalize the matrix
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{M}^{e}$
+\end_inset
+
+ as 
+\begin_inset Formula 
+\begin{equation}
+\usf{M}^{e}=(\usf{M}^{\nu})^{-1}\usf{\Lambda}^{\nu}\usf{M}^{\nu},
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{\Lambda}^{\nu}=\text{diag}(\lambda_{1}^{\nu},\lambda_{2}^{\nu},\lambda_{3}^{\nu},\lambda_{4}^{\nu})$
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{M}^{\nu}$
+\end_inset
+
+ are respectively the eigenvalue and eigenvector matrices of
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{M}^{e}$
+\end_inset
+
+,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\lambda_{i}^{\nu}$
+\end_inset
+
+ are eigenvalues.
+ We denote
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{\Lambda}=\text{diag}(\lambda_{1},\lambda_{2},\lambda_{3},\lambda_{4})$
+\end_inset
+
+, where
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\lambda_{i}=\lambda_{i}^{\nu}/2$
+\end_inset
+
+ for
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $i\in\mathcal{J}$
+\end_inset
+
+.
+ Then it follows that
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{\Lambda}=\usf{\Lambda}^{\nu}/2$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula 
+\begin{equation}
+\usf{Y}=\usf{M}^{\nu}\usf{K}^{e},\quad\usf{L}=\frac{1}{2}\usf{M}^{\nu}\usf{F},
+\end{equation}
+
+\end_inset
+
+then Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:AppendKejdr"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ becomes 
+\begin_inset Formula 
+\begin{equation}
+r\frac{d\usf{Y}}{dr}=\usf{\Lambda}\usf{Y}+r^{2}\usf{L}.\label{eq:AppendYndr}
+\end{equation}
+
+\end_inset
+
+The solution of Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:AppendYndr"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ reads 
+\begin_inset Formula 
+\begin{equation}
+\begin{bmatrix}Y_{1}\\
+Y_{2}\\
+Y_{3}\\
+Y_{4}
+\end{bmatrix}=\begin{bmatrix}\frac{L_{1}}{2-\lambda_{1}}\\
+\frac{L_{2}}{2-\lambda_{2}}\\
+\frac{L_{3}}{2-\lambda_{3}}\\
+\frac{L_{4}}{2-\lambda_{4}}
+\end{bmatrix}r^{2}+\begin{bmatrix}c_{1}r^{\lambda_{1}}\\
+c_{2}r^{\lambda_{2}}\\
+c_{3}r^{\lambda_{3}}\\
+c_{4}r^{\lambda_{4}}
+\end{bmatrix},
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ are the integration constants.
+\end_layout
+
+\begin_layout Standard
+Therefore,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{K}_{n}^{e}$
+\end_inset
+
+ of the odd and even layers are 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations} 
+\backslash
+begin{align} 
+\backslash
+usf{K}_n^e & = 
+\backslash
+left( 
+\backslash
+usf{M}_I^{
+\backslash
+nu} 
+\backslash
+right)^{-1}
+\backslash
+usf{Y}_I, 
+\backslash
+quad 
+\backslash
+text{for odd~$n$}, 
+\backslash
+
+\backslash
+ 
+\backslash
+usf{K}_n^e & = 
+\backslash
+left( 
+\backslash
+usf{M}_{II}^{
+\backslash
+nu} 
+\backslash
+right)^{-1}
+\backslash
+usf{Y}_{II}, 
+\backslash
+quad 
+\backslash
+text{for even~$n$}, 
+\backslash
+end{align} 
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\begin{equation}
+\begin{bmatrix}Y_{1,n}\\
+Y_{2,n}\\
+Y_{3,n}\\
+Y_{4,n}
+\end{bmatrix}=\begin{bmatrix}\frac{L_{1,n}}{2-\lambda_{1,n}}\\
+\frac{L_{2,n}}{2-\lambda_{2,n}}\\
+\frac{L_{3,n}}{2-\lambda_{3,n}}\\
+\frac{L_{4,n}}{2-\lambda_{4,n}}
+\end{bmatrix}r^{2}+\begin{bmatrix}c_{1,n}r^{\lambda_{1,n}}\\
+c_{2,n}r^{\lambda_{2,n}}\\
+c_{3,n}r^{\lambda_{3,n}}\\
+c_{4,n}r^{\lambda_{4,n}}
+\end{bmatrix},\quad\text{for}\,n=I,II.
+\end{equation}
+
+\end_inset
+
+The integration constants
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $c_{i,n}$
+\end_inset
+
+ are determined by the boundary condition given by Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Appenboundary"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
 .
  
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-
-\strikeout on
-We define 
-\begin_inset Preview
-
-\begin_layout Standard
-
-\strikeout on
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$
-\backslash
-mathbb{S}$
+% and interfacial condition
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
 
 
-\end_layout
-
-\end_inset
-
- as the inverse of the 
-\begin_inset Preview
-
-\begin_layout Standard
-
-\strikeout on
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$
+% 
 \backslash
-mathbb{C}$
+begin{equation}
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
 
 
-\end_layout
-
-\end_inset
-
-.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-
-\strikeout on
-Also, we have 
-\begin_inset Preview
-
-\begin_layout Standard
-
-\strikeout on
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$C_{ij}$
+% 	
+\backslash
+tilde{
+\backslash
+usf{A}}_n 
+\backslash
+usf{K}_n^e = 
+\backslash
+tilde{
+\backslash
+usf{B}}_n 
+\backslash
+usf{K}_{n-1}^e + r^2 
+\backslash
+tilde{
+\backslash
+usf{D}}_n.
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
 
 
-\end_layout
-
-\end_inset
-
-.
- Do you think there will be a confusion with regard to 
-\begin_inset Preview
-
-\begin_layout Standard
-
-\strikeout on
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$C_{ijkl}$
+% 
+\backslash
+end{equation}
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
+Finally we obtain
+\begin_inset space ~
 \end_inset
 
-? (I don't think there should be a problem.)
-\strikeout default
- 
-\color blue
-WF: I think this is fine, too.
+
+\begin_inset Formula $\usf{K}_{n}$
+\end_inset
+
+ of the odd and even layers given by 
 \end_layout
 
-\begin_layout Enumerate
-
-\strikeout on
-What is the range of 
+\begin_layout Standard
 \begin_inset Preview
 
 \begin_layout Standard
-
-\strikeout on
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$i$
+
+\backslash
+begin{subequations} 
+\backslash
+begin{align} 	
+\backslash
+usf{K}_n & = (
+\backslash
+usf{r}_{n,n})^{-1} (
+\backslash
+usf{M}_I^{
+\backslash
+nu})^{-1}
+\backslash
+usf{Y}_I, 
+\backslash
+quad 
+\backslash
+text{for odd~$n$}, 
+\backslash
+
+\backslash
+ 	
+\backslash
+usf{K}_n & = (
+\backslash
+usf{r}_{n,n})^{-1} (
+\backslash
+usf{M}_{II}^{
+\backslash
+nu})^{-1}
+\backslash
+usf{Y}_{II}, 
+\backslash
+quad 
+\backslash
+text{for even~$n$}.
+ 
+\backslash
+end{align} 
+\backslash
+label{eq:appenKn_I_II} 
+\backslash
+end{subequations}
 \end_layout
 
 \end_inset
@@ -644,18 +8740,104 @@ $i$
 
 \end_inset
 
- and 
+Substituting the terms in Eqn.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:appenKn_I_II"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we obtain a general expression of
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\usf{K}_{n}$
+\end_inset
+
+ in component form as 
+\begin_inset Formula 
+\begin{equation}
+K_{i,n}=r_{n}^{-m_{i,n}}\left(G_{i,n}^{0}r_{n}^{2}+\sum_{j\in\mathcal{J}}G_{i,n}^{j}r_{n}^{\lambda_{j,n}}\right),\quad\text{for~\ensuremath{i\in\mathcal{J}}},\label{eq:appenKn}
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $G_{i,n}^{j}$
+\end_inset
+
+ are constants given by 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Preview
 
 \begin_layout Standard
-
-\strikeout on
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$j$
+
+\backslash
+begin{subequations} 
+\backslash
+begin{align} 	G^0_{i,n}& := 
+\backslash
+sum_{k 
+\backslash
+in 
+\backslash
+mathcal{J}} 
+\backslash
+pr{
+\backslash
+usf{M}_n^{
+\backslash
+nu}}^{-1}_{ik} 
+\backslash
+frac{L_{k,n}}{2 - 
+\backslash
+lambda_{k,n}}, 
+\backslash
+
+\backslash
+ 	G^j_{i,n}& := 
+\backslash
+pr{
+\backslash
+usf{M}_n^{
+\backslash
+nu}}^{-1}_{ij} c_{j,n}, 
+\backslash
+quad 
+\backslash
+text{for}
+\backslash
+, j
+\backslash
+in 
+\backslash
+mathcal{J} .
+ 
+\backslash
+end{align} 
+\backslash
+label{eq:Gjin} 
+\backslash
+end{subequations}
 \end_layout
 
 \end_inset
@@ -665,229 +8847,44 @@ $j$
 
 \end_inset
 
- in equation 4? (Add it if it is not there).
+
 \end_layout
-
-\begin_layout Enumerate
-
-\strikeout on
-Equation A.1a is unclear.
- ⁃ 
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-
-\strikeout on
-Plus and minus signs in equation A.1a.
-
-\strikeout default
- 
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-
-\strikeout on
-Equation A.1d should come later.
- 
-\end_layout
-
-\begin_layout Enumerate
-
-\strikeout on
-Equation A.1f should also come later
-\end_layout
-
-\begin_layout Enumerate
-
-\strikeout on
-Try to get equation A.2 in a single line.
- HK STOPPED HERE
-\end_layout
-
-\begin_layout Enumerate
-
-\strikeout on
-5.
- S_{ijkl} 6.
- S_{ij}=S_{ijkl} 7.
- 
-\end_layout
-
-\begin_layout Enumerate
-
-\strikeout on
-Use san-serif font for matrices.
- 
-\begin_inset Preview
 
 \begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
 
-\strikeout on
+ 
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "RefsBending"
+options "plainnat"
+
+\end_inset
+
+ 
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$
-\backslash
-usf{C}$
+%% else use the following coding to input the bibitems directly in the
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
 
 
-\end_layout
-
-\end_inset
-
- for 
-\begin_inset Preview
-
-\begin_layout Standard
-
-\strikeout on
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$
-\backslash
-u{C}$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Enumerate
-
-\strikeout on
-Stress components are not defined.
- 9.
- ? 10.
- 11.
- 12.
- 14.
- 16.
- The constant a, b,c should come up after the definition of the constants
- m_i 15.
- 16.
- 17.
- How are e_1, e_2, and e_3 related to e_r, e_
-\backslash
-theta, and e_z.
- 18.
- Perhaps we should have Global cartesian basis vectors.
- ⁃ In that case we should call (e_1, e_2, e_3)->(e_{
-\backslash
-xi}, e_{
-\backslash
-phi}, e_{
-\backslash
-phi}) etc.
-\end_layout
-
-\begin_layout Enumerate
-
-\strikeout on
-From eq.
- 4, 
-\backslash
-beta_ij are all functions of C_ij.
- m_i are all functions of 
-\backslash
-beta_ij g_i are all function of 
-\backslash
-beta_ij Q_i are all functions of C_ij
-\backslash
-
-\backslash
- Q_5 and W_5 should be define separately.
- 
-\end_layout
-
-\begin_layout Enumerate
-
-\strikeout on
-where Qi and Wi (i =1 to 5) are material constants
-\end_layout
-
-\begin_layout Enumerate
-
-\strikeout on
-There are nine elastic constants in equation one.
- Is this the model for an auto profit material 
-\strikeout default
-\color blue
-WF: Yes, this is the model for orthotropic elastic material, which has 9
- independent elastic constants.
-\end_layout
-
-\begin_layout Enumerate
-
-\strikeout on
-Solved from Eqn.
- 8 should come later
-\end_layout
-
-\begin_layout Enumerate
-1.
- Other thickness patterns might provide even more benefit.
- 2.
- We are assuming that the interfaces in EA are closer to a frictionless
- interfaces.
- This is most likey good approximation, since the collagen is very compliant
- compared to silica.
- However, no one has actiually experimentally characterized the interfaces
- in EA.
- 3.
- We soon be publishing experimental data that will sow that EA too has helical
- symmetry elements.
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-In the homogenization, we observe enhancement in bending stiffness for:
-\end_layout
-
-\begin_layout Plain Layout
-1.
- Orthotropic material (9 independent elastic constants)
-\end_layout
-
-\begin_layout Plain Layout
-2.
- Transversely isotropic material (5 independent elastic constants)
-\end_layout
-
-\begin_layout Plain Layout
-For materials with 3 independent elastic constants (shear modulus not related
- to Young's modulus and Poisson's ratio), we didn't observe enhancement
- in bending stiffness.
-\end_layout
-
-\begin_layout Plain Layout
-For isotropic material, the homogenization formula do not apply.
- 
+%% TeX file.
 \end_layout
 
 \end_inset

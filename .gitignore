@@ -1,4 +1,5 @@
 LyxFiles/*.pdf
+TexFiles/*.pdf
 *.xdv
 *.bcf
 *blx.bib
