@@ -3,7 +3,7 @@
 \begin_document
 \begin_header
 \save_transient_properties true
-\origin /Users/haneeshkesari/Downloads/temp/CurvilinearAnisotropyBeam/
+\origin /Users/haneeshkesari/Downloads/temp/OrthotropicBeamBending/LyxFiles/
 \textclass elsarticle
 \begin_preamble
 \usepackage{natbib}
@@ -537,7 +537,7 @@ status open
 
 \begin_layout Plain Layout
 
-%% keywords here, in the form: keyword 
+%% keywords here,   in the form: keyword 
 \backslash
 sep keyword
 \end_layout
