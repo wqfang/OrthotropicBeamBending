@@ -324,7 +324,7 @@ Need to get the Lyx file to compile.
 
 \begin_layout Enumerate
 Bio-composites.
- 
+
 \end_layout
 
 \begin_deeper
@@ -342,7 +342,7 @@ Curved.->why? Nat Com.
  Curved !Toughness.
  Then ? Stiffness.
  Why stiffness is important.
- 
+
 \end_layout
 
 \end_deeper
@@ -354,7 +354,7 @@ Key terms
 \begin_deeper
 \begin_layout Enumerate
 Osteons, Spicules, wood cells, arteries: Biological {{slender | hight aspect
- ratio } structures | cables | colums | fibers} 
+ ratio } structures | cables | colums | fibers}
 \end_layout
 
 \begin_deeper
@@ -364,11 +364,11 @@ cables: spicules, and arteries
 
 \begin_layout Enumerate
 columns: woods cells , osteons, narwhall tusk, tree trunk.
- 
+
 \end_layout
 
 \begin_layout Enumerate
-beam: 
+beam:
 \begin_inset Preview
 
 \begin_layout Standard
@@ -390,7 +390,7 @@ approx$
 \end_inset
 
  Tree trunks, spicules.
- 
+
 \end_layout
 
 \end_deeper
@@ -405,7 +405,7 @@ ar as in wood cells walls.
  The types of anisotropy that is found is quite distinct, at leasty in the
  case where the tubes are circvulare the anisotropic can called cuvilinear
  anisotropyc.
- 
+
 \end_layout
 
 \end_deeper
@@ -453,7 +453,7 @@ status open
 
 \family sans
 A number of biogenic structures can be described as co-axial assemblies
- of cylindrical layers, where the layers are composed of 
+ of cylindrical layers, where the layers are composed of
 \color red
 cylindrically orthotropic materials
 \color inherit
@@ -463,7 +463,7 @@ cylindrically orthotropic materials
 \end_inset
 
 .
- The paper presents analytical expressions for the 
+ The paper presents analytical expressions for the
 \uwave on
 asymptotic bending stiffness
 \uwave default
@@ -479,7 +479,7 @@ HK to WF: what does asymptotic bending stiffness mean? The asymptotic value
 
 \end_inset
 
- of such 
+ of such
 \color teal
 structures
 \begin_inset Note Comment
@@ -491,7 +491,7 @@ What sttructure are we talking abiout here? We are taking about a composite
  The composite cylinder can be described a tight fitting co-axial assembly
  of cylindrical tubes; where each of the tubes is composed of a cylindrically
  orthotropic material.
- 
+
 \end_layout
 
 \end_inset
@@ -500,7 +500,7 @@ What sttructure are we talking abiout here? We are taking about a composite
 \color inherit
  by performing asymptotic analysis of the bending stiffness formula obtained
  by Jolicoeur and Cardou [Jolicoeur, C., Cardou, A.
- (1994): 
+ (1994):
 \shape italic
 J.
  Eng.
@@ -508,14 +508,14 @@ J.
 
 \shape default
  120, 25562574].
- 
+
 \begin_inset Note Comment
 status open
 
 \begin_layout Plain Layout
 One potential advantage of this method ius that we get very good approximation
  sfor the stiffness of a finite number of cylinders.
- 
+
 \end_layout
 
 \end_inset
@@ -537,7 +537,7 @@ status open
 
 \begin_layout Plain Layout
 
-%% keywords here, in the form: keyword 
+%% keywords here,  in the form: keyword
 \backslash
 sep keyword
 \end_layout
@@ -552,7 +552,7 @@ sep keyword
 \end_layout
 
 \begin_layout Keywords
-Multilayered composite structure 
+Multilayered composite structure
 \begin_inset ERT
 status open
 
@@ -565,7 +565,7 @@ sep
 
 \end_inset
 
- Cylindrical orthotropy 
+ Cylindrical orthotropy
 \begin_inset ERT
 status open
 
@@ -578,7 +578,7 @@ sep
 
 \end_inset
 
- Effective bending stiffness 
+ Effective bending stiffness
 \begin_inset ERT
 status open
 
@@ -654,19 +654,19 @@ literal "false"
 status collapsed
 
 \begin_layout Plain Layout
-maybe say 
+maybe say
 \shape italic
-layers 
+layers
 \shape default
 instead of
 \shape italic
- platelets? 
+ platelets?
 \shape default
 However, I don't know whether it would be technically correct to say that.
  So, check that it would be technically correct to describe the various
  biomaterials as being composed of mineral layers before changing platelets
  to layers.
- 
+
 \end_layout
 
 \end_inset
@@ -727,7 +727,7 @@ literal "false"
  with almost no loss of stiffness.
  For example,
 \color teal
- 
+
 \color inherit
 nacre can achieve relatively high fracture toughness (
 \begin_inset Preview
@@ -772,15 +772,15 @@ literal "false"
 \end_inset
 
 .
- The bending failure strain of the spicules from the sponge 
+ The bending failure strain of the spicules from the sponge
 \shape italic
 Euplectella aspergillum
 \shape default
- is 140% higher than that of 
+ is 140% higher than that of
 \shape italic
 Tethya aurantia
 \shape default
- spicules, which have a similar chemical composition to 
+ spicules, which have a similar chemical composition to
 \shape italic
 E.
  aspergillum
@@ -802,7 +802,7 @@ HK to WF: need to revise English.
 \end_layout
 
 \begin_layout Plain Layout
-Hk to WF: Check with SK, 
+Hk to WF: Check with SK,
 \begin_inset CommandInset citation
 LatexCommand citet
 key "walter2007mechanisms"
@@ -821,7 +821,7 @@ literal "false"
  With such remarkable mechanical property combinations, structural biomaterials
  can serve as fascinating model material systems for the discovery of new
  mechanics of materials principles.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -929,7 +929,7 @@ literal "false"
 \begin_inset Formula $\clubsuit$
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -938,7 +938,7 @@ However, there exist a large number of biomaterials in which the layers
 \begin_inset Formula $\clubsuit$
 \end_inset
 
- 
+
 \color teal
 Representative examples include the Ponderosa pine
 \begin_inset space ~
@@ -972,7 +972,7 @@ status collapsed
 
 \color teal
 hk to WF: We can also refer to our own papers here.
- 
+
 \end_layout
 
 \end_inset
@@ -1022,7 +1022,7 @@ HK to WF: The previous colored sentence can be deleted.
  Or may be the introduction could be in the form of how many biological
  materials are found in the structures that function as beams (support bending
  momemnts) and columns (support axial loads).
- 
+
 \end_layout
 
 \end_inset
@@ -1041,7 +1041,7 @@ HK to WF: I think cell walls (in wood) and osteons support compressive loads,
  It is also possible that there might be some axial loads on areteries.
  However, it is unclear to me whether those loads or tensile or compressive.
  If I have to guess I would guess that those loads are compressive.
- 
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -1062,7 +1062,7 @@ status open
 \color teal
 The point is that these structures all might look similar but support different
  types of loads.
- 
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -1083,7 +1083,7 @@ status open
 \color teal
 Even so, I think the bending stiffness might be important in many of these
  cases.
- 
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -1104,7 +1104,7 @@ status open
 \color teal
 In the spicule for a given curvature a higher bending stiffness would allow
  greater load transmission.
- 
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -1127,7 +1127,7 @@ In the osteons and wood cell walls a higher bending stiffness might provide
  better protection against buckling instability.
  This is the same in the case of tree trunks as well.
  Higher bending stiffness and the better the buckling strength.
- 
+
 \begin_inset Preview
 
 \begin_layout Standard
@@ -1259,7 +1259,7 @@ noprefix "false"
  effective mechanical properties and the small-scale architectures for structura
 l biomaterials consisting of cylindrical layers with helical symmetries
  is much elusive.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -1277,12 +1277,12 @@ status open
 
 \end_inset
 
- 
+
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
 Representative examples of structures displaying a helical symmetry.
- 
+
 \begin_inset space ~
 \end_inset
 
@@ -1302,7 +1302,7 @@ literal "false"
 
 \end_inset
 
-), 
+),
 \begin_inset space ~
 \end_inset
 
@@ -1322,7 +1322,7 @@ literal "false"
 
 \end_inset
 
-), 
+),
 \begin_inset space ~
 \end_inset
 
@@ -1330,7 +1330,7 @@ literal "false"
 \begin_inset Formula $\subf{C}$
 \end_inset
 
- the tusk of the narwhal (image courtesy Glenn Williams), 
+ the tusk of the narwhal (image courtesy Glenn Williams),
 \begin_inset space ~
 \end_inset
 
@@ -1350,7 +1350,7 @@ literal "false"
 
 \end_inset
 
-), 
+),
 \begin_inset space ~
 \end_inset
 
@@ -1370,7 +1370,7 @@ literal "false"
 
 \end_inset
 
-), 
+),
 \begin_inset space ~
 \end_inset
 
@@ -1417,7 +1417,7 @@ name "fig:Laminatedbiomaterials"
 
 \end_inset
 
- 
+
 \end_layout
 
 \end_inset
@@ -1485,7 +1485,7 @@ literal "false"
  with various lamination schemes.
  One interesting observation is that all stiffness constants seem to become
  stable when three or four layers are considered in the composite beams.
- 
+
 \begin_inset ERT
 status open
 
@@ -1854,7 +1854,7 @@ We take
 \begin_inset Formula $(\physe_{1},\physe_{2},\physe_{3})$
 \end_inset
 
- is given by 
+ is given by
 \end_layout
 
 \begin_layout Standard
@@ -1868,27 +1868,27 @@ status open
 
 
 \backslash
-begin{subequations} 
+begin{subequations}
 \backslash
-begin{align} 
+begin{align}
 \backslash
-physe_{r} & = 
+physe_{r} & =
 \backslash
 cos(
 \backslash
-theta) 
+theta)
 \backslash
-physe_1 + 
+physe_1 +
 \backslash
 sin(
 \backslash
-theta) 
+theta)
 \backslash
-physe_2 , 
+physe_2 ,
 \backslash
 
 \backslash
- 
+
 \backslash
 physe_{
 \backslash
@@ -1896,26 +1896,26 @@ theta} & = -
 \backslash
 sin(
 \backslash
-theta) 
+theta)
 \backslash
-physe_1 + 
+physe_1 +
 \backslash
 cos(
 \backslash
-theta) 
+theta)
 \backslash
-physe_2 , 
+physe_2 ,
 \backslash
 
 \backslash
- 
+
 \backslash
-physe_{z} & =  
+physe_{z} & =
 \backslash
 physe_3.
- 
+
 \backslash
-end{align} 
+end{align}
 \backslash
 end{subequations}
 \end_layout
@@ -2054,7 +2054,7 @@ For an individual layer of material, we construct a local cylindrical coordinate
 \begin_inset Formula $(\physe'_{r},\physe'_{\theta},\physe'_{z})$
 \end_inset
 
-, where 
+, where
 \end_layout
 
 \begin_layout Standard
@@ -2068,58 +2068,58 @@ status open
 
 
 \backslash
-begin{subequations} 
+begin{subequations}
 \backslash
-begin{align} 
+begin{align}
 \backslash
-physe'_{r} & =  
+physe'_{r} & =
 \backslash
 physe_r ,
 \backslash
 
 \backslash
- 
+
 \backslash
 physe'_{
 \backslash
-theta} & = 
+theta} & =
 \backslash
 cos(
 \backslash
-varphi) 
+varphi)
 \backslash
 physe_{
 \backslash
-theta} - 
+theta} -
 \backslash
 sin(
 \backslash
-varphi) 
+varphi)
 \backslash
-physe_z , 
+physe_z ,
 \backslash
 
 \backslash
- 
+
 \backslash
-physe'_{z} & = 
+physe'_{z} & =
 \backslash
 sin(
 \backslash
-varphi) 
+varphi)
 \backslash
 physe_{
 \backslash
-theta} + 
+theta} +
 \backslash
 cos(
 \backslash
-varphi) 
+varphi)
 \backslash
 physe_z .
- 
+
 \backslash
-end{align} 
+end{align}
 \backslash
 end{subequations}
 \end_layout
@@ -2293,7 +2293,7 @@ status open
 
 \end_inset
 
- 
+
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -2317,7 +2317,7 @@ name "fig:schematic"
 
 \end_inset
 
- 
+
 \end_layout
 
 \end_inset
@@ -2341,8 +2341,8 @@ name "sec:MatrixTrans"
 
 \end_inset
 
- The generalized Hooke's law is 
-\begin_inset Formula 
+ The generalized Hooke's law is
+\begin_inset Formula
 \begin{equation}
 \u{\sigma}=\mathbb{C}\,\u{\epsilon},\label{eq:GeneralizedHooke}
 \end{equation}
@@ -2389,8 +2389,8 @@ noprefix "false"
 
 \end_inset
 
- can be inverted as 
-\begin_inset Formula 
+ can be inverted as
+\begin_inset Formula
 \begin{equation}
 \u{\epsilon}=\mathbb{S}\,\u{\sigma},\label{eq:GeneralizedHookeInverse}
 \end{equation}
@@ -2423,8 +2423,8 @@ noprefix "false"
 
 \end_inset
 
- with index notation as 
-\begin_inset Formula 
+ with index notation as
+\begin_inset Formula
 \begin{equation}
 \epsilon'_{ij}=S'_{ijkl}\sigma'_{kl},\label{eq:GeneralizedHookeComponents}
 \end{equation}
@@ -2538,8 +2538,8 @@ noprefix "false"
 \begin_inset Formula $\usf{S}$
 \end_inset
 
- are defined as 
-\begin_inset Formula 
+ are defined as
+\begin_inset Formula
 \begin{align*}
  & S_{11}=S'_{rrrr},\quad S_{12}=S'_{rr\theta\theta},\quad S_{13}=S'_{rrzz},\\
  & S_{22}=S'_{\theta\theta\theta\theta},\quad S_{23}=S'_{\theta\theta zz},\quad S_{33}=S'_{zzzz},\\
@@ -2566,8 +2566,8 @@ noprefix "false"
 
 \end_inset
 
- as 
-\begin_inset Formula 
+ as
+\begin_inset Formula
 \begin{equation}
 \left[\begin{array}{c}
 \epsilon'_{rr}\\
@@ -2644,8 +2644,8 @@ noprefix "false"
 
 .
  Thus, through coordinate transformation, the compliance form of the generalized
- Hooke's law in the global cylindrical coordinate system becomes 
-\begin_inset Formula 
+ Hooke's law in the global cylindrical coordinate system becomes
+\begin_inset Formula
 \begin{equation}
 \left[\begin{array}{c}
 \epsilon_{rr}\\
@@ -2714,7 +2714,7 @@ where the transformed elastic compliance matrix
 \begin_inset Formula $\usf{S}$
 \end_inset
 
- is given by 
+ is given by
 \begin_inset Preview
 
 \begin_layout Standard
@@ -2725,11 +2725,11 @@ status open
 
 
 \backslash
-begin{subequations} 
+begin{subequations}
 \backslash
-begin{equation} 
+begin{equation}
 \backslash
-usf{C}= 
+usf{C}=
 \backslash
 usf{R}^{-
 \backslash
@@ -2737,47 +2737,47 @@ text{T}}
 \backslash
 usf{S}
 \backslash
-usf{R}^{-1}, 
+usf{R}^{-1},
 \backslash
-end{equation} where 
+end{equation} where
 \backslash
-begin{equation} 	
+begin{equation}
 \backslash
-usf{R} 	:= 	
+usf{R} 	:=
 \backslash
-left[ 	
+left[
 \backslash
-begin{array}{cccccc} 	 1 & 0 & 0 & 0 & 0 & 0 
-\backslash
-
-\backslash
- 	 0 & c^2 & s^2 & 2sc & 0 & 0 
+begin{array}{cccccc} 	 1 & 0 & 0 & 0 & 0 & 0
 \backslash
 
 \backslash
- 	 0 & s^2 & c^2 & -2sc & 0 & 0 
+ 	 0 & c^2 & s^2 & 2sc & 0 & 0
 \backslash
 
 \backslash
- 	 0 & -sc & sc & c^2 - s^2 & 0 & 0 
+ 	 0 & s^2 & c^2 & -2sc & 0 & 0
 \backslash
 
 \backslash
- 	 0 & 0 & 0 & 0 & c & -s 
+ 	 0 & -sc & sc & c^2 - s^2 & 0 & 0
 \backslash
 
 \backslash
- 	 0 & 0 & 0 & 0 & s & c 
+ 	 0 & 0 & 0 & 0 & c & -s
 \backslash
 
 \backslash
- 	
+ 	 0 & 0 & 0 & 0 & s & c
 \backslash
-end{array} 	
+
 \backslash
-right], 
+
 \backslash
-end{equation} 
+end{array}
+\backslash
+right],
+\backslash
+end{equation}
 \backslash
 end{subequations}
 \end_layout
@@ -2864,8 +2864,8 @@ It should be noted that the thirteen non-zero constants
 \begin_inset Formula $C_{ij}$
 \end_inset
 
- as 
-\begin_inset Formula 
+ as
+\begin_inset Formula
 \begin{equation}
 \beta_{ij}=C_{ij}-\frac{C_{i3}C_{3j}}{C_{33}},
 \end{equation}
@@ -2912,8 +2912,8 @@ The bending stiffness of the
 \begin_inset Formula $N$
 \end_inset
 
--layer cylindrical composite is obtained by Jolicoeur and Cardou as 
-\begin_inset Formula 
+-layer cylindrical composite is obtained by Jolicoeur and Cardou as
+\begin_inset Formula
 \begin{equation}
 \begin{aligned}EI= & \sum_{n=1}^{N}\left[\sum_{i\in\mathcal{J}}\alpha_{i,n}K_{i,n}(r_{n-1}^{m_{i,n}+2}-r_{n}^{m_{i,n}+2})+\gamma_{n}(r_{n-1}^{4}-r_{n}^{4})\right],\end{aligned}
 \label{eq:EI}
@@ -2935,36 +2935,36 @@ status open
 
 
 \backslash
-begin{subequations} 	
+begin{subequations}
 \backslash
-begin{align} 	
+begin{align}
 \backslash
-alpha_{i,n} & := 
+alpha_{i,n} & :=
 \backslash
 frac{
 \backslash
-pi}{C_{33,n}} 
+pi}{C_{33,n}}
 \backslash
 frac{  C_{13,n} + C_{23,n}(m_{i,n} + 1) - C_{34,n} g_{i,n} m_{i,n} }{m_{i,n}+2},
- 
+
 \backslash
 
 \backslash
- 	
+
 \backslash
-gamma_n & := 
+gamma_n & :=
 \backslash
 frac{
 \backslash
-pi}{C_{33,n}} 
+pi}{C_{33,n}}
 \backslash
-frac{ 
+frac{
 \backslash
 mu_{1,n} (C_{13,n} + 3C_{23,n}) - 2
 \backslash
-mu_{2,n} C_{34,n} - 1  }{4}, 	
+mu_{2,n} C_{34,n} - 1  }{4},
 \backslash
-end{align} 
+end{align}
 \backslash
 end{subequations}
 \end_layout
@@ -3107,7 +3107,7 @@ The traction free boundaries at innermost radius
 \begin_inset Formula $r_{N}$
 \end_inset
 
- require 
+ require
 \end_layout
 
 \begin_layout Standard
@@ -3121,23 +3121,23 @@ status open
 
 
 \backslash
-begin{subequations} 	
+begin{subequations}
 \backslash
-begin{align} 	
+begin{align}
 \backslash
-sum_{i 
+sum_{i
 \backslash
-in 
+in
 \backslash
 mathcal{J}} K_{i,1} r_0^{m_{i,1}-2} & = -
 \backslash
-mu_{1,1}, 
+mu_{1,1},
 \backslash
-quad 	
+quad
 \backslash
-sum_{i 
+sum_{i
 \backslash
-in 
+in
 \backslash
 mathcal{J}} K_{i,1} g_{i,1} r_0^{m_{i,1}-2} = -
 \backslash
@@ -3145,30 +3145,30 @@ mu_{2,1},
 \backslash
 
 \backslash
- 	
+
 \backslash
-sum_{i 
+sum_{i
 \backslash
-in 
+in
 \backslash
 mathcal{J}} K_{i,N} r_N^{m_{i,N}-2} & = -
 \backslash
-mu_{1,N}, 
+mu_{1,N},
 \backslash
-quad 	
+quad
 \backslash
-sum_{i 
+sum_{i
 \backslash
-in 
+in
 \backslash
 mathcal{J}} K_{i,N} g_{i,N} r_N^{m_{i,N}-2} = -
 \backslash
 mu_{2,N}.
- 	
+
 \backslash
-end{align} 	
+end{align}
 \backslash
-label{eq:boundary} 
+label{eq:boundary}
 \backslash
 end{subequations}
 \end_layout
@@ -3229,7 +3229,7 @@ In the case of no friction interface,
 \begin_inset Formula $K_{i,n}$
 \end_inset
 
- satisfy following equations 
+ satisfy following equations
 \begin_inset Preview
 
 \begin_layout Standard
@@ -3240,53 +3240,53 @@ status open
 
 
 \backslash
-begin{subequations} 	
+begin{subequations}
 \backslash
-begin{align} 	
+begin{align}
 \backslash
-sum_{i 
+sum_{i
 \backslash
-in 
+in
 \backslash
 mathcal{J}} K_{i,n} r_{n}^{m_{i,n}-2} & = -
 \backslash
-mu_{1,n}, 
+mu_{1,n},
 \backslash
-quad 	
+quad
 \backslash
-sum_{i 
+sum_{i
 \backslash
-in 
+in
 \backslash
 mathcal{J}} K_{i,n} g_{i,n} r_{n}^{m_{i,n}-2} = -
 \backslash
-mu_{2,n}, 
+mu_{2,n},
 \backslash
 
 \backslash
- 	
+
 \backslash
-sum_{i 
+sum_{i
 \backslash
-in 
+in
 \backslash
 mathcal{J}} K_{i,n} r_{n-1}^{m_{i,n}-2} & = -
 \backslash
-mu_{1,n}, 
+mu_{1,n},
 \backslash
-quad 	
+quad
 \backslash
-sum_{i 
+sum_{i
 \backslash
-in 
+in
 \backslash
 mathcal{J}} K_{i,n} g_{i,n} r_{n-1}^{m_{i,n}-2} = -
 \backslash
-mu_{2,n}, 	
+mu_{2,n},
 \backslash
-end{align} 	
+end{align}
 \backslash
-label{eq:nofriction_interface} 
+label{eq:nofriction_interface}
 \backslash
 end{subequations}
 \end_layout
@@ -3363,7 +3363,7 @@ y conditions of stresses
 \begin_inset Formula $u_{z}$
 \end_inset
 
- at the interface yields 
+ at the interface yields
 \end_layout
 
 \begin_layout Standard
@@ -3377,76 +3377,76 @@ status open
 
 
 \backslash
-begin{subequations} 	
+begin{subequations}
 \backslash
-begin{align} 	& 
+begin{align} 	&
 \backslash
-sum_{i 
+sum_{i
 \backslash
-in 
+in
 \backslash
-mathcal{J}} 
+mathcal{J}}
 \backslash
-left( K_{i,n} r^{m_{i,n}-2} - K_{i,n+1} r^{m_{i,n+1}-2} 
+left( K_{i,n} r^{m_{i,n}-2} - K_{i,n+1} r^{m_{i,n+1}-2}
 \backslash
-right) = 
+right) =
 \backslash
-mu_{1,n+1} - 
+mu_{1,n+1} -
 \backslash
-mu_{1,n}, 
+mu_{1,n},
 \backslash
 
 \backslash
- 	& 
+ 	&
 \backslash
-sum_{i 
+sum_{i
 \backslash
-in 
+in
 \backslash
-mathcal{J}} 
+mathcal{J}}
 \backslash
 left( K_{i,n} g_{i,n} r^{m_{i,n}-2} - K_{i,n+1} g_{i,n+1} r^{m_{i,n+1}-2}
- 
+
 \backslash
-right) = 
+right) =
 \backslash
-mu_{2,n+1} - 
+mu_{2,n+1} -
 \backslash
-mu_{2,n}, 
+mu_{2,n},
 \backslash
 
 \backslash
- 	& 
+ 	&
 \backslash
-sum_{i 
+sum_{i
 \backslash
-in 
+in
 \backslash
-mathcal{J}} 
+mathcal{J}}
 \backslash
 left( K_{i,n} Q_{i,n} r^{m_{i,n}-2} - K_{i,n+1} Q_{i,n+1} r^{m_{i,n+1}-2}
- 
+
 \backslash
-right) = Q_{5,n+1} - Q_{5,n}, 
+right) = Q_{5,n+1} - Q_{5,n},
 \backslash
 
 \backslash
- 	& 
+ 	&
 \backslash
-sum_{i 
+sum_{i
 \backslash
-in 
+in
 \backslash
-mathcal{J}} 
+mathcal{J}}
 \backslash
 left( K_{i,n} W_{i,n} r^{m_{i,n}-2} - K_{i,n+1} W_{i,n+1} r^{m_{i,n+1}-2}
- 
+
 \backslash
-right) = W_{5,n+1} - W_{5,n}, 	
+right) = W_{5,n+1} - W_{5,n},
 \backslash
-end{align} 	
+end{align}
 \backslash
-label{eq:noslip_interface} 
+label{eq:noslip_interface}
 \backslash
 end{subequations}
 \end_layout
@@ -3529,7 +3529,7 @@ name "sec:limit_analysis"
 
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -3738,8 +3738,8 @@ noprefix "false"
 
 \end_inset
 
- as 
-\begin_inset Formula 
+ as
+\begin_inset Formula
 \begin{equation}
 \begin{bmatrix}r_{n}^{m_{1}-2} & r_{n}^{m_{2}-2} & r_{n}^{m_{3}-2} & r_{n}^{m_{4}-2}\\
 g_{1}r_{n}^{m_{1}-2} & g_{2}r_{n}^{m_{2}-2} & g_{3}r_{n}^{m_{3}-2} & g_{4}r_{n}^{m_{4}-2}\\
@@ -3801,8 +3801,8 @@ for
 \begin_inset Formula $r_{n}$
 \end_inset
 
-, we have 
-\begin_inset Formula 
+, we have
+\begin_inset Formula
 \begin{equation}
 K_{i,n}=P_{i}\cdot r_{n}^{-m_{i}+2}+O(\Delta r),\quad\text{for}\,i\in\mathcal{J},\label{eq:single_mat_Ks}
 \end{equation}
@@ -3860,8 +3860,8 @@ noprefix "false"
 
 \end_inset
 
-, we have 
-\begin_inset Formula 
+, we have
+\begin_inset Formula
 \begin{equation}
 \begin{aligned}EI & =\sum_{n=1}^{N}\left[\sum_{i\in\mathcal{J}}\alpha_{i}\left(P_{i}r_{n}^{-m_{i}+2}+O(\Delta r)\right)(r_{n-1}^{m_{i,n}+2}-r_{n}^{m_{i}+2})\right]+\gamma(r_{0}^{4}-r_{N}^{4})\\
  & \begin{split}=\sum_{n=1}^{N}\left[\sum_{i\in\mathcal{J}}\alpha_{i}\left(P_{i}r_{n}^{-m_{i}+2}+O(\Delta r)\right)(-r_{n}^{m_{i}+1}(m_{i}+2)\Delta r+O(\Delta r^{2}))\right]\\
@@ -3898,8 +3898,8 @@ noprefix "false"
 
 \end_inset
 
- into integral to derive the asymptotic bending stiffness as 
-\begin_inset Formula 
+ into integral to derive the asymptotic bending stiffness as
+\begin_inset Formula
 \begin{equation}
 \begin{aligned}(EI)_{\infty} & =-\lim\limits _{N\to\infty}\sum_{n=1}^{N}\left[\sum_{i\in\mathcal{J}}\alpha_{i}P_{i}(m_{i}+2)r_{n}^{3}\Delta r\right]+\gamma(r_{0}^{4}-r_{N}^{4})+O(\Delta r^{2})\\
  & =-\sum_{i\in\mathcal{J}}\left(\int_{r_{0}}^{r_{N}}\alpha_{i}P_{i}(m_{i}+2)r^{3}\,dr\right)+\gamma(r_{0}^{4}-r_{N}^{4})\\
@@ -3921,7 +3921,7 @@ name "sec:2mat_no_friction"
 
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -4006,8 +4006,8 @@ noprefix "false"
 \begin_inset Formula $K_{i,n}$
 \end_inset
 
- can be solved from the following equations 
-\begin_inset Formula 
+ can be solved from the following equations
+\begin_inset Formula
 \begin{equation}
 \begin{bmatrix}r_{n}^{m_{1,n}-2} & r_{n}^{m_{2,n}-2} & r_{n}^{m_{3,n}-2} & r_{n}^{m_{4,n}-2}\\
 g_{1,n}r_{n}^{m_{1,n}-2} & g_{2,n}r_{n}^{m_{2,n}-2} & g_{3,n}r_{n}^{m_{3,n}-2} & g_{4,n}r_{n}^{m_{4,n}-2}\\
@@ -4062,8 +4062,8 @@ for
 \begin_inset Formula $r_{n}$
 \end_inset
 
- gives 
-\begin_inset Formula 
+ gives
+\begin_inset Formula
 \begin{equation}
 K_{i,n}=P_{i,n}\cdot r_{n}^{-m_{i,n}+2}+O(\Delta r),\quad\text{for}\,i\in\mathcal{J},\label{eq:two_mat_no_friction_Ks}
 \end{equation}
@@ -4129,8 +4129,8 @@ noprefix "false"
 
 \end_inset
 
-, we have 
-\begin_inset Formula 
+, we have
+\begin_inset Formula
 \begin{equation}
 \begin{aligned}\begin{split}EI & =\sum_{n=1}^{N}\bigg[\sum_{i\in\mathcal{J}}\alpha_{i,n}\left(P_{i,n}r_{n}^{-m_{i,n}+2}+O(\Delta r)\right)\cdot\\
  & \qquad{}(-r_{n}^{m_{i,n}+1}(m_{i,n}+2)\Delta r+O(\Delta r^{2}))+\gamma_{n}(-4r_{n}^{3}\Delta r+O(\Delta r^{2}))\bigg]\\
@@ -4222,8 +4222,8 @@ noprefix "false"
 
 \end_inset
 
- as 
-\begin_inset Formula 
+ as
+\begin_inset Formula
 \begin{equation}
 \begin{aligned}EI & =-\sum_{\text{odd layers}}\bigg[\sum_{i\in\mathcal{J}}\alpha_{i,I}P_{i,I}(m_{i,I}+2)+4\gamma_{I}\bigg]r_{n}^{3}\cdot\Delta r\\
  & \quad{}-\sum_{\text{even layers}}\bigg[\sum_{i\in\mathcal{J}}\alpha_{i,II}P_{i,II}(m_{i,II}+2)+4\gamma_{II}\bigg]r_{n}^{3}\cdot\Delta r+O(\Delta r^{2})\\
@@ -4257,8 +4257,8 @@ noprefix "false"
 
 \end_inset
 
- becomes 
-\begin_inset Formula 
+ becomes
+\begin_inset Formula
 \begin{equation}
 \begin{aligned}(EI)_{\infty} & =\frac{1}{2}\Biggl\{-\Biggl[\sum_{i\in\mathcal{J}}\alpha_{i,I}P_{i,I}(m_{i,I}+2)+4\gamma_{I}\Biggr]\int_{r_{0}}^{r_{N}}r^{3}\,dr\\
  & \quad\qquad{}-\Biggl[\sum_{i\in\mathcal{J}}\alpha_{i,II}P_{i,II}(m_{i,II}+2)+4\gamma_{II}\Biggr]\int_{r_{0}}^{r_{N}}r^{3}\,dr\Biggl\}\\
@@ -4269,8 +4269,8 @@ noprefix "false"
 
 \end_inset
 
-where 
-\begin_inset Formula 
+where
+\begin_inset Formula
 \begin{equation}
 (EI)_{j,\infty}=-\frac{r_{N}^{4}-r_{0}^{4}}{4}\left[\sum_{i\in\mathcal{J}}\alpha_{i,j}P_{i,j}(m_{i,j}+2)+4\gamma_{j}\right],\quad\text{for}\,j=I,II.
 \end{equation}
@@ -4288,7 +4288,7 @@ name "sec:2mat_no_slip"
 
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -4345,7 +4345,7 @@ noprefix "false"
 
 \end_inset
 
-, which can be rewritten as 
+, which can be rewritten as
 \end_layout
 
 \begin_layout Standard
@@ -4359,105 +4359,105 @@ status open
 
 
 \backslash
-begin{equation} 
+begin{equation}
 \backslash
-begin{aligned} & 
+begin{aligned} &
 \backslash
 begin{bmatrix} 	r_{n-1}^{m_{1,n-1}} & r_{n-1}^{m_{2,n-1}} & r_{n-1}^{m_{3,n-1}}
- & r_{n-1}^{m_{4,n-1}} 
+ & r_{n-1}^{m_{4,n-1}}
 \backslash
 
 \backslash
  	g_{1,n-1} r_{n-1}^{m_{1,n-1}} & g_{2,n-1} r_{n-1}^{m_{2,n-1}} & g_{3,n-1}
- r_{n-1}^{m_{3,n-1}} & g_{4,n-1} r_{n-1}^{m_{4,n-1}} 
+ r_{n-1}^{m_{3,n-1}} & g_{4,n-1} r_{n-1}^{m_{4,n-1}}
 \backslash
 
 \backslash
  	Q_{1,n-1} r_{n-1}^{m_{1,n-1}} & Q_{2,n-1} r_{n-1}^{m_{2,n-1}} & Q_{3,n-1}
- r_{n-1}^{m_{3,n-1}} & Q_{4,n-1} r_{n-1}^{m_{4,n-1}} 
+ r_{n-1}^{m_{3,n-1}} & Q_{4,n-1} r_{n-1}^{m_{4,n-1}}
 \backslash
 
 \backslash
  	W_{1,n-1} r_{n-1}^{m_{1,n-1}} & W_{2,n-1} r_{n-1}^{m_{2,n-1}} & W_{3,n-1}
- r_{n-1}^{m_{3,n-1}} & W_{4,n-1} r_{n-1}^{m_{4,n-1}} 
+ r_{n-1}^{m_{3,n-1}} & W_{4,n-1} r_{n-1}^{m_{4,n-1}}
 \backslash
-end{bmatrix} 
+end{bmatrix}
 \backslash
-begin{bmatrix} 	K_{1,n-1} 
-\backslash
-
-\backslash
- K_{2,n-1} 
+begin{bmatrix} 	K_{1,n-1}
 \backslash
 
 \backslash
- K_{3,n-1} 
+ K_{2,n-1}
 \backslash
 
 \backslash
- K_{4,n-1} 
+ K_{3,n-1}
+\backslash
+
+\backslash
+ K_{4,n-1}
 \backslash
 end{bmatrix}
 \backslash
 
 \backslash
- & =   
+ & =
 \backslash
 begin{bmatrix} 	r_{n-1}^{m_{1,n}} & r_{n-1}^{m_{2,n}} & r_{n-1}^{m_{3,n}}
- & r_{n-1}^{m_{4,n}} 
+ & r_{n-1}^{m_{4,n}}
 \backslash
 
 \backslash
  	g_{1,n} r_{n-1}^{m_{1,n}} & g_{2,n} r_{n-1}^{m_{2,n}} & g_{3,n} r_{n-1}^{m_{3,
-n}} & g_{4,n} r_{n-1}^{m_{4,n}} 
+n}} & g_{4,n} r_{n-1}^{m_{4,n}}
 \backslash
 
 \backslash
  	Q_{1,n} r_{n-1}^{m_{1,n}} & Q_{2,n} r_{n-1}^{m_{2,n}} & Q_{3,n} r_{n-1}^{m_{3,
-n}} & Q_{4,n} r_{n-1}^{m_{4,n}} 
+n}} & Q_{4,n} r_{n-1}^{m_{4,n}}
 \backslash
 
 \backslash
  	W_{1,n} r_{n-1}^{m_{1,n}} & W_{2,n} r_{n-1}^{m_{2,n}} & W_{3,n} r_{n-1}^{m_{3,
-n}} & W_{4,n} r_{n-1}^{m_{4,n}}   
+n}} & W_{4,n} r_{n-1}^{m_{4,n}}
 \backslash
-end{bmatrix}   
+end{bmatrix}
 \backslash
-begin{bmatrix} 	K_{1,n} 
-\backslash
-
-\backslash
- K_{2,n} 
+begin{bmatrix} 	K_{1,n}
 \backslash
 
 \backslash
- K_{3,n} 
+ K_{2,n}
 \backslash
 
 \backslash
- K_{4,n}   
-\backslash
-end{bmatrix} - 
-\backslash
-begin{bmatrix} 	D_{1,n} 
+ K_{3,n}
 \backslash
 
 \backslash
- D_{2,n} 
+ K_{4,n}
+\backslash
+end{bmatrix} -
+\backslash
+begin{bmatrix} 	D_{1,n}
 \backslash
 
 \backslash
- D_{3,n} 
+ D_{2,n}
 \backslash
 
 \backslash
- D_{4,n} 
+ D_{3,n}
 \backslash
-end{bmatrix}, 
+
 \backslash
-label{eq:eqs of Kin_two_mat_no_slip_original} 
+ D_{4,n}
 \backslash
-end{aligned} 
+end{bmatrix},
+\backslash
+label{eq:eqs of Kin_two_mat_no_slip_original}
+\backslash
+end{aligned}
 \backslash
 end{equation}
 \end_layout
@@ -4477,8 +4477,8 @@ for
 \begin_inset Formula $n=2,3,\dots,N$
 \end_inset
 
-, where 
-\begin_inset Formula 
+, where
+\begin_inset Formula
 \begin{equation}
 \begin{bmatrix}D_{1,n}\\
 D_{2,n}\\
@@ -4511,8 +4511,8 @@ noprefix "false"
 
 \end_inset
 
- as 
-\begin_inset Formula 
+ as
+\begin_inset Formula
 \begin{equation}
 \usf{B}_{n}\usf{K}_{n-1}=\usf{A}_{n}\usf{K}_{n}-\usf{D}_{n},\label{eq:eqs of Kin_two_mat_no_slip_np1}
 \end{equation}
@@ -4656,8 +4656,8 @@ noprefix "false"
 \begin_inset Formula $\usf{K}_{n-2}$
 \end_inset
 
- as 
-\begin_inset Formula 
+ as
+\begin_inset Formula
 \begin{equation}
 \usf{A}_{n}\usf{K}_{n}=\usf{B}_{n}\usf{A}_{n-1}^{-1}\usf{B}_{n-1}\usf{K}_{n-2}+\usf{B}_{n}\usf{A}_{n-1}^{-1}\usf{D}_{n-1}+\usf{D}_{n}.\label{eq:knknm2}
 \end{equation}
@@ -4716,7 +4716,7 @@ noprefix "false"
 
 \end_inset
 
- for details) 
+ for details)
 \end_layout
 
 \begin_layout Standard
@@ -4730,75 +4730,75 @@ status open
 
 
 \backslash
-begin{subequations} 	
+begin{subequations}
 \backslash
-begin{align} 	& 
+begin{align} 	&
 \backslash
-usf{B}_n 
+usf{B}_n
 \backslash
-usf{A}^{-1}_{n-1} 
+usf{A}^{-1}_{n-1}
 \backslash
-usf{B}_{n-1} = 
+usf{B}_{n-1} =
 \backslash
-usf{A}_n + 
+usf{A}_n +
 \backslash
 frac{
 \backslash
-Delta r}{r_{n-1}} 
+Delta r}{r_{n-1}}
 \backslash
-left( 
+left(
 \backslash
-usf{B}_n 
+usf{B}_n
 \backslash
-usf{m}_{n-1} 
+usf{m}_{n-1}
 \backslash
-usf{B}^{-1}_n 
+usf{B}^{-1}_n
 \backslash
-usf{A}_n - 
+usf{A}_n -
 \backslash
-usf{A}_n 
+usf{A}_n
 \backslash
-usf{m}_n 
+usf{m}_n
 \backslash
 right)  + O(
 \backslash
-Delta r^2), 
+Delta r^2),
 \backslash
 
 \backslash
- 	& 
+ 	&
 \backslash
-usf{B}_n 
+usf{B}_n
 \backslash
-usf{A}^{-1}_{n-1} 
+usf{A}^{-1}_{n-1}
 \backslash
-usf{D}_{n-1} + 
+usf{D}_{n-1} +
 \backslash
-usf{D}_n = 
+usf{D}_n =
 \backslash
 frac{
 \backslash
-Delta r}{r_{n-1}} 
+Delta r}{r_{n-1}}
 \backslash
 left( 2
 \backslash
-usf{D}_n + 
+usf{D}_n +
 \backslash
-usf{B}_n 
+usf{B}_n
 \backslash
-usf{m}_{n-1} 
+usf{m}_{n-1}
 \backslash
-usf{B}^{-1}_n 
+usf{B}^{-1}_n
 \backslash
-usf{D}_{n-1} 
+usf{D}_{n-1}
 \backslash
 right) + O(
 \backslash
-Delta r^2), 	
+Delta r^2),
 \backslash
-end{align} 	
+end{align}
 \backslash
-label{eq:bnanm1} 
+label{eq:bnanm1}
 \backslash
 end{subequations}
 \end_layout
@@ -4838,8 +4838,8 @@ noprefix "false"
 
 \end_inset
 
-, we obtain 
-\begin_inset Formula 
+, we obtain
+\begin_inset Formula
 \begin{equation}
 \begin{aligned}\begin{split}\usf{A}_{n}\usf{K}_{n} & =\left[\usf{A}_{n}+\frac{\Delta r}{r_{n-1}}\left(\usf{B}_{n}\usf{m}_{n-1}\usf{B}_{n}^{-1}\usf{A}_{n}-\usf{A}_{n}\usf{m}_{n}\right)+O(\Delta r^{2})\right]\usf{K}_{n-2}\\
  & \qquad+\frac{\Delta r}{r_{n-1}}\left(2\usf{D}_{n}+\usf{B}_{n}\usf{m}_{n-1}\usf{B}_{n}^{-1}\usf{D}_{n-1}\right)+O(\Delta r^{2}),
@@ -4931,8 +4931,8 @@ noprefix "false"
 \begin_inset Formula $\Delta r$
 \end_inset
 
- as 
-\begin_inset Formula 
+ as
+\begin_inset Formula
 \begin{equation}
 \usf{K}_{n-2}=\usf{K}_{n}-2\frac{d\usf{K}_{n}}{dr}\Delta r+O(\Delta r^{2}).\label{eq:knknm2appr2}
 \end{equation}
@@ -4954,7 +4954,7 @@ status open
 
 \end_inset
 
- 
+
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -5054,8 +5054,8 @@ noprefix "false"
 \begin_inset Formula $\usf{K}_{n}$
 \end_inset
 
- 
-\begin_inset Formula 
+
+\begin_inset Formula
 \begin{equation}
 2r_{n}\frac{d(\usf{r}_{n,n}\usf{K}_{n})}{dr}=\left(\usf{M}_{n}+\usf{m}_{n}\right)\usf{r}_{n,n}\usf{K}_{n}+r_{n}^{2}\usf{F}_{n},\label{eq:GovernEqnKn}
 \end{equation}
@@ -5091,8 +5091,8 @@ noprefix "false"
 
 \end_inset
 
- for the details of the solution procedures), we obtain 
-\begin_inset Formula 
+ for the details of the solution procedures), we obtain
+\begin_inset Formula
 \begin{equation}
 %K_{i,n}=r_{n}^{-m_{i,n}}\left(G_{i,n}^{0}r_{n}^{2}+G_{i,n}^{1}r_{n}^{\lambda_{1,n}}+G_{i,n}^{2}r_{n}^{\lambda_{2,n}}+G_{i,n}^{3}r_{n}^{\lambda_{3,n}}+G_{i,n}^{4}r_{n}^{\lambda_{4,n}}\right)
 K_{i,n}=r_{n}^{-m_{i,n}}\left(G_{i,n}^{0}r_{n}^{2}+\sum_{j\in\mathcal{J}}G_{i,n}^{j}r_{n}^{\lambda_{j,n}}\right),\quad\text{for}\,i\in\mathcal{J},\label{eq:two_mat_no_slip_Ks}
@@ -5175,8 +5175,8 @@ noprefix "false"
 
 \end_inset
 
-, we obtain the bending stiffness as 
-\begin_inset Formula 
+, we obtain the bending stiffness as
+\begin_inset Formula
 \begin{equation}
 \begin{aligned}EI & =-\sum_{n=1}^{N}\left\lbrace \sum_{i\in\mathcal{J}}\alpha_{i,n}'\left(G_{i,n}^{0}r_{n}^{2}+\sum_{j\in\mathcal{J}}G_{i,n}^{j}r_{n}^{\lambda_{j,n}}\right)r_{n}+4\gamma_{n}r_{n}^{3}\right\rbrace +O(\Delta r)\\
  & =-\sum_{n=1}^{N}\left\lbrace \left(\sum_{i\in\mathcal{J}}\alpha_{i,n}'G_{i,n}^{0}+4\gamma_{n}\right)r_{n}^{3}+\sum_{i\in\mathcal{J}}\sum_{j\in\mathcal{J}}\alpha_{i,n}'G_{i,n}^{j}r_{n}^{1+\lambda_{j,n}}\right\rbrace +O(\Delta r),
@@ -5279,8 +5279,8 @@ Since the material properties of the layers of the structure are alternately
 \end_inset
 
 .
- Therefore, 
-\begin_inset Formula 
+ Therefore,
+\begin_inset Formula
 \begin{equation}
 \begin{aligned}EI & =-\frac{1}{2}\sum_{n=1}^{N}\left[\left(\sum_{i\in\mathcal{J}}\alpha_{i,I}'G_{i,I}^{0}+4\gamma_{I}\right)r_{n}^{3}+\sum_{i\in\mathcal{J}}\sum_{j\in\mathcal{J}}\alpha_{i,I}'G_{i,I}^{j}r_{n}^{1+\lambda_{j,I}}\right]\\
  & \quad-\frac{1}{2}\sum_{n=1}^{N}\biggr[\left(\sum_{i\in\mathcal{J}}\alpha_{i,II}'G_{i,II}^{0}+4\gamma_{II}\right)r_{n}^{3}\\
@@ -5298,8 +5298,8 @@ As
 \begin_inset Formula $N\to\infty$
 \end_inset
 
-, we obtain the asymptotic bending stiffness as 
-\begin_inset Formula 
+, we obtain the asymptotic bending stiffness as
+\begin_inset Formula
 \begin{equation}
 \begin{aligned}(EI)_{\infty} & =-\frac{1}{2}\left[\sum_{i\in\mathcal{J}}\left(\alpha_{i,I}'G_{i,I}^{0}+\alpha_{i,II}'G_{i,II}^{0}\right)+4\left(\gamma_{I}+\gamma_{II}\right)\right]\int_{r_{0}}^{r_{N}}r^{3}\,dr\\
  & \quad-\frac{1}{2}\sum_{i\in\mathcal{J}}\sum_{j\in\mathcal{J}}\left[\int_{r_{0}}^{r_{N}}\left(\alpha_{i,I}'G_{i,I}^{j}r^{1+\lambda_{j,I}}+\alpha_{i,II}'G_{i,II}^{j}r^{1+\lambda_{j,II}}\right)\,dr\right]\\
@@ -5323,7 +5323,7 @@ name "sec:discussion"
 
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -5429,7 +5429,7 @@ noprefix "false"
 \end_inset
 
 .
- 
+
 \begin_inset Float table
 placement h
 wide false
@@ -5457,12 +5457,12 @@ name "tab:sij"
 
 \end_inset
 
- 
+
 \end_layout
 
 \end_inset
 
- 
+
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="9">
 <features tabularvalignment="middle">
@@ -5483,7 +5483,7 @@ name "tab:sij"
 \begin_inset Formula $S_{11}$
 \end_inset
 
- 
+
 \end_layout
 
 \end_inset
@@ -5495,7 +5495,7 @@ name "tab:sij"
 \begin_inset Formula $S_{12}$
 \end_inset
 
- 
+
 \end_layout
 
 \end_inset
@@ -5507,7 +5507,7 @@ name "tab:sij"
 \begin_inset Formula $S_{13}$
 \end_inset
 
- 
+
 \end_layout
 
 \end_inset
@@ -5519,7 +5519,7 @@ name "tab:sij"
 \begin_inset Formula $S_{22}$
 \end_inset
 
- 
+
 \end_layout
 
 \end_inset
@@ -5531,7 +5531,7 @@ name "tab:sij"
 \begin_inset Formula $S_{23}$
 \end_inset
 
- 
+
 \end_layout
 
 \end_inset
@@ -5543,7 +5543,7 @@ name "tab:sij"
 \begin_inset Formula $S_{33}$
 \end_inset
 
- 
+
 \end_layout
 
 \end_inset
@@ -5555,7 +5555,7 @@ name "tab:sij"
 \begin_inset Formula $S_{44}$
 \end_inset
 
- 
+
 \end_layout
 
 \end_inset
@@ -5567,7 +5567,7 @@ name "tab:sij"
 \begin_inset Formula $S_{55}$
 \end_inset
 
- 
+
 \end_layout
 
 \end_inset
@@ -5579,7 +5579,7 @@ name "tab:sij"
 \begin_inset Formula $S_{66}$
 \end_inset
 
- 
+
 \end_layout
 
 \end_inset
@@ -5590,7 +5590,7 @@ name "tab:sij"
 \begin_inset Text
 
 \begin_layout Plain Layout
-1.05 
+1.05
 \end_layout
 
 \end_inset
@@ -5599,7 +5599,7 @@ name "tab:sij"
 \begin_inset Text
 
 \begin_layout Plain Layout
--0.0632 
+-0.0632
 \end_layout
 
 \end_inset
@@ -5608,7 +5608,7 @@ name "tab:sij"
 \begin_inset Text
 
 \begin_layout Plain Layout
--0.0842 
+-0.0842
 \end_layout
 
 \end_inset
@@ -5617,7 +5617,7 @@ name "tab:sij"
 \begin_inset Text
 
 \begin_layout Plain Layout
-1.18 
+1.18
 \end_layout
 
 \end_inset
@@ -5626,7 +5626,7 @@ name "tab:sij"
 \begin_inset Text
 
 \begin_layout Plain Layout
--0.0941 
+-0.0941
 \end_layout
 
 \end_inset
@@ -5635,7 +5635,7 @@ name "tab:sij"
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.20 
+0.20
 \end_layout
 
 \end_inset
@@ -5644,7 +5644,7 @@ name "tab:sij"
 \begin_inset Text
 
 \begin_layout Plain Layout
-4.00 
+4.00
 \end_layout
 
 \end_inset
@@ -5653,7 +5653,7 @@ name "tab:sij"
 \begin_inset Text
 
 \begin_layout Plain Layout
-5.00 
+5.00
 \end_layout
 
 \end_inset
@@ -5662,7 +5662,7 @@ name "tab:sij"
 \begin_inset Text
 
 \begin_layout Plain Layout
-2.50 
+2.50
 \end_layout
 
 \end_inset
@@ -5827,7 +5827,7 @@ noprefix "false"
 \end_inset
 
 ).
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -5922,7 +5922,7 @@ noprefix "false"
 \end_inset
 
 ), which is equal to the average of those of two homogeneous materials.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -6015,7 +6015,7 @@ m
 .
  This implies that we could build up stiffer composite from compliant materials
  by designing the spatial arrangements of laminae.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -6077,7 +6077,7 @@ status open
 
 \end_inset
 
- 
+
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -6147,7 +6147,7 @@ name "fig:asymptotic_EI"
 
 \end_inset
 
- 
+
 \end_layout
 
 \end_inset
@@ -6168,7 +6168,7 @@ name "sec:conclusion"
 
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -6261,7 +6261,7 @@ name "Appen:MatConst"
 \begin_inset Formula $m_{i}$
 \end_inset
 
- as 
+ as
 \end_layout
 
 \begin_layout Standard
@@ -6275,25 +6275,25 @@ status open
 
 
 \backslash
-begin{subequations} 	
+begin{subequations}
 \backslash
-begin{align} 	 m_1 & =  
+begin{align} 	 m_1 & =
 \backslash
 sqrt{
 \backslash
 frac{-b +
 \backslash
-sqrt{b^2 - 4ac}}{2a}}, 
+sqrt{b^2 - 4ac}}{2a}},
 \backslash
 
 \backslash
- 	 m_2 & =  
+ 	 m_2 & =
 \backslash
 sqrt{
 \backslash
 frac{-b -
 \backslash
-sqrt{b^2 - 4ac}}{2a}}, 
+sqrt{b^2 - 4ac}}{2a}},
 \backslash
 
 \backslash
@@ -6303,7 +6303,7 @@ sqrt{
 \backslash
 frac{-b +
 \backslash
-sqrt{b^2 - 4ac}}{2a}}, 
+sqrt{b^2 - 4ac}}{2a}},
 \backslash
 
 \backslash
@@ -6313,76 +6313,76 @@ sqrt{
 \backslash
 frac{-b -
 \backslash
-sqrt{b^2 - 4ac}}{2a}}, 
+sqrt{b^2 - 4ac}}{2a}},
 \backslash
 
 \backslash
- 	
+
 \backslash
-intertext{where} 	 a & :=  
+intertext{where} 	 a & :=
 \backslash
-beta_{22} 
+beta_{22}
 \backslash
-beta_{44} - 
+beta_{44} -
 \backslash
-beta_{24}^2, 
+beta_{24}^2,
 \backslash
 
 \backslash
- 	
+
 \backslash
-begin{split} 	 b & := 
+begin{split} 	 b & :=
 \backslash
 beta_{24}(2
 \backslash
-beta_{14} + 
+beta_{14} +
 \backslash
 beta_{24} + 2
 \backslash
-beta_{56}) + 
+beta_{56}) +
 \backslash
-beta_{14}^2 
+beta_{14}^2
 \backslash
 
 \backslash
-  	 & 
+  	 &
 \backslash
-quad - 
+quad -
 \backslash
 beta_{44}(
 \backslash
 beta_{11} + 2
 \backslash
-beta_{12} + 
+beta_{12} +
 \backslash
-beta_{22} + 
+beta_{22} +
 \backslash
-beta_{66}) - 
+beta_{66}) -
 \backslash
-beta_{22} 
+beta_{22}
 \backslash
-beta_{55}, 	
+beta_{55},
 \backslash
-end{split} 
+end{split}
 \backslash
 
 \backslash
- 	c & :=  
+ 	c & :=
 \backslash
 beta_{55}(
 \backslash
 beta_{11} + 2
 \backslash
-beta_{12} + 
+beta_{12} +
 \backslash
-beta_{22} + 
+beta_{22} +
 \backslash
 beta_{66})-
 \backslash
 beta_{56}^2.
- 	
+
 \backslash
-end{align} 
+end{align}
 \backslash
 end{subequations}
 \end_layout
@@ -6422,7 +6422,7 @@ We calculate
 \begin_inset Formula $W_{i}$
 \end_inset
 
- as 
+ as
 \end_layout
 
 \begin_layout Standard
@@ -6436,51 +6436,51 @@ status open
 
 
 \backslash
-begin{subequations} 	
+begin{subequations}
 \backslash
-begin{align} 	g_i & = 
+begin{align} 	g_i & =
 \backslash
 frac{
 \backslash
 beta_{24}m_i^2+(
 \backslash
-beta_{14} + 
+beta_{14} +
 \backslash
-beta_{24})m_i - 
+beta_{24})m_i -
 \backslash
 beta_{56}}{
 \backslash
-beta_{44}m_i^2 - 
+beta_{44}m_i^2 -
 \backslash
-beta_{55}}, 
-\backslash
-
-\backslash
- 	Q_i & = 
-\backslash
-frac{1}{m_i} 
-\backslash
-pr{
-\backslash
-beta_{12}m_i + 
-\backslash
-beta_{22}m_i(m_i+1) - 
-\backslash
-beta_{24} g_i m_i^2}, 
+beta_{55}},
 \backslash
 
 \backslash
- 	W_i & = 
+ 	Q_i & =
 \backslash
 frac{1}{m_i}
 \backslash
 pr{
 \backslash
-beta_{55} g_i - 
+beta_{12}m_i +
 \backslash
-beta_{56}}, 	
+beta_{22}m_i(m_i+1) -
 \backslash
-end{align} 
+beta_{24} g_i m_i^2},
+\backslash
+
+\backslash
+ 	W_i & =
+\backslash
+frac{1}{m_i}
+\backslash
+pr{
+\backslash
+beta_{55} g_i -
+\backslash
+beta_{56}},
+\backslash
+end{align}
 \backslash
 end{subequations}
 \end_layout
@@ -6520,7 +6520,7 @@ We calculate
 \begin_inset Formula $W_{5}$
 \end_inset
 
- as 
+ as
 \end_layout
 
 \begin_layout Standard
@@ -6534,9 +6534,9 @@ status open
 
 
 \backslash
-begin{subequations} 	
+begin{subequations}
 \backslash
-begin{align} 	Q_5 & = 
+begin{align} 	Q_5 & =
 \backslash
 mu_1(
 \backslash
@@ -6546,41 +6546,41 @@ beta_{22})-2
 \backslash
 mu_2
 \backslash
-beta_{24} + 
+beta_{24} +
 \backslash
-frac{C_{23}}{C_{33}}, 
+frac{C_{23}}{C_{33}},
 \backslash
 
 \backslash
- 	W_5 & = 
+ 	W_5 & =
 \backslash
 frac{1}{2}(
 \backslash
 beta_{55}
 \backslash
-mu_2 - 
+mu_2 -
 \backslash
 beta_{56}
 \backslash
-mu_1), 	
+mu_1),
 \backslash
-end{align} 	where 	
+end{align} 	where
 \backslash
-begin{equation} 	
+begin{equation}
 \backslash
-begin{bmatrix} 		
+begin{bmatrix}
 \backslash
-mu_1 
+mu_1
 \backslash
 
 \backslash
- 
+
 \backslash
-mu_2 	
+mu_2
 \backslash
-end{bmatrix} := 	
+end{bmatrix} :=
 \backslash
-frac{1}{C_{33}} 	
+frac{1}{C_{33}}
 \backslash
 begin{bmatrix} 		-2
 \backslash
@@ -6592,7 +6592,7 @@ beta_{56} & 4
 \backslash
 beta_{44}-
 \backslash
-beta_{55} 
+beta_{55}
 \backslash
 
 \backslash
@@ -6610,20 +6610,20 @@ beta_{14}-2
 \backslash
 beta_{24}+
 \backslash
-beta_{56} 	
+beta_{56}
 \backslash
-end{bmatrix}^{-1} 	
+end{bmatrix}^{-1}
 \backslash
-begin{bmatrix} 			2C_{34} 
+begin{bmatrix} 			2C_{34}
 \backslash
 
 \backslash
- C_{13}-C_{23} 	
+ C_{13}-C_{23}
 \backslash
 end{bmatrix}.
- 	
+
 \backslash
-end{equation} 
+end{equation}
 \backslash
 end{subequations}
 \end_layout
@@ -6654,7 +6654,7 @@ name "Appen:Pi"
 
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -6694,17 +6694,17 @@ status open
 
 
 \backslash
-begin{subequations} 
+begin{subequations}
 \backslash
-begin{align} 	
+begin{align}
 \backslash
 begin{split} 	P_1 & = -
 \backslash
-frac{1}{p} 
+frac{1}{p}
 \backslash
 left(
 \backslash
-left(g_2 g_3 (m_2 - m_3)(m_4 -2) + g_2 g_4 (m_4 - m_2)(m_3 - 2) 
+left(g_2 g_3 (m_2 - m_3)(m_4 -2) + g_2 g_4 (m_4 - m_2)(m_3 - 2)
 \backslash
 right.
 \backslash
@@ -6714,46 +6714,46 @@ right.
 \backslash
  	&
 \backslash
-qquad{} 
+qquad{}
 \backslash
 left.
- + g_3 g_4 (m_3 - m_4)(m_2 -2) 
-\backslash
-right) 
-\backslash
-mu_1  + 
-\backslash
-left(g_2 (m_3 - m_4)(m_2 -2) 
-\backslash
-right.
- 
-\backslash
-
-\backslash
- 	&
-\backslash
-qquad{} 
-\backslash
-left.
-\backslash
-left.
- + g_3(m_4 - m_2)(m_3 -2) + g_4 (m_2 - m_3)(m_4 -2) 
+ + g_3 g_4 (m_3 - m_4)(m_2 -2)
 \backslash
 right)
 \backslash
-mu_2 
+mu_1  +
 \backslash
-right) , 	
+left(g_2 (m_3 - m_4)(m_2 -2)
 \backslash
-end{split} 
+right.
+
 \backslash
 
 \backslash
- 	
+ 	&
 \backslash
-begin{split} 	P_2 & = 
+qquad{}
 \backslash
-frac{1}{p} 
+left.
+\backslash
+left.
+ + g_3(m_4 - m_2)(m_3 -2) + g_4 (m_2 - m_3)(m_4 -2)
+\backslash
+right)
+\backslash
+mu_2
+\backslash
+right) ,
+\backslash
+end{split}
+\backslash
+
+\backslash
+
+\backslash
+begin{split} 	P_2 & =
+\backslash
+frac{1}{p}
 \backslash
 left(
 \backslash
@@ -6762,22 +6762,22 @@ left( g_1 g_3 (m_1 - m_3)(m_4 -2) + g_1 g_4 (m_4 - m_1)(m_3 - 2)
 right.
 \backslash
 right.
- 
+
 \backslash
 
 \backslash
  	&
 \backslash
-qquad{} 
+qquad{}
 \backslash
 left.
- + g_3 g_4 (m_3 - m_4)(m_1 -2)  
+ + g_3 g_4 (m_3 - m_4)(m_1 -2)
 \backslash
-right) 
+right)
 \backslash
-mu_1 + 
+mu_1 +
 \backslash
-left(g_1 (m_3 - m_4)(m_1 -2) 
+left(g_1 (m_3 - m_4)(m_1 -2)
 \backslash
 right.
 \backslash
@@ -6785,37 +6785,37 @@ right.
 \backslash
  	&
 \backslash
-qquad{} 
+qquad{}
 \backslash
 left.
 \backslash
 left.
- + g_3(m_4 - m_1)(m_3 -2) + g_4 (m_1 - m_3)(m_4 -2)  
+ + g_3(m_4 - m_1)(m_3 -2) + g_4 (m_1 - m_3)(m_4 -2)
 \backslash
 right)
 \backslash
-mu_2  
+mu_2
 \backslash
-right), 	
+right),
 \backslash
-end{split} 
+end{split}
 \backslash
 
 \backslash
- 	
+
 \backslash
 begin{split} 	P_3 & = -
 \backslash
 frac{1}{p} ((g_1 g_2 (m_1 - m_2)(m_4 -2) + g_1 g_4 (m_4 - m_1)(m_2 - 2)
- 
+
 \backslash
 
 \backslash
  &
 \backslash
-qquad{} + g_2 g_4 (m_2 - m_4)(m_1 -2) ) 
+qquad{} + g_2 g_4 (m_2 - m_4)(m_1 -2) )
 \backslash
-mu_1 + (g_1 (m_2 - m_4)(m_1 -2) 
+mu_1 + (g_1 (m_2 - m_4)(m_1 -2)
 \backslash
 
 \backslash
@@ -6823,26 +6823,26 @@ mu_1 + (g_1 (m_2 - m_4)(m_1 -2)
 \backslash
 qquad{} + g_2(m_4 - m_1)(m_2 -2) + g_4 (m_1 - m_2)(m_4 -2))
 \backslash
-mu_2), 	
+mu_2),
 \backslash
-end{split} 
+end{split}
 \backslash
 
 \backslash
- 	
+
 \backslash
-begin{split} 	P_4 & = 
+begin{split} 	P_4 & =
 \backslash
 frac{1}{p} ((g_1 g_2 (m_1 - m_2)(m_3 -2) + g_1 g_3 (m_3 - m_1)(m_2 - 2)
- 
+
 \backslash
 
 \backslash
  &
 \backslash
-qquad{} + g_2 g_3 (m_2 - m_3)(m_1 -2)) 
+qquad{} + g_2 g_3 (m_2 - m_3)(m_1 -2))
 \backslash
-mu_1 +  (g_1 (m_2 - m_3)(m_1 -2) 
+mu_1 +  (g_1 (m_2 - m_3)(m_1 -2)
 \backslash
 
 \backslash
@@ -6850,11 +6850,11 @@ mu_1 +  (g_1 (m_2 - m_3)(m_1 -2)
 \backslash
 qquad{} + g_2(m_3 - m_1)(m_2 -2) + g_3 (m_1 - m_2)(m_3 -2))
 \backslash
-mu_2), 	
+mu_2),
 \backslash
-end{split} 	
+end{split}
 \backslash
-end{align} 
+end{align}
 \backslash
 end{subequations}
 \end_layout
@@ -6866,8 +6866,8 @@ end{subequations}
 
 \end_inset
 
-where 
-\begin_inset Formula 
+where
+\begin_inset Formula
 \begin{equation}
 \begin{aligned}p= & g_{1}(g_{3}-g_{4})(m_{1}-m_{3})(m_{2}-m_{4})\\
  & +g_{2}(g_{3}-g_{4})(m_{2}-m_{3})(m_{4}-m_{1})\\
@@ -6906,7 +6906,7 @@ name "Appen:derivations"
 
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Subsection
@@ -6931,7 +6931,7 @@ name "Appen:Eqn315"
 
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -6963,102 +6963,102 @@ status open
 
 
 \backslash
-begin{subequations} 
+begin{subequations}
 \backslash
-begin{align} 	
-\backslash
-tilde{
-\backslash
-usf{A}}_{n} 	& := 	
-\backslash
-begin{bmatrix} 		1 & 1 & 1 & 1 
-\backslash
-
-\backslash
- 		g_{1,n} & g_{2,n} & g_{3,n} & g_{4,n} 
-\backslash
-
-\backslash
- 		Q_{1,n} & Q_{2,n} & Q_{3,n} & Q_{4,n} 
-\backslash
-
-\backslash
- 		W_{1,n} & W_{2,n} & W_{3,n} & W_{4,n} 	
-\backslash
-end{bmatrix}, 
-\backslash
-
-\backslash
- 	
+begin{align}
 \backslash
 tilde{
 \backslash
-usf{B}}_{n} 	& := 	
+usf{A}}_{n} 	& :=
 \backslash
-begin{bmatrix} 		1 & 1 & 1 & 1 
-\backslash
-
-\backslash
- 		g_{1,n-1} & g_{2,n-1} & g_{3,n-1} & g_{4,n-1} 
+begin{bmatrix} 		1 & 1 & 1 & 1
 \backslash
 
 \backslash
- 		Q_{1,n-1} & Q_{2,n-1} & Q_{3,n-1} & Q_{4,n-1} 
+ 		g_{1,n} & g_{2,n} & g_{3,n} & g_{4,n}
 \backslash
 
 \backslash
- 		W_{1,n-1} & W_{2,n-1} & W_{3,n-1} & W_{4,n-1} 	
-\backslash
-end{bmatrix}, 
+ 		Q_{1,n} & Q_{2,n} & Q_{3,n} & Q_{4,n}
 \backslash
 
 \backslash
- 	
+ 		W_{1,n} & W_{2,n} & W_{3,n} & W_{4,n}
 \backslash
-usf{r}_{n-1,n} 	& := 	
-\backslash
-begin{bmatrix} 		r_{n-1}^{m_{1,n}} & 0 & 0 & 0 
+end{bmatrix},
 \backslash
 
 \backslash
- 		0 & r_{n-1}^{m_{2,n}} & 0 & 0 
+
+\backslash
+tilde{
+\backslash
+usf{B}}_{n} 	& :=
+\backslash
+begin{bmatrix} 		1 & 1 & 1 & 1
 \backslash
 
 \backslash
- 		0 & 0 & r_{n-1}^{m_{3,n}} & 0 
+ 		g_{1,n-1} & g_{2,n-1} & g_{3,n-1} & g_{4,n-1}
 \backslash
 
 \backslash
- 		0 & 0 & 0 & r_{n-1}^{m_{4,n}} 	
-\backslash
-end{bmatrix}, 
+ 		Q_{1,n-1} & Q_{2,n-1} & Q_{3,n-1} & Q_{4,n-1}
 \backslash
 
 \backslash
- 	
+ 		W_{1,n-1} & W_{2,n-1} & W_{3,n-1} & W_{4,n-1}
 \backslash
-usf{m}_{n} 	& := 	
-\backslash
-begin{bmatrix} 		m_{1,n} & 0 & 0 & 0 
+end{bmatrix},
 \backslash
 
 \backslash
- 		0 & m_{2,n} & 0 & 0 
+
+\backslash
+usf{r}_{n-1,n} 	& :=
+\backslash
+begin{bmatrix} 		r_{n-1}^{m_{1,n}} & 0 & 0 & 0
 \backslash
 
 \backslash
- 		0 & 0 & m_{3,n} & 0 
+ 		0 & r_{n-1}^{m_{2,n}} & 0 & 0
 \backslash
 
 \backslash
- 		0 & 0 & 0 & m_{4,n} 	
+ 		0 & 0 & r_{n-1}^{m_{3,n}} & 0
+\backslash
+
+\backslash
+ 		0 & 0 & 0 & r_{n-1}^{m_{4,n}}
+\backslash
+end{bmatrix},
+\backslash
+
+\backslash
+
+\backslash
+usf{m}_{n} 	& :=
+\backslash
+begin{bmatrix} 		m_{1,n} & 0 & 0 & 0
+\backslash
+
+\backslash
+ 		0 & m_{2,n} & 0 & 0
+\backslash
+
+\backslash
+ 		0 & 0 & m_{3,n} & 0
+\backslash
+
+\backslash
+ 		0 & 0 & 0 & m_{4,n}
 \backslash
 end{bmatrix}.
- 	
+
 \backslash
-end{align} 	
+end{align}
 \backslash
-label{eq:C1} 
+label{eq:C1}
 \backslash
 end{subequations}
 \end_layout
@@ -7129,8 +7129,8 @@ noprefix "false"
 
 \end_inset
 
- can be written as 
-\begin_inset Formula 
+ can be written as
+\begin_inset Formula
 \begin{equation}
 \usf{A}_{n}=\tilde{\usf{A}}_{n}\usf{r}_{n-1,n},\quad\usf{B}_{n}=\tilde{\usf{B}}_{n}\usf{r}_{n-1,n-1}.
 \end{equation}
@@ -7169,7 +7169,7 @@ Approximating
 \begin_inset Formula $r_{n-1}$
 \end_inset
 
-, we have 
+, we have
 \end_layout
 
 \begin_layout Standard
@@ -7183,39 +7183,39 @@ status open
 
 
 \backslash
-begin{subequations} 
+begin{subequations}
 \backslash
-begin{align} 	
+begin{align}
 \backslash
-usf{A}_{n-1} & = 
+usf{A}_{n-1} & =
 \backslash
-usf{B}_{n} - 
+usf{B}_{n} -
 \backslash
-delta 
+delta
 \backslash
-usf{B}_{n} 
+usf{B}_{n}
 \backslash
 Delta r + O(
 \backslash
-Delta r^2), 
+Delta r^2),
 \backslash
 
 \backslash
- 	
+
 \backslash
-usf{B}_{n-1} & = 
+usf{B}_{n-1} & =
 \backslash
-usf{A}_{n} - 
+usf{A}_{n} -
 \backslash
-delta 
+delta
 \backslash
-usf{A}_{n} 
+usf{A}_{n}
 \backslash
 Delta r + O(
 \backslash
-Delta r^2), 
+Delta r^2),
 \backslash
-end{align} 
+end{align}
 \backslash
 end{subequations}
 \end_layout
@@ -7238,56 +7238,56 @@ status open
 
 
 \backslash
-begin{subequations} 	
+begin{subequations}
 \backslash
-begin{align} 	
+begin{align}
 \backslash
-delta 
+delta
 \backslash
-usf{A}_{n} & = 
+usf{A}_{n} & =
 \backslash
-frac{1}{r_{n-1}} 
+frac{1}{r_{n-1}}
 \backslash
-usf{A}_{n} 
+usf{A}_{n}
 \backslash
-usf{m}_n = 
+usf{m}_n =
 \backslash
-frac{1}{r_{n-1}} 
+frac{1}{r_{n-1}}
 \backslash
 tilde{
 \backslash
-usf{A}}_{n} 
+usf{A}}_{n}
 \backslash
-usf{r}_{n-1,n} 
+usf{r}_{n-1,n}
 \backslash
-usf{m}_n, 
+usf{m}_n,
 \backslash
 
 \backslash
- 	
+
 \backslash
-delta 
+delta
 \backslash
-usf{B}_{n} & = 
+usf{B}_{n} & =
 \backslash
-frac{1}{r_{n-1}} 
+frac{1}{r_{n-1}}
 \backslash
-usf{B}_{n} 
+usf{B}_{n}
 \backslash
-usf{m}_{n-1} = 
+usf{m}_{n-1} =
 \backslash
-frac{1}{r_{n-1}} 
+frac{1}{r_{n-1}}
 \backslash
 tilde{
 \backslash
-usf{B}}_{n} 
+usf{B}}_{n}
 \backslash
-usf{r}_{n-1,n-1} 
+usf{r}_{n-1,n-1}
 \backslash
 usf{m}_{n-1}.
- 	
+
 \backslash
-end{align} 
+end{align}
 \backslash
 end{subequations}
 \end_layout
@@ -7310,274 +7310,274 @@ status open
 
 
 \backslash
-begin{subequations} 	
+begin{subequations}
 \backslash
-begin{align} 	
+begin{align}
 \backslash
-begin{split} 		
+begin{split}
 \backslash
-usf{B}_n 
+usf{B}_n
 \backslash
-usf{A}^{-1}_{n-1} 		& = 
+usf{A}^{-1}_{n-1} 		& =
 \backslash
-usf{B}_n 
+usf{B}_n
 \backslash
-left[ 
+left[
 \backslash
-usf{B}_{n} - 
+usf{B}_{n} -
 \backslash
-delta 
+delta
 \backslash
-usf{B}_{n} 
+usf{B}_{n}
 \backslash
 Delta r + O(
 \backslash
-Delta r^2) 
+Delta r^2)
 \backslash
-right]^{-1} 
+right]^{-1}
 \backslash
 
 \backslash
- 		& = 
+ 		& =
 \backslash
-usf{B}_n 
+usf{B}_n
 \backslash
-left[ 
+left[
 \backslash
-usf{B}_{n} 
+usf{B}_{n}
 \backslash
-left( 
+left(
 \backslash
-usf{I}- 
+usf{I}-
 \backslash
 frac{
 \backslash
-Delta r}{r_{n-1}} 
+Delta r}{r_{n-1}}
 \backslash
-usf{m}_{n-1} 
+usf{m}_{n-1}
 \backslash
 right) + O(
 \backslash
-Delta r^2) 
+Delta r^2)
 \backslash
-right]^{-1} 
+right]^{-1}
 \backslash
 
 \backslash
- 		& = 
+ 		& =
 \backslash
-usf{B}_n 
+usf{B}_n
 \backslash
-left[ 
+left[
 \backslash
-usf{I} - 
+usf{I} -
 \backslash
 frac{
 \backslash
-Delta r}{r_{n-1}} 
+Delta r}{r_{n-1}}
 \backslash
 usf{m}_{n-1} + O(
 \backslash
-Delta r^2) 
+Delta r^2)
 \backslash
-right]^{-1} 
+right]^{-1}
 \backslash
-usf{B}^{-1}_{n} 
+usf{B}^{-1}_{n}
 \backslash
 
 \backslash
- 		& = 
+ 		& =
 \backslash
-usf{I} + 
+usf{I} +
 \backslash
 frac{
 \backslash
-Delta r}{r_{n-1}} 
+Delta r}{r_{n-1}}
 \backslash
-usf{B}_n 
+usf{B}_n
 \backslash
-usf{m}_{n-1} 
+usf{m}_{n-1}
 \backslash
 usf{B}^{-1}_n + O(
 \backslash
-Delta r^2), 	
+Delta r^2),
 \backslash
 end{split}
 \backslash
 
 \backslash
- 	
+
 \backslash
-begin{split} 		
+begin{split}
 \backslash
-usf{B}_n 
+usf{B}_n
 \backslash
-usf{A}^{-1}_{n-1} 
+usf{A}^{-1}_{n-1}
 \backslash
-usf{B}_{n-1} 		& = 
+usf{B}_{n-1} 		& =
 \backslash
-left[ 
+left[
 \backslash
-usf{I} + 
+usf{I} +
 \backslash
 frac{
 \backslash
-Delta r}{r_{n-1}} 
+Delta r}{r_{n-1}}
 \backslash
-usf{B}_n 
+usf{B}_n
 \backslash
-usf{m}_{n-1} 
+usf{m}_{n-1}
 \backslash
 usf{B}^{-1}_n + O(
 \backslash
-Delta r^2) 
+Delta r^2)
 \backslash
-right] 
+right]
 \backslash
-cdot 
+cdot
 \backslash
 
 \backslash
- 		& 
+ 		&
 \backslash
-qquad 
+qquad
 \backslash
-left[ 
+left[
 \backslash
-usf{A}_{n} - 
+usf{A}_{n} -
 \backslash
 frac{
 \backslash
-Delta r}{r_{n-1}} 
+Delta r}{r_{n-1}}
 \backslash
-usf{A}_n 
+usf{A}_n
 \backslash
 usf{m}_n + O(
 \backslash
-Delta r^2) 
+Delta r^2)
 \backslash
-right] 
+right]
 \backslash
 
 \backslash
- 		& = 
+ 		& =
 \backslash
-usf{A}_{n} + 
+usf{A}_{n} +
 \backslash
 frac{
 \backslash
-Delta r}{r_{n-1}} 
+Delta r}{r_{n-1}}
 \backslash
-left( 
+left(
 \backslash
-usf{B}_n 
+usf{B}_n
 \backslash
-usf{m}_{n-1} 
+usf{m}_{n-1}
 \backslash
-usf{B}^{-1}_n 
+usf{B}^{-1}_n
 \backslash
-usf{A}_{n} - 
+usf{A}_{n} -
 \backslash
-usf{A}_n 
+usf{A}_n
 \backslash
-usf{m}_n 
+usf{m}_n
 \backslash
 right) + O(
 \backslash
-Delta r^2), 	
+Delta r^2),
 \backslash
-end{split} 
+end{split}
 \backslash
 
 \backslash
- 	
+
 \backslash
-begin{split} 		
+begin{split}
 \backslash
-usf{B}_n 
+usf{B}_n
 \backslash
-usf{A}^{-1}_{n-1} 
+usf{A}^{-1}_{n-1}
 \backslash
-usf{D}_{n-1} + 
+usf{D}_{n-1} +
 \backslash
-usf{D}_n 		& = 
+usf{D}_n 		& =
 \backslash
-left[ 
+left[
 \backslash
-usf{I} + 
+usf{I} +
 \backslash
 frac{
 \backslash
-Delta r}{r_{n-1}} 
+Delta r}{r_{n-1}}
 \backslash
-usf{B}_n 
+usf{B}_n
 \backslash
-usf{m}_{n-1} 
+usf{m}_{n-1}
 \backslash
 usf{B}^{-1}_n + O(
 \backslash
-Delta r^2) 
+Delta r^2)
 \backslash
-right] 
+right]
 \backslash
-usf{D}_{n-1} + 
+usf{D}_{n-1} +
 \backslash
-usf{D}_n 
+usf{D}_n
 \backslash
 
 \backslash
- 		& = 
+ 		& =
 \backslash
-usf{D}_{n-1} + 
+usf{D}_{n-1} +
 \backslash
-usf{D}_n + 
+usf{D}_n +
 \backslash
 frac{
 \backslash
-Delta r}{r_{n-1}} 
+Delta r}{r_{n-1}}
 \backslash
-usf{B}_n 
+usf{B}_n
 \backslash
-usf{m}_{n-1} 
+usf{m}_{n-1}
 \backslash
-usf{B}^{-1}_n 
+usf{B}^{-1}_n
 \backslash
 usf{D}_{n-1} + O(
 \backslash
-Delta r^2) 
+Delta r^2)
 \backslash
 
 \backslash
- 		& = 
+ 		& =
 \backslash
 frac{
 \backslash
-Delta r}{r_{n-1}} 
+Delta r}{r_{n-1}}
 \backslash
 left( 2
 \backslash
-usf{D}_n + 
+usf{D}_n +
 \backslash
-usf{B}_n 
+usf{B}_n
 \backslash
-usf{m}_{n-1} 
+usf{m}_{n-1}
 \backslash
-usf{B}^{-1}_n 
+usf{B}^{-1}_n
 \backslash
-usf{D}_{n-1} 
+usf{D}_{n-1}
 \backslash
 right) + O(
 \backslash
 Delta r^2).
- 	
+
 \backslash
-end{split} 	
+end{split}
 \backslash
-end{align} 	
+end{align}
 \backslash
-label{eq:C5} 
+label{eq:C5}
 \backslash
-end{subequations} 
+end{subequations}
 \end_layout
 
 \end_inset
@@ -7658,8 +7658,8 @@ noprefix "false"
 
 \end_inset
 
-, we obtain 
-\begin_inset Formula 
+, we obtain
+\begin_inset Formula
 \begin{equation}
 \begin{aligned}r_{n-1}\frac{d\usf{K}_{n}}{dr}= & \left(\usf{A}_{n}^{-1}\usf{B}_{n}\usf{m}_{n-1}\usf{B}_{n}^{-1}\usf{A}_{n}-\usf{m}_{n}\right)\usf{K}_{n}\\
  & +\usf{A}_{n}^{-1}\left(2\usf{D}_{n}+\usf{B}_{n}\usf{m}_{n-1}\usf{B}_{n}^{-1}\usf{D}_{n-1}\right)+O(\Delta r).
@@ -7695,16 +7695,16 @@ noprefix "false"
 \begin_inset Formula $r_{n}$
 \end_inset
 
- and noting that 
-\begin_inset Formula 
+ and noting that
+\begin_inset Formula
 \begin{equation}
 \usf{B}_{n}\usf{m}_{n-1}\usf{B}_{n}^{-1}=\tilde{\usf{B}}_{n}\usf{m}_{n-1}\tilde{\usf{B}}_{n}^{-1},
 \end{equation}
 
 \end_inset
 
-we have 
-\begin_inset Formula 
+we have
+\begin_inset Formula
 \begin{equation}
 \begin{aligned}\begin{split}2r_{n}\frac{d\usf{K}_{n}}{dr}= & \left(\usf{r}_{n,n}^{-1}\tilde{\usf{A}}_{n}^{-1}\tilde{\usf{B}}_{n}\usf{m}_{n-1}\tilde{\usf{B}}_{n}^{-1}\tilde{\usf{A}}_{n}\usf{r}_{n,n}-\usf{m}_{n}\right)\usf{K}_{n}\\
  & +r_{n}^{2}\usf{r}_{n,n}^{-1}\tilde{\usf{A}}_{n}^{-1}\left(-2\usf{I}+\tilde{\usf{B}}_{n}\usf{m}_{n-1}\tilde{\usf{B}}_{n}^{-1}\right)\tilde{\usf{D}}_{n}+O(\Delta r),
@@ -7723,8 +7723,8 @@ where
 \begin_inset Formula $\tilde{\usf{D}}_{n}$
 \end_inset
 
- is a constant vector 
-\begin_inset Formula 
+ is a constant vector
+\begin_inset Formula
 \begin{equation}
 \tilde{\usf{D}}_{n}=\begin{bmatrix}\mu_{1,n}-\mu_{1,n-1}\\
 \mu_{2,n}-\mu_{2,n-1}\\
@@ -7735,7 +7735,7 @@ W_{5,n}-W_{5,n-1}
 
 \end_inset
 
-Let 
+Let
 \end_layout
 
 \begin_layout Standard
@@ -7749,61 +7749,61 @@ status open
 
 
 \backslash
-begin{subequations} 	
+begin{subequations}
 \backslash
-begin{align} 	
+begin{align}
 \backslash
-usf{M}_n & := 
-\backslash
-tilde{
-\backslash
-usf{A}}^{-1}_n 
+usf{M}_n & :=
 \backslash
 tilde{
 \backslash
-usf{B}}_n 
-\backslash
-usf{m}_{n-1} 
+usf{A}}^{-1}_n
 \backslash
 tilde{
 \backslash
-usf{B}}^{-1}_n 
+usf{B}}_n
+\backslash
+usf{m}_{n-1}
 \backslash
 tilde{
 \backslash
-usf{A}}_n, 
+usf{B}}^{-1}_n
+\backslash
+tilde{
+\backslash
+usf{A}}_n,
 \backslash
 
 \backslash
- 	
+
 \backslash
-usf{F}_n & := 
+usf{F}_n & :=
 \backslash
 tilde{
 \backslash
-usf{A}}^{-1}_n 
+usf{A}}^{-1}_n
 \backslash
 left( -2
 \backslash
-usf{I} + 
+usf{I} +
 \backslash
 tilde{
 \backslash
-usf{B}}_n 
+usf{B}}_n
 \backslash
-usf{m}_{n-1} 
-\backslash
-tilde{
-\backslash
-usf{B}}^{-1}_n 
-\backslash
-right) 
+usf{m}_{n-1}
 \backslash
 tilde{
 \backslash
-usf{D}}_n, 	
+usf{B}}^{-1}_n
 \backslash
-end{align} 
+right)
+\backslash
+tilde{
+\backslash
+usf{D}}_n,
+\backslash
+end{align}
 \backslash
 end{subequations}
 \end_layout
@@ -7833,8 +7833,8 @@ noprefix "false"
 
 \end_inset
 
- as 
-\begin_inset Formula 
+ as
+\begin_inset Formula
 \begin{equation}
 2r_{n}\frac{d\usf{K}_{n}}{dr}=\left(\usf{r}_{n,n}^{-1}\usf{M}_{n}\usf{r}_{n,n}+\usf{m}_{n}\right)\usf{K}_{n}+r_{n}^{2}\usf{r}_{n,n}^{-1}\usf{F}_{n}.\label{eq:AppendKndr}
 \end{equation}
@@ -7871,8 +7871,8 @@ noprefix "false"
 \begin_inset Formula $\usf{K}_{n}$
 \end_inset
 
- 
-\begin_inset Formula 
+
+\begin_inset Formula
 \begin{equation}
 2r_{n}\frac{d\pr{\usf{r}_{n,n}\usf{K}_{n}}}{dr}=\pr{\usf{M}_{n}+\usf{m}_{n}}\pr{\usf{r}_{n,n}\usf{K}_{n}}+r_{n}^{2}\usf{F}_{n},\label{eq:AppendKn}
 \end{equation}
@@ -7975,8 +7975,8 @@ noprefix "false"
 
 \end_inset
 
- is equivalent to 
-\begin_inset Formula 
+ is equivalent to
+\begin_inset Formula
 \begin{equation}
 2r_{n}\frac{d\usf{K}_{n}^{e}}{dr}=\usf{M}_{n}^{e}\usf{K}_{n}^{e}+r_{n}^{2}\usf{F}_{n},\label{eq:AppendKendr}
 \end{equation}
@@ -8000,7 +8000,7 @@ where
 \end_inset
 
 .
- with boundary conditions 
+ with boundary conditions
 \end_layout
 
 \begin_layout Standard
@@ -8014,23 +8014,23 @@ status open
 
 
 \backslash
-begin{subequations} 	
+begin{subequations}
 \backslash
-begin{align} 	
+begin{align}
 \backslash
-sum_{i 
+sum_{i
 \backslash
-in 
+in
 \backslash
 mathcal{J}} K^e_{i,1} r_0^{-2} & = -
 \backslash
-mu_{1,1}, 
+mu_{1,1},
 \backslash
-quad 	 
+quad
 \backslash
-sum_{i 
+sum_{i
 \backslash
-in 
+in
 \backslash
 mathcal{J}} K^e_{i,1} g_{i,1} r_0^{-2} = -
 \backslash
@@ -8038,30 +8038,30 @@ mu_{2,1},
 \backslash
 
 \backslash
- 	
+
 \backslash
-sum_{i 
+sum_{i
 \backslash
-in 
+in
 \backslash
 mathcal{J}} K^e_{i,N} r_N^{-2} & = -
 \backslash
-mu_{1,N}, 
+mu_{1,N},
 \backslash
-quad 	 
+quad
 \backslash
-sum_{i 
+sum_{i
 \backslash
-in 
+in
 \backslash
 mathcal{J}} K^e_{i,N} g_{i,N} r_N^{-2} = -
 \backslash
 mu_{2,N}.
- 	
+
 \backslash
-end{align} 	
+end{align}
 \backslash
-label{eq:Appenboundary} 
+label{eq:Appenboundary}
 \backslash
 end{subequations}
 \end_layout
@@ -8176,7 +8176,7 @@ noprefix "false"
 
 \end_inset
 
- becomes 
+ becomes
 \end_layout
 
 \begin_layout Standard
@@ -8190,46 +8190,46 @@ status open
 
 
 \backslash
-begin{subequations} 
+begin{subequations}
 \backslash
-begin{align} 	2 r 
+begin{align} 	2 r
 \backslash
 frac{d
 \backslash
-usf{K}_n^e}{dr} & = 
+usf{K}_n^e}{dr} & =
 \backslash
-usf{M}_I^e 
+usf{M}_I^e
 \backslash
-usf{K}_n^e + r^2 
+usf{K}_n^e + r^2
 \backslash
-usf{F}_I, 
+usf{F}_I,
 \backslash
-quad 
+quad
 \backslash
-text{for odd~$n$}, 
+text{for odd~$n$},
 \backslash
 
 \backslash
- 	2 r 
+ 	2 r
 \backslash
 frac{d
 \backslash
-usf{K}_n^e}{dr} & = 
+usf{K}_n^e}{dr} & =
 \backslash
-usf{M}_{II}^e 
+usf{M}_{II}^e
 \backslash
-usf{K}_n^e + r^2 
+usf{K}_n^e + r^2
 \backslash
-usf{F}_{II}, 
+usf{F}_{II},
 \backslash
-quad 
+quad
 \backslash
 text{for even~$n$}.
- 
+
 \backslash
-end{align} 
+end{align}
 \backslash
-label{eq:AppendKejdr} 
+label{eq:AppendKejdr}
 \backslash
 end{subequations}
 \end_layout
@@ -8291,8 +8291,8 @@ noprefix "false"
 \begin_inset Formula $\usf{M}^{e}$
 \end_inset
 
- as 
-\begin_inset Formula 
+ as
+\begin_inset Formula
 \begin{equation}
 \usf{M}^{e}=(\usf{M}^{\nu})^{-1}\usf{\Lambda}^{\nu}\usf{M}^{\nu},
 \end{equation}
@@ -8366,8 +8366,8 @@ where
 \end_inset
 
 .
- Let 
-\begin_inset Formula 
+ Let
+\begin_inset Formula
 \begin{equation}
 \usf{Y}=\usf{M}^{\nu}\usf{K}^{e},\quad\usf{L}=\frac{1}{2}\usf{M}^{\nu}\usf{F},
 \end{equation}
@@ -8388,8 +8388,8 @@ noprefix "false"
 
 \end_inset
 
- becomes 
-\begin_inset Formula 
+ becomes
+\begin_inset Formula
 \begin{equation}
 r\frac{d\usf{Y}}{dr}=\usf{\Lambda}\usf{Y}+r^{2}\usf{L}.\label{eq:AppendYndr}
 \end{equation}
@@ -8410,8 +8410,8 @@ noprefix "false"
 
 \end_inset
 
- reads 
-\begin_inset Formula 
+ reads
+\begin_inset Formula
 \begin{equation}
 \begin{bmatrix}Y_{1}\\
 Y_{2}\\
@@ -8450,7 +8450,7 @@ Therefore,
 \begin_inset Formula $\usf{K}_{n}^{e}$
 \end_inset
 
- of the odd and even layers are 
+ of the odd and even layers are
 \end_layout
 
 \begin_layout Standard
@@ -8464,47 +8464,47 @@ status open
 
 
 \backslash
-begin{subequations} 
+begin{subequations}
 \backslash
-begin{align} 
+begin{align}
 \backslash
-usf{K}_n^e & = 
+usf{K}_n^e & =
 \backslash
-left( 
+left(
 \backslash
 usf{M}_I^{
 \backslash
-nu} 
+nu}
 \backslash
 right)^{-1}
 \backslash
-usf{Y}_I, 
+usf{Y}_I,
 \backslash
-quad 
+quad
 \backslash
-text{for odd~$n$}, 
+text{for odd~$n$},
 \backslash
 
 \backslash
- 
+
 \backslash
-usf{K}_n^e & = 
+usf{K}_n^e & =
 \backslash
-left( 
+left(
 \backslash
 usf{M}_{II}^{
 \backslash
-nu} 
+nu}
 \backslash
 right)^{-1}
 \backslash
-usf{Y}_{II}, 
+usf{Y}_{II},
 \backslash
-quad 
+quad
 \backslash
-text{for even~$n$}, 
+text{for even~$n$},
 \backslash
-end{align} 
+end{align}
 \backslash
 end{subequations}
 \end_layout
@@ -8516,8 +8516,8 @@ end{subequations}
 
 \end_inset
 
-where 
-\begin_inset Formula 
+where
+\begin_inset Formula
 \begin{equation}
 \begin{bmatrix}Y_{1,n}\\
 Y_{2,n}\\
@@ -8559,7 +8559,7 @@ noprefix "false"
 \end_inset
 
 .
- 
+
 \begin_inset ERT
 status open
 
@@ -8580,7 +8580,7 @@ status open
 
 \begin_layout Plain Layout
 
-% 
+%
 \backslash
 begin{equation}
 \end_layout
@@ -8597,19 +8597,19 @@ status open
 
 \begin_layout Plain Layout
 
-% 	
+%
 \backslash
 tilde{
 \backslash
-usf{A}}_n 
+usf{A}}_n
 \backslash
-usf{K}_n^e = 
+usf{K}_n^e =
 \backslash
 tilde{
 \backslash
-usf{B}}_n 
+usf{B}}_n
 \backslash
-usf{K}_{n-1}^e + r^2 
+usf{K}_{n-1}^e + r^2
 \backslash
 tilde{
 \backslash
@@ -8628,7 +8628,7 @@ status open
 
 \begin_layout Plain Layout
 
-% 
+%
 \backslash
 end{equation}
 \end_layout
@@ -8647,7 +8647,7 @@ Finally we obtain
 \begin_inset Formula $\usf{K}_{n}$
 \end_inset
 
- of the odd and even layers given by 
+ of the odd and even layers given by
 \end_layout
 
 \begin_layout Standard
@@ -8661,9 +8661,9 @@ status open
 
 
 \backslash
-begin{subequations} 
+begin{subequations}
 \backslash
-begin{align} 	
+begin{align}
 \backslash
 usf{K}_n & = (
 \backslash
@@ -8673,15 +8673,15 @@ usf{M}_I^{
 \backslash
 nu})^{-1}
 \backslash
-usf{Y}_I, 
+usf{Y}_I,
 \backslash
-quad 
+quad
 \backslash
-text{for odd~$n$}, 
+text{for odd~$n$},
 \backslash
 
 \backslash
- 	
+
 \backslash
 usf{K}_n & = (
 \backslash
@@ -8691,16 +8691,16 @@ usf{M}_{II}^{
 \backslash
 nu})^{-1}
 \backslash
-usf{Y}_{II}, 
+usf{Y}_{II},
 \backslash
-quad 
+quad
 \backslash
 text{for even~$n$}.
- 
+
 \backslash
-end{align} 
+end{align}
 \backslash
-label{eq:appenKn_I_II} 
+label{eq:appenKn_I_II}
 \backslash
 end{subequations}
 \end_layout
@@ -8734,8 +8734,8 @@ noprefix "false"
 \begin_inset Formula $\usf{K}_{n}$
 \end_inset
 
- in component form as 
-\begin_inset Formula 
+ in component form as
+\begin_inset Formula
 \begin{equation}
 K_{i,n}=r_{n}^{-m_{i,n}}\left(G_{i,n}^{0}r_{n}^{2}+\sum_{j\in\mathcal{J}}G_{i,n}^{j}r_{n}^{\lambda_{j,n}}\right),\quad\text{for~\ensuremath{i\in\mathcal{J}}},\label{eq:appenKn}
 \end{equation}
@@ -8750,7 +8750,7 @@ where
 \begin_inset Formula $G_{i,n}^{j}$
 \end_inset
 
- are constants given by 
+ are constants given by
 \end_layout
 
 \begin_layout Standard
@@ -8764,50 +8764,50 @@ status open
 
 
 \backslash
-begin{subequations} 
+begin{subequations}
 \backslash
-begin{align} 	G^0_{i,n}& := 
+begin{align} 	G^0_{i,n}& :=
 \backslash
-sum_{k 
+sum_{k
 \backslash
-in 
+in
 \backslash
-mathcal{J}} 
+mathcal{J}}
 \backslash
 pr{
 \backslash
 usf{M}_n^{
 \backslash
-nu}}^{-1}_{ik} 
+nu}}^{-1}_{ik}
 \backslash
-frac{L_{k,n}}{2 - 
+frac{L_{k,n}}{2 -
 \backslash
-lambda_{k,n}}, 
+lambda_{k,n}},
 \backslash
 
 \backslash
- 	G^j_{i,n}& := 
+ 	G^j_{i,n}& :=
 \backslash
 pr{
 \backslash
 usf{M}_n^{
 \backslash
-nu}}^{-1}_{ij} c_{j,n}, 
+nu}}^{-1}_{ij} c_{j,n},
 \backslash
-quad 
+quad
 \backslash
 text{for}
 \backslash
 , j
 \backslash
-in 
+in
 \backslash
 mathcal{J} .
- 
+
 \backslash
-end{align} 
+end{align}
 \backslash
-label{eq:Gjin} 
+label{eq:Gjin}
 \backslash
 end{subequations}
 \end_layout
@@ -8826,7 +8826,7 @@ end{subequations}
 \begin_inset Newpage newpage
 \end_inset
 
- 
+
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 btprint "btPrintCited"
@@ -8835,7 +8835,7 @@ options "plainnat"
 
 \end_inset
 
- 
+
 \begin_inset ERT
 status open
 
