@@ -324,7 +324,6 @@ Need to get the Lyx file to compile.
 
 \begin_layout Enumerate
 Bio-composites.
-
 \end_layout
 
 \begin_deeper
@@ -342,7 +341,6 @@ Curved.->why? Nat Com.
  Curved !Toughness.
  Then ? Stiffness.
  Why stiffness is important.
-
 \end_layout
 
 \end_deeper
@@ -364,7 +362,6 @@ cables: spicules, and arteries
 
 \begin_layout Enumerate
 columns: woods cells , osteons, narwhall tusk, tree trunk.
-
 \end_layout
 
 \begin_layout Enumerate
@@ -390,7 +387,6 @@ approx$
 \end_inset
 
  Tree trunks, spicules.
-
 \end_layout
 
 \end_deeper
@@ -405,7 +401,6 @@ ar as in wood cells walls.
  The types of anisotropy that is found is quite distinct, at leasty in the
  case where the tubes are circvulare the anisotropic can called cuvilinear
  anisotropyc.
-
 \end_layout
 
 \end_deeper
@@ -447,7 +442,7 @@ A wide range of structural biomaterials are multilayered composite cylinders
 \color inherit
 
 \begin_inset Note Comment
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -465,11 +460,11 @@ cylindrically orthotropic materials
 .
  The paper presents analytical expressions for the
 \uwave on
-asymptotic bending stiffness
+ asymptotic bending stiffness
 \uwave default
 
 \begin_inset Note Comment
-status open
+status collapsed
 
 \begin_layout Plain Layout
 HK to WF: what does asymptotic bending stiffness mean? The asymptotic value
@@ -481,9 +476,9 @@ HK to WF: what does asymptotic bending stiffness mean? The asymptotic value
 
  of such
 \color teal
-structures
+ structures
 \begin_inset Note Comment
-status open
+status collapsed
 
 \begin_layout Plain Layout
 What sttructure are we talking abiout here? We are taking about a composite
@@ -491,7 +486,6 @@ What sttructure are we talking abiout here? We are taking about a composite
  The composite cylinder can be described a tight fitting co-axial assembly
  of cylindrical tubes; where each of the tubes is composed of a cylindrically
  orthotropic material.
-
 \end_layout
 
 \end_inset
@@ -508,14 +502,12 @@ J.
 
 \shape default
  120, 25562574].
-
 \begin_inset Note Comment
 status open
 
 \begin_layout Plain Layout
 One potential advantage of this method ius that we get very good approximation
  sfor the stiffness of a finite number of cylinders.
-
 \end_layout
 
 \end_inset
@@ -666,7 +658,6 @@ However, I don't know whether it would be technically correct to say that.
  So, check that it would be technically correct to describe the various
  biomaterials as being composed of mineral layers before changing platelets
  to layers.
-
 \end_layout
 
 \end_inset
@@ -725,11 +716,7 @@ literal "false"
  as fracture toughness and failure strain, are enhanced by a large percentage
  with respect to the corresponding properties of their constituent phases,
  with almost no loss of stiffness.
- For example,
-\color teal
-
-\color inherit
-nacre can achieve relatively high fracture toughness (
+ For example,nacre can achieve relatively high fracture toughness (
 \begin_inset Preview
 
 \begin_layout Standard
@@ -821,7 +808,6 @@ literal "false"
  With such remarkable mechanical property combinations, structural biomaterials
  can serve as fascinating model material systems for the discovery of new
  mechanics of materials principles.
-
 \end_layout
 
 \begin_layout Standard
@@ -959,7 +945,7 @@ literal "false"
 
 \begin_inset CommandInset citation
 LatexCommand citet
-key "Aizenberg2005,monn2015new,monn2017new"
+key "Aizenberg2005,monn2017new,kochiyama2021sawtooth"
 literal "false"
 
 \end_inset
@@ -972,7 +958,6 @@ status collapsed
 
 \color teal
 hk to WF: We can also refer to our own papers here.
-
 \end_layout
 
 \end_inset
@@ -1022,7 +1007,6 @@ HK to WF: The previous colored sentence can be deleted.
  Or may be the introduction could be in the form of how many biological
  materials are found in the structures that function as beams (support bending
  momemnts) and columns (support axial loads).
-
 \end_layout
 
 \end_inset
@@ -1041,7 +1025,6 @@ HK to WF: I think cell walls (in wood) and osteons support compressive loads,
  It is also possible that there might be some axial loads on areteries.
  However, it is unclear to me whether those loads or tensile or compressive.
  If I have to guess I would guess that those loads are compressive.
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -1062,7 +1045,6 @@ status open
 \color teal
 The point is that these structures all might look similar but support different
  types of loads.
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -1083,7 +1065,6 @@ status open
 \color teal
 Even so, I think the bending stiffness might be important in many of these
  cases.
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -1104,7 +1085,6 @@ status open
 \color teal
 In the spicule for a given curvature a higher bending stiffness would allow
  greater load transmission.
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -1127,7 +1107,6 @@ In the osteons and wood cell walls a higher bending stiffness might provide
  better protection against buckling instability.
  This is the same in the case of tree trunks as well.
  Higher bending stiffness and the better the buckling strength.
-
 \begin_inset Preview
 
 \begin_layout Standard
@@ -1259,7 +1238,6 @@ noprefix "false"
  effective mechanical properties and the small-scale architectures for structura
 l biomaterials consisting of cylindrical layers with helical symmetries
  is much elusive.
-
 \end_layout
 
 \begin_layout Standard
@@ -1282,7 +1260,6 @@ status open
 
 \begin_layout Plain Layout
 Representative examples of structures displaying a helical symmetry.
-
 \begin_inset space ~
 \end_inset
 
@@ -1485,7 +1462,6 @@ literal "false"
  with various lamination schemes.
  One interesting observation is that all stiffness constants seem to become
  stable when three or four layers are considered in the composite beams.
-
 \begin_inset ERT
 status open
 
@@ -1726,9 +1702,6 @@ status open
 
 \begin_layout Section
 Pure bending of multilayered composite cylinders with cylindrical orthotropy
-\end_layout
-
-\begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:bending_model"
@@ -1913,7 +1886,6 @@ physe_2 ,
 physe_{z} & =
 \backslash
 physe_3.
-
 \backslash
 end{align}
 \backslash
@@ -2117,7 +2089,6 @@ cos(
 varphi)
 \backslash
 physe_z .
-
 \backslash
 end{align}
 \backslash
@@ -2342,7 +2313,7 @@ name "sec:MatrixTrans"
 \end_inset
 
  The generalized Hooke's law is
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 \u{\sigma}=\mathbb{C}\,\u{\epsilon},\label{eq:GeneralizedHooke}
 \end{equation}
@@ -2390,7 +2361,7 @@ noprefix "false"
 \end_inset
 
  can be inverted as
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 \u{\epsilon}=\mathbb{S}\,\u{\sigma},\label{eq:GeneralizedHookeInverse}
 \end{equation}
@@ -2424,7 +2395,7 @@ noprefix "false"
 \end_inset
 
  with index notation as
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 \epsilon'_{ij}=S'_{ijkl}\sigma'_{kl},\label{eq:GeneralizedHookeComponents}
 \end{equation}
@@ -2539,7 +2510,7 @@ noprefix "false"
 \end_inset
 
  are defined as
-\begin_inset Formula
+\begin_inset Formula 
 \begin{align*}
  & S_{11}=S'_{rrrr},\quad S_{12}=S'_{rr\theta\theta},\quad S_{13}=S'_{rrzz},\\
  & S_{22}=S'_{\theta\theta\theta\theta},\quad S_{23}=S'_{\theta\theta zz},\quad S_{33}=S'_{zzzz},\\
@@ -2567,7 +2538,7 @@ noprefix "false"
 \end_inset
 
  as
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 \left[\begin{array}{c}
 \epsilon'_{rr}\\
@@ -2645,7 +2616,7 @@ noprefix "false"
 .
  Thus, through coordinate transformation, the compliance form of the generalized
  Hooke's law in the global cylindrical coordinate system becomes
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 \left[\begin{array}{c}
 \epsilon_{rr}\\
@@ -2865,7 +2836,7 @@ It should be noted that the thirteen non-zero constants
 \end_inset
 
  as
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 \beta_{ij}=C_{ij}-\frac{C_{i3}C_{3j}}{C_{33}},
 \end{equation}
@@ -2913,7 +2884,7 @@ The bending stiffness of the
 \end_inset
 
 -layer cylindrical composite is obtained by Jolicoeur and Cardou as
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 \begin{aligned}EI= & \sum_{n=1}^{N}\left[\sum_{i\in\mathcal{J}}\alpha_{i,n}K_{i,n}(r_{n-1}^{m_{i,n}+2}-r_{n}^{m_{i,n}+2})+\gamma_{n}(r_{n-1}^{4}-r_{n}^{4})\right],\end{aligned}
 \label{eq:EI}
@@ -2946,7 +2917,6 @@ frac{
 pi}{C_{33,n}}
 \backslash
 frac{  C_{13,n} + C_{23,n}(m_{i,n} + 1) - C_{34,n} g_{i,n} m_{i,n} }{m_{i,n}+2},
-
 \backslash
 
 \backslash
@@ -3164,7 +3134,6 @@ in
 mathcal{J}} K_{i,N} g_{i,N} r_N^{m_{i,N}-2} = -
 \backslash
 mu_{2,N}.
-
 \backslash
 end{align}
 \backslash
@@ -3406,7 +3375,6 @@ in
 mathcal{J}}
 \backslash
 left( K_{i,n} g_{i,n} r^{m_{i,n}-2} - K_{i,n+1} g_{i,n+1} r^{m_{i,n+1}-2}
-
 \backslash
 right) =
 \backslash
@@ -3425,7 +3393,6 @@ in
 mathcal{J}}
 \backslash
 left( K_{i,n} Q_{i,n} r^{m_{i,n}-2} - K_{i,n+1} Q_{i,n+1} r^{m_{i,n+1}-2}
-
 \backslash
 right) = Q_{5,n+1} - Q_{5,n},
 \backslash
@@ -3440,7 +3407,6 @@ in
 mathcal{J}}
 \backslash
 left( K_{i,n} W_{i,n} r^{m_{i,n}-2} - K_{i,n+1} W_{i,n+1} r^{m_{i,n+1}-2}
-
 \backslash
 right) = W_{5,n+1} - W_{5,n},
 \backslash
@@ -3739,7 +3705,7 @@ noprefix "false"
 \end_inset
 
  as
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 \begin{bmatrix}r_{n}^{m_{1}-2} & r_{n}^{m_{2}-2} & r_{n}^{m_{3}-2} & r_{n}^{m_{4}-2}\\
 g_{1}r_{n}^{m_{1}-2} & g_{2}r_{n}^{m_{2}-2} & g_{3}r_{n}^{m_{3}-2} & g_{4}r_{n}^{m_{4}-2}\\
@@ -3802,7 +3768,7 @@ for
 \end_inset
 
 , we have
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 K_{i,n}=P_{i}\cdot r_{n}^{-m_{i}+2}+O(\Delta r),\quad\text{for}\,i\in\mathcal{J},\label{eq:single_mat_Ks}
 \end{equation}
@@ -3861,7 +3827,7 @@ noprefix "false"
 \end_inset
 
 , we have
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 \begin{aligned}EI & =\sum_{n=1}^{N}\left[\sum_{i\in\mathcal{J}}\alpha_{i}\left(P_{i}r_{n}^{-m_{i}+2}+O(\Delta r)\right)(r_{n-1}^{m_{i,n}+2}-r_{n}^{m_{i}+2})\right]+\gamma(r_{0}^{4}-r_{N}^{4})\\
  & \begin{split}=\sum_{n=1}^{N}\left[\sum_{i\in\mathcal{J}}\alpha_{i}\left(P_{i}r_{n}^{-m_{i}+2}+O(\Delta r)\right)(-r_{n}^{m_{i}+1}(m_{i}+2)\Delta r+O(\Delta r^{2}))\right]\\
@@ -3899,7 +3865,7 @@ noprefix "false"
 \end_inset
 
  into integral to derive the asymptotic bending stiffness as
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 \begin{aligned}(EI)_{\infty} & =-\lim\limits _{N\to\infty}\sum_{n=1}^{N}\left[\sum_{i\in\mathcal{J}}\alpha_{i}P_{i}(m_{i}+2)r_{n}^{3}\Delta r\right]+\gamma(r_{0}^{4}-r_{N}^{4})+O(\Delta r^{2})\\
  & =-\sum_{i\in\mathcal{J}}\left(\int_{r_{0}}^{r_{N}}\alpha_{i}P_{i}(m_{i}+2)r^{3}\,dr\right)+\gamma(r_{0}^{4}-r_{N}^{4})\\
@@ -4007,7 +3973,7 @@ noprefix "false"
 \end_inset
 
  can be solved from the following equations
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 \begin{bmatrix}r_{n}^{m_{1,n}-2} & r_{n}^{m_{2,n}-2} & r_{n}^{m_{3,n}-2} & r_{n}^{m_{4,n}-2}\\
 g_{1,n}r_{n}^{m_{1,n}-2} & g_{2,n}r_{n}^{m_{2,n}-2} & g_{3,n}r_{n}^{m_{3,n}-2} & g_{4,n}r_{n}^{m_{4,n}-2}\\
@@ -4063,7 +4029,7 @@ for
 \end_inset
 
  gives
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 K_{i,n}=P_{i,n}\cdot r_{n}^{-m_{i,n}+2}+O(\Delta r),\quad\text{for}\,i\in\mathcal{J},\label{eq:two_mat_no_friction_Ks}
 \end{equation}
@@ -4130,7 +4096,7 @@ noprefix "false"
 \end_inset
 
 , we have
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 \begin{aligned}\begin{split}EI & =\sum_{n=1}^{N}\bigg[\sum_{i\in\mathcal{J}}\alpha_{i,n}\left(P_{i,n}r_{n}^{-m_{i,n}+2}+O(\Delta r)\right)\cdot\\
  & \qquad{}(-r_{n}^{m_{i,n}+1}(m_{i,n}+2)\Delta r+O(\Delta r^{2}))+\gamma_{n}(-4r_{n}^{3}\Delta r+O(\Delta r^{2}))\bigg]\\
@@ -4223,7 +4189,7 @@ noprefix "false"
 \end_inset
 
  as
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 \begin{aligned}EI & =-\sum_{\text{odd layers}}\bigg[\sum_{i\in\mathcal{J}}\alpha_{i,I}P_{i,I}(m_{i,I}+2)+4\gamma_{I}\bigg]r_{n}^{3}\cdot\Delta r\\
  & \quad{}-\sum_{\text{even layers}}\bigg[\sum_{i\in\mathcal{J}}\alpha_{i,II}P_{i,II}(m_{i,II}+2)+4\gamma_{II}\bigg]r_{n}^{3}\cdot\Delta r+O(\Delta r^{2})\\
@@ -4258,7 +4224,7 @@ noprefix "false"
 \end_inset
 
  becomes
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 \begin{aligned}(EI)_{\infty} & =\frac{1}{2}\Biggl\{-\Biggl[\sum_{i\in\mathcal{J}}\alpha_{i,I}P_{i,I}(m_{i,I}+2)+4\gamma_{I}\Biggr]\int_{r_{0}}^{r_{N}}r^{3}\,dr\\
  & \quad\qquad{}-\Biggl[\sum_{i\in\mathcal{J}}\alpha_{i,II}P_{i,II}(m_{i,II}+2)+4\gamma_{II}\Biggr]\int_{r_{0}}^{r_{N}}r^{3}\,dr\Biggl\}\\
@@ -4270,7 +4236,7 @@ noprefix "false"
 \end_inset
 
 where
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 (EI)_{j,\infty}=-\frac{r_{N}^{4}-r_{0}^{4}}{4}\left[\sum_{i\in\mathcal{J}}\alpha_{i,j}P_{i,j}(m_{i,j}+2)+4\gamma_{j}\right],\quad\text{for}\,j=I,II.
 \end{equation}
@@ -4478,7 +4444,7 @@ for
 \end_inset
 
 , where
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 \begin{bmatrix}D_{1,n}\\
 D_{2,n}\\
@@ -4512,7 +4478,7 @@ noprefix "false"
 \end_inset
 
  as
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 \usf{B}_{n}\usf{K}_{n-1}=\usf{A}_{n}\usf{K}_{n}-\usf{D}_{n},\label{eq:eqs of Kin_two_mat_no_slip_np1}
 \end{equation}
@@ -4657,7 +4623,7 @@ noprefix "false"
 \end_inset
 
  as
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 \usf{A}_{n}\usf{K}_{n}=\usf{B}_{n}\usf{A}_{n-1}^{-1}\usf{B}_{n-1}\usf{K}_{n-2}+\usf{B}_{n}\usf{A}_{n-1}^{-1}\usf{D}_{n-1}+\usf{D}_{n}.\label{eq:knknm2}
 \end{equation}
@@ -4839,7 +4805,7 @@ noprefix "false"
 \end_inset
 
 , we obtain
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 \begin{aligned}\begin{split}\usf{A}_{n}\usf{K}_{n} & =\left[\usf{A}_{n}+\frac{\Delta r}{r_{n-1}}\left(\usf{B}_{n}\usf{m}_{n-1}\usf{B}_{n}^{-1}\usf{A}_{n}-\usf{A}_{n}\usf{m}_{n}\right)+O(\Delta r^{2})\right]\usf{K}_{n-2}\\
  & \qquad+\frac{\Delta r}{r_{n-1}}\left(2\usf{D}_{n}+\usf{B}_{n}\usf{m}_{n-1}\usf{B}_{n}^{-1}\usf{D}_{n-1}\right)+O(\Delta r^{2}),
@@ -4932,7 +4898,7 @@ noprefix "false"
 \end_inset
 
  as
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 \usf{K}_{n-2}=\usf{K}_{n}-2\frac{d\usf{K}_{n}}{dr}\Delta r+O(\Delta r^{2}).\label{eq:knknm2appr2}
 \end{equation}
@@ -5055,7 +5021,7 @@ noprefix "false"
 \end_inset
 
 
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 2r_{n}\frac{d(\usf{r}_{n,n}\usf{K}_{n})}{dr}=\left(\usf{M}_{n}+\usf{m}_{n}\right)\usf{r}_{n,n}\usf{K}_{n}+r_{n}^{2}\usf{F}_{n},\label{eq:GovernEqnKn}
 \end{equation}
@@ -5092,7 +5058,7 @@ noprefix "false"
 \end_inset
 
  for the details of the solution procedures), we obtain
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 %K_{i,n}=r_{n}^{-m_{i,n}}\left(G_{i,n}^{0}r_{n}^{2}+G_{i,n}^{1}r_{n}^{\lambda_{1,n}}+G_{i,n}^{2}r_{n}^{\lambda_{2,n}}+G_{i,n}^{3}r_{n}^{\lambda_{3,n}}+G_{i,n}^{4}r_{n}^{\lambda_{4,n}}\right)
 K_{i,n}=r_{n}^{-m_{i,n}}\left(G_{i,n}^{0}r_{n}^{2}+\sum_{j\in\mathcal{J}}G_{i,n}^{j}r_{n}^{\lambda_{j,n}}\right),\quad\text{for}\,i\in\mathcal{J},\label{eq:two_mat_no_slip_Ks}
@@ -5176,7 +5142,7 @@ noprefix "false"
 \end_inset
 
 , we obtain the bending stiffness as
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 \begin{aligned}EI & =-\sum_{n=1}^{N}\left\lbrace \sum_{i\in\mathcal{J}}\alpha_{i,n}'\left(G_{i,n}^{0}r_{n}^{2}+\sum_{j\in\mathcal{J}}G_{i,n}^{j}r_{n}^{\lambda_{j,n}}\right)r_{n}+4\gamma_{n}r_{n}^{3}\right\rbrace +O(\Delta r)\\
  & =-\sum_{n=1}^{N}\left\lbrace \left(\sum_{i\in\mathcal{J}}\alpha_{i,n}'G_{i,n}^{0}+4\gamma_{n}\right)r_{n}^{3}+\sum_{i\in\mathcal{J}}\sum_{j\in\mathcal{J}}\alpha_{i,n}'G_{i,n}^{j}r_{n}^{1+\lambda_{j,n}}\right\rbrace +O(\Delta r),
@@ -5280,7 +5246,7 @@ Since the material properties of the layers of the structure are alternately
 
 .
  Therefore,
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 \begin{aligned}EI & =-\frac{1}{2}\sum_{n=1}^{N}\left[\left(\sum_{i\in\mathcal{J}}\alpha_{i,I}'G_{i,I}^{0}+4\gamma_{I}\right)r_{n}^{3}+\sum_{i\in\mathcal{J}}\sum_{j\in\mathcal{J}}\alpha_{i,I}'G_{i,I}^{j}r_{n}^{1+\lambda_{j,I}}\right]\\
  & \quad-\frac{1}{2}\sum_{n=1}^{N}\biggr[\left(\sum_{i\in\mathcal{J}}\alpha_{i,II}'G_{i,II}^{0}+4\gamma_{II}\right)r_{n}^{3}\\
@@ -5299,7 +5265,7 @@ As
 \end_inset
 
 , we obtain the asymptotic bending stiffness as
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 \begin{aligned}(EI)_{\infty} & =-\frac{1}{2}\left[\sum_{i\in\mathcal{J}}\left(\alpha_{i,I}'G_{i,I}^{0}+\alpha_{i,II}'G_{i,II}^{0}\right)+4\left(\gamma_{I}+\gamma_{II}\right)\right]\int_{r_{0}}^{r_{N}}r^{3}\,dr\\
  & \quad-\frac{1}{2}\sum_{i\in\mathcal{J}}\sum_{j\in\mathcal{J}}\left[\int_{r_{0}}^{r_{N}}\left(\alpha_{i,I}'G_{i,I}^{j}r^{1+\lambda_{j,I}}+\alpha_{i,II}'G_{i,II}^{j}r^{1+\lambda_{j,II}}\right)\,dr\right]\\
@@ -5429,7 +5395,6 @@ noprefix "false"
 \end_inset
 
 .
-
 \begin_inset Float table
 placement h
 wide false
@@ -5827,7 +5792,6 @@ noprefix "false"
 \end_inset
 
 ).
-
 \end_layout
 
 \begin_layout Standard
@@ -5922,7 +5886,6 @@ noprefix "false"
 \end_inset
 
 ), which is equal to the average of those of two homogeneous materials.
-
 \end_layout
 
 \begin_layout Standard
@@ -6015,7 +5978,6 @@ m
 .
  This implies that we could build up stiffer composite from compliant materials
  by designing the spatial arrangements of laminae.
-
 \end_layout
 
 \begin_layout Standard
@@ -6380,7 +6342,6 @@ beta_{22} +
 beta_{66})-
 \backslash
 beta_{56}^2.
-
 \backslash
 end{align}
 \backslash
@@ -6621,7 +6582,6 @@ begin{bmatrix} 			2C_{34}
  C_{13}-C_{23}
 \backslash
 end{bmatrix}.
-
 \backslash
 end{equation}
 \backslash
@@ -6726,7 +6686,6 @@ mu_1  +
 left(g_2 (m_3 - m_4)(m_2 -2)
 \backslash
 right.
-
 \backslash
 
 \backslash
@@ -6762,7 +6721,6 @@ left( g_1 g_3 (m_1 - m_3)(m_4 -2) + g_1 g_4 (m_4 - m_1)(m_3 - 2)
 right.
 \backslash
 right.
-
 \backslash
 
 \backslash
@@ -6807,7 +6765,6 @@ end{split}
 begin{split} 	P_3 & = -
 \backslash
 frac{1}{p} ((g_1 g_2 (m_1 - m_2)(m_4 -2) + g_1 g_4 (m_4 - m_1)(m_2 - 2)
-
 \backslash
 
 \backslash
@@ -6834,7 +6791,6 @@ end{split}
 begin{split} 	P_4 & =
 \backslash
 frac{1}{p} ((g_1 g_2 (m_1 - m_2)(m_3 -2) + g_1 g_3 (m_3 - m_1)(m_2 - 2)
-
 \backslash
 
 \backslash
@@ -6867,7 +6823,7 @@ end{subequations}
 \end_inset
 
 where
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 \begin{aligned}p= & g_{1}(g_{3}-g_{4})(m_{1}-m_{3})(m_{2}-m_{4})\\
  & +g_{2}(g_{3}-g_{4})(m_{2}-m_{3})(m_{4}-m_{1})\\
@@ -7054,7 +7010,6 @@ begin{bmatrix} 		m_{1,n} & 0 & 0 & 0
  		0 & 0 & 0 & m_{4,n}
 \backslash
 end{bmatrix}.
-
 \backslash
 end{align}
 \backslash
@@ -7130,7 +7085,7 @@ noprefix "false"
 \end_inset
 
  can be written as
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 \usf{A}_{n}=\tilde{\usf{A}}_{n}\usf{r}_{n-1,n},\quad\usf{B}_{n}=\tilde{\usf{B}}_{n}\usf{r}_{n-1,n-1}.
 \end{equation}
@@ -7285,7 +7240,6 @@ usf{B}}_{n}
 usf{r}_{n-1,n-1}
 \backslash
 usf{m}_{n-1}.
-
 \backslash
 end{align}
 \backslash
@@ -7569,7 +7523,6 @@ usf{D}_{n-1}
 right) + O(
 \backslash
 Delta r^2).
-
 \backslash
 end{split}
 \backslash
@@ -7659,7 +7612,7 @@ noprefix "false"
 \end_inset
 
 , we obtain
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 \begin{aligned}r_{n-1}\frac{d\usf{K}_{n}}{dr}= & \left(\usf{A}_{n}^{-1}\usf{B}_{n}\usf{m}_{n-1}\usf{B}_{n}^{-1}\usf{A}_{n}-\usf{m}_{n}\right)\usf{K}_{n}\\
  & +\usf{A}_{n}^{-1}\left(2\usf{D}_{n}+\usf{B}_{n}\usf{m}_{n-1}\usf{B}_{n}^{-1}\usf{D}_{n-1}\right)+O(\Delta r).
@@ -7696,7 +7649,7 @@ noprefix "false"
 \end_inset
 
  and noting that
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 \usf{B}_{n}\usf{m}_{n-1}\usf{B}_{n}^{-1}=\tilde{\usf{B}}_{n}\usf{m}_{n-1}\tilde{\usf{B}}_{n}^{-1},
 \end{equation}
@@ -7704,7 +7657,7 @@ noprefix "false"
 \end_inset
 
 we have
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 \begin{aligned}\begin{split}2r_{n}\frac{d\usf{K}_{n}}{dr}= & \left(\usf{r}_{n,n}^{-1}\tilde{\usf{A}}_{n}^{-1}\tilde{\usf{B}}_{n}\usf{m}_{n-1}\tilde{\usf{B}}_{n}^{-1}\tilde{\usf{A}}_{n}\usf{r}_{n,n}-\usf{m}_{n}\right)\usf{K}_{n}\\
  & +r_{n}^{2}\usf{r}_{n,n}^{-1}\tilde{\usf{A}}_{n}^{-1}\left(-2\usf{I}+\tilde{\usf{B}}_{n}\usf{m}_{n-1}\tilde{\usf{B}}_{n}^{-1}\right)\tilde{\usf{D}}_{n}+O(\Delta r),
@@ -7724,7 +7677,7 @@ where
 \end_inset
 
  is a constant vector
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 \tilde{\usf{D}}_{n}=\begin{bmatrix}\mu_{1,n}-\mu_{1,n-1}\\
 \mu_{2,n}-\mu_{2,n-1}\\
@@ -7834,7 +7787,7 @@ noprefix "false"
 \end_inset
 
  as
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 2r_{n}\frac{d\usf{K}_{n}}{dr}=\left(\usf{r}_{n,n}^{-1}\usf{M}_{n}\usf{r}_{n,n}+\usf{m}_{n}\right)\usf{K}_{n}+r_{n}^{2}\usf{r}_{n,n}^{-1}\usf{F}_{n}.\label{eq:AppendKndr}
 \end{equation}
@@ -7872,7 +7825,7 @@ noprefix "false"
 \end_inset
 
 
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 2r_{n}\frac{d\pr{\usf{r}_{n,n}\usf{K}_{n}}}{dr}=\pr{\usf{M}_{n}+\usf{m}_{n}}\pr{\usf{r}_{n,n}\usf{K}_{n}}+r_{n}^{2}\usf{F}_{n},\label{eq:AppendKn}
 \end{equation}
@@ -7976,7 +7929,7 @@ noprefix "false"
 \end_inset
 
  is equivalent to
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 2r_{n}\frac{d\usf{K}_{n}^{e}}{dr}=\usf{M}_{n}^{e}\usf{K}_{n}^{e}+r_{n}^{2}\usf{F}_{n},\label{eq:AppendKendr}
 \end{equation}
@@ -8057,7 +8010,6 @@ in
 mathcal{J}} K^e_{i,N} g_{i,N} r_N^{-2} = -
 \backslash
 mu_{2,N}.
-
 \backslash
 end{align}
 \backslash
@@ -8225,7 +8177,6 @@ usf{F}_{II},
 quad
 \backslash
 text{for even~$n$}.
-
 \backslash
 end{align}
 \backslash
@@ -8292,7 +8243,7 @@ noprefix "false"
 \end_inset
 
  as
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 \usf{M}^{e}=(\usf{M}^{\nu})^{-1}\usf{\Lambda}^{\nu}\usf{M}^{\nu},
 \end{equation}
@@ -8367,7 +8318,7 @@ where
 
 .
  Let
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 \usf{Y}=\usf{M}^{\nu}\usf{K}^{e},\quad\usf{L}=\frac{1}{2}\usf{M}^{\nu}\usf{F},
 \end{equation}
@@ -8389,7 +8340,7 @@ noprefix "false"
 \end_inset
 
  becomes
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 r\frac{d\usf{Y}}{dr}=\usf{\Lambda}\usf{Y}+r^{2}\usf{L}.\label{eq:AppendYndr}
 \end{equation}
@@ -8411,7 +8362,7 @@ noprefix "false"
 \end_inset
 
  reads
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 \begin{bmatrix}Y_{1}\\
 Y_{2}\\
@@ -8517,7 +8468,7 @@ end{subequations}
 \end_inset
 
 where
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 \begin{bmatrix}Y_{1,n}\\
 Y_{2,n}\\
@@ -8559,7 +8510,6 @@ noprefix "false"
 \end_inset
 
 .
-
 \begin_inset ERT
 status open
 
@@ -8696,7 +8646,6 @@ usf{Y}_{II},
 quad
 \backslash
 text{for even~$n$}.
-
 \backslash
 end{align}
 \backslash
@@ -8735,7 +8684,7 @@ noprefix "false"
 \end_inset
 
  in component form as
-\begin_inset Formula
+\begin_inset Formula 
 \begin{equation}
 K_{i,n}=r_{n}^{-m_{i,n}}\left(G_{i,n}^{0}r_{n}^{2}+\sum_{j\in\mathcal{J}}G_{i,n}^{j}r_{n}^{\lambda_{j,n}}\right),\quad\text{for~\ensuremath{i\in\mathcal{J}}},\label{eq:appenKn}
 \end{equation}
@@ -8803,7 +8752,6 @@ text{for}
 in
 \backslash
 mathcal{J} .
-
 \backslash
 end{align}
 \backslash
