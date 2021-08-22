@@ -410,7 +410,7 @@ We also introduce a set of orthonormal vectors~$(\physe_{r},\physe_{\theta},\phy
 \end{subequations}
 
 We consider a hollow composite cylinder, whose axis is aligned with~$\physe_{z}$ and cross sections are in~$(\physe_{r},\physe_{\theta})$ plane (Fig.~\ref{fig:schematic}~$\subf{A}$).
-The inner and outer radius of the cylinder is~$r_0$ and~$r_N$, respectively.
+The inner and outer radius of the cylinder is~${}^{0}\!{r}$ and~${}^{N}\!{r}$, respectively.
 The cylinder consists of~$N$ co-axial cylindrical layers and each layer is cylindrical orthotropic with different principal material property orientations (see Fig.~\ref{fig:schematic}~$\subf{B}$).
 
 For an individual layer of material, we construct a local cylindrical coordinate system according to the principal material property orientation of the layer. We refer to the local cylindrical coordinate system as the material coordinate system. It is a rotation of the global cylindrical coordinate system through an angle~$\varphi$, the so-called helical angle, in clockwise direction with respect to the axis~$\physe_{r}$.
@@ -597,43 +597,43 @@ for~$i,j \in\mathcal{I}$. It can be easily shown that~$\pr{\beta_{ij}}_{i,j \in\
 The bending stiffness of the~$N$-layer cylindrical composite is obtained by Jolicoeur and Cardou as
 \begin{equation}
 	\begin{aligned}
-	EI = & \sum_{n=1}^{N} \left[ \sum_{i \in \mathcal{J}} \alpha_{i,n} K_{i,n}  (r_{n-1}^{m_{i,n}+2} - r_{n}^{m_{i,n}+2}) + \gamma_n(r_{n-1}^4 - r_n^4) \right],
+	EI = & \sum_{n=1}^{N} \left[ \sum_{i \in \mathcal{J}} {}^{n}\!{\alpha_{i}} {}^{n}\!{K_{i}}  ({}^{n-1}\!{r}^{{}^{n}\!{m_{i}}+2} - {}^{n}\!{r}^{{}^{n}\!{m_{i}}+2}) + \gamma_n({}^{n-1}\!{r}^4 - {}^{n}\!{r}^4) \right],
 	\end{aligned}
 	\label{eq:EI}
 \end{equation}
 with
 \begin{subequations}
 	\begin{align}
-	\alpha_{i,n} & := \frac{\pi}{C_{33,n}} \frac{  C_{13,n} + C_{23,n}(m_{i,n} + 1) - C_{34,n} g_{i,n} m_{i,n} }{m_{i,n}+2}, \\
-	\gamma_n & := \frac{\pi}{C_{33,n}} \frac{ \mu_{1,n} (C_{13,n} + 3C_{23,n}) - 2\mu_{2,n} C_{34,n} - 1  }{4},
+	{}^{n}\!{\alpha_{i}} & := \frac{\pi}{{}^{n}\!{C_{33}}} \frac{  {}^{n}\!{C_{13}} + {}^{n}\!{C_{23}}({}^{n}\!{m_{i}} + 1) - {}^{n}\!{C_{34}} {}^{n}\!{g_{i}} {}^{n}\!{m_{i}} }{{}^{n}\!{m_{i}}+2}, \\
+	\gamma_n & := \frac{\pi}{{}^{n}\!{C_{33}}} \frac{ {}^{n}\!{\mu_{1}} ({}^{n}\!{C_{13}} + 3{}^{n}\!{C_{23}}) - 2{}^{n}\!{\mu_{2}} {}^{n}\!{C_{34}} - 1  }{4},
 	\end{align}
 \end{subequations}
-where~$N$ denotes the total number of layers,~$\mathcal{J} := \pr{1,2,3,4}$,~$r_{n-1}$ and~$r_{n}$ the internal and external radii of the~$n^\text{th}$ layer,~$m_{i,n}$,~$g_{i,n}$,~$\mu_{1,n}$, and~$\mu_{2,n}$ are material constants related with elastic constants of the~$n^\text{th}$ layer (see~\ref{Appen:MatConst}).
+where~$N$ denotes the total number of layers,~$\mathcal{J} := \pr{1,2,3,4}$,~${}^{n-1}\!{r}$ and~${}^{n}\!{r}$ the internal and external radii of the~$n^\text{th}$ layer,~${}^{n}\!{m_{i}}$,~${}^{n}\!{g_{i}}$,~${}^{n}\!{\mu_{1}}$, and~${}^{n}\!{\mu_{2}}$ are material constants related with elastic constants of the~$n^\text{th}$ layer (see~\ref{Appen:MatConst}).
 
-The coefficients~$K_{i,n}$ are determined by the boundary conditions and continuity conditions of displacement and stress at the interface.
+The coefficients~${}^{n}\!{K_{i}}$ are determined by the boundary conditions and continuity conditions of displacement and stress at the interface.
 
 \paragraph{Boundary condition.}
 
-The traction free boundaries at innermost radius~$r_0$ and outermost radius~$r_N$ require
+The traction free boundaries at innermost radius~${}^{0}\!{r}$ and outermost radius~${}^{N}\!{r}$ require
 \begin{subequations}
 	\begin{align}
-	\sum_{i \in \mathcal{J}} K_{i,1} r_0^{m_{i,1}-2} & = -\mu_{1,1}, \quad
-	\sum_{i \in \mathcal{J}} K_{i,1} g_{i,1} r_0^{m_{i,1}-2} = -\mu_{2,1},\\
-	\sum_{i \in \mathcal{J}} K_{i,N} r_N^{m_{i,N}-2} & = -\mu_{1,N}, \quad
-	\sum_{i \in \mathcal{J}} K_{i,N} g_{i,N} r_N^{m_{i,N}-2} = -\mu_{2,N}.
+	\sum_{i \in \mathcal{J}} {}^{1}\!{K_{i}} {}^{0}\!{r}^{{}^{1}\!{m_{i}}-2} & = -{}^{1}\!{\mu_{1}}, \quad
+	\sum_{i \in \mathcal{J}} {}^{1}\!{K_{i}} {}^{1}\!{g_{i}} {}^{0}\!{r}^{{}^{1}\!{m_{i}}-2} = -{}^{1}\!{\mu_{2}},\\
+	\sum_{i \in \mathcal{J}} {}^{N}\!{K_{i}} {}^{N}\!{r}^{{}^{N}\!{m_{i}}-2} & = -{}^{N}\!{\mu_{1}}, \quad
+	\sum_{i \in \mathcal{J}} {}^{N}\!{K_{i}} {}^{N}\!{g_{i}} {}^{N}\!{r}^{{}^{N}\!{m_{i}}-2} = -{}^{N}\!{\mu_{2}}.
 	\end{align}
 	\label{eq:boundary}
 \end{subequations}
 
 \paragraph{Interfacial condition: no friction.}
 
-In the case of no friction interface,~$u_r$ and~$\sigma_{rr}$ are continuous,~$\tau_{r\theta}$ and~$\tau_{rz}$ are zero at the interface. Therefore~$K_{i,n}$ satisfy following equations
+In the case of no friction interface,~$u_r$ and~$\sigma_{rr}$ are continuous,~$\tau_{r\theta}$ and~$\tau_{rz}$ are zero at the interface. Therefore~${}^{n}\!{K_{i}}$ satisfy following equations
 \begin{subequations}
 	\begin{align}
-	\sum_{i \in \mathcal{J}} K_{i,n} r_{n}^{m_{i,n}-2} & = -\mu_{1,n}, \quad
-	\sum_{i \in \mathcal{J}} K_{i,n} g_{i,n} r_{n}^{m_{i,n}-2} = -\mu_{2,n}, \\
-	\sum_{i \in \mathcal{J}} K_{i,n} r_{n-1}^{m_{i,n}-2} & = -\mu_{1,n}, \quad
-	\sum_{i \in \mathcal{J}} K_{i,n} g_{i,n} r_{n-1}^{m_{i,n}-2} = -\mu_{2,n},
+	\sum_{i \in \mathcal{J}} {}^{n}\!{K_{i}} {}^{n}\!{r}^{{}^{n}\!{m_{i}}-2} & = -{}^{n}\!{\mu_{1}}, \quad
+	\sum_{i \in \mathcal{J}} {}^{n}\!{K_{i}} {}^{n}\!{g_{i}} {}^{n}\!{r}^{{}^{n}\!{m_{i}}-2} = -{}^{n}\!{\mu_{2}}, \\
+	\sum_{i \in \mathcal{J}} {}^{n}\!{K_{i}} {}^{n-1}\!{r}^{{}^{n}\!{m_{i}}-2} & = -{}^{n}\!{\mu_{1}}, \quad
+	\sum_{i \in \mathcal{J}} {}^{n}\!{K_{i}} {}^{n}\!{g_{i}} {}^{n-1}\!{r}^{{}^{n}\!{m_{i}}-2} = -{}^{n}\!{\mu_{2}},
 	\end{align}
 	\label{eq:nofriction_interface}
 \end{subequations}
@@ -645,10 +645,11 @@ for~$n = 1,2,\dots,N$.
 In the case of perfect bonding (no slip) interface between layers, the continuity conditions of stresses~$\sigma_{rr}$,~$\tau_{r\theta}$,~$\tau_{rz}$ and displacements~$u_{r}$,~$u_{\theta}$,~$u_z$ at the interface yields
 \begin{subequations}
 	\begin{align}
-	& \sum_{i \in \mathcal{J}} \left( K_{i,n} r^{m_{i,n}-2} - K_{i,n+1} r^{m_{i,n+1}-2} \right) = \mu_{1,n+1} - \mu_{1,n}, \\
-	& \sum_{i \in \mathcal{J}} \left( K_{i,n} g_{i,n} r^{m_{i,n}-2} - K_{i,n+1} g_{i,n+1} r^{m_{i,n+1}-2} \right) = \mu_{2,n+1} - \mu_{2,n}, \\
-	& \sum_{i \in \mathcal{J}} \left( K_{i,n} Q_{i,n} r^{m_{i,n}-2} - K_{i,n+1} Q_{i,n+1} r^{m_{i,n+1}-2} \right) = Q_{5,n+1} - Q_{5,n}, \\
-	& \sum_{i \in \mathcal{J}} \left( K_{i,n} W_{i,n} r^{m_{i,n}-2} - K_{i,n+1} W_{i,n+1} r^{m_{i,n+1}-2} \right) = W_{5,n+1} - W_{5,n},
+	& \sum_{i \in \mathcal{J}} \left( {}^{n}\!{K_{i}} r^{{}^{n}\!{m_{i}}-2} - {}^{n+1}\!{K_{i}} r^{{}^{n+1}\!{m_{i}}-2} \right) = {}^{n+1}\!{\mu_{1}} 
+  - {}^{n}\!{\mu_{1}}, \\
+	& \sum_{i \in \mathcal{J}} \left( {}^{n}\!{K_{i}} {}^{n}\!{g_{i}} r^{{}^{n}\!{m_{i}}-2} - {}^{n+1}\!{K_{i}} {}^{n+1}\!{g_{i}} r^{{}^{n+1}\!{m_{i}}-2} \right) = {}^{n+1}\!{\mu_{2}} - {}^{n}\!{\mu_{2}}, \\
+	& \sum_{i \in \mathcal{J}} \left( {}^{n}\!{K_{i}} {}^{n}\!{Q_{i}} r^{{}^{n}\!{m_{i}}-2} - {}^{n+1}\!{K_{i}} {}^{n+1}\!{Q_{i}} r^{{}^{n+1}\!{m_{i}}-2} \right) = {}^{n+1}\!{Q_{5}} - {}^{n}\!{Q_{5}}, \\
+	& \sum_{i \in \mathcal{J}} \left( {}^{n}\!{K_{i}} {}^{n}\!{W_{i}} r^{{}^{n}\!{m_{i}}-2} - {}^{n+1}\!{K_{i}} {}^{n+1}\!{W_{i}} r^{{}^{n+1}\!{m_{i}}-2} \right) = {}^{n+1}\!{W_{5}} - {}^{n}\!{W_{5}},
 	\end{align}
 	\label{eq:noslip_interface}
 \end{subequations}
@@ -674,16 +675,16 @@ Based on the lamination schemes and interfacial conditions, we consider three di
 \subsection{Homogeneous material and no friction interface}
 \label{sec:1mat_no_friction}
 
-First we consider that the elastic property for each layer is the same. The interfaces between layers are frictionless. This is equivalent to the scenario where a homogeneous cylinder is cut into layers with uniform thickness and there is no friction between the layers. In this case, we drop the subscript~$n$ of the material constants for the sake of simplicity. To obtain the coefficients~$K_{i,n}$, we rewrite Eqns.~\eqref{eq:boundary} and~\eqref{eq:nofriction_interface} as
+First we consider that the elastic property for each layer is the same. The interfaces between layers are frictionless. This is equivalent to the scenario where a homogeneous cylinder is cut into layers with uniform thickness and there is no friction between the layers. In this case, we drop the subscript~$n$ of the material constants for the sake of simplicity. To obtain the coefficients~${}^{n}\!{K_{i}}$, we rewrite Eqns.~\eqref{eq:boundary} and~\eqref{eq:nofriction_interface} as
 \begin{equation}
 	\begin{bmatrix}
-	r_n^{m_1 - 2} & r_n^{m_2 - 2} & r_n^{m_3 - 2} & r_n^{m_4 - 2} \\
-	g_1 r_n^{m_1 - 2} & g_2 r_n^{m_2 - 2} & g_3 r_n^{m_3 - 2} & g_4 r_n^{m_4 - 2} \\
-	r_{n-1}^{m_1 - 2} & r_{n-1}^{m_2 - 2} & r_{n-1}^{m_3 - 2} & r_{n-1}^{m_4 - 2} \\
-	g_1 r_{n-1}^{m_1 - 2} & g_2 r_{n-1}^{m_2 - 2} & g_3 r_{n-1}^{m_3 - 2} & g_4 r_{n-1}^{m_4 - 2}
+	{}^{n}\!{r}^{m_1 - 2} & {}^{n}\!{r}^{m_2 - 2} & {}^{n}\!{r}^{m_3 - 2} & {}^{n}\!{r}^{m_4 - 2} \\
+	g_1 {}^{n}\!{r}^{m_1 - 2} & g_2 {}^{n}\!{r}^{m_2 - 2} & g_3 {}^{n}\!{r}^{m_3 - 2} & g_4 {}^{n}\!{r}^{m_4 - 2} \\
+	{}^{n-1}\!{r}^{m_1 - 2} & {}^{n-1}\!{r}^{m_2 - 2} & {}^{n-1}\!{r}^{m_3 - 2} & {}^{n-1}\!{r}^{m_4 - 2} \\
+	g_1 {}^{n-1}\!{r}^{m_1 - 2} & g_2 {}^{n-1}\!{r}^{m_2 - 2} & g_3 {}^{n-1}\!{r}^{m_3 - 2} & g_4 {}^{n-1}\!{r}^{m_4 - 2}
 	\end{bmatrix}
 	\begin{bmatrix}
-	K_{1,n} \\ K_{2,n} \\ K_{3,n} \\ K_{4,n}
+	{}^{n}\!{K_{1}} \\ {}^{n}\!{K_{2}} \\ {}^{n}\!{K_{3}} \\ {}^{n}\!{K_{4}}
 	\end{bmatrix}
 	=
 	\begin{bmatrix}
@@ -691,29 +692,29 @@ First we consider that the elastic property for each layer is the same. The inte
 	\end{bmatrix},
 	\label{eq:eqs of Kin_one_mat_no_friction}
 \end{equation}
-for~$n = 1,2,\dots,N$. Let layer thickness~$\Delta r := \pr{r_N-r_0}/N$, radius sequence~$r_n := r_0 + n\cdot \Delta r$. Applying Taylor series expansion on the inverse of the coefficient matrix of~$K_{i,n}$ around~$r_n$, we have
+for~$n = 1,2,\dots,N$. Let layer thickness~$\Delta r := \pr{{}^{N}\!{r}-{}^{0}\!{r}}/N$, radius sequence~${}^{n}\!{r} := {}^{0}\!{r} + n\cdot \Delta r$. Applying Taylor series expansion on the inverse of the coefficient matrix of~${}^{n}\!{K_{i}}$ around~${}^{n}\!{r}$, we have
 \begin{equation}
-	K_{i,n} = P_i \cdot r_n^{-m_i + 2} + O(\Delta r), \quad \text{for}\, i \in \mathcal{J},
+	{}^{n}\!{K_{i}} = P_i \cdot {}^{n}\!{r}^{-m_i + 2} + O(\Delta r), \quad \text{for}\, i \in \mathcal{J},
 	\label{eq:single_mat_Ks}
 \end{equation}
 where~$P_i$ are material constants given in~\ref{Appen:Pi}. Substituting Eqn.~\eqref{eq:single_mat_Ks} into Eqn.~\eqref{eq:EI}, we have
 \begin{equation}
 	\begin{aligned}
-	EI & = \sum_{n=1}^{N} \left[ \sum_{i \in \mathcal{J}} \alpha_i \left( P_i r_n^{-m_i + 2} + O(\Delta r) \right) (r_{n-1}^{m_{i,n}+2} - r_{n}^{m_{i}+2}) \right] + \gamma (r_0^4 - r_N^4) \\
+	EI & = \sum_{n=1}^{N} \left[ \sum_{i \in \mathcal{J}} \alpha_i \left( P_i {}^{n}\!{r}^{-m_i + 2} + O(\Delta r) \right) ({}^{n-1}\!{r}^{{}^{n}\!{m_{i}}+2} - {}^{n}\!{r}^{m_{i}+2}) \right] + \gamma ({}^{0}\!{r}^4 - {}^{N}\!{r}^4) \\
 	 & \begin{split}
-		= \sum_{n=1}^{N} \left[ \sum_{i \in \mathcal{J}} \alpha_i \left( P_i r_n^{-m_i + 2} + O(\Delta r) \right) (- r_{n}^{m_{i}+1}(m_i + 2 ) \Delta r + O(\Delta r^2)) \right] \\
-		+ \gamma (r_0^4 - r_N^4)
+		= \sum_{n=1}^{N} \left[ \sum_{i \in \mathcal{J}} \alpha_i \left( P_i {}^{n}\!{r}^{-m_i + 2} + O(\Delta r) \right) (- {}^{n}\!{r}^{m_{i}+1}(m_i + 2 ) \Delta r + O(\Delta r^2)) \right] \\
+		+ \gamma ({}^{0}\!{r}^4 - {}^{N}\!{r}^4)
 	   \end{split}\\
-	 & = - \sum_{n=1}^{N} \left[ \sum_{i \in \mathcal{J}} \left( \alpha_i P_i (m_i + 2 ) r_n^{3} \cdot \Delta r \right) \right] + \gamma (r_0^4 - r_N^4) + O(\Delta r^2).
+	 & = - \sum_{n=1}^{N} \left[ \sum_{i \in \mathcal{J}} \left( \alpha_i P_i (m_i + 2 ) {}^{n}\!{r}^{3} \cdot \Delta r \right) \right] + \gamma ({}^{0}\!{r}^4 - {}^{N}\!{r}^4) + O(\Delta r^2).
 	\end{aligned}
 	\label{eq:single_mat_EI}
 \end{equation}
 Taking the limit~$N \to \infty$, according to the definition of Riemann integral, we convert the sum of series in Eqn.~\eqref{eq:single_mat_EI} into integral to derive the asymptotic bending stiffness as
 \begin{equation}
 	\begin{aligned}
-	(EI)_{\infty} & = - \lim\limits_{N \to \infty} \sum_{n=1}^{N} \left[ \sum_{i \in \mathcal{J}} \alpha_i P_i (m_i + 2 ) r_n^{3} \Delta r \right] + \gamma (r_0^4 - r_N^4) + O(\Delta r^2) \\
-	 & = - \sum_{i \in \mathcal{J}} \left( \int_{r_0}^{r_N} \alpha_i P_i (m_i + 2 ) r^3 \, dr \right) + \gamma (r_0^4 - r_N^4) \\
-	 & = - \frac{r_N^4 - r_0^4}{4} \left[ \sum_{i \in \mathcal{J}} \alpha_i P_i (m_i + 2 ) + 4\gamma\right].
+	(EI)_{\infty} & = - \lim\limits_{N \to \infty} \sum_{n=1}^{N} \left[ \sum_{i \in \mathcal{J}} \alpha_i P_i (m_i + 2 ) {}^{n}\!{r}^{3} \Delta r \right] + \gamma ({}^{0}\!{r}^4 - {}^{N}\!{r}^4) + O(\Delta r^2) \\
+	 & = - \sum_{i \in \mathcal{J}} \left( \int_{{}^{0}\!{r}}^{{}^{N}\!{r}} \alpha_i P_i (m_i + 2 ) r^3 \, dr \right) + \gamma ({}^{0}\!{r}^4 - {}^{N}\!{r}^4) \\
+	 & = - \frac{{}^{N}\!{r}^4 - {}^{0}\!{r}^4}{4} \left[ \sum_{i \in \mathcal{J}} \alpha_i P_i (m_i + 2 ) + 4\gamma\right].
 	\end{aligned}
 	\label{eq:single_mat_EI_final}
 \end{equation}
@@ -724,45 +725,45 @@ Taking the limit~$N \to \infty$, according to the definition of Riemann integral
 \subsection{Heterogeneous material and no friction interface}
 \label{sec:2mat_no_friction}
 We consider the lamination scheme of the multilayered cylindrical composite as~$[\varphi_{I}/\varphi_{II}]_{N/2}$. That is, layers with helical angles~$\varphi_I$ and~$\varphi_{II}$ are alternatively arranged from the core to the periphery of the cylinder. We use~$I$ and~$II$ as subscripts to denote material constants of layers with odd and even layer numbers.
-Under no friction interfacial condition~\eqref{eq:nofriction_interface} and considering boundary condition~\eqref{eq:boundary}, the~$K_{i,n}$ can be solved from the following equations
+Under no friction interfacial condition~\eqref{eq:nofriction_interface} and considering boundary condition~\eqref{eq:boundary}, the~${}^{n}\!{K_{i}}$ can be solved from the following equations
 \begin{equation}
 	\begin{bmatrix}
-		r_n^{m_{1,n} - 2} & r_n^{m_{2,n} - 2} & r_n^{m_{3,n} - 2} & r_n^{m_{4,n} - 2} \\
-		g_{1,n} r_n^{m_{1,n} - 2} & g_{2,n} r_n^{m_{2,n} - 2} & g_{3,n} r_n^{m_{3,n} - 2} & g_{4,n} r_n^{m_{4,n} - 2} \\
-		r_{n-1}^{m_{1,n} - 2} & r_{n-1}^{m_{2,n} - 2} & r_{n-1}^{m_{3,n} - 2} & r_{n-1}^{m_{4,n} - 2} \\
-		g_{1,n} r_{n-1}^{m_{1,n} - 2} & g_{2,n} r_{n-1}^{m_{2,n} - 2} & g_{3,n} r_{n-1}^{m_{3,n} - 2} & g_{4,n} r_{n-1}^{m_{4,n} - 2}
+		{}^{n}\!{r}^{{}^{n}\!{m_{1}} - 2} & {}^{n}\!{r}^{{}^{n}\!{m_{2}} - 2} & {}^{n}\!{r}^{{}^{n}\!{m_{3}} - 2} & {}^{n}\!{r}^{{}^{n}\!{m_{4}} - 2} \\
+		{}^{n}\!{g_{1}} {}^{n}\!{r}^{{}^{n}\!{m_{1}} - 2} & {}^{n}\!{g_{2}} {}^{n}\!{r}^{{}^{n}\!{m_{2}} - 2} & {}^{n}\!{g_{3}} {}^{n}\!{r}^{{}^{n}\!{m_{3}} - 2} & {}^{n}\!{g_{4}} {}^{n}\!{r}^{{}^{n}\!{m_{4}} - 2} \\
+		{}^{n-1}\!{r}^{{}^{n}\!{m_{1}} - 2} & {}^{n-1}\!{r}^{{}^{n}\!{m_{2}} - 2} & {}^{n-1}\!{r}^{{}^{n}\!{m_{3}} - 2} & {}^{n-1}\!{r}^{{}^{n}\!{m_{4}} - 2} \\
+		{}^{n}\!{g_{1}} {}^{n-1}\!{r}^{{}^{n}\!{m_{1}} - 2} & {}^{n}\!{g_{2}} {}^{n-1}\!{r}^{{}^{n}\!{m_{2}} - 2} & {}^{n}\!{g_{3}} {}^{n-1}\!{r}^{{}^{n}\!{m_{3}} - 2} & {}^{n}\!{g_{4}} {}^{n-1}\!{r}^{{}^{n}\!{m_{4}} - 2}
 	\end{bmatrix}
 	\begin{bmatrix}
-		K_{1,n} \\ K_{2,n} \\ K_{3,n} \\ K_{4,n}
+		{}^{n}\!{K_{1}} \\ {}^{n}\!{K_{2}} \\ {}^{n}\!{K_{3}} \\ {}^{n}\!{K_{4}}
 	\end{bmatrix}
 	=
 	\begin{bmatrix}
-		-\mu_{1,n} \\ -\mu_{2,n} \\ -\mu_{1,n} \\ -\mu_{2,n}
+		-{}^{n}\!{\mu_{1}} \\ -{}^{n}\!{\mu_{2}} \\ -{}^{n}\!{\mu_{1}} \\ -{}^{n}\!{\mu_{2}}
 	\end{bmatrix},
 	\label{eq:eqs of Kin_two_mat_no_friction}
 \end{equation}
-for~$n = 1,2,\dots,N$. In this case,~$K_{i,n}$ of adjacent layers are not coupled with each other and thus can be obtained by using the similar technique being used in the homogeneous material case. Applying Taylor series expansion on the inverse of the coefficient matrix of~$K_{i,n}$ around~$r_n$ gives
+for~$n = 1,2,\dots,N$. In this case,~${}^{n}\!{K_{i}}$ of adjacent layers are not coupled with each other and thus can be obtained by using the similar technique being used in the homogeneous material case. Applying Taylor series expansion on the inverse of the coefficient matrix of~${}^{n}\!{K_{i}}$ around~${}^{n}\!{r}$ gives
 \begin{equation}
-	K_{i,n} = P_{i,n} \cdot r_n^{-m_{i,n} + 2} + O(\Delta r), \quad \text{for}\, i \in \mathcal{J},
+	{}^{n}\!{K_{i}} = {}^{n}\!{P_{i}} \cdot {}^{n}\!{r}^{-{}^{n}\!{m_{i}} + 2} + O(\Delta r), \quad \text{for}\, i \in \mathcal{J},
 	\label{eq:two_mat_no_friction_Ks}
 \end{equation}
-where~$P_{i,n}$ are material constants of the~$n^{\text{th}}$ layer (see~\ref{Appen:Pi}).  Substituting Eqn.~\eqref{eq:two_mat_no_friction_Ks} into Eqn.~\eqref{eq:EI}, we have
+where~${}^{n}\!{P_{i}}$ are material constants of the~$n^{\text{th}}$ layer (see~\ref{Appen:Pi}).  Substituting Eqn.~\eqref{eq:two_mat_no_friction_Ks} into Eqn.~\eqref{eq:EI}, we have
 \begin{equation}
 	\begin{aligned}
 	\begin{split}
-	EI & = \sum_{n=1}^{N} \bigg[ \sum_{i \in \mathcal{J}} \alpha_{i,n} \left( P_{i,n} r_n^{-m_{i,n} + 2} + O(\Delta r) \right) \cdot \\ & \qquad{} (- r_{n}^{m_{i,n}+1}(m_{i,n} + 2 ) \Delta r + O(\Delta r^2))  + \gamma_n (-4 r_n^3 \Delta r + O(\Delta r^2)) \bigg] \\
-	 & = -\sum_{n=1}^{N} \bigg[ \sum_{i \in \mathcal{J}} \alpha_{i,n} P_{i,n} (m_{i,n} + 2) + 4\gamma_n \bigg] r_{n}^3 \cdot \Delta r + O(\Delta r^2).
+	EI & = \sum_{n=1}^{N} \bigg[ \sum_{i \in \mathcal{J}} {}^{n}\!{\alpha_{i}} \left( {}^{n}\!{P_{i}} {}^{n}\!{r}^{-{}^{n}\!{m_{i}} + 2} + O(\Delta r) \right) \cdot \\ & \qquad{} (- {}^{n}\!{r}^{{}^{n}\!{m_{i}}+1}({}^{n}\!{m_{i}} + 2 ) \Delta r + O(\Delta r^2))  + \gamma_n (-4 {}^{n}\!{r}^3 \Delta r + O(\Delta r^2)) \bigg] \\
+	 & = -\sum_{n=1}^{N} \bigg[ \sum_{i \in \mathcal{J}} {}^{n}\!{\alpha_{i}} {}^{n}\!{P_{i}} ({}^{n}\!{m_{i}} + 2) + 4\gamma_n \bigg] {}^{n}\!{r}^3 \cdot \Delta r + O(\Delta r^2).
 	\end{split}
 	\end{aligned}
 	\label{eq:two_mat_no_friction_EI_1}
 \end{equation}
-Since the arrangement of material property is periodic, the odd layers share the same material constants~$\alpha_{i,I}$,~$P_{i,I}$,~$m_{i,I}$, and~$\gamma_{I}$ while the even layers share the same material constants~$\alpha_{i,II}$,~$P_{i,II}$,~$m_{i,II}$, and~$\gamma_{II}$. We rewrite Eqn.~\eqref{eq:two_mat_no_friction_EI_1} as
+Since the arrangement of material property is periodic, the odd layers share the same material constants~${}^{I}\!{\alpha_{i}}$,~${}^{I}\!{P_{i}}$,~${}^{I}\!{m_{i}}$, and~$\gamma_{I}$ while the even layers share the same material constants~${}^{II}\!{\alpha_{i}}$,~${}^{II}\!{P_{i}}$,~${}^{II}\!{m_{i}}$, and~$\gamma_{II}$. We rewrite Eqn.~\eqref{eq:two_mat_no_friction_EI_1} as
 \begin{equation}
 	\begin{aligned}
-		EI & = -\sum_{\text{odd layers}} \bigg[ \sum_{i \in \mathcal{J}} \alpha_{i,I} P_{i,I} (m_{i,I} + 2) + 4\gamma_{I} \bigg] r_{n}^3 \cdot \Delta r \\ & \quad{} -\sum_{\text{even layers}} \bigg[ \sum_{i \in \mathcal{J}} \alpha_{i,II} P_{i,II} (m_{i,II} + 2) + 4\gamma_{II} \bigg] r_{n}^3 \cdot \Delta r + O(\Delta r^2) \\
+		EI & = -\sum_{\text{odd layers}} \bigg[ \sum_{i \in \mathcal{J}} {}^{I}\!{\alpha_{i}} {}^{I}\!{P_{i}} ({}^{I}\!{m_{i}} + 2) + 4\gamma_{I} \bigg] {}^{n}\!{r}^3 \cdot \Delta r \\ & \quad{} -\sum_{\text{even layers}} \bigg[ \sum_{i \in \mathcal{J}} {}^{II}\!{\alpha_{i}} {}^{II}\!{P_{i}} ({}^{II}\!{m_{i}} + 2) + 4\gamma_{II} \bigg] {}^{n}\!{r}^3 \cdot \Delta r + O(\Delta r^2) \\
 		 & = -\frac{1}{2}
 		 \bigg\lbrace
-		 \sum_{n=1}^N \bigg[ \sum_{i \in \mathcal{J}} \alpha_{i,I} P_{i,I} (m_{i,I} + 2) + 4\gamma_{I} \bigg] r_{n}^3 \cdot \Delta r \\ & \quad\qquad{} + \sum_{n=1}^N \bigg[ \sum_{i \in \mathcal{J}} \alpha_{i,II} P_{i,II} (m_{i,II} + 2) + 4\gamma_{II} \bigg] r_{n}^3 \cdot \Delta r
+		 \sum_{n=1}^N \bigg[ \sum_{i \in \mathcal{J}} {}^{I}\!{\alpha_{i}} {}^{I}\!{P_{i}} ({}^{I}\!{m_{i}} + 2) + 4\gamma_{I} \bigg] {}^{n}\!{r}^3 \cdot \Delta r \\ & \quad\qquad{} + \sum_{n=1}^N \bigg[ \sum_{i \in \mathcal{J}} {}^{II}\!{\alpha_{i}} {}^{II}\!{P_{i}} ({}^{II}\!{m_{i}} + 2) + 4\gamma_{II} \bigg] {}^{n}\!{r}^3 \cdot \Delta r
 		 \bigg\rbrace + O(\Delta r^2).
 	\end{aligned}
 	\label{eq:two_mat_no_friction_EI_2}
@@ -771,10 +772,10 @@ Taking the limit~$N \to \infty$, according to the definition of Riemann integral
 \begin{equation}
 	 \begin{aligned}
 	   (EI)_{\infty} & = \frac{1}{2}  \Biggl \{
-	   		- \Biggl[ \sum_{i \in \mathcal{J}} \alpha_{i,I} P_{i,I} (m_{i,I} + 2) + 4\gamma_{I} \Biggr]
-			\int_{r_0}^{r_N} r^3 \, dr \\ & \quad\qquad{}
-			- \Biggl[ \sum_{i \in \mathcal{J}} \alpha_{i,II} P_{i,II} (m_{i,II} + 2) + 4\gamma_{II} \Biggr]
-			\int_{r_0}^{r_N} r^3 \, dr
+	   		- \Biggl[ \sum_{i \in \mathcal{J}} {}^{I}\!{\alpha_{i}} {}^{I}\!{P_{i}} ({}^{I}\!{m_{i}} + 2) + 4\gamma_{I} \Biggr]
+			\int_{{}^{0}\!{r}}^{{}^{N}\!{r}} r^3 \, dr \\ & \quad\qquad{}
+			- \Biggl[ \sum_{i \in \mathcal{J}} {}^{II}\!{\alpha_{i}} {}^{II}\!{P_{i}} ({}^{II}\!{m_{i}} + 2) + 4\gamma_{II} \Biggr]
+			\int_{{}^{0}\!{r}}^{{}^{N}\!{r}} r^3 \, dr
 	    \Biggl \} \\
 	    & = \frac{1}{2} \left[ (EI)_{I,\infty} + (EI)_{II,\infty} \right],
 	 \end{aligned}
@@ -782,38 +783,38 @@ Taking the limit~$N \to \infty$, according to the definition of Riemann integral
 \end{equation}
 where
 \begin{equation}
-	(EI)_{j,\infty} = - \frac{r_N^4 - r_0^4}{4} \left[ \sum_{i \in \mathcal{J}} \alpha_{i,j} P_{i,j} (m_{i,j} + 2 ) + 4\gamma_j\right], \quad \text{for} \, j = I, II.
+	(EI)_{j,\infty} = - \frac{{}^{N}\!{r}^4 - {}^{0}\!{r}^4}{4} \left[ \sum_{i \in \mathcal{J}} {}^{j}\!{\alpha_{i}} {}^{j}\!{P_{i}} ({}^{j}\!{m_{i}} + 2 ) + 4\gamma_j\right], \quad \text{for} \, j = I, II.
 \end{equation}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Heterogeneous material and no slip interface}
 \label{sec:2mat_no_slip}
-For the case that the lamination scheme of the multilayered cylindrical composite is~$[\varphi_I/\varphi_{II}]_{N/2}$ under no slip interfacial condition, the~$4N$ unknowns~$K_{i,n}$ can be solved from the boundary conditions by Eqn.~\eqref{eq:boundary} and the interfacial conditions by Eqn.~\eqref{eq:noslip_interface}, which can be rewritten as
+For the case that the lamination scheme of the multilayered cylindrical composite is~$[\varphi_I/\varphi_{II}]_{N/2}$ under no slip interfacial condition, the~$4N$ unknowns~${}^{n}\!{K_{i}}$ can be solved from the boundary conditions by Eqn.~\eqref{eq:boundary} and the interfacial conditions by Eqn.~\eqref{eq:noslip_interface}, which can be rewritten as
 \begin{equation}
 \begin{aligned}
 & \begin{bmatrix}
-	r_{n-1}^{m_{1,n-1}} & r_{n-1}^{m_{2,n-1}} & r_{n-1}^{m_{3,n-1}} & r_{n-1}^{m_{4,n-1}} \\
-	g_{1,n-1} r_{n-1}^{m_{1,n-1}} & g_{2,n-1} r_{n-1}^{m_{2,n-1}} & g_{3,n-1} r_{n-1}^{m_{3,n-1}} & g_{4,n-1} r_{n-1}^{m_{4,n-1}} \\
-	Q_{1,n-1} r_{n-1}^{m_{1,n-1}} & Q_{2,n-1} r_{n-1}^{m_{2,n-1}} & Q_{3,n-1} r_{n-1}^{m_{3,n-1}} & Q_{4,n-1} r_{n-1}^{m_{4,n-1}} \\
-	W_{1,n-1} r_{n-1}^{m_{1,n-1}} & W_{2,n-1} r_{n-1}^{m_{2,n-1}} & W_{3,n-1} r_{n-1}^{m_{3,n-1}} & W_{4,n-1} r_{n-1}^{m_{4,n-1}}
+	{}^{n-1}\!{r}^{{}^{n-1}\!{m_{1}}} & {}^{n-1}\!{r}^{{}^{n-1}\!{m_{2}}} & {}^{n-1}\!{r}^{{}^{n-1}\!{m_{3}}} & {}^{n-1}\!{r}^{{}^{n-1}\!{m_{4}}} \\
+	{}^{n-1}\!{g_{1}} {}^{n-1}\!{r}^{{}^{n-1}\!{m_{1}}} & {}^{n-1}\!{g_{2}} {}^{n-1}\!{r}^{{}^{n-1}\!{m_{2}}} & {}^{n-1}\!{g_{3}} {}^{n-1}\!{r}^{{}^{n-1}\!{m_{3}}} & {}^{n-1}\!{g_{4}} {}^{n-1}\!{r}^{{}^{n-1}\!{m_{4}}} \\
+	{}^{n-1}\!{Q_{1}} {}^{n-1}\!{r}^{{}^{n-1}\!{m_{1}}} & {}^{n-1}\!{Q_{2}} {}^{n-1}\!{r}^{{}^{n-1}\!{m_{2}}} & {}^{n-1}\!{Q_{3}} {}^{n-1}\!{r}^{{}^{n-1}\!{m_{3}}} & {}^{n-1}\!{Q_{4}} {}^{n-1}\!{r}^{{}^{n-1}\!{m_{4}}} \\
+	{}^{n-1}\!{W_{1}} {}^{n-1}\!{r}^{{}^{n-1}\!{m_{1}}} & {}^{n-1}\!{W_{2}} {}^{n-1}\!{r}^{{}^{n-1}\!{m_{2}}} & {}^{n-1}\!{W_{3}} {}^{n-1}\!{r}^{{}^{n-1}\!{m_{3}}} & {}^{n-1}\!{W_{4}} {}^{n-1}\!{r}^{{}^{n-1}\!{m_{4}}}
 \end{bmatrix}
 \begin{bmatrix}
-	K_{1,n-1} \\ K_{2,n-1} \\ K_{3,n-1} \\ K_{4,n-1}
+	{}^{n-1}\!{K_{1}} \\ {}^{n-1}\!{K_{2}} \\ {}^{n-1}\!{K_{3}} \\ {}^{n-1}\!{K_{4}}
 \end{bmatrix}\\
 & =
   \begin{bmatrix}
-	r_{n-1}^{m_{1,n}} & r_{n-1}^{m_{2,n}} & r_{n-1}^{m_{3,n}} & r_{n-1}^{m_{4,n}} \\
-	g_{1,n} r_{n-1}^{m_{1,n}} & g_{2,n} r_{n-1}^{m_{2,n}} & g_{3,n} r_{n-1}^{m_{3,n}} & g_{4,n} r_{n-1}^{m_{4,n}} \\
-	Q_{1,n} r_{n-1}^{m_{1,n}} & Q_{2,n} r_{n-1}^{m_{2,n}} & Q_{3,n} r_{n-1}^{m_{3,n}} & Q_{4,n} r_{n-1}^{m_{4,n}} \\
-	W_{1,n} r_{n-1}^{m_{1,n}} & W_{2,n} r_{n-1}^{m_{2,n}} & W_{3,n} r_{n-1}^{m_{3,n}} & W_{4,n} r_{n-1}^{m_{4,n}}
+	{}^{n-1}\!{r}^{{}^{n}\!{m_{1}}} & {}^{n-1}\!{r}^{{}^{n}\!{m_{2}}} & {}^{n-1}\!{r}^{{}^{n}\!{m_{3}}} & {}^{n-1}\!{r}^{{}^{n}\!{m_{4}}} \\
+	{}^{n}\!{g_{1}} {}^{n-1}\!{r}^{{}^{n}\!{m_{1}}} & {}^{n}\!{g_{2}} {}^{n-1}\!{r}^{{}^{n}\!{m_{2}}} & {}^{n}\!{g_{3}} {}^{n-1}\!{r}^{{}^{n}\!{m_{3}}} & {}^{n}\!{g_{4}} {}^{n-1}\!{r}^{{}^{n}\!{m_{4}}} \\
+	{}^{n}\!{Q_{1}} {}^{n-1}\!{r}^{{}^{n}\!{m_{1}}} & {}^{n}\!{Q_{2}} {}^{n-1}\!{r}^{{}^{n}\!{m_{2}}} & {}^{n}\!{Q_{3}} {}^{n-1}\!{r}^{{}^{n}\!{m_{3}}} & {}^{n}\!{Q_{4}} {}^{n-1}\!{r}^{{}^{n}\!{m_{4}}} \\
+	{}^{n}\!{W_{1}} {}^{n-1}\!{r}^{{}^{n}\!{m_{1}}} & {}^{n}\!{W_{2}} {}^{n-1}\!{r}^{{}^{n}\!{m_{2}}} & {}^{n}\!{W_{3}} {}^{n-1}\!{r}^{{}^{n}\!{m_{3}}} & {}^{n}\!{W_{4}} {}^{n-1}\!{r}^{{}^{n}\!{m_{4}}}
   \end{bmatrix}
   \begin{bmatrix}
-	K_{1,n} \\ K_{2,n} \\ K_{3,n} \\ K_{4,n}
+	{}^{n}\!{K_{1}} \\ {}^{n}\!{K_{2}} \\ {}^{n}\!{K_{3}} \\ {}^{n}\!{K_{4}}
   \end{bmatrix}
 -
 \begin{bmatrix}
-	D_{1,n} \\ D_{2,n} \\ D_{3,n} \\ D_{4,n}
+	{}^{n}\!{D_{1}} \\ {}^{n}\!{D_{2}} \\ {}^{n}\!{D_{3}} \\ {}^{n}\!{D_{4}}
 \end{bmatrix},
 \label{eq:eqs of Kin_two_mat_no_slip_original}
 \end{aligned}
@@ -821,33 +822,33 @@ For the case that the lamination scheme of the multilayered cylindrical composit
 for~$n = 2,3,\dots,N$, where
 \begin{equation}
 	\begin{bmatrix}
-		D_{1,n} \\ D_{2,n} \\ D_{3,n} \\ D_{4,n}
+		{}^{n}\!{D_{1}} \\ {}^{n}\!{D_{2}} \\ {}^{n}\!{D_{3}} \\ {}^{n}\!{D_{4}}
 	\end{bmatrix}
 	= - r^2_{n-1}
 	\begin{bmatrix}
-		\mu_{1,n}-\mu_{1,n-1} \\ \mu_{2,n}-\mu_{2,n-1}  \\ Q_{5,n}-Q_{5,n-1} \\ W_{5,n}-W_{5,n-1}
+		{}^{n}\!{\mu_{1}}-{}^{n-1}\!{\mu_{1}} \\ {}^{n}\!{\mu_{2}}-{}^{n-1}\!{\mu_{2}}  \\ {}^{n}\!{Q_{5}}-{}^{n-1}\!{Q_{5}} \\ {}^{n}\!{W_{5}}-{}^{n-1}\!{W_{5}}
 	\end{bmatrix}.
 \end{equation}
 
 Using bold san-serif font symbol to denote matrices, we rewrite Eqn.~\eqref{eq:eqs of Kin_two_mat_no_slip_original} as
 \begin{equation}
-	\usf{B}_n \usf{K}_{n-1} = \usf{A}_n \usf{K}_n - \usf{D}_n,
+	{}^{n}{\usf{B}} {}^{n-1}{\usf{K}} = {}^{n}{\usf{A}} {}^{n}{\usf{K}} - {}^{n}{\usf{D}},
 	\label{eq:eqs of Kin_two_mat_no_slip_np1}
 \end{equation}
-for~$n = 2,3,\dots,N$. The matrices~$\usf{K}_{n-1}$ and~$\usf{K}_n$ are coupled with each other in this case. Therefore, each~$\usf{K}_n$ cannot be solved individually.
+for~$n = 2,3,\dots,N$. The matrices~${}^{{n-1}}{\usf{K}}$ and~${}^{n}{\usf{K}}$ are coupled with each other in this case. Therefore, each~${}^{n}{\usf{K}}$ cannot be solved individually.
 
-We come up with a differential equation based asymptotic analysis method to estimate~$\usf{K}_n$ as~$N$ approaches infinity. For the sake of clarity, we only post essential steps of the derivation in this section. For the details of the complete derivation, we ask the readers to refer to~\ref{Appen:derivations}.
+We come up with a differential equation based asymptotic analysis method to estimate~${}^{n}{\usf{K}}$ as~$N$ approaches infinity. For the sake of clarity, we only post essential steps of the derivation in this section. For the details of the complete derivation, we ask the readers to refer to~\ref{Appen:derivations}.
 
-We first substitute~$n$ as~$n-1$ into Eqn.~\eqref{eq:eqs of Kin_two_mat_no_slip_np1} and combine the resulting equation with Eqn.~\eqref{eq:eqs of Kin_two_mat_no_slip_np1} to find out the relation between~$\usf{K}_{n}$ and~$\usf{K}_{n-2}$ as
+We first substitute~$n$ as~$n-1$ into Eqn.~\eqref{eq:eqs of Kin_two_mat_no_slip_np1} and combine the resulting equation with Eqn.~\eqref{eq:eqs of Kin_two_mat_no_slip_np1} to find out the relation between~$\usf{K}_{n}$ and~${}^{{n-2}}{\usf{K}}$ as
 \begin{equation}
-	\usf{A}_n \usf{K}_n  = \usf{B}_n \usf{A}^{-1}_{n-1} \usf{B}_{n-1} \usf{K}_{n-2} + \usf{B}_n \usf{A}^{-1}_{n-1} \usf{D}_{n-1}  + \usf{D}_n .
+	{}^{n}{\usf{A}} {}^{n}{\usf{K}}  = {}^{n}{\usf{B}} {}^{{n-1}}{\usf{A}}^{-1} {}^{{n-1}}{\usf{B}} {}^{{n-2}}{\usf{K}} + {}^{n}{\usf{B}} {}^{{n-1}}{\usf{A}}^{-1} {}^{{n-1}}{\usf{D}}  + {}^{n}{\usf{D}} .
 	\label{eq:knknm2}
 \end{equation}
-In Eqn.~\eqref{eq:knknm2}, we take Taylor series expansion on~$\usf{A}^{-1}_{n-1}$ and~$\usf{B}_{n-1}$ around~$r_{n-1}$ to obtain (see~\ref{Appen:Eqn315} for details)
+In Eqn.~\eqref{eq:knknm2}, we take Taylor series expansion on~${}^{{n-1}}{\usf{A}}^{-1}$ and~${}^{{n-1}}{\usf{B}}$ around~${}^{n-1}\!{r}$ to obtain (see~\ref{Appen:Eqn315} for details)
 \begin{subequations}
 	\begin{align}
-	& \usf{B}_n \usf{A}^{-1}_{n-1} \usf{B}_{n-1} = \usf{A}_n + \frac{\Delta r}{r_{n-1}} \left( \usf{B}_n \usf{m}_{n-1} \usf{B}^{-1}_n \usf{A}_n - \usf{A}_n \usf{m}_n \right)  + O(\Delta r^2), \\
-	& \usf{B}_n \usf{A}^{-1}_{n-1} \usf{D}_{n-1} + \usf{D}_n = \frac{\Delta r}{r_{n-1}} \left( 2\usf{D}_n + \usf{B}_n \usf{m}_{n-1} \usf{B}^{-1}_n \usf{D}_{n-1} \right) + O(\Delta r^2),
+	& {}^{n}{\usf{B}} {}^{{n-1}}{\usf{A}}^{-1} {}^{{n-1}}{\usf{B}} = {}^{n}{\usf{A}} + \frac{\Delta r}{{}^{n-1}\!{r}} \left( {}^{n}{\usf{B}} {}^{n-1}\tilde{\usf{m}} {}^{n}{\usf{B}}^{-1} {}^{n}{\usf{A}} - {}^{n}{\usf{A}} {}^{n}\tilde{\usf{m}} \right)  + O(\Delta r^2), \\
+	& {}^{n}{\usf{B}} {}^{{n-1}}{\usf{A}}^{-1} {}^{{n-1}}{\usf{D}} + {}^{n}{\usf{D}} = \frac{\Delta r}{{}^{n-1}\!{r}} \left( 2{}^{n}{\usf{D}} + {}^{n}{\usf{B}} {}^{n-1}\tilde{\usf{m}} {}^{n}{\usf{B}}^{-1} {}^{{n-1}}{\usf{D}} \right) + O(\Delta r^2),
 	\end{align}
 	\label{eq:bnanm1}
 \end{subequations}
@@ -855,16 +856,16 @@ Then by substituting Eqn.~\eqref{eq:bnanm1} into Eqn.~\eqref{eq:knknm2}, we obta
 \begin{equation}
 \begin{aligned}
 	\begin{split}
-	\usf{A}_n \usf{K}_n & = \left[  \usf{A}_n + \frac{\Delta r}{r_{n-1}} \left( \usf{B}_n \usf{m}_{n-1} \usf{B}^{-1}_n \usf{A}_n - \usf{A}_n \usf{m}_n \right)  + O(\Delta r^2) \right] \usf{K}_{n-2} \\
-	& \qquad + \frac{\Delta r}{r_{n-1}} \left( 2\usf{D}_n + \usf{B}_n \usf{m}_{n-1} \usf{B}^{-1}_n \usf{D}_{n-1} \right) + O(\Delta r^2),
+	{}^{n}{\usf{A}} {}^{n}{\usf{K}} & = \left[  {}^{n}{\usf{A}} + \frac{\Delta r}{{}^{n-1}\!{r}} \left( {}^{n}{\usf{B}} {}^{n-1}\tilde{\usf{m}} {}^{n}{\usf{B}}^{-1} {}^{n}{\usf{A}} - {}^{n}{\usf{A}} {}^{n}\tilde{\usf{m}} \right)  + O(\Delta r^2) \right] {}^{{n-2}}{\usf{K}} \\
+	& \qquad + \frac{\Delta r}{{}^{n-1}\!{r}} \left( 2{}^{n}{\usf{D}} + {}^{n}{\usf{B}} {}^{n-1}\tilde{\usf{m}} {}^{n}{\usf{B}}^{-1} {}^{{n-1}}{\usf{D}} \right) + O(\Delta r^2),
 	\end{split}
 \end{aligned}
 \label{eq:knknm2appr1}
 \end{equation}
-which gives the asymptotic relation between~$\usf{K}_{n-2}$ and~$\usf{K}_n$.
-From a set of representative plots for~$K_{i}$ versus~$n$ of a 100-layered structure (see Fig.~\ref{fig:two_material_no_slip_Ks}), we deduce that the~$K_{i}$ of odd (and even) layer numbers are continuous in the asymptotic sense (for~$N \to \infty$), which are indicated by red dashed lines. Hence, we approximate~$\usf{K}_{n-2}$ to the first order of~$\Delta r$ as
+which gives the asymptotic relation between~${}^{{n-2}}{\usf{K}}$ and~${}^{n}{\usf{K}}$.
+From a set of representative plots for~$K_{i}$ versus~$n$ of a 100-layered structure (see Fig.~\ref{fig:two_material_no_slip_Ks}), we deduce that the~$K_{i}$ of odd (and even) layer numbers are continuous in the asymptotic sense (for~$N \to \infty$), which are indicated by red dashed lines. Hence, we approximate~${}^{{n-2}}{\usf{K}}$ to the first order of~$\Delta r$ as
 \begin{equation}
-	\usf{K}_{n-2} = \usf{K}_n - 2\frac{d\usf{K}_n}{dr} \Delta r + O(\Delta r^2).
+	{}^{{n-2}}{\usf{K}} = {}^{n}{\usf{K}} - 2\frac{d{}^{n}{\usf{K}}}{dr} \Delta r + O(\Delta r^2).
 	\label{eq:knknm2appr2}
 \end{equation}
 \begin{figure}[t]
@@ -875,43 +876,43 @@ From a set of representative plots for~$K_{i}$ versus~$n$ of a 100-layered struc
 	\label{fig:two_material_no_slip_Ks}
 \end{figure}
 
-Substituting Eqn.~\eqref{eq:knknm2appr2} into Eqn.~\eqref{eq:knknm2appr1} and making simplification (see~\ref{Appen:GovernEqnKn} for details), we obtain a linear ordinary differential equation (ODE) system of~$\usf{K}_n$
+Substituting Eqn.~\eqref{eq:knknm2appr2} into Eqn.~\eqref{eq:knknm2appr1} and making simplification (see~\ref{Appen:GovernEqnKn} for details), we obtain a linear ordinary differential equation (ODE) system of~${}^{n}{\usf{K}}$
 \begin{equation}
-	2 r_n \frac{d (\usf{r}_{n,n}\usf{K}_n)}{dr} = \left( \usf{M}_n + \usf{m}_n \right) \usf{r}_{n,n}\usf{K}_n + r^2_n \usf{F}_n,
+	2 {}^{n}\!{r} \frac{d (\usf{r}_{n,n}{}^{n}{\usf{K}})}{dr} = \left( {}^{n}\tilde{\usf{m}} + {}^{n}\tilde{\usf{m}} \right) \usf{r}_{n,n}{}^{n}{\usf{K}} + r^2_n {}^{n}{\usf{F}},
 	\label{eq:GovernEqnKn}
 \end{equation}
 with boundary conditions given by Eqn.~\eqref{eq:boundary}. Solving this linear ODE system (see~\ref{Appen:SolvingODE} for the details of the solution procedures), we obtain
 \begin{equation}
-%K_{i,n} = r_n^{-m_{i,n}} \left( G^0_{i,n} r^2_n + G^1_{i,n} r^{\lambda_{1,n}}_n + G^2_{i,n} r^{\lambda_{2,n}}_n + G^3_{i,n} r^{\lambda_{3,n}}_n + G^4_{i,n} r^{\lambda_{4,n}}_n \right)
-K_{i,n} = r_n^{-m_{i,n}} \left( G^0_{i,n} r^2_n + \sum_{j \in \mathcal{J}} G^j_{i,n} r^{\lambda_{j,n}}_n \right), \quad \text{for}\, i \in \mathcal{J},
+%{}^{n}\!{K_{i}} = {}^{n}\!{r}^{-{}^{n}\!{m_{i}}} \left( G^0_{i,n} r^2_n + G^1_{i,n} r^{{}^{n}\!{\lambda_{1}}}_n + G^2_{i,n} r^{{}^{n}\!{\lambda_{2}}}_n + G^3_{i,n} r^{{}^{n}\!{\lambda_{3}}}_n + G^4_{i,n} r^{{}^{n}\!{\lambda_{4}}}_n \right)
+{}^{n}\!{K_{i}} = {}^{n}\!{r}^{-{}^{n}\!{m_{i}}} \left( G^0_{i,n} r^2_n + \sum_{j \in \mathcal{J}} G^j_{i,n} r^{\lambda_{j,n}}_n \right), \quad \text{for}\, i \in \mathcal{J},
 \label{eq:two_mat_no_slip_Ks}
 \end{equation}
 where~$G^j_{i,n}$ ($j = \text{0 to 4}$) and~$\lambda_{j,n}$ ($j \in \mathcal{J}$) given by Eqn.~\eqref{eq:Gjin} are constants related to material constants of the~$n^{\text{th}}$ layer.
 Substituting Eqn.~\eqref{eq:two_mat_no_slip_Ks} into Eqn.~\eqref{eq:EI}, we obtain the bending stiffness as
 \begin{equation}
 \begin{aligned}
-	EI & = - \sum_{n=1}^{N} \left\lbrace \sum_{i \in \mathcal{J}} \alpha_{i,n}' \left( G^0_{i,n} r^2_n + \sum_{j \in \mathcal{J}} G^j_{i,n} r^{\lambda_{j,n}}_n \right) r_n + 4\gamma_n r_n^3 \right\rbrace + O(\Delta r) \\
-	& =  - \sum_{n=1}^{N} \left\lbrace \left( \sum_{i \in \mathcal{J}} \alpha_{i,n}' G^0_{i,n} + 4\gamma_n \right) r_n^3+ \sum_{i \in \mathcal{J}} \sum_{j \in \mathcal{J}} \alpha_{i,n}' G^j_{i,n} r^{1 + \lambda_{j,n}}_n \right\rbrace + O(\Delta r),
+	EI & = - \sum_{n=1}^{N} \left\lbrace \sum_{i \in \mathcal{J}} {}^{n}\!{\alpha_{i}}' \left( G^0_{i,n} r^2_n + \sum_{j \in \mathcal{J}} G^j_{i,n} r^{\lambda_{j,n}}_n \right) {}^{n}\!{r} + 4\gamma_n {}^{n}\!{r}^3 \right\rbrace + O(\Delta r) \\
+	& =  - \sum_{n=1}^{N} \left\lbrace \left( \sum_{i \in \mathcal{J}} {}^{n}\!{\alpha_{i}}' G^0_{i,n} + 4\gamma_n \right) {}^{n}\!{r}^3+ \sum_{i \in \mathcal{J}} \sum_{j \in \mathcal{J}} {}^{n}\!{\alpha_{i}}' G^j_{i,n} r^{1 + \lambda_{j,n}}_n \right\rbrace + O(\Delta r),
 \end{aligned}
 \end{equation}
-where~$\alpha_{i,n}' := \alpha_{i,n} \left( m_{i,n} + 2\right)$.
+where~${}^{n}\!{\alpha_{i}}' := {}^{n}\!{\alpha_{i}} \left( {}^{n}\!{m_{i}} + 2\right)$.
 
-Since the material properties of the layers of the structure are alternately arranged, the odd layers share the same material constants~$\alpha_{i,I}$,~$\gamma_{I}$,~$m_{i,I}$,~$G^j_{i,I}$, and~$\lambda_{j,I}$, and the even layers have the same constants~$\alpha_{i,II}$,~$\gamma_{II}$,~$m_{i,II}$,~$G^j_{i,II}$, and~$\lambda_{j,II}$. Therefore,
+Since the material properties of the layers of the structure are alternately arranged, the odd layers share the same material constants~${}^{I}\!{\alpha_{i}}$,~$\gamma_{I}$,~${}^{I}\!{m_{i}}$,~$G^j_{i,I}$, and~$\lambda_{j,I}$, and the even layers have the same constants~${}^{II}\!{\alpha_{i}}$,~$\gamma_{II}$,~${}^{II}\!{m_{i}}$,~$G^j_{i,II}$, and~$\lambda_{j,II}$. Therefore,
 \begin{equation}
 \begin{aligned}
-	EI & =  - \frac{1}{2} \sum_{n=1}^{N} \left[ \left( \sum_{i \in \mathcal{J}} \alpha_{i,I}' G^0_{i,I} + 4\gamma_I \right) r_n^3+ \sum_{i \in \mathcal{J}} \sum_{j \in \mathcal{J}} \alpha_{i,I}' G^j_{i,I} r^{1 + \lambda_{j,I}}_n \right] \\
-	 & \quad - \frac{1}{2} \sum_{n=1}^{N} \biggr[ \left( \sum_{i \in \mathcal{J}} \alpha_{i,II}' G^0_{i,II} + 4\gamma_{II} \right) r_n^3 \\
-	  & \qquad \qquad \qquad \qquad + \sum_{i \in \mathcal{J}} \sum_{j \in \mathcal{J}} \alpha_{i,II}' G^j_{i,II} r^{1 + \lambda_{j,II}}_n \biggr] + O(\Delta r).
+	EI & =  - \frac{1}{2} \sum_{n=1}^{N} \left[ \left( \sum_{i \in \mathcal{J}} {}^{I}\!{\alpha_{i}}' G^0_{i,I} + 4\gamma_I \right) {}^{n}\!{r}^3+ \sum_{i \in \mathcal{J}} \sum_{j \in \mathcal{J}} {}^{I}\!{\alpha_{i}}' G^j_{i,I} r^{1 + \lambda_{j,I}}_n \right] \\
+	 & \quad - \frac{1}{2} \sum_{n=1}^{N} \biggr[ \left( \sum_{i \in \mathcal{J}} {}^{II}\!{\alpha_{i}}' G^0_{i,II} + 4\gamma_{II} \right) {}^{n}\!{r}^3 \\
+	  & \qquad \qquad \qquad \qquad + \sum_{i \in \mathcal{J}} \sum_{j \in \mathcal{J}} {}^{II}\!{\alpha_{i}}' G^j_{i,II} r^{1 + \lambda_{j,II}}_n \biggr] + O(\Delta r).
 \end{aligned}
 \end{equation}
 As~$N \to \infty$, we obtain the asymptotic bending stiffness as
 \begin{equation}
 \begin{aligned}
-	(EI)_{\infty} & =  - \frac{1}{2} \left[ \sum_{i \in \mathcal{J}} \left( \alpha_{i,I}' G^0_{i,I} + \alpha_{i,II}' G^0_{i,II} \right) + 4\left( \gamma_I +\gamma_{II} \right) \right] \int_{r_0}^{r_N} r^3 \, dr \\
-	& \quad - \frac{1}{2} \sum_{i \in \mathcal{J}} \sum_{j \in \mathcal{J}} \left[ \int_{r_0}^{r_N} \left( \alpha_{i,I}' G^j_{i,I} r^{1 + \lambda_{j,I}} + \alpha_{i,II}' G^j_{i,II}  r^{1 + \lambda_{j,II}} \right) \, dr \right] \\
-	& = - \frac{1}{8} \left[ \sum_{i \in \mathcal{J}} \left( \alpha_{i,I}' G^0_{i,I} + \alpha_{i,II}' G^0_{i,II} \right) + 4\left( \gamma_I +\gamma_{II} \right) \right] \left( r_N^4 - r_0^4 \right) \\
-	& \quad - \frac{1}{2} \sum_{i \in \mathcal{J}} \sum_{j \in \mathcal{J}} \biggr[ \frac{\alpha_{i,I}' G^j_{i,I}}{2 + \lambda_{j,I} } \left( r_N^{2 + \lambda_{j,I}} - r_0^{2 + \lambda_{j,I}} \right) \\
-	& \qquad \qquad \qquad \quad + \frac{\alpha_{i,II}' G^j_{i,II}}{2 + \lambda_{j,II}} \left( r_N^{2 + \lambda_{j,II}} - r_0^{2 + \lambda_{j,II}} \right) \biggr] .
+	(EI)_{\infty} & =  - \frac{1}{2} \left[ \sum_{i \in \mathcal{J}} \left( {}^{I}\!{\alpha_{i}}' G^0_{i,I} + {}^{II}\!{\alpha_{i}}' G^0_{i,II} \right) + 4\left( \gamma_I +\gamma_{II} \right) \right] \int_{{}^{0}\!{r}}^{{}^{N}\!{r}} r^3 \, dr \\
+	& \quad - \frac{1}{2} \sum_{i \in \mathcal{J}} \sum_{j \in \mathcal{J}} \left[ \int_{{}^{0}\!{r}}^{{}^{N}\!{r}} \left( {}^{I}\!{\alpha_{i}}' G^j_{i,I} r^{1 + \lambda_{j,I}} + {}^{II}\!{\alpha_{i}}' G^j_{i,II}  r^{1 + \lambda_{j,II}} \right) \, dr \right] \\
+	& = - \frac{1}{8} \left[ \sum_{i \in \mathcal{J}} \left( {}^{I}\!{\alpha_{i}}' G^0_{i,I} + {}^{II}\!{\alpha_{i}}' G^0_{i,II} \right) + 4\left( \gamma_I +\gamma_{II} \right) \right] \left( {}^{N}\!{r}^4 - {}^{0}\!{r}^4 \right) \\
+	& \quad - \frac{1}{2} \sum_{i \in \mathcal{J}} \sum_{j \in \mathcal{J}} \biggr[ \frac{{}^{I}\!{\alpha_{i}}' G^j_{i,I}}{2 + \lambda_{j,I} } \left( {}^{N}\!{r}^{2 + \lambda_{j,I}} - {}^{0}\!{r}^{2 + \lambda_{j,I}} \right) \\
+	& \qquad \qquad \qquad \quad + \frac{{}^{II}\!{\alpha_{i}}' G^j_{i,II}}{2 + \lambda_{j,II}} \left( {}^{N}\!{r}^{2 + \lambda_{j,II}} - {}^{0}\!{r}^{2 + \lambda_{j,II}} \right) \biggr] .
 \end{aligned}
 \label{eq:two_mat_no_slip_EI}
 \end{equation}
@@ -922,7 +923,7 @@ As~$N \to \infty$, we obtain the asymptotic bending stiffness as
 In this section, the bending stiffness of multilayered cylindrical structures with different lamination schemes and interfacial conditions are numerical studied and the asymptotic bending stiffness derived in~$\S$\ref{sec:limit_analysis} are validated.
 
 The the cylindrical composite is divided into~$N$ co-axial layers with constant thickness.
-The innermost and outermost radii of the cylindrical structure are taken to be~$r_0 = 2$ mm and~$r_N = 14$ mm, respectively.
+The innermost and outermost radii of the cylindrical structure are taken to be~${}^{0}\!{r} = 2$ mm and~${}^{N}\!{r} = 14$ mm, respectively.
 Three different combinations of lamination schemes and interfacial conditions are considered: (i)~$[-15 \degree]_N$ and~$[25 \degree]_N$ with no friction interfacial condition, (ii)~$[-15 \degree/ 25 \degree]_{N/2}$ with no friction interfacial condition, (iii)~$[-15 \degree/25 \degree]_{N/2}$ with no slip interfacial condition. In all three scenarios, the non-zero elastic compliance components of cylindrically orthotropic material in each layer's in material coordinate system are the same and provided in Tab.~\ref{tab:sij}.
 \begin{table}[h]
   \begin{center}
@@ -1091,81 +1092,81 @@ where
 To obtain Eqn.~\eqref{eq:bnanm1}, let
 \begin{subequations}
 \begin{align}
-	\tilde{\usf{A}}_{n}
+	{}^{n}\tilde{\usf{A}}
 	& :=
 	\begin{bmatrix}
 		1 & 1 & 1 & 1 \\
-		g_{1,n} & g_{2,n} & g_{3,n} & g_{4,n} \\
-		Q_{1,n} & Q_{2,n} & Q_{3,n} & Q_{4,n} \\
-		W_{1,n} & W_{2,n} & W_{3,n} & W_{4,n}
+		{}^{n}\!{g_{1}} & {}^{n}\!{g_{2}} & {}^{n}\!{g_{3}} & {}^{n}\!{g_{4}} \\
+		{}^{n}\!{Q_{1}} & {}^{n}\!{Q_{2}} & {}^{n}\!{Q_{3}} & {}^{n}\!{Q_{4}} \\
+		{}^{n}\!{W_{1}} & {}^{n}\!{W_{2}} & {}^{n}\!{W_{3}} & {}^{n}\!{W_{4}}
 	\end{bmatrix}, \\
-	\tilde{\usf{B}}_{n}
+	{}^{n}\tilde{\usf{B}}
 	& :=
 	\begin{bmatrix}
 		1 & 1 & 1 & 1 \\
-		g_{1,n-1} & g_{2,n-1} & g_{3,n-1} & g_{4,n-1} \\
-		Q_{1,n-1} & Q_{2,n-1} & Q_{3,n-1} & Q_{4,n-1} \\
-		W_{1,n-1} & W_{2,n-1} & W_{3,n-1} & W_{4,n-1}
+		{}^{n-1}\!{g_{1}} & {}^{n-1}\!{g_{2}} & {}^{n-1}\!{g_{3}} & {}^{n-1}\!{g_{4}} \\
+		{}^{n-1}\!{Q_{1}} & {}^{n-1}\!{Q_{2}} & {}^{n-1}\!{Q_{3}} & {}^{n-1}\!{Q_{4}} \\
+		{}^{n-1}\!{W_{1}} & {}^{n-1}\!{W_{2}} & {}^{n-1}\!{W_{3}} & {}^{n-1}\!{W_{4}}
 	\end{bmatrix}, \\
 	\usf{r}_{n-1,n}
 	& :=
 	\begin{bmatrix}
-		r_{n-1}^{m_{1,n}} & 0 & 0 & 0 \\
-		0 & r_{n-1}^{m_{2,n}} & 0 & 0 \\
-		0 & 0 & r_{n-1}^{m_{3,n}} & 0 \\
-		0 & 0 & 0 & r_{n-1}^{m_{4,n}}
+		{}^{n-1}\!{r}^{{}^{n}\!{m_{1}}} & 0 & 0 & 0 \\
+		0 & {}^{n-1}\!{r}^{{}^{n}\!{m_{2}}} & 0 & 0 \\
+		0 & 0 & {}^{n-1}\!{r}^{{}^{n}\!{m_{3}}} & 0 \\
+		0 & 0 & 0 & {}^{n-1}\!{r}^{{}^{n}\!{m_{4}}}
 	\end{bmatrix}, \\
 	\usf{m}_{n}
 	& :=
 	\begin{bmatrix}
-		m_{1,n} & 0 & 0 & 0 \\
-		0 & m_{2,n} & 0 & 0 \\
-		0 & 0 & m_{3,n} & 0 \\
-		0 & 0 & 0 & m_{4,n}
+		{}^{n}\!{m_{1}} & 0 & 0 & 0 \\
+		0 & {}^{n}\!{m_{2}} & 0 & 0 \\
+		0 & 0 & {}^{n}\!{m_{3}} & 0 \\
+		0 & 0 & 0 & {}^{n}\!{m_{4}}
 	\end{bmatrix}.
 	\end{align}
 	\label{eq:C1}
 \end{subequations}
-It is noted that~$\tilde{\usf{A}}_{n}$,~$\tilde{\usf{B}}_{n}$, and~$\usf{m}_{n}$ are constant matrices. The coefficient matrices~$\usf{A}_n$ and~$\usf{B}_n$ in Eqn.~\eqref{eq:eqs of Kin_two_mat_no_slip_original} can be written as
+It is noted that~${}^{n}\tilde{\usf{A}}$,~${}^{n}\tilde{\usf{B}}$, and~${}^{n}\tilde{\usf{m}}$ are constant matrices. The coefficient matrices~${}^{n}{\usf{A}}$ and~${}^{n}{\usf{B}}$ in Eqn.~\eqref{eq:eqs of Kin_two_mat_no_slip_original} can be written as
 \begin{equation}
-	\usf{A}_n = \tilde{\usf{A}}_{n}  \usf{r}_{n-1,n}, \quad
-	\usf{B}_n = \tilde{\usf{B}}_{n}  \usf{r}_{n-1,n-1}.
+	{}^{n}{\usf{A}} = {}^{n}\tilde{\usf{A}}  \usf{r}_{n-1,n}, \quad
+	{}^{n}{\usf{B}} = {}^{n}\tilde{\usf{B}}  \usf{r}_{n-1,n-1}.
 \end{equation}
-Approximating~$\usf{A}_{n-1}$ and~$\usf{B}_{n-1}$ to the first order of~$\Delta r$ around~$r_{n-1}$, we have
+Approximating~${}^{{n-1}}{\usf{A}}$ and~${}^{{n-1}}{\usf{B}}$ to the first order of~$\Delta r$ around~${}^{n-1}\!{r}$, we have
 \begin{subequations}
 \begin{align}
-	\usf{A}_{n-1} & = \usf{B}_{n} - \delta \usf{B}_{n} \Delta r + O(\Delta r^2), \\
-	\usf{B}_{n-1} & = \usf{A}_{n} - \delta \usf{A}_{n} \Delta r + O(\Delta r^2),
+	{}^{{n-1}}{\usf{A}} & = \usf{B}_{n} - \delta \usf{B}_{n} \Delta r + O(\Delta r^2), \\
+	{}^{{n-1}}{\usf{B}} & = \usf{A}_{n} - \delta \usf{A}_{n} \Delta r + O(\Delta r^2),
 \end{align}
 \end{subequations}
 where
 \begin{subequations}
 	\begin{align}
-	\delta \usf{A}_{n} & = \frac{1}{r_{n-1}} \usf{A}_{n} \usf{m}_n = \frac{1}{r_{n-1}} \tilde{\usf{A}}_{n} \usf{r}_{n-1,n} \usf{m}_n, \\
-	\delta \usf{B}_{n} & = \frac{1}{r_{n-1}} \usf{B}_{n} \usf{m}_{n-1} = \frac{1}{r_{n-1}} \tilde{\usf{B}}_{n} \usf{r}_{n-1,n-1} \usf{m}_{n-1}.
+	\delta \usf{A}_{n} & = \frac{1}{{}^{n-1}\!{r}} \usf{A}_{n} {}^{n}\tilde{\usf{m}} = \frac{1}{{}^{n-1}\!{r}} {}^{n}\tilde{\usf{A}} \usf{r}_{n-1,n} {}^{n}\tilde{\usf{m}}, \\
+	\delta \usf{B}_{n} & = \frac{1}{{}^{n-1}\!{r}} \usf{B}_{n} {}^{n-1}\tilde{\usf{m}} = \frac{1}{{}^{n-1}\!{r}} {}^{n}\tilde{\usf{B}} \usf{r}_{n-1,n-1} {}^{n-1}\tilde{\usf{m}}.
 	\end{align}
 \end{subequations}
 Therefore,
 \begin{subequations}
 	\begin{align}
 	\begin{split}
-		\usf{B}_n \usf{A}^{-1}_{n-1}
-		& = \usf{B}_n \left[ \usf{B}_{n} - \delta \usf{B}_{n} \Delta r + O(\Delta r^2) \right]^{-1} \\
-		& = \usf{B}_n \left[ \usf{B}_{n} \left( \usf{I}- \frac{\Delta r}{r_{n-1}} \usf{m}_{n-1} \right) + O(\Delta r^2) \right]^{-1} \\
-		& = \usf{B}_n \left[ \usf{I} - \frac{\Delta r}{r_{n-1}} \usf{m}_{n-1} + O(\Delta r^2) \right]^{-1} \usf{B}^{-1}_{n} \\
-		& = \usf{I} + \frac{\Delta r}{r_{n-1}} \usf{B}_n \usf{m}_{n-1} \usf{B}^{-1}_n + O(\Delta r^2),
+		{}^{n}{\usf{B}} {}^{{n-1}}{\usf{A}}^{-1}
+		& = {}^{n}{\usf{B}} \left[ \usf{B}_{n} - \delta \usf{B}_{n} \Delta r + O(\Delta r^2) \right]^{-1} \\
+		& = {}^{n}{\usf{B}} \left[ \usf{B}_{n} \left( \usf{I}- \frac{\Delta r}{{}^{n-1}\!{r}} {}^{n-1}\tilde{\usf{m}} \right) + O(\Delta r^2) \right]^{-1} \\
+		& = {}^{n}{\usf{B}} \left[ \usf{I} - \frac{\Delta r}{{}^{n-1}\!{r}} {}^{n-1}\tilde{\usf{m}} + O(\Delta r^2) \right]^{-1} \usf{B}^{-1}_{n} \\
+		& = \usf{I} + \frac{\Delta r}{{}^{n-1}\!{r}} {}^{n}{\usf{B}}\  {}^{n-1}\tilde{\usf{m}}\  {}^{n}{\usf{B}}^{-1} + O(\Delta r^2),
 	\end{split}\\
 	\begin{split}
-		\usf{B}_n \usf{A}^{-1}_{n-1} \usf{B}_{n-1}
-		& = \left[ \usf{I} + \frac{\Delta r}{r_{n-1}} \usf{B}_n \usf{m}_{n-1} \usf{B}^{-1}_n + O(\Delta r^2) \right] \cdot \\
-		& \qquad \left[ \usf{A}_{n} - \frac{\Delta r}{r_{n-1}} \usf{A}_n \usf{m}_n + O(\Delta r^2) \right] \\
-		& = \usf{A}_{n} + \frac{\Delta r}{r_{n-1}} \left( \usf{B}_n \usf{m}_{n-1} \usf{B}^{-1}_n \usf{A}_{n} - \usf{A}_n \usf{m}_n \right) + O(\Delta r^2),
+		{}^{n}{\usf{B}} {}^{{n-1}}{\usf{A}}^{-1} {}^{{n-1}}{\usf{B}}
+		& = \left[ \usf{I} + \frac{\Delta r}{{}^{n-1}\!{r}} {}^{n}{\usf{B}} {}^{n-1}\tilde{\usf{m}} {}^{n}{\usf{B}}^{-1} + O(\Delta r^2) \right] \cdot \\
+		& \qquad \left[ \usf{A}_{n} - \frac{\Delta r}{{}^{n-1}\!{r}} {}^{n}{\usf{A}} {}^{n}\tilde{\usf{m}} + O(\Delta r^2) \right] \\
+		& = \usf{A}_{n} + \frac{\Delta r}{{}^{n-1}\!{r}} \left( {}^{n}{\usf{B}} {}^{n-1}\tilde{\usf{m}} {}^{n}{\usf{B}}^{-1} \usf{A}_{n} - {}^{n}{\usf{A}} {}^{n}\tilde{\usf{m}} \right) + O(\Delta r^2),
 	\end{split} \\
 	\begin{split}
-		\usf{B}_n \usf{A}^{-1}_{n-1} \usf{D}_{n-1} + \usf{D}_n
-		& = \left[ \usf{I} + \frac{\Delta r}{r_{n-1}} \usf{B}_n \usf{m}_{n-1} \usf{B}^{-1}_n + O(\Delta r^2) \right] \usf{D}_{n-1} + \usf{D}_n \\
-		& = \usf{D}_{n-1} + \usf{D}_n + \frac{\Delta r}{r_{n-1}} \usf{B}_n \usf{m}_{n-1} \usf{B}^{-1}_n \usf{D}_{n-1} + O(\Delta r^2) \\
-		& = \frac{\Delta r}{r_{n-1}} \left( 2\usf{D}_n + \usf{B}_n \usf{m}_{n-1} \usf{B}^{-1}_n \usf{D}_{n-1} \right) + O(\Delta r^2).
+		{}^{n}{\usf{B}} {}^{{n-1}}{\usf{A}}^{-1} {}^{{n-1}}{\usf{D}} + {}^{n}{\usf{D}}
+		& = \left[ \usf{I} + \frac{\Delta r}{{}^{n-1}\!{r}} {}^{n}{\usf{B}} {}^{n-1}\tilde{\usf{m}} {}^{n}{\usf{B}}^{-1} + O(\Delta r^2) \right] {}^{{n-1}}{\usf{D}} + {}^{n}{\usf{D}} \\
+		& = {}^{{n-1}}{\usf{D}} + {}^{n}{\usf{D}} + \frac{\Delta r}{{}^{n-1}\!{r}} {}^{n}{\usf{B}} {}^{n-1}\tilde{\usf{m}} {}^{n}{\usf{B}}^{-1} {}^{{n-1}}{\usf{D}} + O(\Delta r^2) \\
+		& = \frac{\Delta r}{{}^{n-1}\!{r}} \left( 2{}^{n}{\usf{D}} + {}^{n}{\usf{B}} {}^{n-1}\tilde{\usf{m}} {}^{n}{\usf{B}}^{-1} {}^{{n-1}}{\usf{D}} \right) + O(\Delta r^2).
 	\end{split}
 	\end{align}
 	\label{eq:C5}
@@ -1177,49 +1178,49 @@ Therefore,
 Substituting Eqn.~\eqref{eq:knknm2appr2} into Eqn.~\eqref{eq:knknm2appr1}, we obtain
 \begin{equation}
 	\begin{aligned}
-		r_{n-1} \frac{d \usf{K}_n}{dr} = & \left( \usf{A}^{-1}_n \usf{B}_n \usf{m}_{n-1} \usf{B}^{-1}_n \usf{A}_n - \usf{m}_n \right) \usf{K}_n \\
-		& + \usf{A}^{-1}_n \left( 2\usf{D}_n + \usf{B}_n \usf{m}_{n-1} \usf{B}^{-1}_n \usf{D}_{n-1} \right) + O(\Delta r).
+		{}^{n-1}\!{r} \frac{d {}^{n}{\usf{K}}}{dr} = & \left( {}^{n}{\usf{A}}^{-1} {}^{n}{\usf{B}} {}^{n-1}\tilde{\usf{m}} {}^{n}{\usf{B}}^{-1} {}^{n}{\usf{A}} - {}^{n}\tilde{\usf{m}} \right) {}^{n}{\usf{K}} \\
+		& + {}^{n}{\usf{A}}^{-1} \left( 2{}^{n}{\usf{D}} + {}^{n}{\usf{B}} {}^{n-1}\tilde{\usf{m}} {}^{n}{\usf{B}}^{-1} {}^{{n-1}}{\usf{D}} \right) + O(\Delta r).
 	\end{aligned}
 	\label{eq:AppendKndr1}
 \end{equation}
 
-Taking the zero order of approximation of Eqn.~\eqref{eq:AppendKndr1} around~$r_n$ and noting that
+Taking the zero order of approximation of Eqn.~\eqref{eq:AppendKndr1} around~${}^{n}\!{r}$ and noting that
 \begin{equation}
-	\usf{B}_n \usf{m}_{n-1} \usf{B}^{-1}_n = \tilde{\usf{B}}_n \usf{m}_{n-1} \tilde{\usf{B}}^{-1}_n,
+	{}^{n}{\usf{B}} {}^{n-1}\tilde{\usf{m}} {}^{n}{\usf{B}}^{-1} = \tilde{\usf{B}}_n {}^{n-1}\tilde{\usf{m}} \tilde{\usf{B}}^{-1}_n,
 \end{equation}
 we have
 \begin{equation}
 \begin{aligned}
 	\begin{split}
-	2 r_{n} \frac{d \usf{K}_n}{dr} = & \left( \usf{r}_{n,n}^{-1} \tilde{\usf{A}}^{-1}_n \tilde{\usf{B}}_n \usf{m}_{n-1} \tilde{\usf{B}}^{-1}_n \tilde{\usf{A}}_n \usf{r}_{n,n} - \usf{m}_n \right) \usf{K}_n \\
-	& + r_n^2 \usf{r}^{-1}_{n,n} \tilde{\usf{A}}^{-1}_n \left( -2\usf{I} + \tilde{\usf{B}}_n \usf{m}_{n-1} \tilde{\usf{B}}^{-1}_n \right) \tilde{\usf{D}}_n + O(\Delta r),
+	2 {}^{n}\!{r} \frac{d {}^{n}{\usf{K}}}{dr} = & \left( \usf{r}_{n,n}^{-1} \tilde{\usf{A}}^{-1}_n \tilde{\usf{B}}_n {}^{n-1}\tilde{\usf{m}} \tilde{\usf{B}}^{-1}_n \tilde{\usf{A}}_n \usf{r}_{n,n} - {}^{n}\tilde{\usf{m}} \right) {}^{n}{\usf{K}} \\
+	& + {}^{n}\!{r}^2 \usf{r}^{-1}_{n,n} \tilde{\usf{A}}^{-1}_n \left( -2\usf{I} + \tilde{\usf{B}}_n {}^{n-1}\tilde{\usf{m}} \tilde{\usf{B}}^{-1}_n \right) \tilde{\usf{D}}_n + O(\Delta r),
 	\end{split}
 \end{aligned}
 \label{eq:AppendKndr2}
 \end{equation}
-where~$\tilde{\usf{D}}_{n}$ is a constant vector
+where~${}^{n}\tilde{\usf{D}}$ is a constant vector
 \begin{equation}
 	\tilde{\usf{D}}_n
 	:=
 	\begin{bmatrix}
-		\mu_{1,n}-\mu_{1,n-1} \\ \mu_{2,n}-\mu_{2,n-1}  \\ Q_{5,n}-Q_{5,n-1} \\ W_{5,n}-W_{5,n-1}
+		{}^{n}\!{\mu_{1}}-{}^{n-1}\!{\mu_{1}} \\ {}^{n}\!{\mu_{2}}-{}^{n-1}\!{\mu_{2}}  \\ {}^{n}\!{Q_{5}}-{}^{n-1}\!{Q_{5}} \\ {}^{n}\!{W_{5}}-{}^{n-1}\!{W_{5}}
 	\end{bmatrix} .
 \end{equation}
 Let
 \begin{subequations}
 	\begin{align}
-	\usf{M}_n & := \tilde{\usf{A}}^{-1}_n \tilde{\usf{B}}_n \usf{m}_{n-1} \tilde{\usf{B}}^{-1}_n \tilde{\usf{A}}_n, \\
-	\usf{F}_n & := \tilde{\usf{A}}^{-1}_n \left( -2\usf{I} + \tilde{\usf{B}}_n \usf{m}_{n-1} \tilde{\usf{B}}^{-1}_n \right) \tilde{\usf{D}}_n,
+	{}^{n}\tilde{\usf{m}} & := \tilde{\usf{A}}^{-1}_n \tilde{\usf{B}}_n {}^{n-1}\tilde{\usf{m}} \tilde{\usf{B}}^{-1}_n \tilde{\usf{A}}_n, \\
+	{}^{n}{\usf{F}} & := \tilde{\usf{A}}^{-1}_n \left( -2\usf{I} + \tilde{\usf{B}}_n {}^{n-1}\tilde{\usf{m}} \tilde{\usf{B}}^{-1}_n \right) \tilde{\usf{D}}_n,
 	\end{align}
 \end{subequations}
 We rewrite Eqn.~\eqref{eq:AppendKndr2} as
 \begin{equation}
-	2 r_{n} \frac{d \usf{K}_n}{dr} = \left( \usf{r}_{n,n}^{-1} \usf{M}_n \usf{r}_{n,n} + \usf{m}_n \right) \usf{K}_n + r_n^2 \usf{r}_{n,n}^{-1} \usf{F}_n.
+	2 {}^{n}\!{r} \frac{d {}^{n}{\usf{K}}}{dr} = \left( \usf{r}_{n,n}^{-1} {}^{n}\tilde{\usf{m}} \usf{r}_{n,n} + {}^{n}\tilde{\usf{m}} \right) {}^{n}{\usf{K}} + {}^{n}\!{r}^2 \usf{r}_{n,n}^{-1} {}^{n}{\usf{F}}.
 	\label{eq:AppendKndr}
 \end{equation}
-Then multiplying Eqn.~\eqref{eq:AppendKndr} by~$\usf{r}_{n,n}$ on both sides, we obtain a linear ODE system of~$\usf{K}_n$
+Then multiplying Eqn.~\eqref{eq:AppendKndr} by~$\usf{r}_{n,n}$ on both sides, we obtain a linear ODE system of~${}^{n}{\usf{K}}$
 \begin{equation}
-	2 r_n \frac{d \pr{\usf{r}_{n,n}\usf{K}_n}}{dr} = \pr{\usf{M}_n + \usf{m}_n} \pr{\usf{r}_{n,n}\usf{K}_n} + r^2_n \usf{F}_n,
+	2 {}^{n}\!{r} \frac{d \pr{\usf{r}_{n,n}{}^{n}{\usf{K}}}}{dr} = \pr{{}^{n}\tilde{\usf{m}} + {}^{n}\tilde{\usf{m}}} \pr{\usf{r}_{n,n}{}^{n}{\usf{K}}} + r^2_n {}^{n}{\usf{F}},
 	\label{eq:AppendKn}
 \end{equation}
 with boundary conditions given by~\eqref{eq:boundary}.
@@ -1228,31 +1229,31 @@ with boundary conditions given by~\eqref{eq:boundary}.
 \subsection{Solution procedures of ODE system given by~\eqref{eq:GovernEqnKn} and~\eqref{eq:boundary}}
 \label{Appen:SolvingODE}
 
-The ODE system of~$\usf{K}_n$ given by~\eqref{eq:GovernEqnKn} and~\eqref{eq:boundary} is equivalent to
+The ODE system of~${}^{n}{\usf{K}}$ given by~\eqref{eq:GovernEqnKn} and~\eqref{eq:boundary} is equivalent to
 \begin{equation}
-	2 r_n \frac{d\usf{K}_n^e}{dr} = \usf{M}_n^e \usf{K}_n^e + r^2_n \usf{F}_n,
+	2 {}^{n}\!{r} \frac{d{}^{n}{\usf{K}}^e}{dr} = {}^{n}\tilde{\usf{m}}^e {}^{n}{\usf{K}}^e + r^2_n {}^{n}{\usf{F}},
 	\label{eq:AppendKendr}
 \end{equation}
-where~$\usf{K}_n^e := \usf{r}_{n,n}\usf{K}_n$ and~$\usf{M}_n^e := \usf{M}_n + \usf{m}_n$. with boundary conditions
+where~${}^{n}{\usf{K}}^e := \usf{r}_{n,n}{}^{n}{\usf{K}}$ and~${}^{n}\tilde{\usf{m}}^e := {}^{n}\tilde{\usf{m}} + {}^{n}\tilde{\usf{m}}$. with boundary conditions
 \begin{subequations}
 	\begin{align}
-	\sum_{i \in \mathcal{J}} K^e_{i,1} r_0^{-2} & = -\mu_{1,1}, \quad
-	 \sum_{i \in \mathcal{J}} K^e_{i,1} g_{i,1} r_0^{-2} = -\mu_{2,1},\\
-	\sum_{i \in \mathcal{J}} K^e_{i,N} r_N^{-2} & = -\mu_{1,N}, \quad
-	 \sum_{i \in \mathcal{J}} K^e_{i,N} g_{i,N} r_N^{-2} = -\mu_{2,N}.
+	\sum_{i \in \mathcal{J}} K^e_{i,1} {}^{0}\!{r}^{-2} & = -{}^{1}\!{\mu_{1}}, \quad
+	 \sum_{i \in \mathcal{J}} K^e_{i,1} {}^{1}\!{g_{i}} {}^{0}\!{r}^{-2} = -{}^{1}\!{\mu_{2}},\\
+	\sum_{i \in \mathcal{J}} K^e_{i,N} {}^{N}\!{r}^{-2} & = -{}^{N}\!{\mu_{1}}, \quad
+	 \sum_{i \in \mathcal{J}} K^e_{i,N} {}^{N}\!{g_{i}} {}^{N}\!{r}^{-2} = -{}^{N}\!{\mu_{2}}.
 	\end{align}
 	\label{eq:Appenboundary}
 \end{subequations}
 
-Since the material properties of the multilayered material is alternately arranged, the constant coefficient matrix~$\usf{M}_n^e$ and~$\usf{F}_n$ for the odd (and even) layers are the same and are denoted as~$\usf{M}_I^e$,~$\usf{F}_I$ (and~$\usf{M}_{II}^e$,~$\usf{F}_{II}$). In the asymptotic sense ($N \to \infty$),~$\usf{K}_n$ of odd and even layers are continuous functions of the radius~$r$ (see Fig.~\ref{fig:two_material_no_slip_Ks}). Then Eqn.~\eqref{eq:AppendKendr} becomes
+Since the material properties of the multilayered material is alternately arranged, the constant coefficient matrix~${}^{n}\tilde{\usf{m}}^e$ and~${}^{n}{\usf{F}}$ for the odd (and even) layers are the same and are denoted as~$\usf{M}_I^e$,~$\usf{F}_I$ (and~$\usf{M}_{II}^e$,~$\usf{F}_{II}$). In the asymptotic sense ($N \to \infty$),~${}^{n}{\usf{K}}$ of odd and even layers are continuous functions of the radius~$r$ (see Fig.~\ref{fig:two_material_no_slip_Ks}). Then Eqn.~\eqref{eq:AppendKendr} becomes
 \begin{subequations}
 \begin{align}
-	2 r \frac{d\usf{K}_n^e}{dr} & = \usf{M}_I^e \usf{K}_n^e + r^2 \usf{F}_I, \quad \text{for odd~$n$}, \\
-	2 r \frac{d\usf{K}_n^e}{dr} & = \usf{M}_{II}^e \usf{K}_n^e + r^2 \usf{F}_{II}, \quad \text{for even~$n$}.
+	2 r \frac{d{}^{n}{\usf{K}}^e}{dr} & = \usf{M}_I^e {}^{n}{\usf{K}}^e + r^2 \usf{F}_I, \quad \text{for odd~$n$}, \\
+	2 r \frac{d{}^{n}{\usf{K}}^e}{dr} & = \usf{M}_{II}^e {}^{n}{\usf{K}}^e + r^2 \usf{F}_{II}, \quad \text{for even~$n$}.
 \end{align}
 \label{eq:AppendKejdr}
 \end{subequations}
-We can obtain~$\usf{K}_n$ of the odd and even layers by solving Eqn.~\eqref{eq:AppendKejdr} separately. The above two ODE systems have similar format. For simplicity, we drop the subscripts~$I$ and~$II$ that denote material constants of odd and even layers in the following derivations. We diagonalize the matrix~$\usf{M}^e$ as
+We can obtain~${}^{n}{\usf{K}}$ of the odd and even layers by solving Eqn.~\eqref{eq:AppendKejdr} separately. The above two ODE systems have similar format. For simplicity, we drop the subscripts~$I$ and~$II$ that denote material constants of odd and even layers in the following derivations. We diagonalize the matrix~$\usf{M}^e$ as
 \begin{equation}
     \usf{M}^e = (\usf{M}^{\nu})^{-1} \usf{\Lambda}^{\nu} \usf{M}^{\nu},
 \end{equation}
@@ -1282,50 +1283,50 @@ The solution of Eqn.~\eqref{eq:AppendYndr} reads
 \end{equation}
 where~$c_{i}$ are the integration constants.
 
-Therefore,~$\usf{K}_n^e$ of the odd and even layers are
+Therefore,~${}^{n}{\usf{K}}^e$ of the odd and even layers are
 \begin{subequations}
 \begin{align}
-\usf{K}_n^e & = \left( \usf{M}_I^{\nu} \right)^{-1}\usf{Y}_I, \quad \text{for odd~$n$}, \\
-\usf{K}_n^e & = \left( \usf{M}_{II}^{\nu} \right)^{-1}\usf{Y}_{II}, \quad \text{for even~$n$},
+{}^{n}{\usf{K}}^e & = \left( \usf{M}_I^{\nu} \right)^{-1}\usf{Y}_I, \quad \text{for odd~$n$}, \\
+{}^{n}{\usf{K}}^e & = \left( \usf{M}_{II}^{\nu} \right)^{-1}\usf{Y}_{II}, \quad \text{for even~$n$},
 \end{align}
 \end{subequations}
 where
 \begin{equation}
 	\begin{bmatrix}
-	 Y_{1,n} \\ Y_{2,n} \\ Y_{3,n} \\ Y_{4,n}
+	 {}^{n}\!{Y_{1}} \\ {}^{n}\!{Y_{2}} \\ {}^{n}\!{Y_{3}} \\ {}^{n}\!{Y_{4}}
 	\end{bmatrix}
 	=
 	\begin{bmatrix}
-	 \frac{L_{1,n}}{2-\lambda_{1,n}} \\ \frac{L_{2,n}}{2-\lambda_{2,n}} \\ \frac{L_{3,n}}{2-\lambda_{3,n}} \\ \frac{L_{4,n}}{2-\lambda_{4,n}}
+	 \frac{{}^{n}\!{L_{1}}}{2-{}^{n}\!{\lambda_{1}}} \\ \frac{{}^{n}\!{L_{2}}}{2-{}^{n}\!{\lambda_{2}}} \\ \frac{{}^{n}\!{L_{3}}}{2-{}^{n}\!{\lambda_{3}}} \\ \frac{{}^{n}\!{L_{4}}}{2-{}^{n}\!{\lambda_{4}}}
 	\end{bmatrix}r^2
 	+
 	\begin{bmatrix}
-	 c_{1,n} r^{\lambda_{1,n}} \\ c_{2,n} r^{\lambda_{2,n}} \\ c_{3,n} r^{\lambda_{3,n}} \\ c_{4,n} r^{\lambda_{4,n}}
+	 {}^{n}\!{c_{1}} r^{{}^{n}\!{\lambda_{1}}} \\ {}^{n}\!{c_{2}} r^{{}^{n}\!{\lambda_{2}}} \\ {}^{n}\!{c_{3}} r^{{}^{n}\!{\lambda_{3}}} \\ {}^{n}\!{c_{4}} r^{{}^{n}\!{\lambda_{4}}}
 	\end{bmatrix}, \quad \text{for} \, n = I, II.
 \end{equation}
-The integration constants~$c_{i,n}$ are determined by the boundary condition given by Eqn.~\eqref{eq:Appenboundary}.
+The integration constants~${}^{n}\!{c_{i}}$ are determined by the boundary condition given by Eqn.~\eqref{eq:Appenboundary}.
 % and interfacial condition
 % \begin{equation}
-% 	\tilde{\usf{A}}_n \usf{K}_n^e = \tilde{\usf{B}}_n \usf{K}_{n-1}^e + r^2 \tilde{\usf{D}}_n.
+% 	\tilde{\usf{A}}_n {}^{n}{\usf{K}}^e = \tilde{\usf{B}}_n {}^{{n-1}}{\usf{K}}^e + r^2 \tilde{\usf{D}}_n.
 % \end{equation}
-Finally, we obtain~$\usf{K}_n$ of the odd and even layers given by
+Finally, we obtain~${}^{n}{\usf{K}}$ of the odd and even layers given by
 \begin{subequations}
 \begin{align}
-	\usf{K}_n & = (\usf{r}_{n,n})^{-1} (\usf{M}_I^{\nu})^{-1}\usf{Y}_I, \quad \text{for odd~$n$}, \\
-	\usf{K}_n & = (\usf{r}_{n,n})^{-1} (\usf{M}_{II}^{\nu})^{-1}\usf{Y}_{II}, \quad \text{for even~$n$}.
+	{}^{n}{\usf{K}} & = (\usf{r}_{n,n})^{-1} (\usf{M}_I^{\nu})^{-1}\usf{Y}_I, \quad \text{for odd~$n$}, \\
+	{}^{n}{\usf{K}} & = (\usf{r}_{n,n})^{-1} (\usf{M}_{II}^{\nu})^{-1}\usf{Y}_{II}, \quad \text{for even~$n$}.
 \end{align}
 \label{eq:appenKn_I_II}
 \end{subequations}
-Substituting the terms in Eqn.~\eqref{eq:appenKn_I_II}, we obtain a general expression of~$\usf{K}_n$ in component form as
+Substituting the terms in Eqn.~\eqref{eq:appenKn_I_II}, we obtain a general expression of~${}^{n}{\usf{K}}$ in component form as
 \begin{equation}
-K_{i,n} = r_n^{-m_{i,n}} \left( G^0_{i,n} r^2_n + \sum_{j \in \mathcal{J}} G^j_{i,n} r^{\lambda_{j,n}}_n \right) , \quad \text{for~$i \in \mathcal{J}$},
+{}^{n}\!{K_{i}} = {}^{n}\!{r}^{-{}^{n}\!{m_{i}}} \left( G^0_{i,n} r^2_n + \sum_{j \in \mathcal{J}} G^j_{i,n} r^{\lambda_{j,n}}_n \right) , \quad \text{for~$i \in \mathcal{J}$},
 \label{eq:appenKn}
 \end{equation}
 where~$G^j_{i,n}$ are constants given by
 \begin{subequations}
 \begin{align}
-	G^0_{i,n}& := \sum_{k \in \mathcal{J}} \pr{\usf{M}_n^{\nu}}^{-1}_{ik} \frac{L_{k,n}}{2 - \lambda_{k,n}}, \\
-	G^j_{i,n}& := \pr{\usf{M}_n^{\nu}}^{-1}_{ij} c_{j,n}, \quad \text{for}\, j\in \mathcal{J} .
+	G^0_{i,n}& := \sum_{k \in \mathcal{J}} \pr{{}^{n}\tilde{\usf{m}}^{\nu}}^{-1}_{ik} \frac{L_{k,n}}{2 - \lambda_{k,n}}, \\
+	G^j_{i,n}& := \pr{{}^{n}\tilde{\usf{m}}^{\nu}}^{-1}_{ij} c_{j,n}, \quad \text{for}\, j\in \mathcal{J} .
 \end{align}
 \label{eq:Gjin}
 \end{subequations}

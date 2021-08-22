@@ -3,7 +3,7 @@
 \begin_document
 \begin_header
 \save_transient_properties true
-\origin /Users/haneeshkesari/Downloads/temp/CurvilinearAnisotropyBeam/
+\origin unavailable
 \textclass elsarticle
 \begin_preamble
 \usepackage{natbib}
@@ -635,7 +635,7 @@ literal "false"
 
 \end_inset
 
-, spicules
+ and spicules
 \begin_inset space ~
 \end_inset
 
@@ -644,28 +644,6 @@ literal "false"
 LatexCommand citet
 key "monn2015new"
 literal "false"
-
-\end_inset
-
-, and bone osteon
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand citet
-key "wegst2015bioinspired"
-literal "false"
-
-\end_inset
-
- 
-\begin_inset Note Comment
-status collapsed
-
-\begin_layout Plain Layout
-...are an interesting class of composites
-\end_layout
 
 \end_inset
 
@@ -693,22 +671,6 @@ However, I don't know whether it would be technically correct to say that.
 
 \end_inset
 
-
-\begin_inset CommandInset citation
-LatexCommand citet
-key "currey1977mechanical,meyers2008biological,espinosa2011tablet"
-literal "false"
-
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand citet
-key "Aizenberg2005,zhang2011structure,li2015hierarchical"
-literal "false"
-
-\end_inset
-
 , and contributes to at least
 \begin_inset space ~
 \end_inset
@@ -730,18 +692,87 @@ HK to WF: need to be more precise here.
 
 \end_inset
 
- of the materials volumes.
- 
+ of the materials volumes
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+~
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "currey1977mechanical,meyers2008biological,espinosa2011tablet"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Aizenberg2005,zhang2011structure,li2015hierarchical"
+literal "false"
+
+\end_inset
+
+.
+ The layers are glued to each other through a compliant organic phase.
+ The effective macro-scale properties of these natural composites, such
+ as fracture toughness and failure strain, are enhanced by a large percentage
+ with respect to the corresponding properties of their constituent phases,
+ with almost no loss of stiffness.
+ For example,
 \color teal
-The layers are glued to each other
-\color inherit
- through a compliant organic phase.
- These natural composites are distinguished from their synthetic counterparts
- by the fact that their effective properties at the macro scale, such as
- failure strain and fracture toughness, are quite high despite the corresponding
- properties of their constituent phases being poor.
- For example, the bending failure strain of the spicules from the sponge
  
+\color inherit
+nacre can achieve relatively high fracture toughness (
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$K_{
+\backslash
+mathrm{IC}}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+) that is around eight-fold higher than that of its main constitutent materials,
+ i.e.
+ pure aragonite
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+~
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "lin2005growth,sun2012hierarchical"
+literal "false"
+
+\end_inset
+
+.
+ The bending failure strain of the spicules from the sponge 
 \shape italic
 Euplectella aspergillum
 \shape default
@@ -787,46 +818,9 @@ literal "false"
 
 \end_inset
 
- 
-\color teal
-Nacre can achieve relatively high fracture toughness an order of magnitude
- that of pure aragonite
-\color inherit
-
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-HK to WF: Need to make this statement more quantitative.
-\end_layout
-
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand citet
-key "tang2007elasto,barthelat2007experimental"
-literal "false"
-
-\end_inset
-
-.
- With such remarkable mechanical property combinations
-\begin_inset Note Comment
-status collapsed
-
-\begin_layout Plain Layout
-mechanical property combinations
-\end_layout
-
-\end_inset
-
-, structural biomaterials can serve as fascinating model material systems
- for the discovery of new mechanics of materials principles.
+ With such remarkable mechanical property combinations, structural biomaterials
+ can serve as fascinating model material systems for the discovery of new
+ mechanics of materials principles.
  
 \end_layout
 
@@ -834,15 +828,7 @@ mechanical property combinations
 The remarkable enhancement in the structural biomaterials' macro-scale propertie
 s in comparison to their micro-scale properties is believed to be due to
  the highly organized and quite elaborate architecture in which the mineral
- 
-\color red
-phases is
-\color inherit
- interlaid with the 
-\color red
-organics
-\color inherit
- phase.
+ phase is interlaid with the organic phase.
 \begin_inset Formula $\clubsuit$
 \end_inset
 
@@ -947,18 +933,8 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-However, there exist a large number of structural biomaterials with cylindrical
- structures and displaying a helical symmetry
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-large number of biomaterials in which the layers are not flat but curved.
-\end_layout
-
-\end_inset
-
-.
+However, there exist a large number of biomaterials in which the layers
+ are not flat but curved.
 \begin_inset Formula $\clubsuit$
 \end_inset
 
@@ -983,14 +959,14 @@ literal "false"
 
 \begin_inset CommandInset citation
 LatexCommand citet
-key "Aizenberg2005"
+key "Aizenberg2005,monn2015new,monn2017new"
 literal "false"
 
 \end_inset
 
 
 \begin_inset Note Comment
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1182,13 +1158,9 @@ $E I/L^2$
 \color inherit
  Furthermore, some other helical structural biomaterials are often found
  to have the architecture consisting of a co-axial array of thin annular
- layers, which is referred to 
-\color teal
-multilayered composite structure
-\color inherit
-
+ layers, which is referred to multilayered cylindrical columns
 \begin_inset Note Comment
-status open
+status collapsed
 
 \begin_layout Plain Layout
 how about "multilayered cylindrical beam," or "multilayered cylinder" instead

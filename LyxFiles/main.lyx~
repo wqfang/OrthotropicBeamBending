@@ -3,18 +3,12 @@
 \begin_document
 \begin_header
 \save_transient_properties true
-\origin unavailable
+\origin /Users/haneeshkesari/Downloads/temp/CurvilinearAnisotropyBeam/
 \textclass elsarticle
 \begin_preamble
 \usepackage{natbib}
 
-\usepackage{geometry}
- \geometry{
- b4paper,
- total={160mm,257mm},
- right=80mm,
- top=20mm,
- }
+
 \usepackage{ulem}
 \usepackage{color,soul}
 
@@ -744,27 +738,33 @@ The layers are glued to each other
  through a compliant organic phase.
  These natural composites are distinguished from their synthetic counterparts
  by the fact that their effective properties at the macro scale, such as
- strength and fracture toughness, are quite high despite the corresponding
+ failure strain and fracture toughness, are quite high despite the corresponding
  properties of their constituent phases being poor.
- For example, the bending failure strain of the spicules of the sponge 
+ For example, the bending failure strain of the spicules from the sponge
+ 
 \shape italic
 Euplectella aspergillum
 \shape default
- is much higher than the silicate glass fiber
-\begin_inset space ~
-\end_inset
-
-
+ is 140% higher than that of 
+\shape italic
+Tethya aurantia
+\shape default
+ spicules, which have a similar chemical composition to 
+\shape italic
+E.
+ aspergillum
+\shape default
+ spicules but have no internal architecture~
 \begin_inset CommandInset citation
 LatexCommand citet
-key "walter2007mechanisms"
+key "monn2017enhanced"
 literal "false"
 
 \end_inset
 
 .
 \begin_inset Note Comment
-status open
+status collapsed
 
 \begin_layout Plain Layout
 HK to WF: need to revise English.
@@ -789,8 +789,8 @@ literal "false"
 
  
 \color teal
-Nacre can achieve relatively high fracture toughness 20-30 times that of
- pure aragonite
+Nacre can achieve relatively high fracture toughness an order of magnitude
+ that of pure aragonite
 \color inherit
 
 \begin_inset Note Comment
