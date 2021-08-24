@@ -1,0 +1,1344 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin /Users/haneeshkesari/Downloads/temp/OrthotropicBeamBending/Notes/
+\textclass article
+\begin_preamble
+\usepackage[scr=boondoxo]{mathalfa}
+\DeclareFontEncoding{FML}{}{}
+\DeclareFontSubstitution{FML}{fncmi}{m}{it}
+\DeclareSymbolFont{fourierletters}{FML}{fncmi}{m}{it}
+\SetSymbolFont{fourierletters}{normal}{FML}{fncmi}{m}{it}
+\DeclareMathSymbol{\fP}{\mathalpha}{fourierletters}{`E}
+\DeclareSymbolFont{Nperm}{OML}{cmss}{bx}{it}
+
+\SetSymbolFont{Nperm}{bold}{OML}{cmss}{bx}{it}
+\DeclareMathSymbol{\nw}{\mathalpha}{Nperm}{`w}
+\newcommand{\unit}[1]{\ensuremath{\, \mathrm{#1}}}
+
+
+\usepackage{amssymb,amsmath,yhmath, amsthm}
+\newtheorem{theorem}{Theorem}[section]
+\usepackage{bm}
+%\usepackage{lineno}
+%\linenumbers
+
+\usepackage{tabularx}
+\numberwithin{equation}{section}
+\usepackage{showkeys}
+
+\usepackage[T1]{fontenc}
+% \usepackage{cite}
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+\node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
+
+
+\usepackage{enumitem}
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\usepackage{epstopdf}
+\usepackage{xr}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks = true,
+citecolor = blue,
+linkcolor = blue
+}
+
+\newcommand{\tbp}[1]{\tilde{{\mathpzc{#1}}}}
+\newcommand{\bp}[1]{{\mathpzc{#1}}}
+
+
+
+
+
+
+% Special font for physical quantities
+\newcommand{\forcemag}{f}
+\newcommand{\physF}{\boldsymbol{\mathfrak{f}}} %
+\newcommand{\physB}{\mathscr{b}} % Width of the thin film
+\newcommand{\physE}{{\mathpzc{E}}}
+\newcommand{\ndE}{E}
+\newcommand{\physI}{{\mathscr{I}}}
+\newcommand{\ndI}{I}
+\newcommand{\physkc}{\mathscr{k}_{\rm c}}
+\newcommand{\ndkc}{k_{\rm c}}
+\newcommand{\physh}{\mathscr{h}} %
+\newcommand{\physe}{\hat{\mathbscr{e}}} %
+\newcommand{\physf}{\hat{\boldsymbol{\mathfrak{f}}}}
+\newcommand{\physm}{\mathscr{m}} %
+\newcommand{\physu}{\mathbscr{u}}
+\newcommand{\physw}{\mathscr{w}}
+\newcommand{\rtple}[1]{\boldsymbol{#1}}
+\newcommand{\n}{\mathfrak{n}} %
+
+\newcommand{\physwc}{\bm{w}_c}
+\newcommand{\physws}{\bm{w}_s}
+\newcommand{\physwo}{\bm{w}_0}
+
+\renewcommand{\u}[1]{\boldsymbol{#1}}
+\newcommand{\OriginRefEucldPtSpace}{O_{\mathrm{ R}}}
+\newcommand{\MapManifoldToRefEucldPtSpace}{\kappa_{\mathrm{ R}}}
+\renewcommand{\t}[1]{\tilde{#1}}
+\renewcommand{\b}[1]{\mathbb{#1}}
+\renewcommand{\c}[1]{\mathcal{#1}}
+\newcommand{\lsc}[2][\mathscr{l}]{{}^{ #1 }\! #2}
+\newcommand{\lscH}[1]{\lsc[H]{#1}}
+\newcommand{\dsf}[1]{\Delta\boldsymbol{\sf #1}}
+\newcommand{\tpsb}[1]{\left. #1 \right.^{\sf T}}
+\newcommand{\tps}[1]{\left( #1 \right)^{\sf T}}
+\newcommand{\usf}[1]{\u{\sf #1}}
+\newcommand{\busf}[1]{\bar{\usf{ #1}}}
+\newcommand{\tu}[1]{\tilde{\u{ #1}}}
+\newcommand{\tusf}[1]{\tilde{\usf{ #1}}}
+\newcommand{\btusf}[1]{\bar{\tusf{ #1}}}
+\newcommand{\pr}[1]{\left( #1 \right)}
+\newcommand{\encl}[1]{\left. #1 \right.}
+\newcommand*{\subfigurewdith}{0.8\textwidth}
+\newcommand{\D}[1]{D\hspace{-.1em}#1}
+\newcommand{\Dr}{D\hspace{-.1em}\varrho}
+\newcommand{\Drp}{\Dr^{+}}
+\newcommand{\Drm}{\Dr^{-}}
+\newcommand{\Dro}{\dot{\rho}}
+\newcommand{\DDro}{\ddot{\rho}}
+\newcommand{\Df}{\dot{f}}
+\newcommand{\DDf}{\ddot{f}}
+\newcommand{\Drop}{\Dro^{+}}
+\newcommand{\Drom}{\Dro^{-}}
+\newcommand{\Dl}{\dot{l}}
+\newcommand{\Da}{\dot{a}}
+\newcommand{\DDl}{\ddot{l}}
+\newcommand{\DF}{\dot{F}}
+\newcommand{\DDF}{\ddot{F}}
+\newcommand{\Dlp}{\Dl^{+}}
+\newcommand{\Dlm}{\Dl^{-}}
+\newcommand{\Dam}{\Da^{-}}
+\newcommand{\Deq}{\mathcal{D}^{\circ}}
+\newcommand{\Dst}{\mathcal{D}^{\stable}}
+\newcommand{\Dnt}{\mathcal{D}^{\odot}}
+\newcommand{\Dunst}{\mathcal{D}^{\otimes}}
+\newcommand{\conf}{\boldsymbol{\kappa}}
+\newcommand{\confp}{\tilde{\boldsymbol{\kappa}}}
+
+
+
+
+
+
+\newcommand{\hlc}[2][yellow]{ {\sethlcolor{#1} \hl{#2}} }
+\usepackage{wrapfig}
+
+
+
+
+% \usepackage{amsmath}
+% \usepackage[small]{eulervm}
+  \DeclareMathAlphabet{\mathvz}{OT1}{LinuxBiolinumT-OsF}{m}{sl}
+
+  \DeclareMathAlphabet{\mathlib}{OT1}{LinuxLibertineT-OsF}{m}{it}
+  \DeclareMathAlphabet{\mathbio}{OT1}{LinuxBiolinumT-OsF}{m}{it}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+
+
+
+
+
+\usepackage[prefix=sol]{xcolor-solarized}
+\usepackage{booktabs}
+\usepackage{float}
+% \usepackage{mathptmx}
+\usepackage{pdflscape}
+\usepackage{threeparttable}
+\usepackage{tabto}
+
+\usepackage{sectsty}
+ \sectionfont{\fontsize{16}{16}\selectfont}
+
+%CUSTOM COMMANDS
+\newcommand{\norm}[1]{\ensuremath \lVert #1 \rVert}
+\newcommand{\bs}[1]{\ensuremath{\mathbf{#1}}}
+\newcommand{\pD}[2]{\frac{\partial #1}{\partial #2}}
+\renewcommand{\D}[2]{\frac{\mathrm{d} #1}{\mathrm{d} #2}}
+\newcommand{\dx}[1]{\,\mathrm{d} #1}
+\newcommand{\ex}{{\bm{\hat{e}}}_1}
+\newcommand{\ey}{{\bm{\hat{e}}}_2}
+\newcommand{\ez}{{\bm{\hat{e}}}_3}
+\newcommand{\ei}{{\bm{\hat{e}}}_i}
+\newcommand{\ej}{{\bm{\hat{e}}}_j}
+\newcommand{\er}{{\bm{\hat{e}}}_r}
+\newcommand{\et}{{\bm{\hat{e}}}_\theta}
+\newcommand{\ep}{{\bm{\hat{e}}}_\phi}
+\usepackage{xspace}
+\newcommand{\TA}{\textit{Ta.\@}\xspace}
+\newcommand{\EA}{\textit{Ea.\@}\xspace}
+\newcommand{\subf}[1]{\pr{\textsf{#1}}}
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+\newcommand{\idp}{\mathsf{p}}
+
+
+
+
+
+
+
+\newcommand{\notimplies}{%
+  \mathrel{{\ooalign{\hidewidth$\not\phantom{=}$\hidewidth\cr$\implies$}}}}
+
+
+
+\usepackage[obeyFinal]{todonotes}
+\setlength\marginparwidth{2.5in}
+\renewcommand{\>}{$\Rightarrow$}
+
+
+%\usepackage[nomarkers,figuresonly]{endfloat}
+
+\usepackage{algorithm,,algorithmicx}
+\usepackage{algpseudocode}
+\usepackage[hang,flushmargin]{footmisc}
+\DeclareMathOperator*{\argmin}{arg\,min} % Jan Hlavacek
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "times" "default"
+\font_sans "default" "default"
+\font_typewriter "cmtl" "default"
+\font_math "auto" "auto"
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 1
+\bibtex_command bibtex
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 0
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine biblatex
+\cite_engine_type numerical
+\biblatex_bibstyle numeric
+\biblatex_citestyle numeric
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.1cm
+\headsep 0.1cm
+\footskip 0.1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Enumerate
+
+\strikeout on
+Should we use Einstein summation convention in equation 2?
+\strikeout default
+ 
+\color blue
+WF: I think just writing all summations explicitly is easier to follow.
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+\strikeout on
+Figure 2(a) is not good.
+ 
+\color blue
+WF: Editing the figure needs some time and I will do it later.
+\end_layout
+
+\begin_layout Enumerate
+As much as possible use same notation as use same notation as Sawtooth II.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\strikeout on
+For examamples as per Sawtooth II 
+\begin_inset Preview
+
+\begin_layout Standard
+
+\strikeout on
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+{
+\backslash
+u{e}_r, 
+\backslash
+u{e}_{
+\backslash
+theta}, 
+\backslash
+u{e}_z
+\backslash
+}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ would appears as 
+\begin_inset Preview
+
+\begin_layout Standard
+
+\strikeout on
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(
+\backslash
+physe_r, 
+\backslash
+physe_{
+\backslash
+theta},
+\backslash
+physe_{z})$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\strikeout on
+Eliminare curly braces everywhere.
+ That is instead 
+\begin_inset Preview
+
+\begin_layout Standard
+
+\strikeout on
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+{a,
+\backslash
+ldots
+\backslash
+}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ use 
+\begin_inset Preview
+
+\begin_layout Standard
+
+\strikeout on
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(
+\backslash
+physe_r, 
+\backslash
+ldots)$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\strikeout on
+Need to explain how 
+\begin_inset Preview
+
+\begin_layout Standard
+
+\strikeout on
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$S_{pq}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ are related to 
+\begin_inset Preview
+
+\begin_layout Standard
+
+\strikeout on
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$C_{ijkl}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, the components of the stiffness operator 
+\begin_inset Preview
+
+\begin_layout Standard
+
+\strikeout on
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+mathbb{C}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\strikeout on
+We define 
+\begin_inset Preview
+
+\begin_layout Standard
+
+\strikeout on
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+mathbb{S}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ as the inverse of the 
+\begin_inset Preview
+
+\begin_layout Standard
+
+\strikeout on
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+mathbb{C}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\strikeout on
+Also, we have 
+\begin_inset Preview
+
+\begin_layout Standard
+
+\strikeout on
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$C_{ij}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ Do you think there will be a confusion with regard to 
+\begin_inset Preview
+
+\begin_layout Standard
+
+\strikeout on
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$C_{ijkl}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+? (I don't think there should be a problem.)
+\strikeout default
+ 
+\color blue
+WF: I think this is fine, too.
+\end_layout
+
+\begin_layout Enumerate
+
+\strikeout on
+What is the range of 
+\begin_inset Preview
+
+\begin_layout Standard
+
+\strikeout on
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$i$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ and 
+\begin_inset Preview
+
+\begin_layout Standard
+
+\strikeout on
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$j$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ in equation 4? (Add it if it is not there).
+\end_layout
+
+\begin_layout Enumerate
+
+\strikeout on
+Equation A.1a is unclear.
+ ⁃ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\strikeout on
+Plus and minus signs in equation A.1a.
+
+\strikeout default
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\strikeout on
+Equation A.1d should come later.
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+\strikeout on
+Equation A.1f should also come later
+\end_layout
+
+\begin_layout Enumerate
+
+\strikeout on
+Try to get equation A.2 in a single line.
+ HK STOPPED HERE
+\end_layout
+
+\begin_layout Enumerate
+
+\strikeout on
+5.
+ S_{ijkl} 6.
+ S_{ij}=S_{ijkl} 7.
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+\strikeout on
+Use san-serif font for matrices.
+ 
+\begin_inset Preview
+
+\begin_layout Standard
+
+\strikeout on
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+usf{C}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ for 
+\begin_inset Preview
+
+\begin_layout Standard
+
+\strikeout on
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+u{C}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+\strikeout on
+Stress components are not defined.
+ 9.
+ ? 10.
+ 11.
+ 12.
+ 14.
+ 16.
+ The constant a, b,c should come up after the definition of the constants
+ m_i 15.
+ 16.
+ 17.
+ How are e_1, e_2, and e_3 related to e_r, e_
+\backslash
+theta, and e_z.
+ 18.
+ Perhaps we should have Global cartesian basis vectors.
+ ⁃ In that case we should call (e_1, e_2, e_3)->(e_{
+\backslash
+xi}, e_{
+\backslash
+phi}, e_{
+\backslash
+phi}) etc.
+\end_layout
+
+\begin_layout Enumerate
+
+\strikeout on
+From eq.
+ 4, 
+\backslash
+beta_ij are all functions of C_ij.
+ m_i are all functions of 
+\backslash
+beta_ij g_i are all function of 
+\backslash
+beta_ij Q_i are all functions of C_ij
+\backslash
+
+\backslash
+ Q_5 and W_5 should be define separately.
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+\strikeout on
+where Qi and Wi (i =1 to 5) are material constants
+\end_layout
+
+\begin_layout Enumerate
+
+\strikeout on
+There are nine elastic constants in equation one.
+ Is this the model for an auto profit material 
+\strikeout default
+\color blue
+WF: Yes, this is the model for orthotropic elastic material, which has 9
+ independent elastic constants.
+\end_layout
+
+\begin_layout Enumerate
+
+\strikeout on
+Solved from Eqn.
+ 8 should come later
+\end_layout
+
+\begin_layout Enumerate
+1.
+ Other thickness patterns might provide even more benefit.
+ 2.
+ We are assuming that the interfaces in EA are closer to a frictionless
+ interfaces.
+ This is most likey good approximation, since the collagen is very compliant
+ compared to silica.
+ However, no one has actiually experimentally characterized the interfaces
+ in EA.
+ 3.
+ We soon be publishing experimental data that will sow that EA too has helical
+ symmetry elements.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+make transpose sans serif.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+In the homogenization, we observe enhancement in bending stiffness for:
+\end_layout
+
+\begin_layout Plain Layout
+1.
+ Orthotropic material (9 independent elastic constants)
+\end_layout
+
+\begin_layout Plain Layout
+2.
+ Transversely isotropic material (5 independent elastic constants)
+\end_layout
+
+\begin_layout Plain Layout
+For materials with 3 independent elastic constants (shear modulus not related
+ to Young's modulus and Poisson's ratio), we didn't observe enhancement
+ in bending stiffness.
+\end_layout
+
+\begin_layout Plain Layout
+For isotropic material, the homogenization formula do not apply.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pr{
+\backslash
+sf{
+\backslash
+Omega}}_{ij}=
+\backslash
+Omega_{ij}=
+\backslash
+hat{
+\backslash
+u{f}}_i
+\backslash
+cdot 
+\backslash
+hat{
+\backslash
+u{e}}_j
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{align}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+mathbf{
+\backslash
+mathsf{
+\backslash
+Omega}}&=
+\backslash
+left[
+\backslash
+begin{array}{ccc}
+\backslash
+Omega_{11} & 
+\backslash
+Omega_{12} & 
+\backslash
+Omega_{13} 
+\backslash
+
+\backslash
+
+\backslash
+Omega_{21} & 
+\backslash
+Omega_{22} & 
+\backslash
+Omega_{23} 
+\backslash
+
+\backslash
+
+\backslash
+Omega_{31} & 
+\backslash
+Omega_{32} & 
+\backslash
+Omega_{33}
+\backslash
+end{array}
+\backslash
+right]
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+&=
+\backslash
+begin{bmatrix}
+\backslash
+hat{
+\backslash
+u{f}}_1
+\backslash
+cdot 
+\backslash
+hat{
+\backslash
+u{e}}_1 & 
+\backslash
+hat{
+\backslash
+u{f}}_1
+\backslash
+cdot 
+\backslash
+hat{
+\backslash
+u{e}}_2 & 
+\backslash
+hat{
+\backslash
+u{f}}_1
+\backslash
+cdot 
+\backslash
+hat{
+\backslash
+u{e}}_3 
+\backslash
+
+\backslash
+
+\backslash
+hat{
+\backslash
+u{f}}_2
+\backslash
+cdot 
+\backslash
+hat{
+\backslash
+u{e}}_1 & 
+\backslash
+hat{
+\backslash
+u{f}}_2
+\backslash
+cdot 
+\backslash
+hat{
+\backslash
+u{e}}_2 & 
+\backslash
+hat{
+\backslash
+u{f}}_2
+\backslash
+cdot 
+\backslash
+hat{
+\backslash
+u{e}}_3 
+\backslash
+
+\backslash
+
+\backslash
+hat{
+\backslash
+u{f}}_3
+\backslash
+cdot 
+\backslash
+hat{
+\backslash
+u{e}}_1 & 
+\backslash
+hat{
+\backslash
+u{f}}_3
+\backslash
+cdot 
+\backslash
+hat{
+\backslash
+u{e}}_2 & 
+\backslash
+hat{
+\backslash
+u{f}}_3
+\backslash
+cdot 
+\backslash
+hat{
+\backslash
+u{e}}_3
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{bmatrix}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{align}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+hat{
+\backslash
+u{f}}_i=
+\backslash
+Omega_{ij}
+\backslash
+hat{
+\backslash
+u{e}}_j$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+u{a}=a_i^{(e)}
+\backslash
+hat{
+\backslash
+u{e}}_i$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+u{a}=a_i^{(f)}
+\backslash
+hat{
+\backslash
+u{f}}_i$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+sf{a}^{(f)}=
+\backslash
+sf{
+\backslash
+Omega}
+\backslash
+sf{a}^{(e)}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted1.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+sf{a}^{(e)}=
+\backslash
+sf{Q}
+\backslash
+sf{a}^{(f)}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+sf{a}^{(f)}=
+\backslash
+sf{Q}^{
+\backslash
+sf T}
+\backslash
+sf{a}^{(e)}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
