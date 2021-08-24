@@ -1209,7 +1209,8 @@ noprefix "false"
 \end_inset
 
 ).
- Some engineering materials such as multiwalled carbon nanotube (see Fig.
+ Some engineering materials are also multilayered cylindrical columns.
+ Examples of this category include multiwalled carbon nanotube (see Fig.
 \begin_inset space ~
 \end_inset
 
@@ -1231,8 +1232,8 @@ noprefix "false"
 \begin_inset Formula $\subf{G}$
 \end_inset
 
-) and filament-wound composite pipes have multilayered helical structure
- as well.
+) and filament-wound composite pipes that are intended to be used as cross
+ piece of landing gear for helicopters.
  Although the property-structure connection of biomaterials with brick-mortar
  architecture has been extensively studied, the relationship between the
  effective mechanical properties and the small-scale architectures for structura
@@ -1415,8 +1416,29 @@ Most of the multilayered structural biological and engineering composite
  Understanding and analyzing the overall deformation of such materials with
  multilayered anisotropic cylindrical microstructures requires the knowledge
  of their effective (i.e., homogenized) elastic properties, which can be obtained
- through the anisotropic elasticity theory and homogenization theory.
- The theory of anisotropic elasticity in the cylindrical coordinates system
+ through either finite element analysis (FEA) or analytical approachs.
+\end_layout
+
+\begin_layout Standard
+For some of the multilayered cylindrical columns, such as sea sponge spicules
+ and filament-wound composite pipes, both the number of layers (more than
+ 50 layers) and the aspect ratio (length/diameter typically 20–2000) are
+ large, which makes FEA very time consuming.
+ In order to have a good accuracy, the number of three-dimensional (3D)
+ finite element meshes for a multilayered cylindrical column can easily
+ grow up to millions.
+ In addition to the expensive computaional cost, it is technically difficult
+ to model beading deformation of a multilayered structure if the layers
+ are not fully-bonded.
+ The difficulty is due to the non-uniqueness of solutions to contact-type
+ problem.
+\end_layout
+
+\begin_layout Standard
+The analytical approachs for modelling effective bending stiffness of multilayer
+ed cylindrical columns involve the anisotropic elasticity theory and homogenizat
+ion theory.
+ The anisotropic elasticity theory in the cylindrical coordinates system
  is developed and summarized in monographs by
 \begin_inset space ~
 \end_inset
@@ -1430,6 +1452,16 @@ literal "false"
 \end_inset
 
 .
+ Regarding the homogenization of multilayered cylindrical columns, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "chatzigeorgiou2008homogenization,chatzigeorgiou2012effective,sun2014homogenization,sun2014stress"
+literal "false"
+
+\end_inset
+
+ studied the homogenized elastic constants of multilayered composite cylindrical
+ structures with curvilinear orthotropy under a varity of loading conditions.
  Analytical solutions for displacement and stress analysis of anisotropic
  composite cylinders subjected to typical loading conditions such as tension,
  shear, torsion, pressuring, thermal deformation and bending are extensively
@@ -1462,139 +1494,88 @@ literal "false"
  with various lamination schemes.
  One interesting observation is that all stiffness constants seem to become
  stable when three or four layers are considered in the composite beams.
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-%One approach to investigate the macroscale effective properties is the
- standard asymptotic homogenization method, a two-scale technique that uses
- asymptotic expansions of displacement and stress fields and appropriate
- variational principles to analyze characteristics of heterogeneous materials,
- cf.
- the monographs by~
-\backslash
-cite{bensoussan2011asymptotic} and~
-\backslash
-cite{sÃ¡nchez1980nonhomogeneous} and recent reviews by~
-\backslash
-cite{kalamkarov2009asymptotic},~
-\backslash
-cite{pindera2009micromechanics}, and~
-\backslash
-cite{charalambakis2010homogenization}.
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-%
-\backslash
-stophere{cyan}{Two ways to obtain homogenized bending stiffness: homogenized
- elastic constants, or infinite layer numbers}
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-%
-\backslash
-stophere{cyan}{Literature survey on homogenization of composite materials.}
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-% %
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Regarding the homogenization of multilayered cylindrical structures, Chatzigeorg
-iou et al.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand citet
-key "chatzigeorgiou2008homogenization"
-literal "false"
-
-\end_inset
-
- studied the homogenized elastic coefficients of an anisotropic hollow layered
- tube with discontinuous elastic constants under axisymmetric loading condition.
- They
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand citet
-key "chatzigeorgiou2012effective"
-literal "false"
-
-\end_inset
-
- also proposed a modified asymptotic expansion homogenization method to
- compute effective thermomechanical properties of composites with periodicity
- in cylindrical coordinates.
- By taking into account the discontinuous stress and strain distributions
- in each layer, Sun et al.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand citet
-key "sun2014homogenization,sun2014stress"
-literal "false"
-
-\end_inset
-
- proposed a force-displacement equivalence method to determine the homogenized
- elastic constants of general multilayered composite cylindrical structures
- with curvilinear orthotropy.
  However, the lack of asymptotic analysis makes their method too complicated
  to apply in practice since the formulations involves the number of layers
  in the cylindrical composite.
+ When the interfaces between layers are no-slip type and the total number
+ of layers is 
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$N$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, it is necessary to compute the inverse of a 
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$4N 
+\backslash
+times 4N$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ matrix, which is quite computational-expensive when 
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$N$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ is large.
+ 
 \end_layout
 
 \begin_layout Standard
-In this paper we derive analytical expressions for the asymptotic bending
- stiffness of multilayered composite cylinderss with cylindrical orthotropy
+Among all types of different loading conditions, we find that the axial
+ compression and bending are the most predominant in the context of multilayered
+ cylindrical columns.
+ For example, the landing gear of helicopter that are made of filament-wound
+ composite pipes are designed to sustain enormous compressive impact at
+ the moment when the skids are in contact with ground.
+ Wood truck are experiencing both its own gravitational force and the lateral
+ wind loads.
+ The sopicules in marine sponge act as anchor 
+\end_layout
+
+\begin_layout Standard
+In this paper, we derive analytical expressions for the asymptotic bending
+ stiffness of multilayered cylindrical columns with cylindrical orthotropy
  by performing asymptotic analysis on the bending stiffness formula obtained
  by Jolicoeur and Cardou
 \begin_inset space ~
@@ -1611,12 +1592,20 @@ literal "false"
 .
  Both the interfacial conditions between adjacent layers and the lamination
  schemes of the layers are considered.
- It is found that the effective bending stiffness of multilayered cylindrical
- orthotropic structure with frictionless interfaces converges as the number
- of layers become infinity.
- Furthermore, the asymptotic bending stiffness of perfectly bonded multilayered
- cylindrical structures consisting of heterogeneous materials is higher
- than that of structures made of either constituent material.
+ It is found that the asymptotic formula provide excellent approximation
+ of effective bending stiffness for two-phase multilayered cylindrical columns
+ with large number of layers.
+ The proposed method is much more computaional efficient than the analytical
+ solution by Jolicoeur and Cardou when dealing with no-slip interficial
+ condition scenario.
+ 
+\end_layout
+
+\begin_layout Standard
+Furthermore, it is found that the perfectly bonded multilayered cylindrical
+ columns consisting of heterogeneous materials achieves even higher effective
+ bending stiffness than that of homogemeous structures made of either constituen
+t material.
 \end_layout
 
 \begin_layout Standard
@@ -1639,7 +1628,7 @@ noprefix "false"
 \end_inset
 
  describes the model problem of pure bending of multilayered cylindrical
- structures and summaries the results obtained by Jolicoeur and Cardou.
+ columns and summaries the results obtained by Jolicoeur and Cardou.
 \begin_inset space ~
 \end_inset
 

@@ -1244,8 +1244,39 @@ where~$~^{n}{\hat{\usf{K}}} := ~^{n}\usf{f}({}^{n}\!r)~^{n}{\usf{K}}$ and~$~^{n}
 	\end{align}
 	\label{eq:Appenboundary}
 \end{subequations}
+In matrix form, Eqns.~\eqref{eq:Appenboundary} can be written as
+\begin{equation}
+  \begin{bmatrix}
+  1 & 1 & 1 & 1 \\
+  {}^{1}\!g_1 & {}^{1}\!g_2 & {}^{1}\!g_3 & {}^{1}\!g_4 
+  \end{bmatrix}
+  \begin{bmatrix}
+  {}^{1}\!{\hat{K}_{1}} \\ {}^{1}\!{\hat{K}_{2}} \\{}^{1}\!{\hat{K}_{3}} \\{}^{1}\!{\hat{K}_{4}} 
+  \end{bmatrix}
+  = {}^{0}\!{r}^{2}
+  \begin{bmatrix}
+  -{}^{1}\!{\mu_{1}} \\ -{}^{1}\!{\mu_{2}}
+  \end{bmatrix},
+\end{equation}
+and
+\begin{equation}
+  \begin{bmatrix}
+  1 & 1 & 1 & 1 \\
+  {}^{N}\!g_1 & {}^{N}\!g_2 & {}^{N}\!g_3 & {}^{N}\!g_4 
+  \end{bmatrix}
+  \begin{bmatrix}
+  {}^{N}\!{\hat{K}_{1}} \\ {}^{N}\!{\hat{K}_{2}} \\{}^{N}\!{\hat{K}_{3}} \\{}^{N}\!{\hat{K}_{4}} 
+  \end{bmatrix}
+  = {}^{N}\!{r}^{2}
+  \begin{bmatrix}
+  -{}^{N}\!{\mu_{1}} \\ -{}^{N}\!{\mu_{2}}
+  \end{bmatrix}.
+\end{equation}
 
-Since the material properties of the multilayered material is alternately arranged, the constant coefficient matrix~$~^{n}\tilde{\usf{H}}$ and~$~^{n}\tilde{\usf{F}}$ for the odd (and even) layers are the same and are denoted as~$~^{I}\tilde{\usf{H}}$,~$~^{I}\tilde{\usf{F}}$ (and~$~^{II}\tilde{\usf{H}}$,~$~^{II}\tilde{\usf{F}}$). In the asymptotic sense ($N \to \infty$),~$~^{n}{\hat{\usf{K}}}$ of odd and even layers are continuous functions of the radius~$r$ (see Fig.~\ref{fig:two_material_no_slip_Ks}). Then Eqn.~\eqref{eq:AppendKendr} becomes
+
+
+
+Since the material properties of the multilayered material is alternately arranged, the constant coefficient matrix~$~^{n}\tilde{\usf{H}}$ and~$~^{n}\tilde{\usf{F}}$ for the odd (and even) layers are the same and are denoted as~$~^{I}\tilde{\usf{H}}$,~$~^{I}\tilde{\usf{F}}$ (and~$~^{II}\tilde{\usf{H}}$,~$~^{II}\tilde{\usf{F}}$). In the asymptotic sense ($N \to \infty$),~$~^{n}{\usf{K}}$ of odd and even layers are continuous functions of the radius~$r$ (see Fig.~\ref{fig:two_material_no_slip_Ks}). Then Eqn.~\eqref{eq:AppendKendr} becomes
 \begin{subequations}
 \begin{align}
 	2 r \frac{d~^{n}{\hat{\usf{K}}}}{dr} & = ~^{I}\tilde{\usf{H}} ~^{n}{\hat{\usf{K}}} + r^2 ~^{I}\tilde{\usf{F}}, \quad \text{for odd~$n$}, \\
@@ -1281,7 +1312,7 @@ The solution of Eqn.~\eqref{eq:AppendYndr} reads
 	 c_{1} r^{\lambda_{1}} \\ c_{2} r^{\lambda_{2}} \\ c_{3} r^{\lambda_{3}} \\ c_{4} r^{\lambda_{4}}
 	\end{bmatrix},
 \end{equation}
-where~$c_{i}$ are the integration constants.
+where~$c_{i}$ are the integration constants. 
 
 Therefore,~$~^{n}{\hat{\usf{K}}}$ of the odd and even layers are
 \begin{subequations}
@@ -1289,6 +1320,7 @@ Therefore,~$~^{n}{\hat{\usf{K}}}$ of the odd and even layers are
 ~^{n}{\hat{\usf{K}}} & = \left( ~^{I}\tilde{\usf{Q}} \right)^{-1}~^{I}\usf{Y}, \quad \text{for odd~$n$}, \\
 ~^{n}{\hat{\usf{K}}} & = \left( ~^{II}\tilde{\usf{Q}} \right)^{-1}~^{II}\usf{Y}, \quad \text{for even~$n$},
 \end{align}
+\label{eq:KhatExpress}
 \end{subequations}
 where
 \begin{equation}
@@ -1304,11 +1336,8 @@ where
 	 {}^{n}\!{c_{1}} r^{{}^{n}\!{\lambda_{1}}} \\ {}^{n}\!{c_{2}} r^{{}^{n}\!{\lambda_{2}}} \\ {}^{n}\!{c_{3}} r^{{}^{n}\!{\lambda_{3}}} \\ {}^{n}\!{c_{4}} r^{{}^{n}\!{\lambda_{4}}}
 	\end{bmatrix}, \quad \text{for} \, n = I, II.
 \end{equation}
-The integration constants~${}^{n}\!{c_{i}}$ are determined by the boundary condition given by Eqn.~\eqref{eq:Appenboundary}.
-% and interfacial condition
-% \begin{equation}
-% 	~^{n}\tilde{\usf{A}} ~^{n}{\hat{\usf{K}}} = ~^{n}\tilde{\usf{B}} ~^{{n-1}}{\usf{K}}^e + r^2 ~^{n}\tilde{\usf{D}}.
-% \end{equation}
+The analytical expression of integration constants~${}^{n}\!{c_{i}}$ can be obtained by solving the linear system given by inserting Eqns.~\eqref{eq:KhatExpress} into the boundary conditions Eqns.~\eqref{eq:Appenboundary}. For the conciseness of the manuscript, we will not report the explicit analytical expression of ${}^{n}\!{c_{i}}$ here.
+
 Finally, we obtain~$~^{n}{\usf{K}}$ of the odd and even layers given by
 \begin{subequations}
 \begin{align}
