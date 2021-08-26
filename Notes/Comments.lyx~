@@ -1271,13 +1271,19 @@ sf{a}^{(e)}$
 \end_inset
 
 
-\end_layout
+\begin_inset Note Comment
+status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename pasted1.png
 	lyxscale 60
 	scale 20
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 

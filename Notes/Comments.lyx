@@ -3,7 +3,7 @@
 \begin_document
 \begin_header
 \save_transient_properties true
-\origin /Users/haneeshkesari/Downloads/temp/OrthotropicBeamBending/Notes/
+\origin unavailable
 \textclass article
 \begin_preamble
 \usepackage[scr=boondoxo]{mathalfa}
@@ -284,7 +284,7 @@ linkcolor = blue
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Enumerate
 
@@ -863,7 +863,7 @@ Solved from Eqn.
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 make transpose sans serif.
@@ -907,9 +907,6 @@ For isotropic material, the homogenization formula do not apply.
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
 \begin_inset Preview
 
 \begin_layout Standard
