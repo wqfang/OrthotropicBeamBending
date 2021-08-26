@@ -283,630 +283,31 @@ linkcolor = blue
 \begin_body
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Enumerate
-
-\strikeout on
-Should we use Einstein summation convention in equation 2?
-\strikeout default
- 
-\color blue
-WF: I think just writing all summations explicitly is easier to follow.
- 
-\end_layout
-
-\begin_layout Enumerate
-
-\strikeout on
-Figure 2(a) is not good.
- 
-\color blue
-WF: Editing the figure needs some time and I will do it later.
-\end_layout
-
-\begin_layout Enumerate
-As much as possible use same notation as use same notation as Sawtooth II.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-
-\strikeout on
-For examamples as per Sawtooth II 
-\begin_inset Preview
-
-\begin_layout Standard
-
-\strikeout on
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$
-\backslash
-{
-\backslash
-u{e}_r, 
-\backslash
-u{e}_{
-\backslash
-theta}, 
-\backslash
-u{e}_z
-\backslash
-}$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
- would appears as 
-\begin_inset Preview
-
-\begin_layout Standard
-
-\strikeout on
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$(
-\backslash
-physe_r, 
-\backslash
-physe_{
-\backslash
-theta},
-\backslash
-physe_{z})$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-.
- 
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-
-\strikeout on
-Eliminare curly braces everywhere.
- That is instead 
-\begin_inset Preview
-
-\begin_layout Standard
-
-\strikeout on
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$
-\backslash
-{a,
-\backslash
-ldots
-\backslash
-}$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
- use 
-\begin_inset Preview
-
-\begin_layout Standard
-
-\strikeout on
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$(
-\backslash
-physe_r, 
-\backslash
-ldots)$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-
-\strikeout on
-Need to explain how 
-\begin_inset Preview
-
-\begin_layout Standard
-
-\strikeout on
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$S_{pq}$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
- are related to 
-\begin_inset Preview
-
-\begin_layout Standard
-
-\strikeout on
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$C_{ijkl}$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-, the components of the stiffness operator 
-\begin_inset Preview
-
-\begin_layout Standard
-
-\strikeout on
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$
-\backslash
-mathbb{C}$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-
-\strikeout on
-We define 
-\begin_inset Preview
-
-\begin_layout Standard
-
-\strikeout on
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$
-\backslash
-mathbb{S}$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
- as the inverse of the 
-\begin_inset Preview
-
-\begin_layout Standard
-
-\strikeout on
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$
-\backslash
-mathbb{C}$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-
-\strikeout on
-Also, we have 
-\begin_inset Preview
-
-\begin_layout Standard
-
-\strikeout on
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$C_{ij}$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-.
- Do you think there will be a confusion with regard to 
-\begin_inset Preview
-
-\begin_layout Standard
-
-\strikeout on
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$C_{ijkl}$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-? (I don't think there should be a problem.)
-\strikeout default
- 
-\color blue
-WF: I think this is fine, too.
-\end_layout
-
-\begin_layout Enumerate
-
-\strikeout on
-What is the range of 
-\begin_inset Preview
-
-\begin_layout Standard
-
-\strikeout on
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$i$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
- and 
-\begin_inset Preview
-
-\begin_layout Standard
-
-\strikeout on
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$j$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
- in equation 4? (Add it if it is not there).
-\end_layout
-
-\begin_layout Enumerate
-
-\strikeout on
-Equation A.1a is unclear.
- ⁃ 
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-
-\strikeout on
-Plus and minus signs in equation A.1a.
-
-\strikeout default
- 
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-
-\strikeout on
-Equation A.1d should come later.
- 
-\end_layout
-
-\begin_layout Enumerate
-
-\strikeout on
-Equation A.1f should also come later
-\end_layout
-
-\begin_layout Enumerate
-
-\strikeout on
-Try to get equation A.2 in a single line.
- HK STOPPED HERE
-\end_layout
-
-\begin_layout Enumerate
-
-\strikeout on
-5.
- S_{ijkl} 6.
- S_{ij}=S_{ijkl} 7.
- 
-\end_layout
-
-\begin_layout Enumerate
-
-\strikeout on
-Use san-serif font for matrices.
- 
-\begin_inset Preview
-
-\begin_layout Standard
-
-\strikeout on
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$
-\backslash
-usf{C}$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
- for 
-\begin_inset Preview
-
-\begin_layout Standard
-
-\strikeout on
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$
-\backslash
-u{C}$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Enumerate
-
-\strikeout on
-Stress components are not defined.
- 9.
- ? 10.
- 11.
- 12.
- 14.
- 16.
- The constant a, b,c should come up after the definition of the constants
- m_i 15.
- 16.
- 17.
- How are e_1, e_2, and e_3 related to e_r, e_
-\backslash
-theta, and e_z.
- 18.
- Perhaps we should have Global cartesian basis vectors.
- ⁃ In that case we should call (e_1, e_2, e_3)->(e_{
-\backslash
-xi}, e_{
-\backslash
-phi}, e_{
-\backslash
-phi}) etc.
-\end_layout
-
-\begin_layout Enumerate
-
-\strikeout on
-From eq.
- 4, 
-\backslash
-beta_ij are all functions of C_ij.
- m_i are all functions of 
-\backslash
-beta_ij g_i are all function of 
-\backslash
-beta_ij Q_i are all functions of C_ij
-\backslash
-
-\backslash
- Q_5 and W_5 should be define separately.
- 
-\end_layout
-
-\begin_layout Enumerate
-
-\strikeout on
-where Qi and Wi (i =1 to 5) are material constants
-\end_layout
-
-\begin_layout Enumerate
-
-\strikeout on
-There are nine elastic constants in equation one.
- Is this the model for an auto profit material 
-\strikeout default
-\color blue
-WF: Yes, this is the model for orthotropic elastic material, which has 9
- independent elastic constants.
-\end_layout
-
-\begin_layout Enumerate
-
-\strikeout on
-Solved from Eqn.
- 8 should come later
-\end_layout
-
-\begin_layout Enumerate
-1.
- Other thickness patterns might provide even more benefit.
- 2.
- We are assuming that the interfaces in EA are closer to a frictionless
- interfaces.
- This is most likey good approximation, since the collagen is very compliant
- compared to silica.
- However, no one has actiually experimentally characterized the interfaces
- in EA.
- 3.
- We soon be publishing experimental data that will sow that EA too has helical
- symmetry elements.
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-make transpose sans serif.
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
 In the homogenization, we observe enhancement in bending stiffness for:
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 1.
  Orthotropic material (9 independent elastic constants)
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 2.
  Transversely isotropic material (5 independent elastic constants)
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 For materials with 3 independent elastic constants (shear modulus not related
  to Young's modulus and Poisson's ratio), we didn't observe enhancement
  in bending stiffness.
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 For isotropic material, the homogenization formula do not apply.
- 
+
 \end_layout
 
-\end_inset
-
-
+\begin_layout Standard
 \begin_inset Preview
 
 \begin_layout Standard
@@ -936,7 +337,7 @@ hat{
 \backslash
 u{f}}_i
 \backslash
-cdot 
+cdot
 \backslash
 hat{
 \backslash
@@ -988,29 +389,29 @@ left[
 \backslash
 begin{array}{ccc}
 \backslash
-Omega_{11} & 
+Omega_{11} &
 \backslash
-Omega_{12} & 
+Omega_{12} &
 \backslash
-Omega_{13} 
-\backslash
-
-\backslash
-
-\backslash
-Omega_{21} & 
-\backslash
-Omega_{22} & 
-\backslash
-Omega_{23} 
+Omega_{13}
 \backslash
 
 \backslash
 
 \backslash
-Omega_{31} & 
+Omega_{21} &
 \backslash
-Omega_{32} & 
+Omega_{22} &
+\backslash
+Omega_{23}
+\backslash
+
+\backslash
+
+\backslash
+Omega_{31} &
+\backslash
+Omega_{32} &
 \backslash
 Omega_{33}
 \backslash
@@ -1033,31 +434,31 @@ hat{
 \backslash
 u{f}}_1
 \backslash
-cdot 
+cdot
 \backslash
 hat{
 \backslash
-u{e}}_1 & 
-\backslash
-hat{
-\backslash
-u{f}}_1
-\backslash
-cdot 
-\backslash
-hat{
-\backslash
-u{e}}_2 & 
+u{e}}_1 &
 \backslash
 hat{
 \backslash
 u{f}}_1
 \backslash
-cdot 
+cdot
 \backslash
 hat{
 \backslash
-u{e}}_3 
+u{e}}_2 &
+\backslash
+hat{
+\backslash
+u{f}}_1
+\backslash
+cdot
+\backslash
+hat{
+\backslash
+u{e}}_3
 \backslash
 
 \backslash
@@ -1067,31 +468,31 @@ hat{
 \backslash
 u{f}}_2
 \backslash
-cdot 
+cdot
 \backslash
 hat{
 \backslash
-u{e}}_1 & 
-\backslash
-hat{
-\backslash
-u{f}}_2
-\backslash
-cdot 
-\backslash
-hat{
-\backslash
-u{e}}_2 & 
+u{e}}_1 &
 \backslash
 hat{
 \backslash
 u{f}}_2
 \backslash
-cdot 
+cdot
 \backslash
 hat{
 \backslash
-u{e}}_3 
+u{e}}_2 &
+\backslash
+hat{
+\backslash
+u{f}}_2
+\backslash
+cdot
+\backslash
+hat{
+\backslash
+u{e}}_3
 \backslash
 
 \backslash
@@ -1101,27 +502,27 @@ hat{
 \backslash
 u{f}}_3
 \backslash
-cdot 
+cdot
 \backslash
 hat{
 \backslash
-u{e}}_1 & 
-\backslash
-hat{
-\backslash
-u{f}}_3
-\backslash
-cdot 
-\backslash
-hat{
-\backslash
-u{e}}_2 & 
+u{e}}_1 &
 \backslash
 hat{
 \backslash
 u{f}}_3
 \backslash
-cdot 
+cdot
+\backslash
+hat{
+\backslash
+u{e}}_2 &
+\backslash
+hat{
+\backslash
+u{f}}_3
+\backslash
+cdot
 \backslash
 hat{
 \backslash
@@ -1163,6 +564,130 @@ status open
 
 $
 \backslash
+u{
+\backslash
+hat{e}}_{j}
+\backslash
+in
+\backslash
+mathbb{E}^3$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+u{x},
+\backslash
+u{y}
+\backslash
+in
+\backslash
+mathbb{E}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+u{x}
+\backslash
+text{wedge}
+\backslash
+u{y}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+boldsymbol{
+\backslash
+sigma}=
+\backslash
+sigma_{ij}
+\backslash
+u{t}_i
+\backslash
+otimes
+\backslash
+u{
+\backslash
+hat{e}}_{j}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
 hat{
 \backslash
 u{f}}_i=
@@ -1181,7 +706,7 @@ u{e}}_j$
 
 \end_inset
 
-, 
+,
 \end_layout
 
 \begin_layout Standard
@@ -1269,7 +794,7 @@ sf{a}^{(e)}$
 
 
 \begin_inset Note Comment
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1343,9 +868,6 @@ sf{a}^{(e)}$
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
 \begin_inset Preview
 
 \begin_layout Standard
@@ -1376,7 +898,131 @@ sf T}$
 \end_layout
 
 \begin_layout Standard
-Let's call 
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+sf{A}^{f}=
+\backslash
+sf{
+\backslash
+Omega}
+\backslash
+sf{A}^{e}
+\backslash
+sf{
+\backslash
+Omega}^{
+\backslash
+sf T}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+mathbb{C}=C_{ijkl}^{e}
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+pr{
+\backslash
+sf{C}^{e}}_{ijkl}=C^{e}_{ijkl}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+pr{
+\backslash
+sf{C}^{f}}_{ijkl}=C^{f}_{ijkl}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$C^{f}_{ijkl}=
+\backslash
+Omega_{ip}
+\backslash
+Omega_{jq}C_{pqrs}^{e}
+\backslash
+Omega_{kr}
+\backslash
+Omega_{ls}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let's call
 \begin_inset Preview
 
 \begin_layout Standard
@@ -1399,7 +1045,487 @@ sf{Q}$
 
  the transformation matrix (keeping in line with the notation of Adrian's
  notes).
- 
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left[
+\backslash
+begin{array}{ccc}1 & 0 & 0
+\backslash
+
+\backslash
+0 &
+\backslash
+cos(
+\backslash
+varphi) & -
+\backslash
+sin(
+\backslash
+varphi)
+\backslash
+
+\backslash
+0 &
+\backslash
+sin(
+\backslash
+varphi) &
+\backslash
+cos(
+\backslash
+varphi)
+\backslash
+end{array}
+\backslash
+right]$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bone
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Compact
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Osteons
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cubes
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Spongy
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Compact
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Osteons
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9.3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7.3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cubes
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Spongy
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dentine
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9 GPa
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Enamel
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+40-50 GPa
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Wood
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Alder, red
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ash, white
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Basswood, American
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8.1 GPa
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9.9 GPa
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7.2 GPa
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \end_body
