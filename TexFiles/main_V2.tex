@@ -458,12 +458,12 @@ In the material coordinate system, we rewrite Eqn.~\eqref{eq:GeneralizedHookeInv
 \end{equation}
 where and~$\epsilon'_{ij}$,~$S'_{ijkl}$, and~$\sigma'_{kl}$ are the components of~$\u{\sigma}$,~$\mathbb{S}$, and~$\u{\epsilon}$, respectively, with respect to the basis~$(\physe'_{r},\physe'_{\theta},\physe'_{z})$. For helical fibers with cylindrical orthotropy, the elastic compliance components,~$S'_{ijkl}$, are constant from point to point in its material coordinate system.
 In order to express Eqn.~\eqref{eq:GeneralizedHookeComponents} in terms of matrices, we use Voigt notation.
-We introduce elastic compliance matrix~$\usf{S} := \pr{S_{ij}}_{i,j \in\mathcal{I}}$, where~$\mathcal{I} :=\pr{1,\ldots,6}$. 
-According to the convention of Voigt notation, the non-zero elements of~$\usf{S}$ are defined as 
+We introduce elastic compliance matrix~$\usf{S} := \pr{S_{ij}}_{i,j \in\mathcal{I}}$, where~$\mathcal{I} :=\pr{1,\ldots,6}$.
+According to the convention of Voigt notation, the non-zero elements of~$\usf{S}$ are defined as
 \begin{align*}
 & S_{11} := S'_{rrrr},\quad S_{12} := S'_{rr\theta\theta},\quad S_{13} := S'_{rrzz}, \\
 & S_{22} := S'_{\theta\theta\theta\theta},\quad S_{23} := S'_{\theta\theta zz},\quad S_{33} := S'_{zzzz}, \\
-& S_{44} := 2 S'_{\theta z\theta z},\quad S_{55} := 2 S'_{rzrz},\quad S_{66} := 2 S'_{r\theta r\theta}. 
+& S_{44} := 2 S'_{\theta z\theta z},\quad S_{55} := 2 S'_{rzrz},\quad S_{66} := 2 S'_{r\theta r\theta}.
 \end{align*}
 We define engineering strain
 
@@ -645,7 +645,7 @@ for~$n = 1,2,\dots,N$.
 In the case of perfect bonding (no slip) interface between layers, the continuity conditions of stresses~$\sigma_{rr}$,~$\tau_{r\theta}$,~$\tau_{rz}$ and displacements~$u_{r}$,~$u_{\theta}$,~$u_z$ at the interface yields
 \begin{subequations}
 	\begin{align}
-	& \sum_{i \in \mathcal{J}} \left( {}^{n}\!{K_{i}} r^{{}^{n}\!{m_{i}}-2} - {}^{n+1}\!{K_{i}} r^{{}^{n+1}\!{m_{i}}-2} \right) = {}^{n+1}\!{\mu_{1}} 
+	& \sum_{i \in \mathcal{J}} \left( {}^{n}\!{K_{i}} r^{{}^{n}\!{m_{i}}-2} - {}^{n+1}\!{K_{i}} r^{{}^{n+1}\!{m_{i}}-2} \right) = {}^{n+1}\!{\mu_{1}}
   - {}^{n}\!{\mu_{1}}, \\
 	& \sum_{i \in \mathcal{J}} \left( {}^{n}\!{K_{i}} {}^{n}\!{g_{i}} r^{{}^{n}\!{m_{i}}-2} - {}^{n+1}\!{K_{i}} {}^{n+1}\!{g_{i}} r^{{}^{n+1}\!{m_{i}}-2} \right) = {}^{n+1}\!{\mu_{2}} - {}^{n}\!{\mu_{2}}, \\
 	& \sum_{i \in \mathcal{J}} \left( {}^{n}\!{K_{i}} {}^{n}\!{Q_{i}} r^{{}^{n}\!{m_{i}}-2} - {}^{n+1}\!{K_{i}} {}^{n+1}\!{Q_{i}} r^{{}^{n+1}\!{m_{i}}-2} \right) = {}^{n+1}\!{Q_{5}} - {}^{n}\!{Q_{5}}, \\
@@ -1013,7 +1013,7 @@ We calculate~$m_i$ as
 	\intertext{where}
 	 a & :=  \beta_{22} \beta_{44} - \beta_{24}^2, \\
 	\begin{split}
-	 b & := \beta_{24}(2\beta_{14} + \beta_{24} + 2\beta_{56}) + \beta_{14}^2 \\ 
+	 b & := \beta_{24}(2\beta_{14} + \beta_{24} + 2\beta_{56}) + \beta_{14}^2 \\
 	 & \quad - \beta_{44}(\beta_{11} + 2\beta_{12} + \beta_{22} + \beta_{66}) - \beta_{22} \beta_{55},
 	\end{split} \\
 	c & :=  \beta_{55}(\beta_{11} + 2\beta_{12} + \beta_{22} + \beta_{66})-\beta_{56}^2.
@@ -1248,10 +1248,10 @@ In matrix form, Eqns.~\eqref{eq:Appenboundary} can be written as
 \begin{equation}
   \begin{bmatrix}
   1 & 1 & 1 & 1 \\
-  {}^{1}\!g_1 & {}^{1}\!g_2 & {}^{1}\!g_3 & {}^{1}\!g_4 
+  {}^{1}\!g_1 & {}^{1}\!g_2 & {}^{1}\!g_3 & {}^{1}\!g_4
   \end{bmatrix}
   \begin{bmatrix}
-  {}^{1}\!{\hat{K}_{1}} \\ {}^{1}\!{\hat{K}_{2}} \\{}^{1}\!{\hat{K}_{3}} \\{}^{1}\!{\hat{K}_{4}} 
+  {}^{1}\!{\hat{K}_{1}} \\ {}^{1}\!{\hat{K}_{2}} \\{}^{1}\!{\hat{K}_{3}} \\{}^{1}\!{\hat{K}_{4}}
   \end{bmatrix}
   = {}^{0}\!{r}^{2}
   \begin{bmatrix}
@@ -1262,10 +1262,10 @@ and
 \begin{equation}
   \begin{bmatrix}
   1 & 1 & 1 & 1 \\
-  {}^{N}\!g_1 & {}^{N}\!g_2 & {}^{N}\!g_3 & {}^{N}\!g_4 
+  {}^{N}\!g_1 & {}^{N}\!g_2 & {}^{N}\!g_3 & {}^{N}\!g_4
   \end{bmatrix}
   \begin{bmatrix}
-  {}^{N}\!{\hat{K}_{1}} \\ {}^{N}\!{\hat{K}_{2}} \\{}^{N}\!{\hat{K}_{3}} \\{}^{N}\!{\hat{K}_{4}} 
+  {}^{N}\!{\hat{K}_{1}} \\ {}^{N}\!{\hat{K}_{2}} \\{}^{N}\!{\hat{K}_{3}} \\{}^{N}\!{\hat{K}_{4}}
   \end{bmatrix}
   = {}^{N}\!{r}^{2}
   \begin{bmatrix}
@@ -1288,10 +1288,10 @@ We can obtain~$~^{n}{\usf{K}}$ of the odd and even layers by solving Eqn.~\eqref
 \begin{equation}
     \tilde{\usf{H}} = (\tilde{\usf{Q}})^{-1} \tilde{\usf{\Lambda}} \tilde{\usf{Q}},
 \end{equation}
-where~$\tilde{\usf{\Lambda}} := \text{diag}(\tilde{\lambda}_1,\tilde{\lambda}_2,\tilde{\lambda}_3,\tilde{\lambda}_4)$ and~$\tilde{\usf{Q}}$ are respectively the eigenvalue and eigenvector matrices of~$\tilde{\usf{H}}$,~$\tilde{\lambda}_i$ are eigenvalues. We denote~$\usf{\Lambda}= \text{diag}(\lambda_1,\lambda_2,\lambda_3,\lambda_4)$, where~$\lambda_i = \tilde{\lambda}_i/2$ for~$i \in \mathcal{J}$. Then it follows that~$\usf{\Lambda} := \tilde{\usf{\Lambda}}/2$.  
+where~$\tilde{\usf{\Lambda}} := \text{diag}(\tilde{\lambda}_1,\tilde{\lambda}_2,\tilde{\lambda}_3,\tilde{\lambda}_4)$ and~$\tilde{\usf{Q}}$ are respectively the eigenvalue and eigenvector matrices of~$\tilde{\usf{H}}$,~$\tilde{\lambda}_i$ are eigenvalues. We denote~$\usf{\Lambda}= \text{diag}(\lambda_1,\lambda_2,\lambda_3,\lambda_4)$, where~$\lambda_i = \tilde{\lambda}_i/2$ for~$i \in \mathcal{J}$. Then it follows that~$\usf{\Lambda} := \tilde{\usf{\Lambda}}/2$.
 Let
 \begin{equation}
-	\usf{Y} := \tilde{\usf{Q}} \hat{\usf{K}}, \quad \usf{L} := \frac{1}{2}\tilde{\usf{Q}} \tilde{\usf{F}}, 
+	\usf{Y} := \tilde{\usf{Q}} \hat{\usf{K}}, \quad \usf{L} := \frac{1}{2}\tilde{\usf{Q}} \tilde{\usf{F}},
 \end{equation}
 then Eqn.~\eqref{eq:AppendKejdr} becomes
 \begin{equation}
@@ -1312,7 +1312,7 @@ The solution of Eqn.~\eqref{eq:AppendYndr} reads
 	 c_{1} r^{\lambda_{1}} \\ c_{2} r^{\lambda_{2}} \\ c_{3} r^{\lambda_{3}} \\ c_{4} r^{\lambda_{4}}
 	\end{bmatrix},
 \end{equation}
-where~$c_{i}$ are the integration constants. 
+where~$c_{i}$ are the integration constants.
 
 Therefore,~$~^{n}{\hat{\usf{K}}}$ of the odd and even layers are
 \begin{subequations}
