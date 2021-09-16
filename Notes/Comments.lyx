@@ -3,7 +3,7 @@
 \begin_document
 \begin_header
 \save_transient_properties true
-\origin unavailable
+\origin /Users/haneeshkesari/Downloads/temp/OrthotropicBeamBending/Notes/
 \textclass article
 \begin_preamble
 \usepackage[scr=boondoxo]{mathalfa}
@@ -292,6 +292,16 @@ In the homogenization, we observe enhancement in bending stiffness for:
 \end_layout
 
 \begin_layout Standard
+3.
+ Simililar homogenization can be carried out for torsion.
+ May be stretching?
+\end_layout
+
+\begin_layout Standard
+* Structure Property connections investigated in Osteons?
+\end_layout
+
+\begin_layout Standard
 2.
  Transversely isotropic material (5 independent elastic constants)
 \end_layout
@@ -304,7 +314,6 @@ For materials with 3 independent elastic constants (shear modulus not related
 
 \begin_layout Standard
 For isotropic material, the homogenization formula do not apply.
-
 \end_layout
 
 \begin_layout Standard
@@ -1045,7 +1054,6 @@ sf{Q}$
 
  the transformation matrix (keeping in line with the notation of Adrian's
  notes).
-
 \end_layout
 
 \begin_layout Standard
@@ -1099,15 +1107,46 @@ right]$
 
 \end_inset
 
+ 
+\end_layout
 
+\begin_layout Subsubsection
+Bone
 \end_layout
 
 \begin_layout Standard
-Compressive strength
+What is the length of osteons
 \end_layout
 
 \begin_layout Standard
-Wood =20-50 MPA.
+Compressive strength Ostens = 163.
+ MPA, 133 MPa, 107 MPa, 
+\end_layout
+
+\begin_layout Standard
+What is the length of osteons=
+\end_layout
+
+\begin_layout Standard
+What is the diameter of osteons=
+\end_layout
+
+\begin_layout Standard
+How many lamellae are there in osteons=
+\end_layout
+
+\begin_layout Standard
+Alternating oteons, Bright osteons.
+ Type I osteons.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Wood
+\end_layout
+
+\begin_layout Standard
+Compressive strength Wood =20-50 MPA.
  
 \begin_inset Note Note
 status open
@@ -1119,11 +1158,6 @@ source:
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-Ostens = 163.
- MPA, 133 MPa, 107 MPa, 
 \end_layout
 
 \begin_layout Standard
