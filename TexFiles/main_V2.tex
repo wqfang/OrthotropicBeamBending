@@ -156,7 +156,8 @@ linkcolor = blue
 \newcommand{\Dunst}{\mathcal{D}^{\otimes}}
 \newcommand{\conf}{\boldsymbol{\kappa}}
 \newcommand{\confp}{\tilde{\boldsymbol{\kappa}}}
-\newcommand{\p}{\mathsf{p}}
+\newcommand{\p}{\,\mathsf{p}}
+\newcommand{\Inv}{\,\mathsf{Inv}}
 
 
 
@@ -446,7 +447,7 @@ and the transformation matrix from~$(\physe_{r}(\theta),\physe_{\theta}(\theta),
  \end{bmatrix}.
 \end{equation}
 
-In terms of $\usf{Q}(\varphi)$ , we have the transformation relation between~$(\physe_{r}(\theta),\physe_{\theta}(\theta),\physe_{z}(\theta))$ and~$(\physf_{r}(\theta;\varphi),\physf_{\theta}(\theta;\varphi),\physf_{z}(\theta;\varphi))$ as
+In terms of $\usf{Q}(\varphi)$ , we have the transformation relation between~$(\physe_{r}(\theta),\physe_{\theta}(\theta),\physe_{z}(\theta))$ and~$\pr{\physf_{r}(\theta;\varphi),\physf_{\theta}(\theta;\varphi),\physf_{z}(\theta;\varphi)}$ as
 \begin{equation}
 \physf_{i} (\theta;\varphi) = \sum_{j \in \mathcal{I} } Q_{ij}(\varphi)\physe_{j}(\theta), \quad \text{for} \,i \in \mathcal{I} ,
 \label{eq:Qtransform}
@@ -479,14 +480,14 @@ where~$\u{\sigma}$,~$\u{\epsilon}$, and~$\mathbb{C}$ are the Cauchy stress tenso
  \u{\epsilon} = \mathbb{S}\, \u{\sigma},
 \label{eq:GeneralizedHookeInverse}
 \end{equation}
-where~$\mathbb{S} = \mathbb{C}^{-1}$ is the elastic compliance tensor.
+where~$\mathbb{S} = \Inv\pr{\mathbb{C}}$ is the elastic compliance tensor, $\Inv\pr{\cdot}$ is the inverse operation.
 
-In the material coordinate system whose basis is~$(\physf_{r}(\theta;\varphi),\physf_{\theta}(\theta;\varphi),\physf_{z}(\theta;\varphi))$, we rewrite Eqn.~\eqref{eq:GeneralizedHookeInverse} with index notation as
+In the material coordinate system whose basis is~$\pr{\physf_{r}(\theta;\varphi),\physf_{\theta}(\theta;\varphi),\physf_{z}(\theta;\varphi)}$, we rewrite Eqn.~\eqref{eq:GeneralizedHookeInverse} with index notation as
 \begin{equation}
 \epsilon_{ij}^{\pr{\physf}} = \sum_{k,l \in \mathcal{I}}  S_{ijkl}^{\pr{\physf}} \sigma_{kl}^{\pr{\physf}}, \quad \text{for} \,i,j \in \mathcal{I} ,
 \label{eq:GeneralizedHookeComponents}
 \end{equation}
-where~$\epsilon_{ij}^{\pr{\physf}}$,~$S_{ijkl}^{\pr{\physf}}$, and~$\sigma_{kl}^{\pr{\physf}}$ are the components of~$\u{\sigma}$,~$\mathbb{S}$, and~$\u{\epsilon}$, respectively, with respect to the basis~$(\physf_{r}(\theta;\varphi),\physf_{\theta}(\theta;\varphi),\physf_{z}(\theta;\varphi))$. For helical fibers with cylindrical orthotropy, the elastic compliance components in its material coordinate system,~$S_{ijkl}^{\pr{\physf}}$, are constant from point to point.
+where~$\epsilon_{ij}^{\pr{\physf}}$,~$S_{ijkl}^{\pr{\physf}}$, and~$\sigma_{kl}^{\pr{\physf}}$ are the components of~$\u{\sigma}$,~$\mathbb{S}$, and~$\u{\epsilon}$, respectively, with respect to the basis~$\pr{\physf_{r}(\theta;\varphi),\physf_{\theta}(\theta;\varphi),\physf_{z}(\theta;\varphi)}$. For helical fibers with cylindrical orthotropy, the elastic compliance components in its material coordinate system,~$S_{ijkl}^{\pr{\physf}}$, are constant from point to point.
 \todo[fancyline]{WF: Need to consider that $\u{\epsilon}$, $\mathbb{S}$, $\u{\sigma}$ are not in the space $\mathbb{E}$. Should introduce more spaces and corresponding bases.}
 
 
@@ -641,7 +642,7 @@ With the addtional variable $\varphi$, there should be ten independent constants
 The bending stiffness of the~$N$-layer cylindrical composite is obtained by Jolicoeur and Cardou as
 \begin{equation}
 	\begin{aligned}
-	EI = & \sum_{n=1}^{N} \left[ \sum_{i \in \mathcal{L}} {}^{n}\!{\alpha_{i}} {}^{n}\!{K_{i}}  \pr{\p\pr{{}^{n-1}\!{r},{}^{n}\!{m_{i}}+2} - \p\pr{{}^{n}\!{r},{}^{n}\!{m_{i}} + 2}} + {}^{n}\!\gamma(\p\pr{{}^{n-1}\!{r},4} - \p\pr{{}^{n}\!{r},4}) \right],
+	EI = & \sum_{n=1}^{N} \left[ \sum_{i \in \mathcal{L}} {}^{n}\!{\alpha_{i}} {}^{n}\!{K_{i}}  \pr{\p\pr{{}^{n-1}\!{r},{}^{n}\!{m_{i}}+2} - \p\pr{{}^{n}\!{r},{}^{n}\!{m_{i}} + 2}} + {}^{n}\!\gamma\pr{\p\pr{{}^{n-1}\!{r},4} - \p\pr{{}^{n}\!{r},4}} \right],
 	\end{aligned}
 	\label{eq:EI}
 \end{equation}
@@ -748,20 +749,20 @@ for~$n = 1,2,\dots,N$. Let layer thickness~$\Delta r := \pr{{}^{N}\!{r}-{}^{0}\!
 where~$P_i$ are material constants given in~\ref{Appen:Pi}. Substituting Eqn.~\eqref{eq:single_mat_Ks} into Eqn.~\eqref{eq:EI}, we have
 \begin{equation}
 	\begin{aligned}
-	EI & = \sum_{n=1}^{N} \left[ \sum_{i \in \mathcal{L}} \alpha_i \left( P_i \p\pr{{}^{n}\!{r},-m_i  + 2} + O(\Delta r) \right) (\p\pr{{}^{n-1}\!{r},{}^{n}\!{m_{i}} + 2} - \p\pr{{}^{n}\!{r},m_{i} +2}) \right] + \gamma (\p\pr{{}^{0}\!{r},4} - \p\pr{{}^{N}\!{r},4}) \\
+	EI & = \sum_{n=1}^{N} \left[ \sum_{i \in \mathcal{L}} \alpha_i \left( P_i \p\pr{{}^{n}\!{r},-m_i  + 2} + O(\Delta r) \right) \pr{\p\pr{{}^{n-1}\!{r},{}^{n}\!{m_{i}} + 2} - \p\pr{{}^{n}\!{r},m_{i} +2}} \right] + \gamma \pr{\p\pr{{}^{0}\!{r},4} - \p\pr{{}^{N}\!{r},4}} \\
 	 & \begin{split}
 		= \sum_{n=1}^{N} \left[ \sum_{i \in \mathcal{L}} \alpha_i \left( P_i \p\pr{{}^{n}\!{r},-m_i  + 2} + O(\Delta r) \right) (- \p\pr{{}^{n}\!{r},m_{i} +1}(m_i + 2 ) \Delta r + O(\p\pr{\Delta r,2})) \right] \\
-		+ \gamma (\p\pr{{}^{0}\!{r},4} - \p\pr{{}^{N}\!{r},4})
+		+ \gamma \pr{\p\pr{{}^{0}\!{r},4} - \p\pr{{}^{N}\!{r},4}}
 	   \end{split}\\
-	 & = - \sum_{n=1}^{N} \left[ \sum_{i \in \mathcal{L}} \left( \alpha_i P_i (m_i + 2 ) \p\pr{{}^{n}\!{r},3} \cdot \Delta r \right) \right] + \gamma (\p\pr{{}^{0}\!{r},4} - \p\pr{{}^{N}\!{r},4}) + O(\p\pr{\Delta r,2}).
+	 & = - \sum_{n=1}^{N} \left[ \sum_{i \in \mathcal{L}} \left( \alpha_i P_i (m_i + 2 ) \p\pr{{}^{n}\!{r},3} \cdot \Delta r \right) \right] + \gamma \pr{\p\pr{{}^{0}\!{r},4} - \p\pr{{}^{N}\!{r},4}} + O\pr{\p\pr{\Delta r,2}}.
 	\end{aligned}
 	\label{eq:single_mat_EI}
 \end{equation}
 Taking the limit~$N \to \infty$, according to the definition of Riemann integral, we convert the sum of series in Eqn.~\eqref{eq:single_mat_EI} into integral to derive the asymptotic bending stiffness as
 \begin{equation}
 	\begin{aligned}
-	(EI)_{\infty} & = - \lim\limits_{N \to \infty} \sum_{n=1}^{N} \left[ \sum_{i \in \mathcal{L}} \alpha_i P_i (m_i + 2 ) \p\pr{{}^{n}\!{r},3} \Delta r \right] + \gamma (\p\pr{{}^{0}\!{r},4} - \p\pr{{}^{N}\!{r},4}) + O(\p\pr{\Delta r,2}) \\
-	 & = - \sum_{i \in \mathcal{L}} \left( \int_{{}^{0}\!{r}}^{{}^{N}\!{r}} \alpha_i P_i (m_i + 2 ) \p\pr{r,3} \, dr \right) + \gamma (\p\pr{{}^{0}\!{r},4} - \p\pr{{}^{N}\!{r},4}) \\
+	(EI)_{\infty} & = - \lim\limits_{N \to \infty} \sum_{n=1}^{N} \left[ \sum_{i \in \mathcal{L}} \alpha_i P_i (m_i + 2 ) \p\pr{{}^{n}\!{r},3} \Delta r \right] + \gamma \pr{\p\pr{{}^{0}\!{r},4} - \p\pr{{}^{N}\!{r},4}} + O\pr{\p\pr{\Delta r,2}} \\
+	 & = - \sum_{i \in \mathcal{L}} \left( \int_{{}^{0}\!{r}}^{{}^{N}\!{r}} \alpha_i P_i (m_i + 2 ) \p\pr{r,3} \, dr \right) + \gamma \pr{\p\pr{{}^{0}\!{r},4} - \p\pr{{}^{N}\!{r},4}} \\
 	 & = - \frac{\p\pr{{}^{N}\!{r},4} - \p\pr{{}^{0}\!{r},4}}{4} \left[ \sum_{i \in \mathcal{L}} \alpha_i P_i (m_i + 2 ) + 4\gamma\right].
 	\end{aligned}
 	\label{eq:single_mat_EI_final}
@@ -889,14 +890,14 @@ We come up with a differential equation based asymptotic analysis method to esti
 
 We first substitute~$n$ as~$n-1$ into Eqn.~\eqref{eq:eqs of Kin_two_mat_no_slip_np1} and combine the resulting equation with Eqn.~\eqref{eq:eqs of Kin_two_mat_no_slip_np1} to find out the relation between~$~^{n}{\usf{K}}$ and~$~^{{n-2}}{\usf{K}}$ as
 \begin{equation}
-	~^{n}{\usf{A}} ~^{n}{\usf{K}}  = ~^{n}{\usf{B}} ~^{{n-1}}{\usf{A}}^{-1} ~^{{n-1}}{\usf{B}} ~^{{n-2}}{\usf{K}} + ~^{n}{\usf{B}} ~^{{n-1}}{\usf{A}}^{-1} ~^{{n-1}}{\usf{D}}  + ~^{n}{\usf{D}} .
+	~^{n}{\usf{A}} ~^{n}{\usf{K}}  = ~^{n}{\usf{B}} \Inv\pr{{}^{{n-1}}\usf{A}} ~^{{n-1}}{\usf{B}} ~^{{n-2}}{\usf{K}} + ~^{n}{\usf{B}} \Inv\pr{{}^{{n-1}}\usf{A}} ~^{{n-1}}{\usf{D}}  + ~^{n}{\usf{D}} .
 	\label{eq:knknm2}
 \end{equation}
-In Eqn.~\eqref{eq:knknm2}, we take Taylor series expansion on~$~^{{n-1}}{\usf{A}}^{-1}$ and~$~^{{n-1}}{\usf{B}}$ around~${}^{n-1}\!{r}$ to obtain (see~\ref{Appen:Eqn315} for details)
+In Eqn.~\eqref{eq:knknm2}, we take Taylor series expansion on~$\Inv\pr{{}^{{n-1}}\usf{A}}$ and~$~^{{n-1}}{\usf{B}}$ around~${}^{n-1}\!{r}$ to obtain (see~\ref{Appen:Eqn315} for details)
 \begin{subequations}
 	\begin{align}
-	& ~^{n}{\usf{B}} ~^{{n-1}}{\usf{A}}^{-1} ~^{{n-1}}{\usf{B}} = ~^{n}{\usf{A}} + \frac{\Delta r}{~^{n-1}\!{r}} \left( ~^{n}{\usf{B}} ~^{n-1}\tilde{\usf{m}} ~^{n}{\usf{B}}^{-1} ~^{n}{\usf{A}} - ~^{n}{\usf{A}} ~^{n}\tilde{\usf{m}} \right)  + O(\p\pr{\Delta r,2}), \\
-	& ~^{n}{\usf{B}} ~^{{n-1}}{\usf{A}}^{-1} ~^{{n-1}}{\usf{D}} + ~^{n}{\usf{D}} = \frac{\Delta r}{~^{n-1}\!{r}} \left( 2~^{n}{\usf{D}} + ~^{n}{\usf{B}} ~^{n-1}\tilde{\usf{m}} ~^{n}{\usf{B}}^{-1} ~^{{n-1}}{\usf{D}} \right) + O(\p\pr{\Delta r,2}),
+	& ~^{n}{\usf{B}} \Inv\pr{{}^{{n-1}}\usf{A}} ~^{{n-1}}{\usf{B}} = ~^{n}{\usf{A}} + \frac{\Delta r}{~^{n-1}\!{r}} \left( ~^{n}{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\usf{B}} ~^{n}{\usf{A}} - ~^{n}{\usf{A}} ~^{n}\tilde{\usf{m}} \right)  + O(\p\pr{\Delta r,2}), \\
+	& ~^{n}{\usf{B}} \Inv\pr{{}^{{n-1}}\usf{A}} ~^{{n-1}}{\usf{D}} + ~^{n}{\usf{D}} = \frac{\Delta r}{~^{n-1}\!{r}} \left( 2~^{n}{\usf{D}} + ~^{n}{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\usf{B}} ~^{{n-1}}{\usf{D}} \right) + O(\p\pr{\Delta r,2}),
 	\end{align}
 	\label{eq:bnanm1}
 \end{subequations}
@@ -904,8 +905,8 @@ Then by substituting Eqn.~\eqref{eq:bnanm1} into Eqn.~\eqref{eq:knknm2}, we obta
 \begin{equation}
 \begin{aligned}
 	\begin{split}
-	~^{n}{\usf{A}} ~^{n}{\usf{K}} & = \left[  ~^{n}{\usf{A}} + \frac{\Delta r}{~^{n-1}\!{r}} \left( ~^{n}{\usf{B}} ~^{n-1}\tilde{\usf{m}} ~^{n}{\usf{B}}^{-1} ~^{n}{\usf{A}} - ~^{n}{\usf{A}} ~^{n}\tilde{\usf{m}} \right)  + O(\p\pr{\Delta r,2}) \right] ~^{{n-2}}{\usf{K}} \\
-	& \qquad + \frac{\Delta r}{~^{n-1}\!{r}} \left( 2~^{n}{\usf{D}} + ~^{n}{\usf{B}} ~^{n-1}\tilde{\usf{m}} ~^{n}{\usf{B}}^{-1} ~^{{n-1}}{\usf{D}} \right) + O(\p\pr{\Delta r,2}),
+	~^{n}{\usf{A}} ~^{n}{\usf{K}} & = \left[  ~^{n}{\usf{A}} + \frac{\Delta r}{~^{n-1}\!{r}} \left( ~^{n}{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\usf{B}} ~^{n}{\usf{A}} - ~^{n}{\usf{A}} ~^{n}\tilde{\usf{m}} \right)  + O(\p\pr{\Delta r,2}) \right] ~^{{n-2}}{\usf{K}} \\
+	& \qquad + \frac{\Delta r}{~^{n-1}\!{r}} \left( 2~^{n}{\usf{D}} + ~^{n}{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\usf{B}} ~^{{n-1}}{\usf{D}} \right) + O(\p\pr{\Delta r,2}),
 	\end{split}
 \end{aligned}
 \label{eq:knknm2appr1}
@@ -1095,10 +1096,10 @@ We calculate~$Q_5$ and~$W_5$ as
 		\mu_1 \\ \mu_2
 	\end{bmatrix} :=
 	\frac{1}{C_{33}}
-	\begin{bmatrix}
+	\Inv \pr{\begin{bmatrix}
 		-2\beta_{14}-6\beta_{24}+\beta_{56} & 4\beta_{44}-\beta_{55} \\
 		-\beta_{11}-2\beta_{12}+3\beta_{22}-\beta_{66} & 2\beta_{14}-2\beta_{24}+\beta_{56}
-	\end{bmatrix}^{-1}
+	\end{bmatrix}}
 	\begin{bmatrix}
 			2C_{34} \\ C_{13}-C_{23}
 	\end{bmatrix}.
@@ -1164,10 +1165,10 @@ To obtain Eqn.~\eqref{eq:bnanm1}, let
 	~^{n}\usf{f}(r)
 	& :=
 	\begin{bmatrix}
-		{r}^{{}^{n}\!{m_{1}}} & 0 & 0 & 0 \\
-		0 & {r}^{{}^{n}\!{m_{2}}} & 0 & 0 \\
-		0 & 0 & {r}^{{}^{n}\!{m_{3}}} & 0 \\
-		0 & 0 & 0 & {r}^{{}^{n}\!{m_{4}}}
+		\p\pr{r,{}^{n}\!{m_{1}}} & 0 & 0 & 0 \\
+		0 & \p\pr{r,{}^{n}\!{m_{2}}} & 0 & 0 \\
+		0 & 0 & \p\pr{r,{}^{n}\!{m_{3}}} & 0 \\
+		0 & 0 & 0 & \p\pr{r,{}^{n}\!{m_{4}}}
 	\end{bmatrix}, \\
 	~^{n}\tilde{\usf{m}}
 	& :=
@@ -1203,23 +1204,23 @@ Therefore,
 \begin{subequations}
 	\begin{align}
 	\begin{split}
-		~^{n}{\usf{B}} ~^{{n-1}}{\usf{A}}^{-1}
-		& = ~^{n}{\usf{B}} \left[ ~^{n}\usf{B} - \delta ~^{n}\usf{B} \Delta r + O(\p\pr{\Delta r,2}) \right]^{-1} \\
-		& = ~^{n}{\usf{B}} \left[ ~^{n}\usf{B} \left( \usf{I}_{4\times 4}- \frac{\Delta r}{~^{n-1}\!{r}} ~^{n-1}\tilde{\usf{m}} \right) + O(\p\pr{\Delta r,2}) \right]^{-1} \\
-		& = ~^{n}{\usf{B}} \left[ \usf{I}_{4\times 4} - \frac{\Delta r}{~^{n-1}\!{r}} ~^{n-1}\tilde{\usf{m}} + O(\p\pr{\Delta r,2}) \right]^{-1} \usf{B}^{-1}_{n} \\
-		& = \usf{I}_{4\times 4} + \frac{\Delta r}{~^{n-1}\!{r}} ~^{n}{\usf{B}}\  ~^{n-1}\tilde{\usf{m}}\  ~^{n}{\usf{B}}^{-1} + O(\p\pr{\Delta r,2}),
+		~^{n}{\usf{B}} \Inv\pr{{}^{{n-1}}\usf{A}}
+		& = ~^{n}{\usf{B}} \Inv\left[ ~^{n}\usf{B} - \delta ~^{n}\usf{B} \Delta r + O(\p\pr{\Delta r,2}) \right] \\
+		& = ~^{n}{\usf{B}} \Inv\left[ ~^{n}\usf{B} \left( \usf{I}_{4\times 4}- \frac{\Delta r}{~^{n-1}\!{r}} ~^{n-1}\tilde{\usf{m}} \right) + O(\p\pr{\Delta r,2}) \right] \\
+		& = ~^{n}{\usf{B}} \Inv\left[ \usf{I}_{4\times 4} - \frac{\Delta r}{~^{n-1}\!{r}} ~^{n-1}\tilde{\usf{m}} + O(\p\pr{\Delta r,2}) \right] \Inv\pr{{}^{{n}}\usf{B}} \\
+		& = \usf{I}_{4\times 4} + \frac{\Delta r}{~^{n-1}\!{r}} ~^{n}{\usf{B}}\  ~^{n-1}\tilde{\usf{m}}\  \Inv\pr{{}^{n}\usf{B}} + O(\p\pr{\Delta r,2}),
 	\end{split}\\
 	\begin{split}
-		~^{n}{\usf{B}} ~^{{n-1}}{\usf{A}}^{-1} ~^{{n-1}}{\usf{B}}
-		& = \left[ \usf{I}_{4\times 4} + \frac{\Delta r}{~^{n-1}\!{r}} ~^{n}{\usf{B}} ~^{n-1}\tilde{\usf{m}} ~^{n}{\usf{B}}^{-1} + O(\p\pr{\Delta r,2}) \right] \cdot \\
+		~^{n}{\usf{B}} \Inv\pr{{}^{{n-1}}\usf{A}} ~^{{n-1}}{\usf{B}}
+		& = \left[ \usf{I}_{4\times 4} + \frac{\Delta r}{~^{n-1}\!{r}} ~^{n}{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\usf{B}} + O(\p\pr{\Delta r,2}) \right] \cdot \\
 		& \qquad \left[ ~^{n}\usf{A} - \frac{\Delta r}{~^{n-1}\!{r}} ~^{n}{\usf{A}} ~^{n}\tilde{\usf{m}} + O(\p\pr{\Delta r,2}) \right] \\
-		& = ~^{n}\usf{A} + \frac{\Delta r}{~^{n-1}\!{r}} \left( ~^{n}{\usf{B}} ~^{n-1}\tilde{\usf{m}} ~^{n}{\usf{B}}^{-1} ~^{n}\usf{A} - ~^{n}{\usf{A}} ~^{n}\tilde{\usf{m}} \right) + O(\p\pr{\Delta r,2}),
+		& = ~^{n}\usf{A} + \frac{\Delta r}{~^{n-1}\!{r}} \left( ~^{n}{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\usf{B}} ~^{n}\usf{A} - ~^{n}{\usf{A}} ~^{n}\tilde{\usf{m}} \right) + O(\p\pr{\Delta r,2}),
 	\end{split} \\
 	\begin{split}
-		~^{n}{\usf{B}} ~^{{n-1}}{\usf{A}}^{-1} ~^{{n-1}}{\usf{D}} + ~^{n}{\usf{D}}
-		& = \left[ \usf{I}_{4\times 4} + \frac{\Delta r}{~^{n-1}\!{r}} ~^{n}{\usf{B}} ~^{n-1}\tilde{\usf{m}} ~^{n}{\usf{B}}^{-1} + O(\p\pr{\Delta r,2}) \right] ~^{{n-1}}{\usf{D}} + ~^{n}{\usf{D}} \\
-		& = ~^{{n-1}}{\usf{D}} + ~^{n}{\usf{D}} + \frac{\Delta r}{~^{n-1}\!{r}} ~^{n}{\usf{B}} ~^{n-1}\tilde{\usf{m}} ~^{n}{\usf{B}}^{-1} ~^{{n-1}}{\usf{D}} + O(\p\pr{\Delta r,2}) \\
-		& = \frac{\Delta r}{~^{n-1}\!{r}} \left( 2~^{n}{\usf{D}} + ~^{n}{\usf{B}} ~^{n-1}\tilde{\usf{m}} ~^{n}{\usf{B}}^{-1} ~^{{n-1}}{\usf{D}} \right) + O(\p\pr{\Delta r,2}).
+		~^{n}{\usf{B}} \Inv\pr{{}^{{n-1}}\usf{A}} ~^{{n-1}}{\usf{D}} + ~^{n}{\usf{D}}
+		& = \left[ \usf{I}_{4\times 4} + \frac{\Delta r}{~^{n-1}\!{r}} ~^{n}{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\usf{B}} + O(\p\pr{\Delta r,2}) \right] ~^{{n-1}}{\usf{D}} + ~^{n}{\usf{D}} \\
+		& = ~^{{n-1}}{\usf{D}} + ~^{n}{\usf{D}} + \frac{\Delta r}{~^{n-1}\!{r}} ~^{n}{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\usf{B}} ~^{{n-1}}{\usf{D}} + O(\p\pr{\Delta r,2}) \\
+		& = \frac{\Delta r}{~^{n-1}\!{r}} \left( 2~^{n}{\usf{D}} + ~^{n}{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\usf{B}} ~^{{n-1}}{\usf{D}} \right) + O(\p\pr{\Delta r,2}).
 	\end{split}
 	\end{align}
 	\label{eq:C5}
@@ -1231,22 +1232,22 @@ Therefore,
 Substituting Eqn.~\eqref{eq:knknm2appr2} into Eqn.~\eqref{eq:knknm2appr1}, we obtain
 \begin{equation}
 	\begin{aligned}
-		~^{n-1}\!{r} \frac{d ~^{n}{\usf{K}}}{dr} = & \left( ~^{n}{\usf{A}}^{-1} ~^{n}{\usf{B}} ~^{n-1}\tilde{\usf{m}} ~^{n}{\usf{B}}^{-1} ~^{n}{\usf{A}} - ~^{n}\tilde{\usf{m}} \right) ~^{n}{\usf{K}} \\
-		& + ~^{n}{\usf{A}}^{-1} \left( 2~^{n}{\usf{D}} + ~^{n}{\usf{B}} ~^{n-1}\tilde{\usf{m}} ~^{n}{\usf{B}}^{-1} ~^{{n-1}}{\usf{D}} \right) + O(\Delta r).
+		~^{n-1}\!{r} \frac{d ~^{n}{\usf{K}}}{dr} = & \left( \Inv\pr{{}^{n}\usf{A}} ~^{n}{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\usf{B}} ~^{n}{\usf{A}} - ~^{n}\tilde{\usf{m}} \right) ~^{n}{\usf{K}} \\
+		& + \Inv\pr{{}^{n}\usf{A}} \left( 2~^{n}{\usf{D}} + ~^{n}{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\usf{B}} ~^{{n-1}}{\usf{D}} \right) + O(\Delta r).
 	\end{aligned}
 	\label{eq:AppendKndr1}
 \end{equation}
 
 Taking the zero order of approximation of Eqn.~\eqref{eq:AppendKndr1} around~${}^{n}\!{r}$ and noting that
 \begin{equation}
-	~^{n}{\usf{B}} ~^{n-1}\tilde{\usf{m}} ~^{n}{\usf{B}}^{-1} = ~^{n}\tilde{\usf{B}} ~^{n-1}\tilde{\usf{m}} ~^{n}\tilde{\usf{B}}^{-1},
+	~^{n}{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\usf{B}} = ~^{n}\tilde{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\tilde{\usf{B}}},
 \end{equation}
 we have
 \begin{equation}
 \begin{aligned}
 	\begin{split}
-	2 ~^{n}\!{r} \frac{d ~^{n}{\usf{K}}}{dr} = & \left( ~^{n}\usf{f}({}^{n}\!r)^{-1} ~^{n}\tilde{\usf{A}}^{-1} ~^{n}\tilde{\usf{B}} ~^{n-1}\tilde{\usf{m}} ~^{n}\tilde{\usf{B}}^{-1} \tilde{\usf{A}}_n ~^{n}\usf{f}({}^{n}\!r) - ~^{n}\tilde{\usf{m}} \right) ~^{n}{\usf{K}} \\
-	& + ~^{n}\!{r}^2 ~^{n}\usf{f}({}^{n}\!r)^{-1} ~^{n}\tilde{\usf{A}}^{-1} \left( -2\usf{I}_{4\times 4} + ~^{n}\tilde{\usf{B}} ~^{n-1}\tilde{\usf{m}} ~^{n}\tilde{\usf{B}}^{-1} \right) ~^{n}\tilde{\usf{D}} + O(\Delta r),
+	2 ~^{n}\!{r} \frac{d ~^{n}{\usf{K}}}{dr} = & \left( \Inv\pr{{}^{n}\usf{f}({}^{n}\!r)} \Inv\pr{{}^{n}\tilde{\usf{A}}} ~^{n}\tilde{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\tilde{\usf{B}}} \tilde{\usf{A}}_n ~^{n}\usf{f}({}^{n}\!r) - ~^{n}\tilde{\usf{m}} \right) ~^{n}{\usf{K}} \\
+	& + \p\pr{{}^{n}\!{r},2} \Inv\pr{{}^{n}\usf{f}({}^{n}\!r)} \Inv\pr{{}^{n}\tilde{\usf{A}}} \left( -2\usf{I}_{4\times 4} + ~^{n}\tilde{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\tilde{\usf{B}}} \right) ~^{n}\tilde{\usf{D}} + O(\Delta r),
 	\end{split}
 \end{aligned}
 \label{eq:AppendKndr2}
@@ -1262,13 +1263,13 @@ where~$~^{n}\tilde{\usf{D}}$ is a constant vector
 Let
 \begin{subequations}
 	\begin{align}
-	~^{n}\tilde{\usf{M}} & := ~^{n}\tilde{\usf{A}}^{-1} ~^{n}\tilde{\usf{B}} ~^{n-1}\tilde{\usf{m}} ~^{n}\tilde{\usf{B}}^{-1} ~^{n}\tilde{\usf{A}}, \\
-	~^{n}\tilde{\usf{F}} & := ~^{n}\tilde{\usf{A}}^{-1} \left( -2\usf{I}_{4\times 4} + ~^{n}\tilde{\usf{B}} ~^{n-1}\tilde{\usf{m}} ~^{n}\tilde{\usf{B}}^{-1} \right) ~^{n}\tilde{\usf{D}},
+	~^{n}\tilde{\usf{M}} & := \Inv\pr{{}^{n}\tilde{\usf{A}}} ~^{n}\tilde{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\tilde{\usf{B}}} ~^{n}\tilde{\usf{A}}, \\
+	~^{n}\tilde{\usf{F}} & := \Inv\pr{{}^{n}\tilde{\usf{A}}} \left( -2\usf{I}_{4\times 4} + ~^{n}\tilde{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\tilde{\usf{B}}} \right) ~^{n}\tilde{\usf{D}},
 	\end{align}
 \end{subequations}
 We rewrite Eqn.~\eqref{eq:AppendKndr2} as
 \begin{equation}
-	2 ~^{n}\!{r} \frac{d ~^{n}{\usf{K}}}{dr} = \left( ~^{n}\usf{f}({}^{n}\!r)^{-1} ~^{n}\tilde{\usf{M}} ~^{n}\usf{f}({}^{n}\!r) + ~^{n}\tilde{\usf{m}} \right) {}^{n}{\usf{K}} + ~^{n}\!{r}^2 ~^{n}\usf{f}({}^{n}\!r)^{-1} ~^{n}\tilde{\usf{F}}.
+	2 ~^{n}\!{r} \frac{d ~^{n}{\usf{K}}}{dr} = \left( \Inv\pr{{}^{n}\usf{f}({}^{n}\!r)} ~^{n}\tilde{\usf{M}} ~^{n}\usf{f}({}^{n}\!r) + ~^{n}\tilde{\usf{m}} \right) {}^{n}{\usf{K}} + \p\pr{{}^{n}\!{r},2} \Inv\pr{{}^{n}\usf{f}({}^{n}\!r)} ~^{n}\tilde{\usf{F}}.
 	\label{eq:AppendKndr}
 \end{equation}
 Then multiplying Eqn.~\eqref{eq:AppendKndr} by~$~^{n}\usf{f}({}^{n}\!r)$ on both sides, we obtain a linear ODE system of~$~^{n}{\usf{K}}$
@@ -1290,10 +1291,10 @@ The ODE system of~$~^{n}{\usf{K}}$ given by~\eqref{eq:GovernEqnKn} and~\eqref{eq
 where~$~^{n}{\hat{\usf{K}}} := ~^{n}\usf{f}({}^{n}\!r)~^{n}{\usf{K}}$ and~$~^{n}\tilde{\usf{H}} := ~^{n}\tilde{\usf{M}} + ~^{n}\tilde{\usf{m}}$, with boundary conditions
 \begin{subequations}
 	\begin{align}
-	\sum_{i \in \mathcal{L}} {}^{1}\!\hat{K}_{i} {}^{0}\!{r}^{-2} & = -{}^{1}\!{\mu_{1}}, \quad
-	 \sum_{i \in \mathcal{L}} {}^{1}\!\hat{K}_{i} {}^{1}\!{g_{i}} {}^{0}\!{r}^{-2} = -{}^{1}\!{\mu_{2}},\\
-	\sum_{i \in \mathcal{L}} {}^{N}\!\hat{K}_{i} {}^{N}\!{r}^{-2} & = -{}^{N}\!{\mu_{1}}, \quad
-	 \sum_{i \in \mathcal{L}} {}^{N}\!\hat{K}_{i} {}^{N}\!{g_{i}} {}^{N}\!{r}^{-2} = -{}^{N}\!{\mu_{2}}.
+	\sum_{i \in \mathcal{L}} {}^{1}\!\hat{K}_{i} \p\pr{{}^{0}\!{r},-2} & = -{}^{1}\!{\mu_{1}}, \quad
+	 \sum_{i \in \mathcal{L}} {}^{1}\!\hat{K}_{i} {}^{1}\!{g_{i}} \p\pr{{}^{0}\!{r},-2} = -{}^{1}\!{\mu_{2}},\\
+	\sum_{i \in \mathcal{L}} {}^{N}\!\hat{K}_{i} \p\pr{{}^{N}\!{r},-2} & = -{}^{N}\!{\mu_{1}}, \quad
+	 \sum_{i \in \mathcal{L}} {}^{N}\!\hat{K}_{i} {}^{N}\!{g_{i}} \p\pr{{}^{N}\!{r},-2} = -{}^{N}\!{\mu_{2}}.
 	\end{align}
 	\label{eq:Appenboundary}
 \end{subequations}
@@ -1339,7 +1340,7 @@ Since the material properties of the multilayered material is alternately arrang
 \end{subequations}
 We can obtain~$~^{n}{\usf{K}}$ of the odd and even layers by solving Eqn.~\eqref{eq:AppendKejdr} separately. The above two ODE systems have similar format. For simplicity, we drop the subscripts~$I$ and~$II$ that denote material constants of odd and even layers in the following derivations. We diagonalize the matrix~$\tilde{\usf{H}}$ as
 \begin{equation}
-    \tilde{\usf{H}} = (\tilde{\usf{Q}})^{-1} \tilde{\usf{\Lambda}} \tilde{\usf{Q}},
+    \tilde{\usf{H}} = \Inv\pr{\tilde{\usf{Q}}} \tilde{\usf{\Lambda}} \tilde{\usf{Q}},
 \end{equation}
 where~$\tilde{\usf{\Lambda}} := \text{diag}(\tilde{\lambda}_1,\tilde{\lambda}_2,\tilde{\lambda}_3,\tilde{\lambda}_4)$ and~$\tilde{\usf{Q}}$ are respectively the eigenvalue and eigenvector matrices of~$\tilde{\usf{H}}$,~$\tilde{\lambda}_i$ are eigenvalues. We denote~$\usf{\Lambda}= \text{diag}(\lambda_1,\lambda_2,\lambda_3,\lambda_4)$, where~$\lambda_i = \tilde{\lambda}_i/2$ for~$i \in \mathcal{L}$. Then it follows that~$\usf{\Lambda} := \tilde{\usf{\Lambda}}/2$.
 Let
@@ -1370,8 +1371,8 @@ where~$c_{i}$ are the integration constants.
 Therefore,~$~^{n}{\hat{\usf{K}}}$ of the odd and even layers are
 \begin{subequations}
 \begin{align}
-~^{n}{\hat{\usf{K}}} & = \left( ~^{I}\tilde{\usf{Q}} \right)^{-1}~^{I}\usf{Y}, \quad \text{for odd~$n$}, \\
-~^{n}{\hat{\usf{K}}} & = \left( ~^{II}\tilde{\usf{Q}} \right)^{-1}~^{II}\usf{Y}, \quad \text{for even~$n$},
+~^{n}{\hat{\usf{K}}} & = \Inv\left( ~^{I}\tilde{\usf{Q}} \right) ~^{I}\usf{Y}, \quad \text{for odd~$n$}, \\
+~^{n}{\hat{\usf{K}}} & = \Inv\left( ~^{II}\tilde{\usf{Q}} \right) ~^{II}\usf{Y}, \quad \text{for even~$n$},
 \end{align}
 \label{eq:KhatExpress}
 \end{subequations}
@@ -1394,8 +1395,8 @@ The analytical expression of integration constants~${}^{n}\!{c_{i}}$ can be obta
 Finally, we obtain~$~^{n}{\usf{K}}$ of the odd and even layers given by
 \begin{subequations}
 \begin{align}
-	~^{n}{\usf{K}} & = (~^{n}\usf{f}({}^{n}\!r))^{-1} (~^{I}\tilde{\usf{Q}})^{-1}~^{I}\usf{Y}, \quad \text{for odd~$n$}, \\
-	~^{n}{\usf{K}} & = (~^{n}\usf{f}({}^{n}\!r))^{-1} (~^{II}\tilde{\usf{Q}})^{-1}~^{II}\usf{Y}, \quad \text{for even~$n$}.
+	~^{n}{\usf{K}} & = \Inv\pr{~^{n}\usf{f}({}^{n}\!r)} \Inv\pr{~^{I}\tilde{\usf{Q}}}~^{I}\usf{Y}, \quad \text{for odd~$n$}, \\
+	~^{n}{\usf{K}} & = \Inv\pr{~^{n}\usf{f}({}^{n}\!r)} \Inv\pr{~^{II}\tilde{\usf{Q}}}~^{II}\usf{Y}, \quad \text{for even~$n$}.
 \end{align}
 \label{eq:appenKn_I_II}
 \end{subequations}
@@ -1407,8 +1408,8 @@ Substituting the terms in Eqn.~\eqref{eq:appenKn_I_II}, we obtain a general expr
 where~${}^{n}\!G_{ij}$ are constants given by
 \begin{subequations}
 \begin{align}
-	{}^{n}\!G_{i0}& := \sum_{k \in \mathcal{L}} \pr{~^{n}\tilde{\usf{Q}}}^{-1}_{ik} \frac{{}^{n}\!L_{k}}{2 - {}^{n}\!\lambda_{k}}, \\
-	{}^{n}\!G_{ij}& := \pr{~^{n}\tilde{\usf{Q}}}^{-1}_{ij} {}^{n}\!c_{j}, \quad \text{for}\, j\in \mathcal{L} .
+	{}^{n}\!G_{i0}& := \sum_{k \in \mathcal{L}} \Inv\pr{~^{n}\tilde{\usf{Q}}}_{ik} \frac{{}^{n}\!L_{k}}{2 - {}^{n}\!\lambda_{k}}, \\
+	{}^{n}\!G_{ij}& := \Inv\pr{~^{n}\tilde{\usf{Q}}}_{ij} {}^{n}\!c_{j}, \quad \text{for}\, j\in \mathcal{L} .
 \end{align}
 \label{eq:Gjin}
 \end{subequations}
