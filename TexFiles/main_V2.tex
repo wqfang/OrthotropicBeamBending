@@ -419,12 +419,12 @@ We also introduce a set of orthonormal vectors~$(\physe_{r}(\theta),\physe_{\the
 \end{align}
 \end{subequations}
 
-We consider a hollow composite cylinder, whose axis is aligned with~$\physe_{z}(\theta)$ and cross sections are in~$(\physe_{r}(\theta),\physe_{\theta}(\theta))$ plane (Fig.~\ref{fig:schematic}~$\subf{A}$).
+We consider a hollow composite cylinder, whose axis is aligned with~$\physe_{z}(\theta)$ and cross sections are in~$(\physe_{r}(\theta),\physe_{\theta}(\theta))$ plane (see Fig.~\ref{fig:schematic}~$\subf{A}$).
 The inner and outer radius of the cylinder is~${}^{0}\!{r}$ and~${}^{N}\!{r}$, respectively.
-The cylinder consists of~$N$ co-axial cylindrical layers and each layer is cylindrical orthotropic with different principal material property orientations (see Fig.~\ref{fig:schematic}~$\subf{B}$).
+The cylinder consists of~$N$ co-axial cylindrical layers and each layer is cylindrical orthotropic with different principal material property orientations (see Fig.~\ref{fig:Cylinder3D}~$\subf{E}$).
 
 For an individual layer of material, we construct a local cylindrical coordinate system according to the principal material property orientation of the layer. We refer to the local cylindrical coordinate system as the material coordinate system. It is a rotation of the global cylindrical coordinate system through an angle~$\varphi$, the so-called helical angle, in clockwise direction with respect to the axis~$\physe_{r}(\theta)$.
-We denote the basis of the material coordinate system as~$(\physf_{r}(\theta;\varphi),\physf_{\theta}(\theta;\varphi),\physf_{z}(\theta;\varphi))$, 
+We denote the basis of the material coordinate system as~$\pr{\physf_{r}(\theta;\varphi),\physf_{\theta}(\theta;\varphi),\physf_{z}(\theta;\varphi)}$, 
 % where
 % \begin{subequations}
 % \begin{align}
@@ -433,7 +433,7 @@ We denote the basis of the material coordinate system as~$(\physf_{r}(\theta;\va
 % \physf_{z}(\theta;\varphi) & = \sin(\varphi) \physe_{\theta} (\theta) + \cos(\varphi) \physe_z (\theta).
 % \end{align}
 % \end{subequations}
-and the transformation matrix from~$(\physe_{r}(\theta),\physe_{\theta}(\theta),\physe_{z}(\theta))$ to~$(\physf_{r}(\theta;\varphi),\physf_{\theta}(\theta;\varphi),\physf_{z}(\theta;\varphi))$ as $\usf{Q}(\varphi)$, which can be expressed as
+and the transformation matrix from~$(\physe_{r}(\theta),\physe_{\theta}(\theta),\physe_{z}(\theta))$ to~$\pr{\physf_{r}(\theta;\varphi),\physf_{\theta}(\theta;\varphi),\physf_{z}(\theta;\varphi)}$ as $\usf{Q}(\varphi)$, which can be expressed as
 
 \begin{equation}
 \usf{Q}(\varphi)
@@ -663,7 +663,7 @@ with
 	{}^{n}\!\gamma & := \frac{\pi}{{}^{n}\!{C_{33}}} \frac{ {}^{n}\!{\mu_{1}} ({}^{n}\!{C_{13}} + 3{}^{n}\!{C_{23}}) - 2{}^{n}\!{\mu_{2}} {}^{n}\!{C_{34}} - 1  }{4},
 	\end{align}
 \end{subequations}
-where~$N$ denotes the total number of layers,~$\mathcal{L} := \pr{1,2,3,4}$,~${}^{n-1}\!{r}$ and~${}^{n}\!{r}$ the internal and external radii of the~$n^\text{th}$ layer,~${}^{n}\!{m_{i}}$,~${}^{n}\!{g_{i}}$,~${}^{n}\!{\mu_{1}}$, and~${}^{n}\!{\mu_{2}}$ are material constants related with elastic constants of the~$n^\text{th}$ layer (see~\ref{Appen:MatConst}). We use $\p\pr{x,y}$ to denote a power operation where $x$ is the base and $y$ is the exponent.
+where~$N$ denotes the total number of layers,~$\mathcal{L} := \pr{1,2,3,4}$,~${}^{n-1}\!{r}$ and~${}^{n}\!{r}$ the internal and external radii of the~$n^\text{th}$ layer,~${}^{n}\!{m_{i}}$,~${}^{n}\!{g_{i}}$,~${}^{n}\!{\mu_{1}}$, and~${}^{n}\!{\mu_{2}}$ are material constants related with elastic constants of the~$n^\text{th}$ layer (see~\ref{Appen:MatConst}). We use $\p\pr{x,y}$ to denote the power operation where $x$ is the base and $y$ is the exponent.
 
 The coefficients~${}^{n}\!{K_{i}}$ are determined by the boundary conditions and continuity conditions of displacement and stress at the interface.
 
