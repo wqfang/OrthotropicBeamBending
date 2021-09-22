@@ -406,9 +406,14 @@ The paper is organized as follows:~$\S$\ref{sec:bending_model} describes the mod
 \section{Pure bending of multilayered composite cylinders with cylindrical orthotropy}
 \label{sec:bending_model}
 
+
+We consider a hollow composite cylinder consisting of~$N$ co-axial cylindrical layers and each layer is cylindrical orthotropic with different principal material property orientations (see Fig.~\ref{fig:Cylinder3D}). The inner and outer radius of the cylinder is~${}^{0}\!{r}$ and~${}^{N}\!{r}$, respectively.
+
 We take~$\mathbb{E}$ to be a three dimensional, oriented, Hilbert space and introduce vectors~$(\physe_1,\physe_2,\physe_3)$ to form a basis for~$\mathbb{E}$. We also define an Euclidean point space~$\mathcal{E}$ as~$\mathbb{E}$'s principle homogeneous space.
 The vectors~$\physe_1$,~$\physe_2$, and~$\physe_3$ are orthonormal, that is,~$\physe_i\cdot\physe_j=\delta_{ij}$, for~$i$,~$j\in (1,2,3)$, where the Kronecker delta symbol~$\delta_{ij}$ is defined as unity if~$i=j$ and zero otherwise.
-Following the conventions in~\cite{rahaman2020accelerometer,deng2021angle}, we define the vectors in~$\mathbb{E}$ to have units of length, say meters, and refer to~$\mathbb{E}$ as the physical-space. The units are carried by the basis vectors~$(\physe_1,\physe_2,\physe_3)$.
+Following the conventions in~\cite{rahaman2020accelerometer,deng2021angle}, we define the vectors in~$\mathbb{E}$ to have units of length, say meters, and refer to~$\mathbb{E}$ as the physical-space. The units are carried by the basis vectors~$(\physe_1,\physe_2,\physe_3)$ (see Fig.~\ref{fig:schematic}~$\subf{A}$).
+
+We place the cylinder in~$\mathcal{E}$ so that the axis of the cylinder is aligned with~$\physe_3$ and cross sections are in~$(\physe_1,\physe2)$ plane (see Fig.~\ref{fig:schematic}~$\subf{A}$).
 
 We also introduce a set of orthonormal vectors~$(\physe_{r}(\theta),\physe_{\theta}(\theta),\physe_{z}(\theta))$ as a basis for a global cylindrical coordinate system in~$\mathbb{E}$. The dependence of~$(\physe_{r}(\theta),\physe_{\theta}(\theta),\physe_{z}(\theta))$ on~$(\physe_1,\physe_2,\physe_3)$ is given by
 \begin{subequations}
@@ -419,12 +424,8 @@ We also introduce a set of orthonormal vectors~$(\physe_{r}(\theta),\physe_{\the
 \end{align}
 \end{subequations}
 
-We consider a hollow composite cylinder, whose axis is aligned with~$\physe_{z}(\theta)$ and cross sections are in~$(\physe_{r}(\theta),\physe_{\theta}(\theta))$ plane (see Fig.~\ref{fig:schematic}~$\subf{A}$).
-The inner and outer radius of the cylinder is~${}^{0}\!{r}$ and~${}^{N}\!{r}$, respectively.
-The cylinder consists of~$N$ co-axial cylindrical layers and each layer is cylindrical orthotropic with different principal material property orientations (see Fig.~\ref{fig:Cylinder3D}~$\subf{E}$).
-
-For an individual layer of material, we construct a local cylindrical coordinate system according to the principal material property orientation of the layer. We refer to the local cylindrical coordinate system as the material coordinate system. It is a rotation of the global cylindrical coordinate system through an angle~$\varphi$, the so-called helical angle, in clockwise direction with respect to the axis~$\physe_{r}(\theta)$.
-We denote the basis of the material coordinate system as~$\pr{\physf_{r}(\theta;\varphi),\physf_{\theta}(\theta;\varphi),\physf_{z}(\theta;\varphi)}$, 
+For an individual layer of material, we construct a local cylindrical coordinate system according to the principal material property orientation of the layer. We refer to the local cylindrical coordinate system as the material coordinate system. It is a rotation of the global cylindrical coordinate system through an angle~$\varphi$, the so-called helical angle, in clockwise direction with respect to the axis~$\physe_{r}(\theta)$ (see Fig.~\ref{fig:schematic}).
+It can be shown in Fig.~\ref{fig:schematic}~$\subf{B}$ that $\tan(\varphi) = 2 \pi r/h$, where $h$ is the pitch height of the helix that forms the cylindrical layer. We denote the basis of the material coordinate system as~$\pr{\physf_{r}(\theta;\varphi),\physf_{\theta}(\theta;\varphi),\physf_{z}(\theta;\varphi)}$, 
 % where
 % \begin{subequations}
 % \begin{align}
@@ -472,7 +473,8 @@ The solution of a single cylinder with cylindrical orthotropy subjected to pure 
 	\centering
 	\graphicspath{{../LyxFiles/figure/}}
 	\includegraphics[width=0.8\textwidth]{schematic_V3.pdf}
-	\caption{$\subf{A}$ A single-layer cylindrical sturcture with cylindrical orthotropy.~$\subf{B}$ The cross-section view showing the geometry and helical angles for each layer.}
+	\caption{$\subf{A}$ A single-layer cylindrical sturcture with cylindrical orthotropy.~$\subf{B}$ By cutting the hollow cylinder in $\subf{A}$ along the black dashed line, the lateral surface of the cylinder can form a rectanglar sheet of width $2\pi r$.
+  }
 	\label{fig:schematic}
 \end{figure}
 
