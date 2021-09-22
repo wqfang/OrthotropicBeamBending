@@ -412,9 +412,14 @@ The paper is organized as follows:~$\S$\ref{sec:bending_model} describes the mod
 \section{Pure bending of multilayered composite cylinders with cylindrical orthotropy}
 \label{sec:bending_model}
 
+
+We consider a hollow composite cylinder consisting of~$N$ co-axial cylindrical layers and each layer is cylindrical orthotropic with different principal material property orientations (see Fig.~\ref{fig:Cylinder3D}). The inner and outer radius of the cylinder is~${}^{0}\!{r}$ and~${}^{N}\!{r}$, respectively.
+
 We take~$\mathbb{E}$ to be a three dimensional, oriented, Hilbert space and introduce vectors~$(\physe_1,\physe_2,\physe_3)$ to form a basis for~$\mathbb{E}$. We also define an Euclidean point space~$\mathcal{E}$ as~$\mathbb{E}$'s principle homogeneous space.
 The vectors~$\physe_1$,~$\physe_2$, and~$\physe_3$ are orthonormal, that is,~$\physe_i\cdot\physe_j=\delta_{ij}$, for~$i$,~$j\in (1,2,3)$, where the Kronecker delta symbol~$\delta_{ij}$ is defined as unity if~$i=j$ and zero otherwise.
-Following the conventions in~\cite{rahaman2020accelerometer,deng2021angle}, we define the vectors in~$\mathbb{E}$ to have units of length, say meters, and refer to~$\mathbb{E}$ as the physical-space. The units are carried by the basis vectors~$(\physe_1,\physe_2,\physe_3)$.
+Following the conventions in~\cite{rahaman2020accelerometer,deng2021angle}, we define the vectors in~$\mathbb{E}$ to have units of length, say meters, and refer to~$\mathbb{E}$ as the physical-space. The units are carried by the basis vectors~$(\physe_1,\physe_2,\physe_3)$ (see Fig.~\ref{fig:schematic}~$\subf{A}$).
+
+We place the cylinder in~$\mathcal{E}$ so that the axis of the cylinder is aligned with~$\physe_3$ and cross sections are in~$(\physe_1,\physe2)$ plane (see Fig.~\ref{fig:schematic}~$\subf{A}$).
 
 We also introduce a set of orthonormal vectors~$(\physe_{r}(\theta),\physe_{\theta}(\theta),\physe_{z}(\theta))$ as a basis for a global cylindrical coordinate system in~$\mathbb{E}$. The dependence of~$(\physe_{r}(\theta),\physe_{\theta}(\theta),\physe_{z}(\theta))$ on~$(\physe_1,\physe_2,\physe_3)$ is given by
 \begin{subequations}
@@ -425,12 +430,8 @@ We also introduce a set of orthonormal vectors~$(\physe_{r}(\theta),\physe_{\the
 \end{align}
 \end{subequations}
 
-We consider a hollow composite cylinder, whose axis is aligned with~$\physe_{z}(\theta)$ and cross sections are in~$(\physe_{r}(\theta),\physe_{\theta}(\theta))$ plane (Fig.~\ref{fig:schematic}~$\subf{A}$).
-The inner and outer radius of the cylinder is~${}^{0}\!{r}$ and~${}^{N}\!{r}$, respectively.
-The cylinder consists of~$N$ co-axial cylindrical layers and each layer is cylindrical orthotropic with different principal material property orientations (see Fig.~\ref{fig:schematic}~$\subf{B}$).
-
-For an individual layer of material, we construct a local cylindrical coordinate system according to the principal material property orientation of the layer. We refer to the local cylindrical coordinate system as the material coordinate system. It is a rotation of the global cylindrical coordinate system through an angle~$\varphi$, the so-called helical angle, in clockwise direction with respect to the axis~$\physe_{r}(\theta)$.
-We denote the basis of the material coordinate system as~$(\physf_{r}(\theta;\varphi),\physf_{\theta}(\theta;\varphi),\physf_{z}(\theta;\varphi))$, 
+For an individual layer of material, we construct a local cylindrical coordinate system according to the principal material property orientation of the layer. We refer to the local cylindrical coordinate system as the material coordinate system. It is a rotation of the global cylindrical coordinate system through an angle~$\varphi$, the so-called helical angle, in clockwise direction with respect to the axis~$\physe_{r}(\theta)$ (see Fig.~\ref{fig:schematic}).
+It can be shown in Fig.~\ref{fig:schematic}~$\subf{B}$ that $\tan(\varphi) = 2 \pi r/h$, where $h$ is the pitch height of the helix that forms the cylindrical layer. We denote the basis of the material coordinate system as~$\pr{\physf_{r}(\theta;\varphi),\physf_{\theta}(\theta;\varphi),\physf_{z}(\theta;\varphi)}$, 
 % where
 % \begin{subequations}
 % \begin{align}
@@ -439,7 +440,7 @@ We denote the basis of the material coordinate system as~$(\physf_{r}(\theta;\va
 % \physf_{z}(\theta;\varphi) & = \sin(\varphi) \physe_{\theta} (\theta) + \cos(\varphi) \physe_z (\theta).
 % \end{align}
 % \end{subequations}
-and the transformation matrix from~$(\physe_{r}(\theta),\physe_{\theta}(\theta),\physe_{z}(\theta))$ to~$(\physf_{r}(\theta;\varphi),\physf_{\theta}(\theta;\varphi),\physf_{z}(\theta;\varphi))$ as $\usf{Q}(\varphi)$, which can be expressed as
+and the transformation matrix from~$(\physe_{r}(\theta),\physe_{\theta}(\theta),\physe_{z}(\theta))$ to~$\pr{\physf_{r}(\theta;\varphi),\physf_{\theta}(\theta;\varphi),\physf_{z}(\theta;\varphi)}$ as $\usf{Q}(\varphi)$, which can be expressed as
 
 \begin{equation}
 \usf{Q}(\varphi)
@@ -468,8 +469,8 @@ The solution of a single cylinder with cylindrical orthotropy subjected to pure 
 \begin{figure}[t]
   \centering
   \graphicspath{{../LyxFiles/figure/}}
-  \includegraphics[width=0.8\textwidth]{Cylinder3D_V2.pdf}
-  \caption{Three-dimensional schematics of  $N$-layer cylindrical structure.~$\subf{A}$ General view, $N = 1$.~$\subf{B}$ General view, $N = 2$.~$\subf{C}$ General view, $N = 3$.~$\subf{D}$ Cross-section view, $N = 3$.~$\subf{E}$ Cross-section view of an arbitrary $N$-layer cylindrical structure. Radii ${}^{0}\!{r},{}^{1}\!{r},\ldots,{}^{n}\!{r},\ldots,{}^{N-1}\!{r},{}^{N}\!{r}$ are marked in the figure.}
+  \includegraphics[width=0.8\textwidth]{Cylinder3D_V3.pdf}
+  \caption{Three-dimensional schematics of  $N$-layer cylindrical structure.~$\subf{A}$ General view and cross section view for $N = 1$.~$\subf{B}$ General view and cross section view for $N = 2$.~$\subf{C}$ General view and cross section view for $N = 3$.~$\subf{D}$ Cross-section view of an arbitrary $N$-layer cylindrical structure. Radii ${}^{0}\!{r},{}^{1}\!{r},\ldots,{}^{n-1}\!{r},\ldots,{}^{n}\!{r},\ldots,{}^{N-1}\!{r},{}^{N}\!{r}$ are marked in the figure.}
   \label{fig:Cylinder3D}
 \end{figure}
 
@@ -477,8 +478,9 @@ The solution of a single cylinder with cylindrical orthotropy subjected to pure 
 \begin{figure}[t]
 	\centering
 	\graphicspath{{../LyxFiles/figure/}}
-	\includegraphics[width=0.8\textwidth]{schematic_V3.pdf}
-	\caption{$\subf{A}$ A single-layer cylindrical sturcture with cylindrical orthotropy.~$\subf{B}$ The cross-section view showing the geometry and helical angles for each layer.}
+	\includegraphics[width=0.3\textwidth]{schematic_V4.pdf}
+	\caption{A single-layer cylindrical sturcture with cylindrical orthotropy.
+  }
 	\label{fig:schematic}
 \end{figure}
 
@@ -669,7 +671,7 @@ with
 	{}^{n}\!\gamma & := \frac{\pi}{{}^{n}\!{C_{33}}} \frac{ {}^{n}\!{\mu_{1}} ({}^{n}\!{C_{13}} + 3{}^{n}\!{C_{23}}) - 2{}^{n}\!{\mu_{2}} {}^{n}\!{C_{34}} - 1  }{4},
 	\end{align}
 \end{subequations}
-where~$N$ denotes the total number of layers,~$\mathcal{L} := \pr{1,2,3,4}$,~${}^{n-1}\!{r}$ and~${}^{n}\!{r}$ the internal and external radii of the~$n^\text{th}$ layer,~${}^{n}\!{m_{i}}$,~${}^{n}\!{g_{i}}$,~${}^{n}\!{\mu_{1}}$, and~${}^{n}\!{\mu_{2}}$ are material constants related with elastic constants of the~$n^\text{th}$ layer (see~\ref{Appen:MatConst}). We use $\p\pr{x,y}$ to denote a power operation where $x$ is the base and $y$ is the exponent.
+where~$N$ denotes the total number of layers,~$\mathcal{L} := \pr{1,2,3,4}$,~${}^{n-1}\!{r}$ and~${}^{n}\!{r}$ the internal and external radii of the~$n^\text{th}$ layer,~${}^{n}\!{m_{i}}$,~${}^{n}\!{g_{i}}$,~${}^{n}\!{\mu_{1}}$, and~${}^{n}\!{\mu_{2}}$ are material constants related with elastic constants of the~$n^\text{th}$ layer (see~\ref{Appen:MatConst}). We use $\p\pr{x,y}$ to denote the power operation where $x$ is the base and $y$ is the exponent.
 
 The coefficients~${}^{n}\!{K_{i}}$ are determined by the boundary conditions and continuity conditions of displacement and stress at the interface.
 
