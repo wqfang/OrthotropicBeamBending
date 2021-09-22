@@ -157,7 +157,7 @@ linkcolor = blue
 \newcommand{\conf}{\boldsymbol{\kappa}}
 \newcommand{\confp}{\tilde{\boldsymbol{\kappa}}}
 \newcommand{\p}{\,\mathsf{p}}
-\newcommand{\Inv}{\,\mathsf{Inv}}
+\newcommand{\Inv}{\,\mathrm{Inv}}
 
 
 
@@ -390,12 +390,14 @@ Regarding the homogenization of multilayered cylindrical structures, Chatzigeorg
 %
 By taking into account the discontinuous stress and strain distributions in each layer, Sun et al.~\cite{sun2014homogenization,sun2014stress} proposed a force-displacement equivalence method to determine the homogenized elastic constants of general multilayered composite cylindrical structures with curvilinear orthotropy. However, the lack of asymptotic analysis makes their method too complicated to apply in practice since the formulations involves the number of layers in the cylindrical composite.
 
-In this paper we derive analytical expressions for the asymptotic bending stiffness of multilayered composite cylinderss with cylindrical orthotropy by performing asymptotic analysis on the bending stiffness formula obtained by Jolicoeur and Cardou~\cite{Jolicoeur1994}.
+In this paper, we derive analytical expressions for the asymptotic bending stiffness of multilayered composite cylinders with cylindrical orthotropy by performing asymptotic analysis on the bending stiffness formula obtained by Jolicoeur and Cardou~\cite{Jolicoeur1994}.
+% Issue with Jolicoeur's work
+We focus on hollow multilayered cylindrical structures with no-slip interfacial condition between adjacent layers. The lamination scheme of the structure is composed of two alternatively arranged orthotropic materials with different helical angles.
+% Both the interfacial conditions between adjacent layers and the lamination schemes of the layers are considered.
 %
-Both the interfacial conditions between adjacent layers and the lamination schemes of the layers are considered.
-%
-It is found that the effective bending stiffness of multilayered cylindrical orthotropic structure with frictionless interfaces converges as the number of layers become infinity. %
-Furthermore, the asymptotic bending stiffness of perfectly bonded multilayered cylindrical structures consisting of heterogeneous materials is higher than that of structures made of either constituent material.
+% It is found that the effective bending stiffness of multilayered cylindrical orthotropic structure with frictionless interfaces converges as the number of layers become infinity. %
+It is found that the asymptotic bending stiffness of perfectly bonded multilayered cylindrical structures consisting of heterogeneous materials is higher than that of structures made of either constituent material.
+
 
 
 The paper is organized as follows:~$\S$\ref{sec:bending_model} describes the model problem of pure bending of multilayered cylindrical structures and summaries the results obtained by Jolicoeur and Cardou.~$\S$\ref{sec:limit_analysis} presents the asymptotic analysis procedures of bending stiffness of the structure. The expressions of asymptotic bending stiffness for different interfacial conditions and lamination schemes are derived.~$\S$\ref{sec:discussion} illustrates the numerical examples and discussions of the results. The final section includes the major conclusions.
@@ -464,7 +466,7 @@ The solution of a single cylinder with cylindrical orthotropy subjected to pure 
   \centering
   \graphicspath{{../LyxFiles/figure/}}
   \includegraphics[width=0.8\textwidth]{Cylinder3D_V3.pdf}
-  \caption{Three-dimensional schematics of  $N$-layer cylindrical structure.~$\subf{A}$ General view and cross section view for $N = 1$.~$\subf{B}$ General view and cross section view for $N = 2$.~$\subf{C}$ General view and cross section view for $N = 3$.~$\subf{D}$ Cross-section view of an arbitrary $N$-layer cylindrical structure. Radii ${}^{0}\!{r},{}^{1}\!{r},\ldots,{}^{n-1}\!{r},\ldots,{}^{n}\!{r},\ldots,{}^{N-1}\!{r},{}^{N}\!{r}$ are marked in the figure.}
+  \caption{Three-dimensional schematics of  $N$-layer cylindrical structure.~$\subf{A}$ General view and cross section view for $N = 1$.~$\subf{B}$ General view and cross section view for $N = 2$.~$\subf{C}$ General view and cross section view for $N = 3$.~$\subf{D}$ Cross-section view of an arbitrary $N$-layer cylindrical structure. Inner and outer Radii for the $1^\text{st}$ layer, $n^\text{th}$ layer and $N^\text{th}$ layer are marked in the figure.}
   \label{fig:Cylinder3D}
 \end{figure}
 
