@@ -1610,6 +1610,49 @@ Thus, wood is stiffer but weaker than bone.
 Spicules: 
 \end_layout
 
+\begin_layout Standard
+Monoraphis, Rosella, and 
+\end_layout
+
+\begin_layout Standard
+Hi Haneesh, for M.Chuni, the number of layers are somewhere between 200~800
+ [1,2].
+ For Rosella, Sarikaya estimates to be 50-200 layers, and that's all the
+ information I have found[3].
+ For Hyalonema, I think it's safe to say approximately 30-40 layers[4,5].
+ (edited) 4:29 [1]@article{wang2009giant, title={Giant Siliceous Spicules
+ From the Deep-sea Glass Sponge Monorhaphis chuni}, author={Wang, Xiaohong
+ and Schr{
+\backslash
+"o}der, Heinz C and M{
+\backslash
+"u}ller, Werner EG}, journal={International review of cell and molecular
+ biology}, volume={273}, pages={69--115}, year={2009}, publisher={Elsevier}
+ } [2]@article{levi1989remarkably, title={A remarkably strong natural glassy
+ rod: the anchoring spicule of theMonorhaphis sponge}, author={Levi, C and
+ Barton, JL and Guillemet, C and Le Bras, E and Lehuede, P}, journal={Journal
+ of materials science letters}, volume={8}, number={3}, pages={337--339},
+ year={1989}, publisher={Springer} } [3]@article{sarikaya2001biomimetic,
+ title={Biomimetic model of a sponge-spicular optical fiber—mechanical propertie
+s and structure}, author={Sarikaya, M and Fong, H and Sunderland, N and
+ Flinn, BD and Mayer, G and Mescher, A and Gaino, E}, journal={Journal of
+ Materials Research}, volume={16}, number={5}, pages={1420--1428}, year={2001},
+ publisher={Cambridge University Press} } [4]@article{drozdov2018structure,
+ title={Structure and physico-chemical properties of organosilicon crystal-like
+ composite spicules of the glass sponge Hyalonema sieboldi}, author={Drozdov,
+ Anatoliy L and Andreykin, Nikolay A and Dorofeev, Anatoliy G}, journal={Materia
+ls Research Bulletin}, volume={105}, pages={372--376}, year={2018}, publisher={E
+lsevier} } [5]@article{muller2006novel, title={Novel photoreception system
+ in sponges?: unique transmission properties of the stalk spicules from
+ the hexactinellid Hyalonema sieboldi}, author={M{
+\backslash
+"u}ller, Werner EG and Wendt, Klaus and Geppert, Christopher and Wiens,
+ Matthias and Reiber, Andreas and Schr{
+\backslash
+"o}der, Heinz C}, journal={Biosensors and Bioelectronics}, volume={21},
+ number={7}, pages={1149--1155}, year={2006}, publisher={Elsevier} }
+\end_layout
+
 \begin_layout Subsubsection
 
 \series bold
@@ -1633,7 +1676,6 @@ Diameter of 50 micrometers and length of about 10 cm.
 \end_layout
 
 \begin_layout Plain Layout
- 
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="2">
 <features tabularvalignment="middle">
