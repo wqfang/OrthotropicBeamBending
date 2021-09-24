@@ -1611,21 +1611,51 @@ Spicules:
 \end_layout
 
 \begin_layout Standard
-How many layers do spicules 
+Monoraphis Chuni is XXXX 
 \end_layout
 
 \begin_layout Standard
-Average calue of inner radius: 10 micrometers
+Rosella, and XXXX
 \end_layout
 
 \begin_layout Standard
-Average value of the outer radius.
- 25 micrometers.
+Hyalonema XXXX
+\end_layout
+
+\begin_layout Standard
+Eucplectella ap.
+ is XXXXXX
+\end_layout
+
+\begin_layout Standard
+Hi Haneesh, for M.Chuni, the number of layers are somewhere between 200~800~
+\backslash
+cite{wang2009giant,levi1989remarkably}.
+ For Rosella, Sarikaya estimates to be 50-200 layers, and that's all the
+ information I have found
+\backslash
+cite{sarikaya2001biomimetic}.
+ For Hyalonema, I think it's safe to say approximately 30-40 layers~
+\backslash
+cite{drozdov2018structure,muller2006novel}.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Euplectella
+\series default
  
 \end_layout
 
 \begin_layout Standard
-Avergare number of layers (26+22+20+26): 24.
+: 
+\end_layout
+
+\begin_layout Standard
+.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1633,9 +1663,118 @@ Diameter of 50 micrometers and length of about 10 cm.
  
 \end_layout
 
-\begin_layout Standard
-Min10-Max 50.
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Average calue of inner radius
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10 micrometers
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Average value of the outer radius
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+25 micrometers.
  
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Avergare number of layers
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(26+22+20+26): 24.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
