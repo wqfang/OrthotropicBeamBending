@@ -8,6 +8,7 @@
  top=20mm,
  }
 
+ \usepackage{setspace}
 
 \usepackage{ulem}
 \usepackage{color,soul}
@@ -100,7 +101,8 @@ linkcolor = blue
 \newcommand{\physkc}{\mathscr{k}_{\rm c}}
 \newcommand{\ndkc}{k_{\rm c}}
 \newcommand{\physh}{\mathscr{h}} %
-\newcommand{\physe}{\hat{\mathbscr{e}}} %
+%\newcommand{\physe}{\hat{\mathbscr{e}}} %
+\newcommand{\physe}{\hat{\mathscr{e}}} %
 \newcommand{\physf}{\hat{\boldsymbol{\mathfrak{f}}}}
 \newcommand{\physm}{\mathscr{m}} %
 \newcommand{\physu}{\mathbscr{u}}
@@ -306,9 +308,10 @@ Multilayered composite structure \sep Cylindrical orthotropy \sep Effective bend
 \label{sec:intro}
 \todo{HK to WF: need to say somewhere that we only consider the case with no solid core. Need to say whether Lekhnitskii considerd solid core, and/or JOlicoeur considered solid core.}
 
-\todo{HK to WF: We call $\varphi$ the helix angle because.... helix corresponding to it...... However, pitch of the helix changes from the outside to the inside. Specifically, it chnagea as.... Now, does the picth of the helical straition seen in osteons, cell-walls, spicules, changes from the outisde to the inside? It is not clear. However, we highlight this fact since it might be critical to be congnizant of this fact when  applying the ppresented theory to experiments.  This is also relevant because the helicoid remain fixed. So, the current theory would not apply to materials are a foliation of helicoidal surfaces.}
+\todo{\href{https://hackmd.io/-Q9bMN5xRDqp2RmYz8p-Ag}{HK to WF}}
 
-\todo{What is roughly the helical angles in  the helicophter structures, monoraphis chuni, osteons. }
+\todo{\tiny
+	{\setstretch{2.5} What is roughly the helical angles in  the helicophter structures, monoraphis chuni, osteons.}}
 
 \todo{How if the $f$ frame related to the Frennet-Serret formula.}
 
@@ -323,9 +326,9 @@ The platelets and fibers are glued to the mineral phase through a compliant orga
 These natural composites are distinguished from their synthetic counterparts by the facts that their effective properties at the macro scale, such as strength and fracture toughness, are quite high despite the corresponding properties of their constituent phases being very poor.
 % \ul{phases being very poor.}\todo[fancyline]{English. "being very poor"}
 %
-\setulcolor{green}\textcolor{red}{For example, the tensile strength of the spicules of the sponge \textit{Euplectella aspergillum} is much higher than the silicate glass fiber~\cite{walter2007mechanisms}.}\marginpar{}
+\setulcolor{green}\textcolor{red}{For example, the tensile strength of the spicules of the sponge \textit{Euplectella aspergillum} is much higher than the silicate glass fiber~\cite{walter2007mechanisms}.}\todo[fancyline]{hk to WF: I think we should not refer to the paper by Walter for the tensile strength of EA spicules. I think SK will be able to advise you regarding this aspect.}
 %
-Nacre can achieve relatively high fracture toughness 20-30 times that of pure aragonite~\cite{tang2007elasto, barthelat2007experimental}.
+Nacre can achieve relatively high fracture toughness 20-30 times that of pure aragonite~\cite{tang2007elasto, barthelat2007experimental}.\todo[fanyline]{HK to WF: Are you sure about the number 20-30? Also, what measure of fracture toughness are we talking about?}
 %
 With such remarkable mechanical performances, structural biomaterials can serve as fascinating model material systems for the discovery of new mechanics of materials principles.
 %
@@ -433,7 +436,7 @@ We also introduce a set of orthonormal vectors~$(\physe_{r}(\theta),\physe_{\the
 \end{subequations}
 
 For an individual layer of material, we construct a local cylindrical coordinate system according to the principal material property orientation of the layer. We refer to the local cylindrical coordinate system as the material coordinate system. It is a rotation of the global cylindrical coordinate system through an angle~$\varphi$, the so-called helical angle, in clockwise direction with respect to the axis~$\physe_{r}(\theta)$ (see Fig.~\ref{fig:schematic}).
-It can be shown in Fig.~\ref{fig:schematic}~$\subf{B}$ that $\tan(\varphi) = 2 \pi r/h$, where $h$ is the pitch height of the helix that forms the cylindrical layer. We denote the basis of the material coordinate system as~$\pr{\physf_{r}(\theta;\varphi),\physf_{\theta}(\theta;\varphi),\physf_{z}(\theta;\varphi)}$, 
+It can be shown in Fig.~\ref{fig:schematic}~$\subf{B}$ that $\tan(\varphi) = 2 \pi r/h$, where $h$ is the pitch height of the helix that forms the cylindrical layer. We denote the basis of the material coordinate system as~$\pr{\physf_{r}(\theta;\varphi),\physf_{\theta}(\theta;\varphi),\physf_{z}(\theta;\varphi)}$,
 % where
 % \begin{subequations}
 % \begin{align}
@@ -448,7 +451,7 @@ and the transformation matrix from~$(\physe_{r}(\theta),\physe_{\theta}(\theta),
 \usf{Q}(\varphi)
 % & = \begin{bmatrix}
 % \physf_{r}(\theta;\varphi)\cdot \physe_{r}(\theta) & \physf_{r}(\theta;\varphi)\cdot \physe_{\theta}(\theta) & \physf_{r}(\theta;\varphi)\cdot \physe_{z}(\theta) \\\physf_{\theta}(\theta;\varphi)\cdot \physe_{r}(\theta) & \physf_{\theta}(\theta;\varphi)\cdot \physe_{\theta}(\theta) & \physf_{\theta}(\theta;\varphi)\cdot \physe_{z}(\theta) \\\physf_{z}(\theta;\varphi)\cdot \physe_{r}(\theta) & \physf_{z}(\theta;\varphi)\cdot \physe_{\theta}(\theta) & \physf_{z}(\theta;\varphi)\cdot \physe_{z}(\theta)
-% \end{bmatrix}\\& 
+% \end{bmatrix}\\&
 = \begin{bmatrix}
 1 & 0 & 0 \\
  0 & \cos(\varphi) & -\sin(\varphi) \\
@@ -461,7 +464,7 @@ In terms of $\usf{Q}(\varphi)$ , we have the transformation relation between~$(\
 \physf_{i} (\theta;\varphi) = \sum_{j \in \mathcal{I} } Q_{ij}(\varphi)\physe_{j}(\theta), \quad \text{for} \,i \in \mathcal{I} ,
 \label{eq:Qtransform}
 \end{equation}
-where $\mathcal{I} :=\pr{r,\theta,z}$,  $Q_{ij}(\varphi) = \pr{\usf{Q}(\varphi)}_{ij}$ are elements of the matrix $\usf{Q}(\varphi)$.
+where $\mathcal{I} :=\pr{r,\theta,z}$,  $Q_{ij}(\varphi) = \pr{\usf{Q}(\varphi)}_{ij}$ \todo{are the i-jth elements of}are elements of the matrix $\usf{Q}(\varphi)$.
 
 % ,~$\physe_3$ is the longitudinal direonction making an angle~$\varphi$, the so-called helical angle, with the cylinder axis, and the direction perpendicular to~$\physe_3$ and~$\physe_1$ is defined as tangential direction~$\physe_2$.
 
@@ -731,12 +734,12 @@ In this section, we derive the asymptotic bending stiffness of multilayer cylind
 Specifically, for a given lamination scheme, we analyze the asymptotic behavior of Eqn.~\eqref{eq:EI} by limiting the total number of layers,~$N$, to infinity.
 The asymptotic expansion is performed under the following assumptions: (i) We assume that the cross-section area of the structure is constant and the thickness of each layer is equal and vanishing as~$N$ goes to infinity. (ii) We also assume that the constitutive properties of all layers are the same in their own material coordinate system. But the principal material property orientations, i.e. helical angles, of the layers may be different.
 
-We use the stacking-sequence notation to describe the spatial arrangement of layers' helical angles. As per stacking-sequence notation, we use~$[{}^{0}\!\varphi]_N$ to denote a lamination scheme consisting of~$N$ layers and all layers have same helical angle,~${}^{0}\!\varphi$. 
+We use the stacking-sequence notation to describe the spatial arrangement of layers' helical angles. As per stacking-sequence notation, we use~$[{}^{0}\!\varphi]_N$ to denote a lamination scheme consisting of~$N$ layers and all layers have same helical angle,~${}^{0}\!\varphi$.
 For this lamination scheme, the material property of a material point does not change with its position in the cylinder. Thus the material is essentially homogeneous.
 It should be noted that even though all layers share the same helical angle, the pitch sizes $p$ of different layers may not be the same. According to the relation $\tan{({}^{0}\!\varphi)} = p/(2\pi r )$, for inner layer with smaller radius than that of the outer layer, the pitch size is smaller.
 
 
-We also consider cases where the helical angles are not uniform and the composed material becomes heterogeneous. We use~$[{}^{I}\!\varphi/{}^{II}\!\varphi]_{N/2}$ to denote a lamination scheme consisting of~$N$ layers where layers with helical angles~${}^{I}\!\varphi$ and~${}^{II}\!\varphi$ are alternatively arranged. 
+We also consider cases where the helical angles are not uniform and the composed material becomes heterogeneous. We use~$[{}^{I}\!\varphi/{}^{II}\!\varphi]_{N/2}$ to denote a lamination scheme consisting of~$N$ layers where layers with helical angles~${}^{I}\!\varphi$ and~${}^{II}\!\varphi$ are alternatively arranged.
 
 Based on the lamination schemes and interfacial conditions, we consider three different scenarios here. (i) Homogeneous material-No friction: the lamination scheme is~$[{}^{0}\!\varphi]_N$ and no friction exists between layers. (ii) Heterogeneous material-No friction: the lamination scheme is~$[{}^{I}\!\varphi/{}^{II}\!\varphi]_{N/2}$ and the interfaces between layers is frictionless. (iii) Heterogeneous material-No slip: the lamination scheme is~$[{}^{I}\!\varphi/{}^{II}\!\varphi]_{N/2}$ as well, but there is no slip between the interfaces.
 
@@ -1460,7 +1463,7 @@ where~${}^{n}\!G_{ij}$ are constants given by
 %% else use the following coding to input the bibitems directly in the
 %% TeX file.
 
-This is 
+This is
 \end{document}
 
 \endinput
