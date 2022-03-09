@@ -1,5 +1,5 @@
 
-\documentclass[preprint,10pt,times]{elsarticle}
+\documentclass[preprint,12pt,times]{elsarticle}
 \usepackage{geometry}
  \geometry{
  b4paper,
@@ -66,6 +66,7 @@
 \newcommand{\xmark}{\ding{55}}%
 \usepackage{epstopdf}
 \usepackage{xr}
+\usepackage{xstring}
 \usepackage{hyperref}
 \hypersetup{
 colorlinks = true,
@@ -159,7 +160,38 @@ linkcolor = blue
 \newcommand{\confp}{\tilde{\boldsymbol{\kappa}}}
 \newcommand{\p}{\,\mathsf{p}}
 \newcommand{\Inv}{\,\mathrm{Inv}}
+%\newcommand{\mni}{m_{n\cdot i}}
+\newcommand{\mni}{\,^{n}\!m_{i}}
+\newcommand{\m}[2]{
+\IfEqCase{#2}{
+       {i}{m_{#1\cdot #2}}%
+   }[m_{#1\cdot {\scriptscriptstyle #2}}]}
 
+
+\newcommand{\msub}[2]{
+\IfEqCase{#2}{
+      {i}{\, m_{#1\cdot #2}\,}%
+  }[\,m_{#1\cdot {\scriptscriptstyle #2}}\,]}
+
+\newcommand{\gsub}[2]{g_{#1\cdot #2}}
+\newcommand{\Qsub}[2]{Q_{#1\cdot #2}}
+
+% \newcommand{\Wsub}[2]{W_{#1\cdot #2}}
+\newcommand{\Wsub}[2]{
+\IfEqCase{#2}{
+      {i}{\, W_{#1\cdot #2}\,}%
+  }[\,W_{#1\cdot {\scriptscriptstyle #2}}\,]}
+
+\newcommand{\musub}[2]{\mu_{#1\cdot #2}}
+% \newcommand{\betasub}[2]{\,\beta_{ {#1}\cdot {\scriptscriptstyle #2}}\,}
+
+
+\newcommand{\betasub}[2]{
+\IfEqCase{#2}{
+       {xxxx}{\,\beta_{ {#1}\cdot { #2}}\,}%
+   }[\,\beta_{ {#1}\cdot {\scriptscriptstyle #2}}\,]}
+
+\newcommand{\Ssub}[2]{\,S_{ {#1}\cdot {\scriptscriptstyle #2}}\,}
 
 
 
@@ -415,7 +447,7 @@ While Jolicoeur and Cardou studied cylinders, with or without a core, with both 
 % Both the interfacial conditions between adjacent layers and the lamination schemes of the layers are considered.
 %
 % It is found that the effective bending stiffness of multilayered cylindrical orthotropic structure with frictionless interfaces converges as the number of layers become infinity. %
-It is found that the asymptotic bending stiffness of perfectly bonded multilayered cylindrical structures consisting of heterogeneous materials is higher than that of structures made of either constituent material. The calculation of the asymptotic bending stiffness, unlike Jolicoeur and Cardou's formula, does not involving  the inversion of a large-size matrix, therefore is much more computational efficient. 
+It is found that the asymptotic bending stiffness of perfectly bonded multilayered cylindrical structures consisting of heterogeneous materials is higher than that of structures made of either constituent material. The calculation of the asymptotic bending stiffness, unlike Jolicoeur and Cardou's formula, does not involving  the inversion of a large-size matrix, therefore is much more computational efficient.
 
 
 
@@ -462,7 +494,7 @@ We also introduce a set of orthonormal vectors~$(\physe_{r}(\theta),\physe_{\the
 \end{align}
 \end{subequations}
 
-For an individual layer of material, we construct a local cylindrical coordinate system according to the principal material property orientation of the layer. We refer to the local cylindrical coordinate system as the material coordinate system. It is a rotation of the global cylindrical coordinate system through an angle~$\varphi$, in clockwise direction with respect to the axis~$\physe_{r}(\theta)$ (see Fig.~\ref{fig:schematic}). We denote the basis of the material coordinate system as~$\pr{\physf_{r}(\theta;\varphi),\physf_{\theta}(\theta;\varphi),\physf_{z}(\theta;\varphi)}$, 
+For an individual layer of material, we construct a local cylindrical coordinate system according to the principal material property orientation of the layer. We refer to the local cylindrical coordinate system as the material coordinate system. It is a rotation of the global cylindrical coordinate system through an angle~$\varphi$, in clockwise direction with respect to the axis~$\physe_{r}(\theta)$ (see Fig.~\ref{fig:schematic}). We denote the basis of the material coordinate system as~$\pr{\physf_{r}(\theta;\varphi),\physf_{\theta}(\theta;\varphi),\physf_{z}(\theta;\varphi)}$,
 % where
 % \begin{subequations}
 % \begin{align}
@@ -492,14 +524,14 @@ In terms of $\usf{Q}(\varphi)$ , we have the transformation relation between~$(\
 \end{equation}
 where $\mathcal{I} :=\pr{r,\theta,z}$, and $Q_{ij}(\varphi) = \pr{\usf{Q}(\varphi)}_{ij}$ is defined to be the $i$-$j^{\rm th}$ element of the matrix $\usf{Q}(\varphi)$.
 
-It truns out that the basis $\pr{\physf_{r}(\theta;\varphi),\physf_{\theta}(\theta;\varphi),\physf_{z}(\theta;\varphi)}$ are closely related to the Frenet–Serret frame~\cite{forsyth1912lectures}, which describes a local coordinate system on a particle moving along a continuous, differentiable curve in~$\mathcal{E}$. In this case, we imagine a helix tightly wound on the cylinder and the tangent unit vector of the helix is along the principle direction of the orthotropic material $\physf_{z}(\theta;\varphi)$ (see Fig.~\ref{fig:schematic}). Then, as per the definition of Frenet–Serret frame, $\physf_{r}(\theta;\varphi)$ is negative to the normal unit vector and $\physf_{\theta}(\theta;\varphi)$ is negative to the binormal unit vector of the helix. 
-The helical angle is the complement of $\varphi$ and the pitch size, $p$, is related to $\varphi$ by 
+It truns out that the basis $\pr{\physf_{r}(\theta;\varphi),\physf_{\theta}(\theta;\varphi),\physf_{z}(\theta;\varphi)}$ are closely related to the Frenet–Serret frame~\cite{forsyth1912lectures}, which describes a local coordinate system on a particle moving along a continuous, differentiable curve in~$\mathcal{E}$. In this case, we imagine a helix tightly wound on the cylinder and the tangent unit vector of the helix is along the principle direction of the orthotropic material $\physf_{z}(\theta;\varphi)$ (see Fig.~\ref{fig:schematic}). Then, as per the definition of Frenet–Serret frame, $\physf_{r}(\theta;\varphi)$ is negative to the normal unit vector and $\physf_{\theta}(\theta;\varphi)$ is negative to the binormal unit vector of the helix.
+The helical angle is the complement of $\varphi$ and the pitch size, $p$, is related to $\varphi$ by
 \begin{equation}
 \tan(\varphi) = 2 \pi r/p.
 \label{eq:AnglePitch}
 \end{equation}
 
-It should be noted that when two layers of different radii share the same helical angle, the pitch sizes of the two layers are not the same. According to the relation~\eqref{eq:AnglePitch}, for inner layer with smaller radius than that of the outer layer, $p$ is smaller. In this paper, we deal with the case in which $\varphi$ are constant or alternatively arrenged throughout the radial direction of the cylinder. The given formulae do not apply to the case in which pitch sizes are constant throughout the radial direction of the cylinder (e.g., helices on helicoid are of constant pitch). It is not clear whether the pitch size of cylindrical layers in osteons, cell-walls or spicules, changes from the outisde to the inside. However, we highlight this fact since it might be critical to be congnizant of this fact when applying the presented theory to experiments. 
+It should be noted that when two layers of different radii share the same helical angle, the pitch sizes of the two layers are not the same. According to the relation~\eqref{eq:AnglePitch}, for inner layer with smaller radius than that of the outer layer, $p$ is smaller. In this paper, we deal with the case in which $\varphi$ are constant or alternatively arrenged throughout the radial direction of the cylinder. The given formulae do not apply to the case in which pitch sizes are constant throughout the radial direction of the cylinder (e.g., helices on helicoid are of constant pitch). It is not clear whether the pitch size of cylindrical layers in osteons, cell-walls or spicules, changes from the outisde to the inside. However, we highlight this fact since it might be critical to be congnizant of this fact when applying the presented theory to experiments.
 
 The solution of a single cylinder with cylindrical orthotropy subjected to pure bending was obtained by Lekhnitskii~\cite{Lekhnitskii1981}. Jolicoeur and Cardou extended this method to a more general bending problem of a co-axial array of~$N$ cylindrical layers with cylindrical orthotropy. Each cylindrical layers have different helical angles (see Fig.~\ref{fig:schematic}~$\subf{B}$). The cylinder can be eitehr hollow or with a solid core. The interfaces between adjacent layers could be either perfectly bonded or frictionless. The elastic problem is solved by using stress function method with assumptions that the elastic cylinder is under small strains, the loads along~$z$-axis are constant, no shear load resultant, and stresses and strains only depend on~$r$ and~$\theta$, which implies constant curvature of the bent cylinder. In the following, we describe the generalized Hooke's law of cylindrical orthotropy in~$\S$\ref{sec:MatrixTrans}. The results that are obtained by Jolicoeur and Cardou and relevant to the pure bending problem are summarized in~$\S$\ref{sec:bending stiffness}.
 
@@ -780,7 +812,7 @@ Based on the lamination schemes and interfacial conditions, we consider three di
 \subsection{Homogeneous material and no friction interface}
 \label{sec:1mat_no_friction}
 
-First we consider that the elastic property for each layer is the same. The interfaces between layers are frictionless. This is equivalent to the scenario where a homogeneous cylinder is cut into layers with uniform thickness and there is no friction between the layers. In this case, we drop the subscript~$n$ of the material constants for the sake of simplicity. 
+First we consider that the elastic property for each layer is the same. The interfaces between layers are frictionless. This is equivalent to the scenario where a homogeneous cylinder is cut into layers with uniform thickness and there is no friction between the layers. In this case, we drop the subscript~$n$ of the material constants for the sake of simplicity.
 We solve for the coefficients~${}^{n}\!{K_{i}}$ for~$n = 1,2,\dots,N$ from Eqns.~\eqref{eq:boundary} and~\eqref{eq:nofriction_interface}.
 % To obtain the coefficients~${}^{n}\!{K_{i}}$, we rewrite Eqns.~\eqref{eq:boundary} and~\eqref{eq:nofriction_interface} as
 % \begin{equation}
@@ -799,7 +831,7 @@ We solve for the coefficients~${}^{n}\!{K_{i}}$ for~$n = 1,2,\dots,N$ from Eqns.
 % 	\end{bmatrix},
 % 	\label{eq:eqs of Kin_one_mat_no_friction}
 % \end{equation}
-% for~$n = 1,2,\dots,N$. 
+% for~$n = 1,2,\dots,N$.
 Let layer thickness~$\Delta r := \pr{{}^{N}\!{r}-{}^{0}\!{r}}/N$, radius sequence~${}^{n}\!{r} := {}^{0}\!{r} + n\cdot \Delta r$. Applying Taylor series expansion on the inverse of the coefficient matrix of~${}^{n}\!{K_{i}}$ around~${}^{n}\!{r}$, we have
 \begin{equation}
 	{}^{n}\!{K_{i}} = P_i \cdot \p\pr{{}^{n}\!{r},-m_i  + 2} + O(\Delta r), \quad \text{for}\, i \in \mathcal{L},\, n = 1,2,\dots,N,
@@ -809,12 +841,12 @@ where~$P_i$ are material constants given in~\ref{Appen:Pi}. Substituting Eqn.~\e
 \begin{equation*}
 EI  = \sum_{n=1}^{N} \left[ \sum_{i \in \mathcal{L}} \alpha_i \left( P_i \p\pr{{}^{n}\!{r},-m_i  + 2} + O(\Delta r) \right) \pr{\p\pr{{}^{n-1}\!{r},{m_{i}} + 2} - \p\pr{{}^{n}\!{r},m_{i} +2}} \right] + \gamma \pr{\p\pr{{}^{0}\!{r},4} - \p\pr{{}^{N}\!{r},4}} .
 \end{equation*}
-Applying Taylor series expansion and simplifying the above equation, we have 
+Applying Taylor series expansion and simplifying the above equation, we have
 \begin{equation}
 	EI = - \sum_{n=1}^{N} \left[ \sum_{i \in \mathcal{L}} \left( \alpha_i P_i (m_i + 2 ) \p\pr{{}^{n}\!{r},3} \cdot \Delta r \right) \right] + \gamma \pr{\p\pr{{}^{0}\!{r},4} - \p\pr{{}^{N}\!{r},4}} + O\pr{\p\pr{\Delta r,2}}.
 \label{eq:single_mat_EI}
 \end{equation}
-Taking the limit~$N \to \infty$, according to the definition of Riemann integral, we convert the sum of series in Eqn.~\eqref{eq:single_mat_EI} into integral as 
+Taking the limit~$N \to \infty$, according to the definition of Riemann integral, we convert the sum of series in Eqn.~\eqref{eq:single_mat_EI} into integral as
 \begin{equation*}
 (EI)_{\infty}  = - \sum_{i \in \mathcal{L}} \left( \int_{{}^{0}\!{r}}^{{}^{N}\!{r}} \alpha_i P_i (m_i + 2 ) \p\pr{r,3} \, dr \right) + \gamma \pr{\p\pr{{}^{0}\!{r},4} - \p\pr{{}^{N}\!{r},4}}.
 \end{equation*}
@@ -828,7 +860,7 @@ Finally, we obtain the asymptotic bending stiffness as
 \subsection{Heterogeneous material and no friction interface}
 \label{sec:2mat_no_friction}
 We consider the lamination scheme of the multilayered cylindrical composite as~$[{}^{I}\!\varphi/{}^{II}\!\varphi]_{N/2}$. That is, layers with helical angles~${}^{I}\!\varphi$ and~${}^{II}\!\varphi$ are alternatively arranged from the core to the periphery of the cylinder. We use~$I$ and~$II$ as subscripts to denote material constants of layers with odd and even layer numbers.
-Under no friction interfacial condition~\eqref{eq:nofriction_interface} and considering boundary condition~\eqref{eq:boundary}, the~${}^{n}\!{K_{i}}$ for~$n = 1,2,\dots,N$ can be solved from a linear system. 
+Under no friction interfacial condition~\eqref{eq:nofriction_interface} and considering boundary condition~\eqref{eq:boundary}, the~${}^{n}\!{K_{i}}$ for~$n = 1,2,\dots,N$ can be solved from a linear system.
 % the following equations
 % \begin{equation}
 % 	\begin{bmatrix}
@@ -860,7 +892,7 @@ where~${}^{n}\!{P_{i}}$ are material constants of the~$n^{\text{th}}$ layer (see
 	\end{split}
 	\end{aligned}
 \end{equation*}
-Applying Taylor series expansion and simplifying the above equation, we have 
+Applying Taylor series expansion and simplifying the above equation, we have
 \begin{equation}
 EI = -\sum_{n=1}^{N} \bigg[ \sum_{i \in \mathcal{L}} {}^{n}\!{\alpha_{i}} {}^{n}\!{P_{i}} ({}^{n}\!{m_{i}} + 2) + 4{}^{n}\!\gamma \bigg] \p\pr{{}^{n}\!{r},3} \cdot \Delta r + O(\p\pr{\Delta r,2}).
 \label{eq:two_mat_no_friction_EI_1}
@@ -951,7 +983,7 @@ Using bold san-serif font symbol to denote matrices, we rewrite Eqns.~\eqref{eq:
 	~^{n}{\usf{B}} ~^{n-1}{\usf{K}} = ~^{n}{\usf{A}} ~^{n}{\usf{K}} - ~^{n}{\usf{D}}, \quad \text{for}\,n = 2,3,\dots,N,
 	\label{eq:eqs of Kin_two_mat_no_slip_np1}
 \end{equation}
-where 
+where
 \begin{align}
 ~^{n}{\usf{B}} & = \begin{bmatrix}
   \p\pr{{}^{n-1}\!{r},{}^{n-1}\!{m_{1}}} & \p\pr{{}^{n-1}\!{r},{}^{n-1}\!{m_{2}}} & \p\pr{{}^{n-1}\!{r},{}^{n-1}\!{m_{3}}} & \p\pr{{}^{n-1}\!{r},{}^{n-1}\!{m_{4}}} \\
@@ -976,7 +1008,7 @@ where
 \end{align}
 \end{subequations}
 
-The matrices~${}^{{n-1}}{\usf{K}}$ and~${}^{n}{\usf{K}}$ are coupled with each other in this case. Therefore, each~${}^{n}{\usf{K}}$ cannot be solved individually. The computational complexity of solving lienar equation of size $n$ is $O(n^3)$. Therefore, the computational time for solving a linear system of size $4N$ is growing up very quickly when $N$ is increasing.  
+The matrices~${}^{{n-1}}{\usf{K}}$ and~${}^{n}{\usf{K}}$ are coupled with each other in this case. Therefore, each~${}^{n}{\usf{K}}$ cannot be solved individually. The computational complexity of solving lienar equation of size $n$ is $O(n^3)$. Therefore, the computational time for solving a linear system of size $4N$ is growing up very quickly when $N$ is increasing.
 
 To overcome this difficulty, we come up with a differential equation based asymptotic analysis method to estimate~${}^{n}{\usf{K}}$ as~$N$ approaches infinity. Since the matrices~${}^{n}{\usf{K}}$ are decoupled for different layers, each ${}^{n}{\usf{K}}$ can be solved individually, which greatly improves the computational efficiency.
 For the sake of clarity, we only post essential steps of the derivation in this section. For the details of the complete derivation, we ask the readers to refer to~\ref{Appen:derivations}.
@@ -1166,48 +1198,91 @@ W.L. Deng acknowledges the graduate fellowship from the China Scholarship Counci
 \newpage
 \appendix
 
-\section{Material constants}
+\section{Definitions of various material and micro-architecture dependent constants}
 \label{Appen:MatConst}
-The material constants~$m_i$,~$g_i$,~$Q_i$,~$W_i$ and~$\mu_i$ are dependent on elastic constants.
-We calculate~$m_i$ as
+
+
+
+In sections \S\ref{sec:mni} and \S\ref{sec:gni} we, respectively, define the constants $\msub{n}{i}$, and~$\gsub{n}{i}$, where $i\in (1,2,3,4)$, and $n\in(1,\ldots,N)$. In section \S\ref{sec:muni} we define the constants $\musub{n}{i}$, where $i\in (1,2)$, and $n\in(1,\ldots,N)$. In sections \S\ref{sec:Qni} and \S\ref{sec:Wni} we, respectively, define the constants $\Qsub{n}{i}$, and~$\Wsub{n}{i}$, where $i\in (1,\ldots,5)$, and $n\in(1,\ldots,N)$.
+% hk done with above paragraph.
+
+
+
+\subsection{Definitions of $m_{n\cdot i}$, where $i\in (1,2,3,4)$, and $n\in(1,\ldots,N)$}
+\label{sec:mni}
+By definition
 \begin{subequations}
 	\begin{align}
-	 m_1 & =  \sqrt{\frac{-b +\sqrt{\p\pr{b,2} - 4ac}}{2a}}, \\
-	 m_2 & =  \sqrt{\frac{-b -\sqrt{\p\pr{b,2} - 4ac}}{2a}}, \\
-	 m_3 & =  -\sqrt{\frac{-b +\sqrt{\p\pr{b,2} - 4ac}}{2a}}, \\
-	 m_4 & =  -\sqrt{\frac{-b -\sqrt{\p\pr{b,2} - 4ac}}{2a}}, \\
-	\intertext{where}
-	 a & :=  \beta_{22} \beta_{44} - \p\pr{\beta_{24},2}, \\
-	\begin{split}
-	 b & := \beta_{24}(2\beta_{14} + \beta_{24} + 2\beta_{56}) + \p\pr{\beta_{14},2} \\
-	 & \quad - \beta_{44}(\beta_{11} + 2\beta_{12} + \beta_{22} + \beta_{66}) - \beta_{22} \beta_{55},
-	\end{split} \\
-	c & :=  \beta_{55}(\beta_{11} + 2\beta_{12} + \beta_{22} + \beta_{66})-\p\pr{\beta_{56},2},
-	\end{align}
+	 \m{n}{{\scriptscriptstyle 1}} & =  \sqrt{\frac{-b_n +\sqrt{\p\pr{b_n,2} - 4a_n c_n }}{2a_n}}, \\
+	 \m{n}{2} & =  \sqrt{\frac{-b_n -\sqrt{\p\pr{b_n,2} - 4a_n c_n}}{2a_n}}, \\
+	 \m{n}{3} & =  -\m{n}{1},
+   \intertext{and}
+	 \m{n}{4} & =  -\m{n}{2},
+ \end{align}
+\label{eqns:mnis}
 \end{subequations}
-and the reduced elastic constants~$\beta_{ij}$ are defined in terms of~$C_{ij}$ as
+where
+\begin{subequations}
+  \begin{align}
+	 a_n & :=  \betasub{n}{22}\, \betasub{n}{44} - \p\pr{\betasub{n}{24},2}, \\[1em]
+	\begin{split}
+	 b_n & := \betasub{n}{24}(2\betasub{n}{14} + \betasub{n}{24} + 2\betasub{n}{56}) + \p\pr{\betasub{n}{14},2} \\
+	 & \quad - \betasub{n}{44}(\betasub{n}{11} + 2\betasub{n}{12} + \betasub{n}{22} + \betasub{n}{66}) - \betasub{n}{22} \betasub{n}{55},
+	\end{split}
+  \intertext{and}
+	c_n & :=  \betasub{n}{55}(\betasub{n}{11} + 2\betasub{n}{12} + \betasub{n}{22} + \betasub{n}{66})-\p\pr{\betasub{n}{56},2}.
+	\end{align}
+  \label{eqns:anbncn}
+\end{subequations}
+The symbols $\betasub{n}{ij}$, which appear in \eqref{eqns:anbncn}, are called the reduced elastic constants and are defined such that
 \begin{equation}
-\beta_{ij} := C_{ij}-\frac{C_{i3} C_{3j}}{C_{33}}.
+\betasub{n}{ij} = \texttt{HK to WF: Fill this up using $\Ssub{n}{ijkl}$}
+% C_{ij}-\frac{C_{i3} C_{3j}}{C_{33}}.
 \end{equation}
 
+%hk done with section sec:mni
 
-We calculate~$g_i$,~$Q_i$,~$W_i$ as
+\subsection{Definitions of $\gsub{n}{i}$, where $i\in (1,2,3,4)$, and $n\in(1,\ldots,N)$}
+\label{sec:gni}
+
+By definition
 \begin{subequations}
 	\begin{align}
-	g_i & = \frac{\beta_{24}\p\pr{m_i,2}+(\beta_{14} + \beta_{24})m_i - \beta_{56}}{\beta_{44}\p\pr{m_i,2} - \beta_{55}}, \\
-	Q_i & = \frac{1}{m_i} \pr{\beta_{12}m_i + \beta_{22}m_i(m_i+1) - \beta_{24} g_i \p\pr{m_i,2}}, \\
-	W_i & = \frac{1}{m_i}\pr{\beta_{55} g_i - \beta_{56}},
+	\gsub{n}{i} & = \frac{\betasub{n}{24}\p\pr{\msub{n}{i},2}+(\betasub{n}{14} + \betasub{n}{24})\msub{n}{i} - \betasub{n}{56}}{\betasub{n}{44}\p\pr{\msub{n}{i},2} - \betasub{n}{55}},
 	\end{align}
 \end{subequations}
-for~$ i \in \mathcal{L}$.
+where $i\in (1,2,3,4)$, and $n\in(1,\ldots,N)$
 
-We calculate~$Q_5$ and~$W_5$ as
+\subsection{Definitions of $\musub{n}{i}$, where $i\in (1,2)$ and $n\in (1,\ldots,N)$}.
+
+\label{sec:muni}
+
+\subsection{Definitions of $\Qsub{n}{i}$, where $i\in (1,\ldots,5)$ and $n\in (1,\ldots,N)$}
+\label{sec:Qni}
+
+For $n\in(1,\ldots,N)$
+\begin{subequations}
+\begin{align}
+  \Qsub{n}{i}& := \frac{1}{m_i} \pr{\beta_{12}m_i + \beta_{22}m_i(m_i+1) - \beta_{24} g_i \p\pr{m_i,2}}, \\
+\intertext{where $i\in (1,2,3,4)$, and}
+\Qsub{n}{5} & = \mu_1(\beta_{12} + 3\beta_{22})-2\mu_2\beta_{24} + \frac{C_{23}}{C_{33}}.
+\end{align}
+\end{subequations}
+
+
+\subsection{Definitions of $W_{n\cdot {\scriptscriptstyle i}}$, where $i\in (1,\ldots,5)$ and $n\in (1,\ldots,N)$}
+\label{sec:Wni}
+
+
+
 \begin{subequations}
 	\begin{align}
-	Q_5 & = \mu_1(\beta_{12} + 3\beta_{22})-2\mu_2\beta_{24} + \frac{C_{23}}{C_{33}}, \\
-	W_5 & = \frac{1}{2}(\beta_{55}\mu_2 - \beta_{56}\mu_1),
+\Wsub{n}{i} & = \frac{1}{m_i}\pr{\beta_{55} g_i - \beta_{56}},
+\intertext{where $i\in (1,2,3,4)$, and}
+	\Wsub{n}{5} & = \frac{1}{2}(\beta_{55}\mu_2 - \beta_{56}\mu_1),
 	\end{align}
-	where
+\end{subequations}
+where
 	\begin{equation}
 	\begin{bmatrix}
 		\mu_1 \\ \mu_2
@@ -1221,7 +1296,7 @@ We calculate~$Q_5$ and~$W_5$ as
 			2C_{34} \\ C_{13}-C_{23}
 	\end{bmatrix}.
 	\end{equation}
-\end{subequations}
+
 
 
 \section{Expressions of~$P_i$}
@@ -1287,7 +1362,7 @@ To obtain Eqn.~\eqref{eq:bnanm1}, let
 		0 & \p\pr{r,{}^{n}\!{m_{2}}} & 0 & 0 \\
 		0 & 0 & \p\pr{r,{}^{n}\!{m_{3}}} & 0 \\
 		0 & 0 & 0 & \p\pr{r,{}^{n}\!{m_{4}}}
-	\end{bmatrix}, \\ 
+	\end{bmatrix}, \\
 	~^{n}\tilde{\usf{m}}
 	& :=
 	\begin{bmatrix}
@@ -1402,7 +1477,7 @@ We rewrite Eqn.~\eqref{eq:AppendKndr2} as
 	\label{eq:AppendKndr}
 \end{equation}
 
-For simplicity, we drop the left superscript in all variables in the following derivations when there is no confusion. We can rewrite Eqn.~\eqref{eq:AppendKndr} as 
+For simplicity, we drop the left superscript in all variables in the following derivations when there is no confusion. We can rewrite Eqn.~\eqref{eq:AppendKndr} as
 \begin{equation}
   2 r \frac{d \busf{K}(r)}{dr} = \left( \Inv\pr{\usf{f}(r)} \tilde{\usf{M}} \usf{f}(r) + \tilde{\usf{m}} \right) \busf{K}(r) + \p\pr{r,2} \Inv\pr{\usf{f}(r)} \tilde{\usf{F}}.
   \label{eq:AppendKndrSimple}
@@ -1464,7 +1539,7 @@ where~$\hat{\usf{K}}(r) := \usf{f}(r)\busf{K}(r)$ and~$\tilde{\usf{H}} :=\tilde{
 %   \end{bmatrix}.
 % \end{equation}
 
-Recall that the material properties of the multilayered material is alternately arranged, the constant coefficient matrix~$\tilde{\usf{H}}$ and~$\tilde{\usf{F}}$ are different for the odd and even layers. We denote~$\tilde{\usf{H}}$ and~$\tilde{\usf{F}}$ for the odd layers as~$~^{I}\tilde{\usf{H}}$ and~$~^{I}\tilde{\usf{F}}$ (for even layers,~$~^{II}\tilde{\usf{H}}$ and~$~^{II}\tilde{\usf{F}}$). 
+Recall that the material properties of the multilayered material is alternately arranged, the constant coefficient matrix~$\tilde{\usf{H}}$ and~$\tilde{\usf{F}}$ are different for the odd and even layers. We denote~$\tilde{\usf{H}}$ and~$\tilde{\usf{F}}$ for the odd layers as~$~^{I}\tilde{\usf{H}}$ and~$~^{I}\tilde{\usf{F}}$ (for even layers,~$~^{II}\tilde{\usf{H}}$ and~$~^{II}\tilde{\usf{F}}$).
 % Then Eqn.~\eqref{eq:AppendKendr} becomes
 % \begin{subequations}
 % \begin{align}
