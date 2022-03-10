@@ -191,6 +191,11 @@ linkcolor = blue
        {xxxx}{\,\beta_{ {#1}\cdot { #2}}\,}%
    }[\,\beta_{ {#1}\cdot {\scriptscriptstyle #2}}\,]}
 
+   \newcommand{\Csub}[2]{
+   \IfEqCase{#2}{
+          {xxxx}{\,\beta_{ {#1}\cdot { #2}}\,}%
+      }[\,C_{ {#1}\cdot {\scriptscriptstyle #2}}\,]}
+
 \newcommand{\Ssub}[2]{\,S_{ {#1}\cdot {\scriptscriptstyle #2}}\,}
 
 
@@ -736,10 +741,7 @@ The bending stiffness of the~$N$-layer cylindrical composite is obtained by Joli
 	\label{eq:EI}
 \end{equation}
 with
-	\begin{align}
-	{}^{n}\!{\alpha_{i}} & := \frac{\pi}{{}^{n}\!{C_{33}}} \frac{  {}^{n}\!{C_{13}} + {}^{n}\!{C_{23}}({}^{n}\!{m_{i}} + 1) - {}^{n}\!{C_{34}} {}^{n}\!{g_{i}} {}^{n}\!{m_{i}} }{{}^{n}\!{m_{i}}+2}, \\
-	{}^{n}\!\gamma & := \frac{\pi}{{}^{n}\!{C_{33}}} \frac{ {}^{n}\!{\mu_{1}} ({}^{n}\!{C_{13}} + 3{}^{n}\!{C_{23}}) - 2{}^{n}\!{\mu_{2}} {}^{n}\!{C_{34}} - 1  }{4},
-	\end{align}
+
 \end{subequations}
 where~$N$ denotes the total number of layers,~$\mathcal{L} := \pr{1,2,3,4}$,~${}^{n-1}\!{r}$ and~${}^{n}\!{r}$ the internal and external radii of the~$n^\text{th}$ layer,~${}^{n}\!{m_{i}}$,~${}^{n}\!{g_{i}}$,~${}^{n}\!{\mu_{1}}$, and~${}^{n}\!{\mu_{2}}$ are material constants related with elastic constants of the~$n^\text{th}$ layer (see~\ref{Appen:MatConst}). We use $\p\pr{x,y}$ to denote the power operation where $x$ is the base and $y$ is the exponent.
 
@@ -758,7 +760,7 @@ The traction free boundaries at innermost radius~${}^{0}\!{r}$ and outermost rad
 	\label{eq:boundary}
 \end{subequations}
 
-\paragraph{Interfacial condition: no friction.}
+\paragraph{Interfacial condition: frictionless slip.}
 
 In the case of no friction interface,~$u_r$ and~$\sigma_{rr}$ are continuous,~$\tau_{r\theta}$ and~$\tau_{rz}$ are zero at the interface. Therefore~${}^{n}\!{K_{i}}$ satisfy following equations
 \begin{subequations}
@@ -1207,6 +1209,17 @@ In sections \S\ref{sec:mni} and \S\ref{sec:gni} we, respectively, define the con
 % hk done with above paragraph.
 
 
+\texttt{In this section we give the definitions of $\alpha$, $m$ and $\gamma$. The definition of $\alpha$ depend on $m$ and $g$, and the definition of $g$ depends on $m$. Thereofe, we first give the deifnition of $m$, followed, that of $g$ and the finally give the definition}
+
+
+\subsection{Definition of $\alpha_{n\cdot i}$}
+
+\begin{align}
+{}^{n}\!{\alpha_{i}} & := \frac{\pi}{{}^{n}\!{C_{33}}} \frac{  {}^{n}\!{C_{13}} + {}^{n}\!{C_{23}}({}^{n}\!{m_{i}} + 1) - {}^{n}\!{C_{34}} {}^{n}\!{g_{i}} {}^{n}\!{m_{i}} }{{}^{n}\!{m_{i}}+2}, \\
+{}^{n}\!\gamma & := \frac{\pi}{{}^{n}\!{C_{33}}} \frac{ {}^{n}\!{\mu_{1}} ({}^{n}\!{C_{13}} + 3{}^{n}\!{C_{23}}) - 2{}^{n}\!{\mu_{2}} {}^{n}\!{C_{34}} - 1  }{4},
+\end{align}
+
+The constants $\Csub{n}{ij}$, $\msub{n}{i}$, $\gsub{n}{i}$ are, respectively, defined in section XX, YY, and ZZ.
 
 \subsection{Definitions of $m_{n\cdot i}$, where $i\in (1,2,3,4)$, and $n\in(1,\ldots,N)$}
 \label{sec:mni}
@@ -1236,8 +1249,7 @@ where
 \end{subequations}
 The symbols $\betasub{n}{ij}$, which appear in \eqref{eqns:anbncn}, are called the reduced elastic constants and are defined such that
 \begin{equation}
-\betasub{n}{ij} = \texttt{HK to WF: Fill this up using $\Ssub{n}{ijkl}$}
-% C_{ij}-\frac{C_{i3} C_{3j}}{C_{33}}.
+\betasub{n}{ij} = \Csub{n}{ij}-\frac{\Csub{n}{i3} \Csub{n}{3j}}{\Csub{n}{33}}.
 \end{equation}
 
 %hk done with section sec:mni
