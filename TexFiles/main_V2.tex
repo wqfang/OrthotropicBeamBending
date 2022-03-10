@@ -1,12 +1,37 @@
 
-\documentclass[preprint,12pt,times]{elsarticle}
+\documentclass[preprint,12pt,times,draft]{elsarticle}
 \usepackage{geometry}
+\usepackage{tabularx}
  \geometry{
  b4paper,
  total={160mm,257mm},
  right=80mm,
  top=20mm,
  }
+
+
+% \usepackage{accents}
+ \newlength{\dhatheight}
+  \setlength{\dhatheight}{12pt}
+
+ \newcommand{\doublehat}[1]{%
+	 \settoheight{\dhatheight}{\ensuremath{\hat{#1}}}%
+	 \addtolength{\dhatheight}{-0.35ex}%
+	 \hat{\vphantom{\rule{1pt}{\dhatheight}}%
+	 \smash{\hat{#1}}}}
+
+\newcommand{\plus}[1]{\hat{#1}}
+\newcommand{\plusplus}[1]{\plus{\plus{#1}}}
+\newcommand{\minus}[1]{\check{#1}}
+\newcommand{\minusminus}[1]{\minus{\minus{#1}}}
+
+% \newcommand{\doublehat}[1]{\hat{\hat{#1}}}
+
+	%  \newcommand{\doublecheck}[1]{%
+	%  \settoheight{\dhatheight}{\ensuremath{\check{#1}}}%
+	%  \addtolength{\dhatheight}{-0.35ex}%
+	%  \hat{\vphantom{\rule{1pt}{\dhatheight}}%
+	%  \smash{\check{#1}}}}
 
  \usepackage{setspace}
 
@@ -158,7 +183,9 @@ linkcolor = blue
 \newcommand{\Dunst}{\mathcal{D}^{\otimes}}
 \newcommand{\conf}{\boldsymbol{\kappa}}
 \newcommand{\confp}{\tilde{\boldsymbol{\kappa}}}
+
 \newcommand{\p}{\,\mathsf{p}}
+
 \newcommand{\Inv}{\,\mathrm{Inv}}
 %\newcommand{\mni}{m_{n\cdot i}}
 \newcommand{\mni}{\,^{n}\!m_{i}}
@@ -196,10 +223,35 @@ linkcolor = blue
           {xxxx}{\,\beta_{ {#1}\cdot { #2}}\,}%
       }[\,C_{ {#1}\cdot {\scriptscriptstyle #2}}\,]}
 
-\newcommand{\Ssub}[2]{\,S_{ {#1}\cdot {\scriptscriptstyle #2}}\,}
+
+
+\newcommand{\alphasub}[2]{
+\IfEqCase{#2}{
+		{i}{\,\alpha_{ {#1}\cdot { \scriptstyle #2}}\,}%
+	}[\,\alpha_{ {#1}\cdot {\scriptscriptstyle #2}}\,]}
+
+\newcommand{\gammasub}[2]{
+\IfEqCase{#2}{
+		{i}{\,\gamma_{ {#1}\cdot { \scriptstyle #2}}\,}%
+	}[\,\gamma_{ {#1}\cdot {\scriptscriptstyle #2}}\,]}
+	
+
+	  \newcommand{\Ssub}[2]{\,S_{ {#1}\cdot {\scriptscriptstyle #2}}\,}
+
+
+\newcommand{\intwo}{\in(1,2)}
+\newcommand{\infour}{\in(1,\ldots,4)}
+\newcommand{\infive}{\in(1,\ldots,5)}
+\newcommand{\insix}{\in(1,\ldots,6)}
+\newcommand{\inN}{\in(1,\ldots,N)}
 
 
 
+\newcommand{\Subs}[3]{
+\IfEqCase{#3}{
+		{i}{\,#1_{ {#2}\cdot { \scriptstyle #3}}\,}%
+	}[\,#1_{ {#2}\cdot {\scriptscriptstyle #3}}\,]}
+		
 
 \newcommand{\hlc}[2][yellow]{ {\sethlcolor{#1} \hl{#2}} }
 \usepackage{wrapfig}
@@ -280,6 +332,7 @@ linkcolor = blue
 \usepackage{bm}
 
 \journal{International Journal of Solids and Structures}
+
 \begin{document}
 \begin{frontmatter}
 
@@ -500,21 +553,11 @@ We also introduce a set of orthonormal vectors~$(\physe_{r}(\theta),\physe_{\the
 \end{subequations}
 
 For an individual layer of material, we construct a local cylindrical coordinate system according to the principal material property orientation of the layer. We refer to the local cylindrical coordinate system as the material coordinate system. It is a rotation of the global cylindrical coordinate system through an angle~$\varphi$, in clockwise direction with respect to the axis~$\physe_{r}(\theta)$ (see Fig.~\ref{fig:schematic}). We denote the basis of the material coordinate system as~$\pr{\physf_{r}(\theta;\varphi),\physf_{\theta}(\theta;\varphi),\physf_{z}(\theta;\varphi)}$,
-% where
-% \begin{subequations}
-% \begin{align}
-% \physf_{r} (\theta;\varphi) & =  \physe_r (\theta),\\
-% \physf_{\theta} (\theta;\varphi)& = \cos(\varphi) \physe_{\theta} (\theta) - \sin(\varphi) \physe_z (\theta), \\
-% \physf_{z}(\theta;\varphi) & = \sin(\varphi) \physe_{\theta} (\theta) + \cos(\varphi) \physe_z (\theta).
-% \end{align}
-% \end{subequations}
+
 and the transformation matrix from~$(\physe_{r}(\theta),\physe_{\theta}(\theta),\physe_{z}(\theta))$ to~$\pr{\physf_{r}(\theta;\varphi),\physf_{\theta}(\theta;\varphi),\physf_{z}(\theta;\varphi)}$ as $\usf{Q}(\varphi)$, which can be expressed as
 
 \begin{equation}
 \usf{Q}(\varphi)
-% & = \begin{bmatrix}
-% \physf_{r}(\theta;\varphi)\cdot \physe_{r}(\theta) & \physf_{r}(\theta;\varphi)\cdot \physe_{\theta}(\theta) & \physf_{r}(\theta;\varphi)\cdot \physe_{z}(\theta) \\\physf_{\theta}(\theta;\varphi)\cdot \physe_{r}(\theta) & \physf_{\theta}(\theta;\varphi)\cdot \physe_{\theta}(\theta) & \physf_{\theta}(\theta;\varphi)\cdot \physe_{z}(\theta) \\\physf_{z}(\theta;\varphi)\cdot \physe_{r}(\theta) & \physf_{z}(\theta;\varphi)\cdot \physe_{\theta}(\theta) & \physf_{z}(\theta;\varphi)\cdot \physe_{z}(\theta)
-% \end{bmatrix}\\&
 = \begin{bmatrix}
 1 & 0 & 0 \\
  0 & \cos(\varphi) & -\sin(\varphi) \\
@@ -720,6 +763,7 @@ With the addtional variable $\varphi$, there should be ten independent constants
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Bending stiffness formula by Jolicoeur and Cardou}
+\todo[fancyline]{need to add reference}
 %The solutions of stresses are
 %\begin{equation}
 %\begin{aligned}
@@ -736,46 +780,54 @@ The bending stiffness of the~$N$-layer cylindrical composite is obtained by Joli
 \begin{subequations}
 \begin{equation}
 	\begin{aligned}
-	EI = & \sum_{n=1}^{N} \left[ \sum_{i \in \mathcal{L}} {}^{n}\!{\alpha_{i}} {}^{n}\!{K_{i}}  \pr{\p\pr{{}^{n-1}\!{r},{}^{n}\!{m_{i}}+2} - \p\pr{{}^{n}\!{r},{}^{n}\!{m_{i}} + 2}} + {}^{n}\!\gamma\pr{\p\pr{{}^{n-1}\!{r},4} - \p\pr{{}^{n}\!{r},4}} \right],
+	EI = & \sum_{n=1}^{N} \left[ \sum_{i \in \mathcal{L}} {}^{n}\!{\alpha_{i}} {}^{n}\!{K_{i}}  \pr{\p\pr{{}^{n-1}\!{r},{}^{n}\!{m_{i}}+2} - \p\pr{{}^{n}\!{r},{}^{n}\!{m_{i}} + 2}} + {}^{n}\!\gamma\pr{\p\pr{{}^{n-1}\!{r},4} - \p\pr{{}^{n}\!{r},4}} \right].
 	\end{aligned}
 	\label{eq:EI}
 \end{equation}
-with
+The symbols $\alphasub{n}{i}$, $\msub{n}{i}$, and $\gammasub{n}{i}$, where $n\inN$, and $i\infour$, denote constants that depend on material properties and the helix angles. They are, respectively, defined in \S\ref{sec:alphani}, \S\ref{sec:mni}, and \S\ref{sec:gni}.
 
 \end{subequations}
-where~$N$ denotes the total number of layers,~$\mathcal{L} := \pr{1,2,3,4}$,~${}^{n-1}\!{r}$ and~${}^{n}\!{r}$ the internal and external radii of the~$n^\text{th}$ layer,~${}^{n}\!{m_{i}}$,~${}^{n}\!{g_{i}}$,~${}^{n}\!{\mu_{1}}$, and~${}^{n}\!{\mu_{2}}$ are material constants related with elastic constants of the~$n^\text{th}$ layer (see~\ref{Appen:MatConst}). We use $\p\pr{x,y}$ to denote the power operation where $x$ is the base and $y$ is the exponent.
+~$r_{\minus{n}}$ and~$r_n$ the internal and external radii of the~$n^\text{th}$ layer, (see~\ref{Appen:MatConst}). We use $\p\pr{x,y}$ to denote the power operation where $x$ is the base and $y$ is the exponent.
 
 The coefficients~${}^{n}\!{K_{i}}$ are determined by the boundary conditions and continuity conditions of displacement and stress at the interface.
 
-\paragraph{Boundary condition.}
 
-The traction free boundaries at innermost radius~${}^{0}\!{r}$ and outermost radius~${}^{N}\!{r}$ require
-\begin{subequations}
-	\begin{align}
-	\sum_{i \in \mathcal{L}} {}^{1}\!{K_{i}} \p\pr{{}^{0}\!{r},{}^{1}\!{m_{i}} - 2} & = -{}^{1}\!{\mu_{1}}, \quad
-	\sum_{i \in \mathcal{L}} {}^{1}\!{K_{i}} {}^{1}\!{g_{i}} \p\pr{{}^{0}\!{r},{}^{1}\!{m_{i}} - 2} = -{}^{1}\!{\mu_{2}},\\
-	\sum_{i \in \mathcal{L}} {}^{N}\!{K_{i}} \p\pr{{}^{N}\!{r},{}^{N}\!{m_{i}} - 2} & = -{}^{N}\!{\mu_{1}}, \quad
-	\sum_{i \in \mathcal{L}} {}^{N}\!{K_{i}} {}^{N}\!{g_{i}} \p\pr{{}^{N}\!{r},{}^{N}\!{m_{i}} - 2} = -{}^{N}\!{\mu_{2}}.
-	\end{align}
-	\label{eq:boundary}
-\end{subequations}
 
-\paragraph{Interfacial condition: frictionless slip.}
+
+
+\subsection{Freely slipping interfaces}
 
 In the case of no friction interface,~$u_r$ and~$\sigma_{rr}$ are continuous,~$\tau_{r\theta}$ and~$\tau_{rz}$ are zero at the interface. Therefore~${}^{n}\!{K_{i}}$ satisfy following equations
-\begin{subequations}
-	\begin{align}
-	\sum_{i \in \mathcal{L}} {}^{n}\!{K_{i}} \p\pr{{}^{n}\!{r},{}^{n}\!{m_{i}} - 2} & = -{}^{n}\!{\mu_{1}}, \quad
-	\sum_{i \in \mathcal{L}} {}^{n}\!{K_{i}} {}^{n}\!{g_{i}} \p\pr{{}^{n}\!{r},{}^{n}\!{m_{i}} - 2} = -{}^{n}\!{\mu_{2}}, \\
-	\sum_{i \in \mathcal{L}} {}^{n}\!{K_{i}} \p\pr{{}^{n-1}\!{r},{}^{n}\!{m_{i}} - 2} & = -{}^{n}\!{\mu_{1}}, \quad
-	\sum_{i \in \mathcal{L}} {}^{n}\!{K_{i}} {}^{n}\!{g_{i}} \p\pr{{}^{n-1}\!{r},{}^{n}\!{m_{i}} - 2} = -{}^{n}\!{\mu_{2}},
-	\end{align}
-	\label{eq:nofriction_interface}
-\end{subequations}
+%\begin{subequations}
+%	\label{eq:nofriction_interface}
+%\end{subequations}
 for~$n = 1,2,\dots,N$.
 
+\begin{subequations}
+\noindent
+\begin{tabularx}{0.9\textwidth}{@{}XX@{}}
+  \begin{equation}
+	\sum_{i \in \mathcal{L}} {}^{n}\!{K_{i}} \p\pr{{}^{n}\!{r},{}^{n}\!{m_{i}} - 2}  = -{}^{n}\!{\mu_{1}},
+    \label{eqn:1}
+  \end{equation} &
+  \begin{equation}
+	\sum_{i \in \mathcal{L}} {}^{n}\!{K_{i}} {}^{n}\!{g_{i}} \p\pr{{}^{n}\!{r},{}^{n}\!{m_{i}} - 2} = -{}^{n}\!{\mu_{2}},
+    \label{eqn:2}
+  \end{equation} \\
+  \begin{equation}
+	\sum_{i \in \mathcal{L}} {}^{n}\!{K_{i}} \p\pr{{}^{n-1}\!{r},{}^{n}\!{m_{i}} - 2}  = -{}^{n}\!{\mu_{1}},
+    \label{eqn:3}
+  \end{equation} &
+  \begin{equation}
+  	\sum_{i \in \mathcal{L}} {}^{n}\!{K_{i}} {}^{n}\!{g_{i}} \p\pr{{}^{n-1}\!{r},{}^{n}\!{m_{i}} - 2} = -{}^{n}\!{\mu_{2}}.
+  \end{equation}
+\end{tabularx}
+\label{eq:freeslipinterfaces}
+\end{subequations}
 
-\paragraph{Interfacial condition: no slip.}
+The symbols $\gsub{n}{i}$, where $i\infour$, and  $n\inN$, and $\musub{n}{i}$, where $i\intwo$, and  $n\inN$, which, e.g., appear in \eqref{eq:freeslipinterfaces}, denote constants. They are, respectively, defined in \S\ref{sec:gni}, and \S\ref{sec:muni}.
+
+\subsection{Non slipping interfaces}
 
 In the case of perfect bonding (no slip) interface between layers, the continuity conditions of stresses~$\sigma_{rr}$,~$\tau_{r\theta}$,~$\tau_{rz}$ and displacements~$u_{r}$,~$u_{\theta}$,~$u_z$ at the interface yields
 \begin{subequations}
@@ -788,7 +840,22 @@ In the case of perfect bonding (no slip) interface between layers, the continuit
 	\end{align}
 	\label{eq:noslip_interface}
 \end{subequations}
-for~$n = 1,2,\dots,N-1$, where~$Q_i$ and~$W_i$ ($i=$1 to 5) are material constants (see~\ref{Appen:MatConst}).
+where~$n = 1,2,\dots,N-1$, and
+\begin{subequations}
+	\begin{align}
+	\sum_{i \in \mathcal{L}} {}^{1}\!{K_{i}} \p\pr{{}^{0}\!{r},{}^{1}\!{m_{i}} - 2} & = -{}^{1}\!{\mu_{1}}, \quad
+	\sum_{i \in \mathcal{L}} {}^{1}\!{K_{i}} {}^{1}\!{g_{i}} \p\pr{{}^{0}\!{r},{}^{1}\!{m_{i}} - 2} = -{}^{1}\!{\mu_{2}},\\
+	\sum_{i \in \mathcal{L}} {}^{N}\!{K_{i}} \p\pr{{}^{N}\!{r},{}^{N}\!{m_{i}} - 2} & = -{}^{N}\!{\mu_{1}}, \quad
+	\sum_{i \in \mathcal{L}} {}^{N}\!{K_{i}} {}^{N}\!{g_{i}} \p\pr{{}^{N}\!{r},{}^{N}\!{m_{i}} - 2} = -{}^{N}\!{\mu_{2}}.
+	\end{align}
+	\label{eq:boundary}
+\end{subequations}
+
+
+The symbols $\Qsub{n}{i}$, and $\Wsub{n}{i}$, where $n\inN$, and $i\infive$, which, e.g., appear in \eqref{eq:noslip_interface}, denote constants. They are, respectively, defined in \S\ref{sec:Qni}, and \S\ref{sec:Wni}.
+
+%The traction free boundaries at innermost radius~${}^{0}\!{r}$ and outermost radius~${}^{N}\!{r}$ require
+
 
 
 
@@ -1212,17 +1279,42 @@ In sections \S\ref{sec:mni} and \S\ref{sec:gni} we, respectively, define the con
 \texttt{In this section we give the definitions of $\alpha$, $m$ and $\gamma$. The definition of $\alpha$ depend on $m$ and $g$, and the definition of $g$ depends on $m$. Thereofe, we first give the deifnition of $m$, followed, that of $g$ and the finally give the definition}
 
 
-\subsection{Definition of $\alpha_{n\cdot i}$}
+\subsection{Definitions of $\beta_{n\cdot i j}$, and $C_{n\cdot i j}$, where $i,~j\insix$, and $n\inN$\label{sec:betaCnij}}
+
+
+\subsubsection{Definitions of $\beta_{n\cdot i j}$, where $i,~j\insix$, and $n\infour$\label{sec:betaCnij}\label{sec:betanij}}
+
+The constants $\beta_{n\cdot i j}$, where $i,~j\insix$, and $n\infour$, are defined as
+
+\begin{equation}
+\betasub{n}{ij} = \Csub{n}{ij}-\frac{\Csub{n}{i3} \Csub{n}{3j}}{\Csub{n}{33}}.
+\label{eq:betanijdef}
+\end{equation}
+The constants $C_{n\cdot i j}$, where $i,~j\insix$, and $n\infour$, which appear in \eqref{eq:betanijdef}, are defined in \S\ref{sec:Cnij}.
+
+
+\subsubsection{Definitions of $C_{n\cdot i j}$, where $i,~j\insix$, and $n\infour$\label{sec:Cnij}}
+
+\subsection{Definitions of $\alpha_{n\cdot i}$, $m_{n\cdot i}$, and $\gamma_{n\cdot i}$, where $i\in (1,2,3,4)$, and $n\in (1,\ldots,N)$\label{sec:alphamgni}}
+
+
+\subsubsection{Definitions of $\alpha_{n\cdot i}$, $i\in (1,2,3,4)$, and $n\in (1,\ldots,N)$\label{sec:alphani}}
+
+The constants $\alphasub{n}{i}$, $i\in (1,2,3,4)$, $n\in (1,\ldots,N)$, are defined as
 
 \begin{align}
-{}^{n}\!{\alpha_{i}} & := \frac{\pi}{{}^{n}\!{C_{33}}} \frac{  {}^{n}\!{C_{13}} + {}^{n}\!{C_{23}}({}^{n}\!{m_{i}} + 1) - {}^{n}\!{C_{34}} {}^{n}\!{g_{i}} {}^{n}\!{m_{i}} }{{}^{n}\!{m_{i}}+2}, \\
-{}^{n}\!\gamma & := \frac{\pi}{{}^{n}\!{C_{33}}} \frac{ {}^{n}\!{\mu_{1}} ({}^{n}\!{C_{13}} + 3{}^{n}\!{C_{23}}) - 2{}^{n}\!{\mu_{2}} {}^{n}\!{C_{34}} - 1  }{4},
+	\alphasub{n}{i} & = \frac{\pi}{\Subs{\plusplus{m}}{n}{i} \Csub{n}{33}}\left(\Csub{n}{13} + \Subs{\plus{m}}{n}{i}\Csub{n}{23} - \Csub{n}{34} \gsub{n}{i} \msub{n}{i}\right),
+\label{eq:alphani}
 \end{align}
+where the constants $\msub{n}{i}$, and $\gsub{n}{i}$, $i\infour$, $n\inN$, are, respectively, defined in \S\ref{sec:mni}, and \S\ref{sec:gni}. The constants $\Csub{n}{ij}$, $n\inN$, and $i,~j\insix$, are defined in \S\ref{sec:Cnij}.
 
-The constants $\Csub{n}{ij}$, $\msub{n}{i}$, $\gsub{n}{i}$ are, respectively, defined in section XX, YY, and ZZ.
+$\Subs{m}{n}{j}$
+$\Subs{m}{n}{i}$
+$\Subs{m}{n}{2}$
 
-\subsection{Definitions of $m_{n\cdot i}$, where $i\in (1,2,3,4)$, and $n\in(1,\ldots,N)$}
-\label{sec:mni}
+\subsubsection{Definitions of $m_{n\cdot i}$, where $i\in (1,2,3,4)$, and $n\in(1,\ldots,N)$\label{sec:mni}}
+
+
 By definition
 \begin{subequations}
 	\begin{align}
@@ -1247,14 +1339,23 @@ where
 	\end{align}
   \label{eqns:anbncn}
 \end{subequations}
-The symbols $\betasub{n}{ij}$, which appear in \eqref{eqns:anbncn}, are called the reduced elastic constants and are defined such that
-\begin{equation}
-\betasub{n}{ij} = \Csub{n}{ij}-\frac{\Csub{n}{i3} \Csub{n}{3j}}{\Csub{n}{33}}.
-\end{equation}
+The symbols $\betasub{n}{ij}$, which appear in \eqref{eqns:anbncn}, are called the reduced elastic constants. They are defined in \S\ref{sec:betanij}. 
 
 %hk done with section sec:mni
 
-\subsection{Definitions of $\gsub{n}{i}$, where $i\in (1,2,3,4)$, and $n\in(1,\ldots,N)$}
+\subsubsection{Definitions of $\gamma_{n\cdot i}$, $i\infour$, and $n\inN$\label{sec:gammani}}
+
+\begin{align}
+	{}^{n}\!\gamma & := \frac{\pi}{{}^{n}\!{C_{33}}} \frac{ {}^{n}\!{\mu_{1}} ({}^{n}\!{C_{13}} + 3{}^{n}\!{C_{23}}) - 2{}^{n}\!{\mu_{2}} {}^{n}\!{C_{34}} - 1  }{4},
+\end{align}
+
+The constants $\Csub{n}{ij}$, $\msub{n}{i}$, $\gsub{n}{i}$ are, respectively, defined in section XX, YY, and ZZ.
+
+
+\subsection{Definitions of $\gsub{n}{i}$, where $i\infour$, and $n\inN$, and $\musub{n}{i}$, $i\intwo $, and $n\inN$}
+\label{sec:gmuni}
+
+\subsubsection{Definitions of $\gsub{n}{i}$, where $i\infour$, and $n\inN$}
 \label{sec:gni}
 
 By definition
@@ -1263,38 +1364,11 @@ By definition
 	\gsub{n}{i} & = \frac{\betasub{n}{24}\p\pr{\msub{n}{i},2}+(\betasub{n}{14} + \betasub{n}{24})\msub{n}{i} - \betasub{n}{56}}{\betasub{n}{44}\p\pr{\msub{n}{i},2} - \betasub{n}{55}},
 	\end{align}
 \end{subequations}
-where $i\in (1,2,3,4)$, and $n\in(1,\ldots,N)$
+where $i\in (1,2,3,4)$, and $n\in(1,\ldots,N)$.
 
-\subsection{Definitions of $\musub{n}{i}$, where $i\in (1,2)$ and $n\in (1,\ldots,N)$}.
-
+\subsubsection{Definitions of $\musub{n}{i}$, where $i\in (1,2)$ and $n\in (1,\ldots,N)$}.
 \label{sec:muni}
 
-\subsection{Definitions of $\Qsub{n}{i}$, where $i\in (1,\ldots,5)$ and $n\in (1,\ldots,N)$}
-\label{sec:Qni}
-
-For $n\in(1,\ldots,N)$
-\begin{subequations}
-\begin{align}
-  \Qsub{n}{i}& := \frac{1}{m_i} \pr{\beta_{12}m_i + \beta_{22}m_i(m_i+1) - \beta_{24} g_i \p\pr{m_i,2}}, \\
-\intertext{where $i\in (1,2,3,4)$, and}
-\Qsub{n}{5} & = \mu_1(\beta_{12} + 3\beta_{22})-2\mu_2\beta_{24} + \frac{C_{23}}{C_{33}}.
-\end{align}
-\end{subequations}
-
-
-\subsection{Definitions of $W_{n\cdot {\scriptscriptstyle i}}$, where $i\in (1,\ldots,5)$ and $n\in (1,\ldots,N)$}
-\label{sec:Wni}
-
-
-
-\begin{subequations}
-	\begin{align}
-\Wsub{n}{i} & = \frac{1}{m_i}\pr{\beta_{55} g_i - \beta_{56}},
-\intertext{where $i\in (1,2,3,4)$, and}
-	\Wsub{n}{5} & = \frac{1}{2}(\beta_{55}\mu_2 - \beta_{56}\mu_1),
-	\end{align}
-\end{subequations}
-where
 	\begin{equation}
 	\begin{bmatrix}
 		\mu_1 \\ \mu_2
@@ -1308,6 +1382,36 @@ where
 			2C_{34} \\ C_{13}-C_{23}
 	\end{bmatrix}.
 	\end{equation}
+
+
+\subsection{Definitions of $\Qsub{n}{i}$, and $W_{n\cdot i}$, where $i\in (1,\ldots,5)$ and $n\in (1,\ldots,N)$}
+\label{sec:Qni}
+
+\subsubsection{Definitions of $\Qsub{n}{i}$, where $i\in (1,\ldots,5)$ and $n\in (1,\ldots,N)$}
+
+For $n\in(1,\ldots,N)$
+\begin{subequations}
+\begin{align}
+  \Qsub{n}{i}& := \frac{1}{m_i} \pr{\beta_{12}m_i + \beta_{22}m_i(m_i+1) - \beta_{24} g_i \p\pr{m_i,2}}, \\
+\intertext{where $i\in (1,2,3,4)$, and}
+\Qsub{n}{5} & = \mu_1(\beta_{12} + 3\beta_{22})-2\mu_2\beta_{24} + \frac{C_{23}}{C_{33}}.
+\end{align}
+\end{subequations}
+
+
+\subsubsection{Definitions of $W_{n\cdot i}$, where $i\in (1,\ldots,5)$ and $n\in (1,\ldots,N)$}
+\label{sec:Wni}
+
+
+
+\begin{subequations}
+	\begin{align}
+\Wsub{n}{i} & = \frac{1}{m_i}\pr{\beta_{55} g_i - \beta_{56}},
+\intertext{where $i\in (1,2,3,4)$, and}
+	\Wsub{n}{5} & = \frac{1}{2}(\beta_{55}\mu_2 - \beta_{56}\mu_1),
+	\end{align}
+\end{subequations}
+where
 
 
 
