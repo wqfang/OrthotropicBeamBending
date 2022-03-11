@@ -1,13 +1,13 @@
 
-\documentclass[preprint,12pt,times,draft]{elsarticle}
+\documentclass[preprint,12pt,times]{elsarticle}
 \usepackage{geometry}
 \usepackage{tabularx}
- \geometry{
- b4paper,
- total={160mm,257mm},
- right=80mm,
- top=20mm,
- }
+%  \geometry{
+%  b4paper,
+%  total={160mm,257mm},
+%  right=80mm,
+%  top=20mm,
+%  }
 
 
 % \usepackage{accents}
@@ -184,7 +184,7 @@ linkcolor = blue
 \newcommand{\conf}{\boldsymbol{\kappa}}
 \newcommand{\confp}{\tilde{\boldsymbol{\kappa}}}
 
-\newcommand{\p}{\,\mathsf{p}}
+\newcommand{\p}{\,\textsf{\small pow}}
 
 \newcommand{\Inv}{\,\mathrm{Inv}}
 %\newcommand{\mni}{m_{n\cdot i}}
@@ -398,9 +398,9 @@ Multilayered composite structure \sep Cylindrical orthotropy \sep Effective bend
 
 
 
-\todo{\href{https://hackmd.io/-Q9bMN5xRDqp2RmYz8p-Ag}{HK to WF}}
+\todo[inline]{\href{https://hackmd.io/-Q9bMN5xRDqp2RmYz8p-Ag}{HK to WF}}
 
-\todo{\tiny
+\todo[inline]{\tiny
 	{\setstretch{2.5} What is roughly the helical angles in  the helicophter structures, monoraphis chuni, osteons.}}
 
 % \todo{HK to WF: need to say somewhere that we only consider the case with no solid core. Need to say whether Lekhnitskii considerd solid core, and/or JOlicoeur considered solid core.  }
@@ -423,7 +423,7 @@ The platelets and fibers are glued to the mineral phase through a compliant orga
 These natural composites are distinguished from their synthetic counterparts by the facts that their effective properties at the macro scale, such as strength and fracture toughness, are quite high despite the corresponding properties of their constituent phases being poor.
 % \ul{phases being very poor.}\todo[fancyline]{English. "being very poor"}
 %
-\setulcolor{green}\textcolor{red}{For example, the tensile strength of the spicules of the sponge \textit{Euplectella aspergillum} is much higher than the silicate glass fiber~\cite{walter2007mechanisms}.}\todo[fancyline]{hk to WF: I think we should not refer to the paper by Walter for the tensile strength of EA spicules. I think SK will be able to advise you regarding this aspect.}
+\setulcolor{green}\textcolor{red}{For example, the tensile strength of the spicules of the sponge \textit{Euplectella aspergillum} is much higher than the silicate glass fiber~\cite{walter2007mechanisms}.}\todo[inline]{hk to WF: I think we should not refer to the paper by Walter for the tensile strength of EA spicules. I think SK will be able to advise you regarding this aspect.}
 %
 
 
@@ -533,7 +533,7 @@ The paper is organized as follows:~$\S$\ref{sec:bending_model} describes the mod
 \end{enumerate}
 
 
-\texttt{We consider a hollow composite cylinder consisting of~$N$ co-axial cylindrical layers and each layer is cylindrical orthotropic with different principal material property orientations (see Fig.~\ref{fig:Cylinder3D}). The inner and outer radius of the cylinder is~${}^{0}\!{r}$ and~${}^{N}\!{r}$, respectively.\todo{HK to WF: need to say somewhere that we only consider the case with no solid core. Need to say whether Lekhnitskii considerd solid core, and/or JOlicoeur considered solid core.}}
+\texttt{We consider a hollow composite cylinder consisting of~$N$ co-axial cylindrical layers and each layer is cylindrical orthotropic with different principal material property orientations (see Fig.~\ref{fig:Cylinder3D}). The inner and outer radius of the cylinder is~${}^{0}\!{r}$ and~${}^{N}\!{r}$, respectively.\todo[inline]{HK to WF: need to say somewhere that we only consider the case with no solid core. Need to say whether Lekhnitskii considerd solid core, and/or JOlicoeur considered solid core.}}
 
 \texttt{We consider a hollow composite cylinder consisting of~$N$ co-axial cylindrical layers without a solid core and each layer is cylindrical orthotropic with different principal material property orientations (see Fig.~\ref{fig:Cylinder3D}). The inner and outer radius of the cylinder is~${}^{0}\!{r}$ and~${}^{N}\!{r}$, respectively, where $0 < {}^{0}\!{r}<{}^{N}\!{r}$.}
 
@@ -598,7 +598,7 @@ The solution of a single cylinder with cylindrical orthotropy subjected to pure 
 \begin{figure}[t]
 	\centering
 	\graphicspath{{../LyxFiles/figure/}}
-	\includegraphics[width=0.3\textwidth]{schematic_V6.pdf}
+	\includegraphics[width=0.45\textwidth]{schematic_V6.pdf}
 	\caption{A single-layer cylindrical sturcture with cylindrical orthotropy.
   }
 	\label{fig:schematic}
@@ -765,7 +765,7 @@ With the addtional variable $\varphi$, there should be ten independent constants
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Bending stiffness formula by Jolicoeur and Cardou}
-\todo[fancyline]{need to add reference}
+\todo[inline]{need to add reference}
 %The solutions of stresses are
 %\begin{equation}
 %\begin{aligned}
@@ -777,7 +777,7 @@ With the addtional variable $\varphi$, there should be ten independent constants
 %\sigma_{zz} & = \frac{1}{C_{33}} \left[ \kappa_x r \sin \theta - \kappa_y r \cos\theta + \epsilon - C_{13} \sigma_r - C_{23} \sigma_{\theta} - C_{34} \tau_{\theta z} \right]
 %\end{aligned}
 %\end{equation}
-\label{sec:bending stiffness}
+\label{sec:BendingStiffness}
 The bending stiffness of the~$N$-layer cylindrical composite is obtained by Jolicoeur and Cardou as
 \begin{subequations}
 \begin{equation}
@@ -880,7 +880,7 @@ We also consider cases where the helical angles are not uniform and the composed
 Based on the lamination schemes and interfacial conditions, we consider three different scenarios here. (i) Homogeneous material-No friction: the lamination scheme is~$[{}^{0}\!\varphi]_N$ and no friction exists between layers. (ii) Heterogeneous material-No friction: the lamination scheme is~$[{}^{I}\!\varphi/{}^{II}\!\varphi]_{N/2}$ and the interfaces between layers is frictionless. (iii) Heterogeneous material-No slip: the lamination scheme is~$[{}^{I}\!\varphi/{}^{II}\!\varphi]_{N/2}$ as well, but there is no slip between the interfaces.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Homogeneous material and no friction interface}
+\subsection{Uniform lamellae and freely slipping interfaces}
 \label{sec:1mat_no_friction}
 
 First we consider that the elastic property for each layer is the same. The interfaces between layers are frictionless. This is equivalent to the scenario where a homogeneous cylinder is cut into layers with uniform thickness and there is no friction between the layers. In this case, we drop the subscript~$n$ of the material constants for the sake of simplicity.
@@ -1281,46 +1281,50 @@ In sections \S\ref{sec:mni} and \S\ref{sec:gni} we, respectively, define the con
 \texttt{In this section we give the definitions of $\alpha$, $m$ and $\gamma$. The definition of $\alpha$ depend on $m$ and $g$, and the definition of $g$ depends on $m$. Thereofe, we first give the deifnition of $m$, followed, that of $g$ and the finally give the definition}
 
 
-\subsection{Definitions of $\beta_{n\cdot i j}$, and $C_{n\cdot i j}$, where $i,~j\insix$, and $n\inN$\label{sec:betaCnij}}
+\subsection{Definitions of  $\beta_{n\cdot i j}\,$, and $C_{n\cdot i j}\,$, where $i,~j\insix$, and $n\inN$\label{sec:betaCnij}}
+%hk done with subsection title.
+
+\subsubsection{Definitions of the constants $C_{n\cdot i j}$, where $i,~j\insix$, and $n\inN$\label{sec:Cnij}}%hk done
+
+\todo[inline]{HK to WF: complete this section}
 
 
-\subsubsection{Definitions of $\beta_{n\cdot i j}$, where $i,~j\insix$, and $n\infour$\label{sec:betaCnij}\label{sec:betanij}}
+\subsubsection{Definitions of the constants $\beta_{n\cdot i j}$, where $i,~j\insix$, and $n\inN$\label{sec:betaCnij}\label{sec:betanij}}
+%hk done with subsubsection title.
 
-The constants $\beta_{n\cdot i j}$, where $i,~j\insix$, and $n\infour$, are defined as
-
+The constants $\beta_{n\cdot i j}$, where $i,~j\insix$, and $n\inN$, are defined as
 \begin{equation}
 \betasub{n}{ij} = \Csub{n}{ij}-\frac{\Csub{n}{i3} \Csub{n}{3j}}{\Csub{n}{33}}.
 \label{eq:betanijdef}
-\end{equation}
-The constants $C_{n\cdot i j}$, where $i,~j\insix$, and $n\infour$, which appear in \eqref{eq:betanijdef}, are defined in \S\ref{sec:Cnij}.
+\end{equation} %hk done
+The constants $C_{n\cdot i j}$, where $i,~j\insix$, and $n\inN$, which appear in \eqref{eq:betanijdef}, are defined in \S\ref{sec:Cnij}. %hk done
 
 
-\subsubsection{Definitions of $C_{n\cdot i j}$, where $i,~j\insix$, and $n\infour$\label{sec:Cnij}}
-
-\subsection{Definitions of $\alpha_{n\cdot i}$, $m_{n\cdot i}$, and $\gamma_{n\cdot i}$, where $i\in (1,2,3,4)$, and $n\in (1,\ldots,N)$\label{sec:alphamgni}}
 
 
-\subsubsection{Definitions of $\alpha_{n\cdot i}$, $i\in (1,2,3,4)$, and $n\in (1,\ldots,N)$\label{sec:alphani}}
 
-The constants $\alphasub{n}{i}$, $i\in (1,2,3,4)$, $n\in (1,\ldots,N)$, are defined as
+\subsection{Definitions of $\alpha_{n\cdot i}$, $m_{n\cdot i}$, and $\gamma_{n}$, where $i\infour$, and $n\inN$\label{sec:alphamgni}} % hk done
 
+
+\subsubsection{Definitions of $\alpha_{n\cdot i}$, where $i\infour$, and $n\inN$\label{sec:alphani}} % hk done
+
+The constants $\alphasub{n}{i}$, where $i\infour$, and $n\inN$, are defined as
 \begin{align}
-	\alphasub{n}{i} & = \frac{\pi}{\Subs{\plusplus{m}}{n}{i} \Csub{n}{33}}\left(\Csub{n}{13} + \Subs{\plus{m}}{n}{i}\Csub{n}{23} - \Csub{n}{34} \gsub{n}{i} \msub{n}{i}\right),
+	\alphasub{n}{i} & = \frac{\pi}{\Subs{\plusplus{m}}{n}{i} \Csub{n}{33}}\left(\Csub{n}{13} + \Subs{\plus{m}}{n}{i}\Csub{n}{23} - \Csub{n}{34} \gsub{n}{i} \msub{n}{i}\right).
 \label{eq:alphani}
-\end{align}
-where the constants $\msub{n}{i}$, and $\gsub{n}{i}$, $i\infour$, $n\inN$, are, respectively, defined in \S\ref{sec:mni}, and \S\ref{sec:gni}. The constants $\Csub{n}{ij}$, $n\inN$, and $i,~j\insix$, are defined in \S\ref{sec:Cnij}.
+\end{align}% hk done
+The constants $\msub{n}{i}$, and $\gsub{n}{i}$, where $i\infour$, and $n\inN$, which appear in \eqref{eq:alphani}, are, respectively, defined in \S\ref{sec:mni}, and \S\ref{sec:gni}.% hk done
+The constants $\Csub{n}{ij}$, where $i,~j\insix$, and $n\inN$, which  appear in \eqref{eq:alphani}, are defined in \S\ref{sec:Cnij}. %hk done
+To recall, as per the notation we introduced in \S\ref{sec:BendingStiffness}, the symbols $\Subs{\plus{m}}{n}{i}$, and $\Subs{\plusplus{m}}{n}{i}$ denote the expressions $\Subs{m}{n}{i}+1$, and $\Subs{m}{n}{i}+2$, respectively. %hk done
 
-$\Subs{m}{n}{j}$
-$\Subs{m}{n}{i}$
-$\Subs{m}{n}{2}$
-
-\subsubsection{Definitions of $m_{n\cdot i}$, where $i\in (1,2,3,4)$, and $n\in(1,\ldots,N)$\label{sec:mni}}
-
+\subsubsection{Definitions of $m_{n\cdot i}$, where $i\infour$, and $n\inN$\label{sec:mni}}
+%hk done
 
 By definition
 \begin{subequations}
 	\begin{align}
-	 \m{n}{{\scriptscriptstyle 1}} & =  \sqrt{\frac{-b_n +\sqrt{\p\pr{b_n,2} - 4a_n c_n }}{2a_n}}, \\
+	 \m{n}{{\scriptscriptstyle 1}} & =  \sqrt{\frac{-b_n +\sqrt{\p\pr{b_n,2} - 4a_n c_n }}{2a_n}}, 
+	 \intertext{where note that, as per the notation we introduced in \S\ref{sec:BendingStiffness}, $\p\pr{b_n,2}$ denotes the square of $b_n$,}
 	 \m{n}{2} & =  \sqrt{\frac{-b_n -\sqrt{\p\pr{b_n,2} - 4a_n c_n}}{2a_n}}, \\
 	 \m{n}{3} & =  -\m{n}{1},
    \intertext{and}
@@ -1340,83 +1344,101 @@ where
 	c_n & :=  \betasub{n}{55}(\betasub{n}{11} + 2\betasub{n}{12} + \betasub{n}{22} + \betasub{n}{66})-\p\pr{\betasub{n}{56},2}.
 	\end{align}
   \label{eqns:anbncn}
-\end{subequations}
-The symbols $\betasub{n}{ij}$, which appear in \eqref{eqns:anbncn}, are called the reduced elastic constants. They are defined in \S\ref{sec:betanij}. 
+\end{subequations} %hk done
+The symbols $\betasub{n}{ij}$, where $i,~j\insix$, and $n\inN$, which appear in \eqref{eqns:anbncn}, are defined in \S\ref{sec:betanij}.%hk done 
 
-%hk done with section sec:mni
 
-\subsubsection{Definitions of $\gamma_{n\cdot i}$, $i\infour$, and $n\inN$\label{sec:gammani}}
 
+\subsubsection{Definitions of $\gamma_{n}$, where $n\inN$\label{sec:gammani}}%hk done
+
+The constants $\gamma_{n}$, where $n\inN$, are defined as
 \begin{align}
-	{}^{n}\!\gamma & := \frac{\pi}{{}^{n}\!{C_{33}}} \frac{ {}^{n}\!{\mu_{1}} ({}^{n}\!{C_{13}} + 3{}^{n}\!{C_{23}}) - 2{}^{n}\!{\mu_{2}} {}^{n}\!{C_{34}} - 1  }{4},
+	\gamma_{n} & = \frac{\pi}{4 \Subs{C}{n}{33}} \left( \Subs{\mu}{n}{1} \left(\Subs{C}{n}{13} + 3\Subs{C}{n}{23}\right) - 2\Subs{\mu}{n}{2} \Subs{C}{n}{34} - 1  \right),
 \end{align}
+where $\Csub{n}{ij}$, where $i,~j\insix$, and $n\inN$, are defined in \S\ref{sec:Cnij} and  $\musub{n}{i}$, where $i\intwo$, and $n\inN$, are defined in \S\ref{sec:muni}. %hk done
 
-The constants $\Csub{n}{ij}$, $\msub{n}{i}$, $\gsub{n}{i}$ are, respectively, defined in section XX, YY, and ZZ.
+
+
 
 
 \subsection{Definitions of $\gsub{n}{i}$, where $i\infour$, and $n\inN$, and $\musub{n}{i}$, $i\intwo $, and $n\inN$}
-\label{sec:gmuni}
+\label{sec:gmuni}%hk done
 
 \subsubsection{Definitions of $\gsub{n}{i}$, where $i\infour$, and $n\inN$}
-\label{sec:gni}
+\label{sec:gni}%hk done
 
 By definition
-\begin{subequations}
-	\begin{align}
-	\gsub{n}{i} & = \frac{\betasub{n}{24}\p\pr{\msub{n}{i},2}+(\betasub{n}{14} + \betasub{n}{24})\msub{n}{i} - \betasub{n}{56}}{\betasub{n}{44}\p\pr{\msub{n}{i},2} - \betasub{n}{55}},
-	\end{align}
-\end{subequations}
-where $i\in (1,2,3,4)$, and $n\in(1,\ldots,N)$.
+	\begin{equation}
+	\gsub{n}{i} = \frac{\betasub{n}{24}\p\pr{\msub{n}{i},2}+(\betasub{n}{14} + \betasub{n}{24})\msub{n}{i} - \betasub{n}{56}}{\betasub{n}{44}\p\pr{\msub{n}{i},2} - \betasub{n}{55}},
+\label{eq:gni}
+	\end{equation}
+where $i\infour$, and $n\inN$. %hk done
+The symbols $\betasub{n}{ij}$, where $i,~j\insix$, and $n\inN$, which appear in \eqref{eq:gni}, are defined in \S\ref{sec:betanij}.%hk done
+The constants $\msub{n}{i}$, where $i\infour$, and $n\inN$, which appear in \eqref{eq:gni}, are defined in \S\ref{sec:mni}.% hk done
 
-\subsubsection{Definitions of $\musub{n}{i}$, where $i\in (1,2)$ and $n\in (1,\ldots,N)$}.
+
+
+\subsubsection{Definitions of $\musub{n}{i}$, where $i\in (1,2)$, and $n\in (1,\ldots,N)$}%hk done
 \label{sec:muni}
 
-	\begin{equation}
+The constants $\musub{n}{i}$, where $i\in (1,2)$, and $n\in (1,\ldots,N)$, are defined by the equation
+	\begin{multline}
 	\begin{bmatrix}
-		\mu_1 \\ \mu_2
-	\end{bmatrix} :=
-	\frac{1}{C_{33}}
+		\musub{n}{1} \\ \musub{n}{2}
+	\end{bmatrix} =
+	\frac{1}{\Csub{n}{33}}
 	\Inv \pr{\begin{bmatrix}
-		-2\beta_{14}-6\beta_{24}+\beta_{56} & 4\beta_{44}-\beta_{55} \\
-		-\beta_{11}-2\beta_{12}+3\beta_{22}-\beta_{66} & 2\beta_{14}-2\beta_{24}+\beta_{56}
-	\end{bmatrix}}
+		\pr{-2\betasub{n}{14}-6\betasub{n}{24}+\betasub{n}{56}} & \pr{4\betasub{n}{44}-\betasub{n}{55}} \\
+		\pr{-\betasub{n}{11}-2\betasub{n}{12}+3\betasub{n}{22}-\betasub{n}{66}} & \pr{2\betasub{n}{14}-2\betasub{n}{24}+\betasub{n}{56}}
+	\end{bmatrix}}\\ 
 	\begin{bmatrix}
-			2C_{34} \\ C_{13}-C_{23}
+			2\Csub{n}{34} \\ \Csub{n}{13}-\Csub{n}{23}
 	\end{bmatrix}.
-	\end{equation}
+\label{eq:muni}	
+\end{multline} %hk done
+The constants $\betasub{n}{ij}$, and $\Csub{n}{ij}$, where $i,~j\insix$, and $n\inN$, which appear in \eqref{eq:muni}, are, respectively, defined in \S\ref{sec:betanij}, and \S\ref{sec:Cnij}. %hk done
 
-
-\subsection{Definitions of $\Qsub{n}{i}$, and $W_{n\cdot i}$, where $i\in (1,\ldots,5)$ and $n\in (1,\ldots,N)$}
+\subsection{Definitions of $\Qsub{n}{i}$, and $W_{n\cdot i}$, where $i\in (1,\ldots,5)$, and $n\in (1,\ldots,N)$} %hk done
 \label{sec:Qni}
 
-\subsubsection{Definitions of $\Qsub{n}{i}$, where $i\in (1,\ldots,5)$ and $n\in (1,\ldots,N)$}
+\subsubsection{Definitions of $\Qsub{n}{i}$, where $i\in (1,\ldots,5)$, and $n\in (1,\ldots,N)$} %hk done
+\todo{hk to wf: we can cancel mi from numerator and denominator.}
 
-For $n\in(1,\ldots,N)$
-\begin{subequations}
-\begin{align}
-  \Qsub{n}{i}& := \frac{1}{m_i} \pr{\beta_{12}m_i + \beta_{22}m_i(m_i+1) - \beta_{24} g_i \p\pr{m_i,2}}, \\
-\intertext{where $i\in (1,2,3,4)$, and}
-\Qsub{n}{5} & = \mu_1(\beta_{12} + 3\beta_{22})-2\mu_2\beta_{24} + \frac{C_{23}}{C_{33}}.
-\end{align}
-\end{subequations}
+For $i\infive$, and $n\in(1,\ldots,N)$
+\begin{equation}
+  \Qsub{n}{i} := 
+ \left\{ 
+	 \begin{array}{ll}
+   \pr{\betasub{n}{12}\msub{n}{i} + \betasub{n}{22}\msub{n}{i}\Subs{\plus{m}}{n}{i} - \betasub{n}{24} g_i \p\pr{\msub{n}{i},2}}/\msub{n}{i}, & i\infour, \\ \\
+\musub{n}{1}(\betasub{n}{12} + 3\betasub{n}{22})-2\musub{n}{2}\betasub{n}{24} + \Csub{n}{23}/\Csub{n}{33}, & i=5.
+	 \end{array} 
+\right.
+\label{eq:Qni}
+\end{equation}%hk done
+The constants $\Csub{n}{ij}$, and $\betasub{n}{ij}$, where $i,~j\insix$, and $n\inN$,  $\msub{n}{i}$, where $i\infour$, and $n\inN$, and $\musub{n}{i}$, where $i\intwo$, and $n\inN$, all of which appear in \eqref{eq:Qni}, are defined in \S\ref{sec:Cnij}, \S\ref{sec:betanij}, \S\ref{sec:mni}, and \S\ref{sec:muni}, respectively. % hk done
 
 
-\subsubsection{Definitions of $W_{n\cdot i}$, where $i\in (1,\ldots,5)$ and $n\in (1,\ldots,N)$}
+
+
+\subsubsection{Definitions of $W_{n\cdot i}$, where $i\in (1,\ldots,5)$, and $n\in (1,\ldots,N)$} %hk done
 \label{sec:Wni}
 
 
 
-\begin{subequations}
-	\begin{align}
-\Wsub{n}{i} & = \frac{1}{m_i}\pr{\beta_{55} g_i - \beta_{56}},
-\intertext{where $i\in (1,2,3,4)$, and}
-	\Wsub{n}{5} & = \frac{1}{2}(\beta_{55}\mu_2 - \beta_{56}\mu_1),
-	\end{align}
-\end{subequations}
-where
+For $i\infive$, and $n\in(1,\ldots,N)$
+\begin{equation}
+  \Wsub{n}{i} := 
+ \left\{ 
+	\begin{array}{ll}
+		\pr{\betasub{n}{55} \gsub{n}{i} - \betasub{n}{56}}/\msub{n}{i}, & i\infour, \\ \\
+		(\betasub{n}{55}\musub{n}{2} - \betasub{n}{56}\musub{n}{1})/2, & i=5.
+	 \end{array} 
+\right.
+\label{eq:Wni}
+\end{equation} % hk done
+The constants $\betasub{n}{ij}$, where $i,~j\insix$, and $n\inN$,  $\msub{n}{i}$, and $\gsub{n}{i}$, where $i\infour$, and $n\inN$, and $\musub{n}{i}$, where $i\intwo$, and $n\inN$, all of which appear in \eqref{eq:Wni}, are defined in \S\ref{sec:betanij}, \S\ref{sec:mni}, \S\ref{sec:gni}, and \S\ref{sec:muni}, respectively. % hk done
 
-
-
+\todo[inline]{HK stopped here}
 \section{Expressions of~$P_i$}
 \label{Appen:Pi}
 The expressions of~$P_i$ in Eqn.~\eqref{eq:single_mat_Ks} are given by
@@ -1738,17 +1760,10 @@ where~${}^{n}\!G_{ij}$ are constants given by
 \end{subequations}
 
 \newpage
-%% If you have bibdatabase file and want bibtex to generate the
-%% bibitems, please use
-%%-
-%%  \bibliographystyle{elsarticle-harv}
-%%  \bibliography{<your bibdatabase>}
+
 \bibliographystyle{elsarticle-harv}
 \bibliography{../LyxFiles/RefsBending}
-%% else use the following coding to input the bibitems directly in the
-%% TeX file.
 
-This is
 \end{document}
 
 \endinput
