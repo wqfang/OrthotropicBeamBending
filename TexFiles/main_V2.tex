@@ -1524,14 +1524,14 @@ To obtain Eqn.~\eqref{eq:bnanm1}, let
 		{}^{n}\!{Q_{1}} & {}^{n}\!{Q_{2}} & {}^{n}\!{Q_{3}} & {}^{n}\!{Q_{4}} \\
 		{}^{n}\!{W_{1}} & {}^{n}\!{W_{2}} & {}^{n}\!{W_{3}} & {}^{n}\!{W_{4}}
 	\end{bmatrix}, \\
-	~^{n}\tilde{\usf{B}}
-	& :=
-	\begin{bmatrix}
-		1 & 1 & 1 & 1 \\
-		{}^{n-1}\!{g_{1}} & {}^{n-1}\!{g_{2}} & {}^{n-1}\!{g_{3}} & {}^{n-1}\!{g_{4}} \\
-		{}^{n-1}\!{Q_{1}} & {}^{n-1}\!{Q_{2}} & {}^{n-1}\!{Q_{3}} & {}^{n-1}\!{Q_{4}} \\
-		{}^{n-1}\!{W_{1}} & {}^{n-1}\!{W_{2}} & {}^{n-1}\!{W_{3}} & {}^{n-1}\!{W_{4}}
-	\end{bmatrix}, \\
+	% ~^{n}\tilde{\usf{B}}
+	% & :=
+	% \begin{bmatrix}
+	% 	1 & 1 & 1 & 1 \\
+	% 	{}^{n-1}\!{g_{1}} & {}^{n-1}\!{g_{2}} & {}^{n-1}\!{g_{3}} & {}^{n-1}\!{g_{4}} \\
+	% 	{}^{n-1}\!{Q_{1}} & {}^{n-1}\!{Q_{2}} & {}^{n-1}\!{Q_{3}} & {}^{n-1}\!{Q_{4}} \\
+	% 	{}^{n-1}\!{W_{1}} & {}^{n-1}\!{W_{2}} & {}^{n-1}\!{W_{3}} & {}^{n-1}\!{W_{4}}
+	% \end{bmatrix}, \\
   \label{eq:deff}
 	~^{n}\usf{f}(r)
 	& :=
@@ -1555,7 +1555,7 @@ To obtain Eqn.~\eqref{eq:bnanm1}, let
 It is noted that~$~^{n}\tilde{\usf{A}}$,~$~^{n}\tilde{\usf{B}}$, and~$~^{n}\tilde{\usf{m}}$ are constant matrices. The coefficient matrices~${}^{n}{\usf{A}}$ and~$~^{n}{\usf{B}}$ in Eqn.~\eqref{eq:eqs of Kin_two_mat_no_slip_np1} can be written as
 \begin{equation}
 	~^{n}{\usf{A}} = ~^{n}\tilde{\usf{A}}  ~^{n}\usf{f}({}^{n-1}\!r), \quad
-	~^{n}{\usf{B}} = ~^{n}\tilde{\usf{B}}  ~^{n-1}\usf{f}({}^{n-1}\!r).
+	~^{n}{\usf{B}} = ~^{n-1}\tilde{\usf{A}}  ~^{n-1}\usf{f}({}^{n-1}\!r).
 \end{equation}
 Approximating~$~^{{n-1}}{\usf{A}}$ and~$~^{{n-1}}{\usf{B}}$ to the first order of~$\Delta r$ around~${}^{n-1}\!{r}$, we have
 \begin{subequations}
@@ -1566,7 +1566,7 @@ Approximating~$~^{{n-1}}{\usf{A}}$ and~$~^{{n-1}}{\usf{B}}$ to the first order o
 where
 	\begin{align}
 	\delta ~^{n}\usf{A} & = \frac{1}{~^{n-1}\!{r}} ~^{n}\usf{A} ~^{n}\tilde{\usf{m}} = \frac{1}{~^{n-1}\!{r}} ~^{n}\tilde{\usf{A}} ~^{n}\usf{f}({}^{n-1}\!r) ~^{n}\tilde{\usf{m}}, \\
-	\delta ~^{n}\usf{B} & = \frac{1}{~^{n-1}\!{r}} ~^{n}\usf{B} ~^{n-1}\tilde{\usf{m}} = \frac{1}{~^{n-1}\!{r}} ~^{n}\tilde{\usf{B}} ~^{n-1}\usf{f}({}^{n-1}\!r) ~^{n-1}\tilde{\usf{m}}.
+	\delta ~^{n}\usf{B} & = \frac{1}{~^{n-1}\!{r}} ~^{n}\usf{B} ~^{n-1}\tilde{\usf{m}} = \frac{1}{~^{n-1}\!{r}} ~^{n-1}\tilde{\usf{A}} ~^{n-1}\usf{f}({}^{n-1}\!r) ~^{n-1}\tilde{\usf{m}}.
 	\end{align}
 \label{eq:nMinus1AB}
 \end{subequations}
@@ -1633,22 +1633,22 @@ if $n$ is even,
 
 Taking the zero order of approximation of Eqn.~\eqref{eq:AppendKndr1} around~${}^{n}\!{r}$ and noting that
 \begin{equation}
-	~^{n}{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\usf{B}} = ~^{n}\tilde{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\tilde{\usf{B}}},
+	~^{n}{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\usf{B}} = ~^{n-1}\tilde{\usf{A}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n-1}\tilde{\usf{A}}},
 \end{equation}
 we have
 \begin{subequations}
 if $n$ is odd,
 \begin{equation}
     \begin{aligned}
-        2 r_n \frac{d\, \Kodd(r_n)}{dr} = & \left( \Inv\pr{{}^{n}\usf{f}({}^{n}\!r)} \Inv\pr{{}^{n}\tilde{\usf{A}}} ~^{n}\tilde{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\tilde{\usf{B}}} \tilde{\usf{A}}_n ~^{n}\usf{f}({}^{n}\!r) - ~^{n}\tilde{\usf{m}} \right)\Kodd(r_n) \\
-    & + \p\pr{{}^{n}\!{r},2} \Inv\pr{{}^{n}\usf{f}({}^{n}\!r)} \Inv\pr{{}^{n}\tilde{\usf{A}}} \left( -2\usf{I}_{4\times 4} + ~^{n}\tilde{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\tilde{\usf{B}}} \right) ~^{n}\tilde{\usf{D}} + O(\Delta r);
+        2 r_n \frac{d\, \Kodd(r_n)}{dr} = & \left( \Inv\pr{{}^{n}\usf{f}({}^{n}\!r)} \Inv\pr{{}^{n}\tilde{\usf{A}}} ~^{n-1}\tilde{\usf{A}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n-1}\tilde{\usf{A}}} \tilde{\usf{A}}_n ~^{n}\usf{f}({}^{n}\!r) - ~^{n}\tilde{\usf{m}} \right)\Kodd(r_n) \\
+    & + \p\pr{{}^{n}\!{r},2} \Inv\pr{{}^{n}\usf{f}({}^{n}\!r)} \Inv\pr{{}^{n}\tilde{\usf{A}}} \left( -2\usf{I}_{4\times 4} + ~^{n-1}\tilde{\usf{A}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n-1}\tilde{\usf{A}}} \right) ~^{n}\tilde{\usf{D}} + O(\Delta r);
     \end{aligned}
 \end{equation}
 if $n$ is even,
 \begin{equation}
     \begin{aligned}
-    2 r_n \frac{d\, \Keven(r_n)}{dr} = & \left( \Inv\pr{{}^{n}\usf{f}({}^{n}\!r)} \Inv\pr{{}^{n}\tilde{\usf{A}}} ~^{n}\tilde{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\tilde{\usf{B}}} \tilde{\usf{A}}_n ~^{n}\usf{f}({}^{n}\!r) - ~^{n}\tilde{\usf{m}} \right)\Keven(r_n) \\
-    & + \p\pr{{}^{n}\!{r},2} \Inv\pr{{}^{n}\usf{f}({}^{n}\!r)} \Inv\pr{{}^{n}\tilde{\usf{A}}} \left( -2\usf{I}_{4\times 4} + ~^{n}\tilde{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\tilde{\usf{B}}} \right) ~^{n}\tilde{\usf{D}} + O(\Delta r),
+    2 r_n \frac{d\, \Keven(r_n)}{dr} = & \left( \Inv\pr{{}^{n}\usf{f}({}^{n}\!r)} \Inv\pr{{}^{n}\tilde{\usf{A}}} ~^{n-1}\tilde{\usf{A}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n-1}\tilde{\usf{A}}} \tilde{\usf{A}}_n ~^{n}\usf{f}({}^{n}\!r) - ~^{n}\tilde{\usf{m}} \right)\Keven(r_n) \\
+    & + \p\pr{{}^{n}\!{r},2} \Inv\pr{{}^{n}\usf{f}({}^{n}\!r)} \Inv\pr{{}^{n}\tilde{\usf{A}}} \left( -2\usf{I}_{4\times 4} + ~^{n-1}\tilde{\usf{A}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n-1}\tilde{\usf{A}}} \right) ~^{n}\tilde{\usf{D}} + O(\Delta r),
     \end{aligned}
 \end{equation}
 \label{eq:AppendKndr2}
@@ -1661,11 +1661,21 @@ where~$~^{n}\tilde{\usf{D}}$ is a constant vector
 		{}^{n}\!{\mu_{1}}-{}^{n-1}\!{\mu_{1}} \\ {}^{n}\!{\mu_{2}}-{}^{n-1}\!{\mu_{2}}  \\ {}^{n}\!{Q_{5}}-{}^{n-1}\!{Q_{5}} \\ {}^{n}\!{W_{5}}-{}^{n-1}\!{W_{5}}
 	\end{bmatrix} .
 \end{equation}
+
+% \begin{subequations}
+% \begin{align}
+% ~^{\RN{1}}\tilde{\usf{M}} & = \Inv\pr{{}^{\RN{1}}\tilde{\usf{A}}} ~^{\RN{2}}\tilde{\usf{A}} ~^{\RN{2}}\tilde{\usf{m}} \Inv\pr{{}^{\RN{2}}\tilde{\usf{A}}} ~^{\RN{1}}\tilde{\usf{A}} , \\
+% ~^{\RN{2}}\tilde{\usf{M}} & = \Inv\pr{{}^{\RN{2}}\tilde{\usf{A}}} ~^{\RN{1}}\tilde{\usf{A}} ~^{\RN{1}}\tilde{\usf{m}} \Inv\pr{{}^{\RN{1}}\tilde{\usf{A}}} ~^{\RN{2}}\tilde{\usf{A}} , \\
+% ~^{\RN{1}}\tilde{\usf{F}} & =\Inv\pr{{}^{\RN{1}}\tilde{\usf{A}}} \left( -2\usf{I}_{4\times 4} + ~^{\RN{2}}\tilde{\usf{A}} ~^{\RN{2}}\tilde{\usf{m}} \Inv\pr{{}^{\RN{2}}\tilde{\usf{A}}} \right) ~^{\RN{1}}\tilde{\usf{D}},\\
+% ~^{\RN{2}}\tilde{\usf{F}} & =\Inv\pr{{}^{\RN{2}}\tilde{\usf{A}}} \left( -2\usf{I}_{4\times 4} + ~^{\RN{1}}\tilde{\usf{A}} ~^{\RN{1}}\tilde{\usf{m}} \Inv\pr{{}^{\RN{1}}\tilde{\usf{A}}} \right) ~^{\RN{2}}\tilde{\usf{D}},
+% \end{align}
+% \end{subequations}
+
 Let
 \begin{subequations}
 	\begin{align}
-	~^{n}\tilde{\usf{M}} & := \Inv\pr{{}^{n}\tilde{\usf{A}}} ~^{n}\tilde{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\tilde{\usf{B}}} ~^{n}\tilde{\usf{A}}, \\
-	~^{n}\tilde{\usf{F}} & := \Inv\pr{{}^{n}\tilde{\usf{A}}} \left( -2\usf{I}_{4\times 4} + ~^{n}\tilde{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\tilde{\usf{B}}} \right) ~^{n}\tilde{\usf{D}},
+	~^{n}\tilde{\usf{M}} & := \Inv\pr{{}^{n}\tilde{\usf{A}}} ~^{n-1}\tilde{\usf{A}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n-1}\tilde{\usf{A}}} ~^{n}\tilde{\usf{A}}, \\
+	~^{n}\tilde{\usf{F}} & := \Inv\pr{{}^{n}\tilde{\usf{A}}} \left( -2\usf{I}_{4\times 4} + ~^{n-1}\tilde{\usf{A}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n-1}\tilde{\usf{A}}} \right) ~^{n}\tilde{\usf{D}},
 	\end{align}
 \end{subequations}
 We rewrite Eqn.~\eqref{eq:AppendKndr2} as,
@@ -1695,16 +1705,35 @@ if $n$ is even,
 \end{subequations}
 for $n \inN$.
 
-In the asymptotic case (as $N \rightarrow \infty$, $\Delta r \rightarrow 0$), Eqns.~\eqref{eq:AppendKndrn} are true for any rational number $r \in \left\{ r \in \mathbb{Q} | r_1 \leq r \leq r_N \right\}$. 
-The domain can be extended to $r \in \left\{ r \in \mathbb{R} | r_1 \leq r \leq r_N \right\}$ through construction from Cauchy sequences.
-For example, for an irrational number $r_\text{ir} \in \left\{ r \in \mathbb{R}/\mathbb{Q} | r_1 \leq r \leq r_N \right\} $, we can construct a Cauchy sequences using rational numbers, that is 
+In the asymptotic case (as $N \rightarrow \infty$, $\Delta r \rightarrow 0$), Eqns.~\eqref{eq:AppendKndrn} are true for any rational number $r \in \left\{ r \in \mathbb{Q} \,|\, r_1 \leq r \leq r_N \right\}$. 
+The domain can be extended to $r \in \left\{ r \in \mathbb{R} \,|\, r_1 \leq r \leq r_N \right\}$ through construction from Cauchy sequences.
+For example, for an irrational number $r_\text{ir} \in \left\{ r \in \mathbb{R}/\mathbb{Q} \,|\, r_1 \leq r \leq r_N \right\} $, we can construct a Cauchy sequences using rational numbers, that is 
 \begin{equation}
-r_{m_1}, r_{m_2},\ldots,r_{m_n}
+r_{m_1}, r_{m_2},\ldots,r_{m_n},
+\end{equation}
+where $m_1, m_2, \ldots, m_n$ are odd integers.
+The Cauchy sequence converges to $r_\text{ir}$ as $n \rightarrow \infty$, that is,
+\begin{equation}
+\lim_{n \rightarrow \infty} r_{m_n} = r_\text{ir}.
+\end{equation}
+We can define $\Kodd(r_\text{ir})$ such that 
+\begin{equation}
+\Kodd(r_\text{ir}) = \lim_{n \rightarrow \infty} \Kodd(r_{m_n}).
+\end{equation}
+The same extension can be applied define $\Keven(r)$ for any real number $r \in \left\{ r \in \mathbb{R} \,|\, r_1 \leq r \leq r_N \right\}$
+Therefore, Eqns.~\eqref{eq:AppendKndrn} are true for any real number $r \in \left\{ r \in \mathbb{R} \,|\, r_1 \leq r \leq r_N \right\}$.
+
+We use $\RN{1}$ and $\RN{2}$ as subscripts to denote material constants of layers with odd and even layer numbers, respectively. Thus we can express the material constant matrices $~^{n}\tilde{\usf{M}}$, $~^{n}\tilde{\usf{m}}$, and $~^{n}\tilde{\usf{F}}$ as $~^{\RN{1}}\tilde{\usf{M}}$, $~^{\RN{1}}\tilde{\usf{m}}$, and $~^{\RN{1}}\tilde{\usf{F}}$ for odd layer numbers and $~^{\RN{2}}\tilde{\usf{M}}$, $~^{\RN{2}}\tilde{\usf{m}}$, and $~^{\RN{2}}\tilde{\usf{F}}$ for even layer numbers. It is noted that if $n$ is an odd number, then $n-1$ is an even number. Similarly, if $n$ is an even number, then $n-1$ is an odd number. Therefore, the material constant matrices for odd layer numbers may depend on the material constants for even layer numbers. For example,
+\begin{equation}
+    ~^{\RN{1}}\tilde{\usf{D}}
+    :=
+    \begin{bmatrix}
+        {}^{\RN{1}}\!{\mu_{1}}-{}^{\RN{2}}\!{\mu_{1}} \\ {}^{\RN{1}}\!{\mu_{2}}-{}^{\RN{2}}\!{\mu_{2}}  \\ {}^{\RN{1}}\!{Q_{5}}-{}^{\RN{2}}\!{Q_{5}} \\ {}^{\RN{1}}\!{W_{5}}-{}^{\RN{2}}\!{W_{5}}.
+    \end{bmatrix} .
 \end{equation}
 
 
-
-Therefore, we obain linear ordinary differential equation (ODE) systems of $\Kodd(r)$ and $\Keven(r)$ as,
+Therefore, we obtain linear ordinary differential equation (ODE) systems of $\Kodd(r)$ and $\Keven(r)$ as,
 \begin{subequations}
 \begin{equation}
     2 r \frac{d \pr{~^{\RN{1}}\usf{f}(r)\Kodd(r) }}{dr} = \left( ~^{\RN{1}}\tilde{\usf{M}} + ~^{\RN{1}}\tilde{\usf{m}} \right) \pr{ ~^{\RN{1}}\usf{f}(r)\Kodd(r)}  + \p\pr{r,2} ~^{\RN{1}}\tilde{\usf{F}},
@@ -1715,6 +1744,7 @@ and
 \end{equation}
 \label{eq:AppendKn}
 \end{subequations}
+
 with boundary conditions given by~\eqref{eq:boundary}, where $\RN{1}$ and $\RN{2}$ denote material constants of layers with odd and even layer numbers.
 
 
