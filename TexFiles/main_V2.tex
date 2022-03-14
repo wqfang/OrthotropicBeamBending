@@ -1,12 +1,37 @@
 
 \documentclass[preprint,12pt,times]{elsarticle}
 \usepackage{geometry}
- \geometry{
- b4paper,
- total={160mm,257mm},
- right=80mm,
- top=20mm,
- }
+\usepackage{tabularx}
+%  \geometry{
+%  b4paper,
+%  total={160mm,257mm},
+%  right=80mm,
+%  top=20mm,
+%  }
+
+
+% \usepackage{accents}
+ \newlength{\dhatheight}
+  \setlength{\dhatheight}{12pt}
+
+ \newcommand{\doublehat}[1]{%
+	 \settoheight{\dhatheight}{\ensuremath{\hat{#1}}}%
+	 \addtolength{\dhatheight}{-0.35ex}%
+	 \hat{\vphantom{\rule{1pt}{\dhatheight}}%
+	 \smash{\hat{#1}}}}
+
+\newcommand{\plus}[1]{\hat{#1}}
+\newcommand{\plusplus}[1]{\plus{\plus{#1}}}
+\newcommand{\minus}[1]{\check{#1}}
+\newcommand{\minusminus}[1]{\minus{\minus{#1}}}
+
+% \newcommand{\doublehat}[1]{\hat{\hat{#1}}}
+
+	%  \newcommand{\doublecheck}[1]{%
+	%  \settoheight{\dhatheight}{\ensuremath{\check{#1}}}%
+	%  \addtolength{\dhatheight}{-0.35ex}%
+	%  \hat{\vphantom{\rule{1pt}{\dhatheight}}%
+	%  \smash{\check{#1}}}}
 
  \usepackage{setspace}
 
@@ -158,7 +183,9 @@ linkcolor = blue
 \newcommand{\Dunst}{\mathcal{D}^{\otimes}}
 \newcommand{\conf}{\boldsymbol{\kappa}}
 \newcommand{\confp}{\tilde{\boldsymbol{\kappa}}}
-\newcommand{\p}{\,\mathsf{p}}
+
+\newcommand{\p}{\,\textsf{\small pow}}
+
 \newcommand{\Inv}{\,\mathrm{Inv}}
 %\newcommand{\mni}{m_{n\cdot i}}
 \newcommand{\mni}{\,^{n}\!m_{i}}
@@ -196,16 +223,46 @@ linkcolor = blue
           {xxxx}{\,\beta_{ {#1}\cdot { #2}}\,}%
       }[\,C_{ {#1}\cdot {\scriptscriptstyle #2}}\,]}
 
+
+
+\newcommand{\alphasub}[2]{
+\IfEqCase{#2}{
+		{i}{\,\alpha_{ {#1}\cdot { \scriptstyle #2}}\,}%
+	}[\,\alpha_{ {#1}\cdot {\scriptscriptstyle #2}}\,]}
+
+\newcommand{\gammasub}[2]{
+\IfEqCase{#2}{
+		{i}{\,\gamma_{ {#1}\cdot { \scriptstyle #2}}\,}%
+	}[\,\gamma_{ {#1}\cdot {\scriptscriptstyle #2}}\,]}
+	
+
 \newcommand{\Ssub}[2]{\,S_{ {#1}\cdot {\scriptscriptstyle #2}}\,}
 
+\newcommand{\Kodd}{\,\busf{K}_\mathrm{odd} \,}
+\newcommand{\Keven}{\,\busf{K}_\mathrm{even} \,}
 
 
+\newcommand{\intwo}{\in(1,2)}
+\newcommand{\infour}{\in(1,\ldots,4)}
+\newcommand{\infive}{\in(1,\ldots,5)}
+\newcommand{\insix}{\in(1,\ldots,6)}
+\newcommand{\inN}{\in(1,\ldots,N)}
+
+
+
+\newcommand{\Subs}[3]{
+\IfEqCase{#3}{
+		{i}{\,#1_{ {#2}\cdot { \scriptstyle #3}}\,}%
+	}[\,#1_{ {#2}\cdot {\scriptscriptstyle #3}}\,]}
+		
 
 \newcommand{\hlc}[2][yellow]{ {\sethlcolor{#1} \hl{#2}} }
 \usepackage{wrapfig}
 
 
-
+\newcommand{\RN}[1]{%
+  \textup{\uppercase\expandafter{\romannumeral#1}}%
+}
 
 % \usepackage{amsmath}
 % \usepackage[small]{eulervm}
@@ -280,6 +337,7 @@ linkcolor = blue
 \usepackage{bm}
 
 \journal{International Journal of Solids and Structures}
+
 \begin{document}
 \begin{frontmatter}
 
@@ -345,9 +403,9 @@ Multilayered composite structure \sep Cylindrical orthotropy \sep Effective bend
 
 
 
-\todo{\href{https://hackmd.io/-Q9bMN5xRDqp2RmYz8p-Ag}{HK to WF}}
+\todo[inline]{\href{https://hackmd.io/-Q9bMN5xRDqp2RmYz8p-Ag}{HK to WF}}
 
-\todo{\tiny
+\todo[inline]{\tiny
 	{\setstretch{2.5} What is roughly the helical angles in  the helicophter structures, monoraphis chuni, osteons.}}
 
 % \todo{HK to WF: need to say somewhere that we only consider the case with no solid core. Need to say whether Lekhnitskii considerd solid core, and/or JOlicoeur considered solid core.  }
@@ -370,7 +428,7 @@ The platelets and fibers are glued to the mineral phase through a compliant orga
 These natural composites are distinguished from their synthetic counterparts by the facts that their effective properties at the macro scale, such as strength and fracture toughness, are quite high despite the corresponding properties of their constituent phases being poor.
 % \ul{phases being very poor.}\todo[fancyline]{English. "being very poor"}
 %
-\setulcolor{green}\textcolor{red}{For example, the tensile strength of the spicules of the sponge \textit{Euplectella aspergillum} is much higher than the silicate glass fiber~\cite{walter2007mechanisms}.}\todo[fancyline]{hk to WF: I think we should not refer to the paper by Walter for the tensile strength of EA spicules. I think SK will be able to advise you regarding this aspect.}
+% \setulcolor{green}\textcolor{red}{For example, the tensile strength of the spicules of the sponge \textit{Euplectella aspergillum} is much higher than the silicate glass fiber~\cite{walter2007mechanisms}.}\todo[inline]{hk to WF: I think we should not refer to the paper by Walter for the tensile strength of EA spicules. I think SK will be able to advise you regarding this aspect.}
 %
 
 
@@ -480,7 +538,7 @@ The paper is organized as follows:~$\S$\ref{sec:bending_model} describes the mod
 \end{enumerate}
 
 
-\texttt{We consider a hollow composite cylinder consisting of~$N$ co-axial cylindrical layers and each layer is cylindrical orthotropic with different principal material property orientations (see Fig.~\ref{fig:Cylinder3D}). The inner and outer radius of the cylinder is~${}^{0}\!{r}$ and~${}^{N}\!{r}$, respectively.\todo{HK to WF: need to say somewhere that we only consider the case with no solid core. Need to say whether Lekhnitskii considerd solid core, and/or JOlicoeur considered solid core.}}
+\texttt{We consider a hollow composite cylinder consisting of~$N$ co-axial cylindrical layers and each layer is cylindrical orthotropic with different principal material property orientations (see Fig.~\ref{fig:Cylinder3D}). The inner and outer radius of the cylinder is~${}^{0}\!{r}$ and~${}^{N}\!{r}$, respectively.\todo[inline]{HK to WF: need to say somewhere that we only consider the case with no solid core. Need to say whether Lekhnitskii considerd solid core, and/or JOlicoeur considered solid core.}}
 
 \texttt{We consider a hollow composite cylinder consisting of~$N$ co-axial cylindrical layers without a solid core and each layer is cylindrical orthotropic with different principal material property orientations (see Fig.~\ref{fig:Cylinder3D}). The inner and outer radius of the cylinder is~${}^{0}\!{r}$ and~${}^{N}\!{r}$, respectively, where $0 < {}^{0}\!{r}<{}^{N}\!{r}$.}
 
@@ -502,21 +560,11 @@ We also introduce a set of orthonormal vectors~$(\physe_{r}(\theta),\physe_{\the
 \end{subequations}
 
 For an individual layer of material, we construct a local cylindrical coordinate system according to the principal material property orientation of the layer. We refer to the local cylindrical coordinate system as the material coordinate system. It is a rotation of the global cylindrical coordinate system through an angle~$\varphi$, in clockwise direction with respect to the axis~$\physe_{r}(\theta)$ (see Fig.~\ref{fig:schematic}). We denote the basis of the material coordinate system as~$\pr{\physf_{r}(\theta;\varphi),\physf_{\theta}(\theta;\varphi),\physf_{z}(\theta;\varphi)}$,
-% where
-% \begin{subequations}
-% \begin{align}
-% \physf_{r} (\theta;\varphi) & =  \physe_r (\theta),\\
-% \physf_{\theta} (\theta;\varphi)& = \cos(\varphi) \physe_{\theta} (\theta) - \sin(\varphi) \physe_z (\theta), \\
-% \physf_{z}(\theta;\varphi) & = \sin(\varphi) \physe_{\theta} (\theta) + \cos(\varphi) \physe_z (\theta).
-% \end{align}
-% \end{subequations}
+
 and the transformation matrix from~$(\physe_{r}(\theta),\physe_{\theta}(\theta),\physe_{z}(\theta))$ to~$\pr{\physf_{r}(\theta;\varphi),\physf_{\theta}(\theta;\varphi),\physf_{z}(\theta;\varphi)}$ as $\usf{Q}(\varphi)$, which can be expressed as
 
 \begin{equation}
 \usf{Q}(\varphi)
-% & = \begin{bmatrix}
-% \physf_{r}(\theta;\varphi)\cdot \physe_{r}(\theta) & \physf_{r}(\theta;\varphi)\cdot \physe_{\theta}(\theta) & \physf_{r}(\theta;\varphi)\cdot \physe_{z}(\theta) \\\physf_{\theta}(\theta;\varphi)\cdot \physe_{r}(\theta) & \physf_{\theta}(\theta;\varphi)\cdot \physe_{\theta}(\theta) & \physf_{\theta}(\theta;\varphi)\cdot \physe_{z}(\theta) \\\physf_{z}(\theta;\varphi)\cdot \physe_{r}(\theta) & \physf_{z}(\theta;\varphi)\cdot \physe_{\theta}(\theta) & \physf_{z}(\theta;\varphi)\cdot \physe_{z}(\theta)
-% \end{bmatrix}\\&
 = \begin{bmatrix}
 1 & 0 & 0 \\
  0 & \cos(\varphi) & -\sin(\varphi) \\
@@ -555,7 +603,7 @@ The solution of a single cylinder with cylindrical orthotropy subjected to pure 
 \begin{figure}[t]
 	\centering
 	\graphicspath{{../LyxFiles/figure/}}
-	\includegraphics[width=0.3\textwidth]{schematic_V6.pdf}
+	\includegraphics[width=0.3\textwidth]{schematic_V7.pdf}
 	\caption{A single-layer cylindrical sturcture with cylindrical orthotropy.
   }
 	\label{fig:schematic}
@@ -658,11 +706,10 @@ As discussed in~$\S$~\ref{sec:bending_model}, The material coordinates are relat
 \end{equation}
 where~$\epsilon_{ij}^{\pr{\physe}}$,~$S_{ijkl}^{\pr{\physe}}$, and~$\sigma_{kl}^{\pr{\physe}}$ are the components of~$\u{\sigma}$,~$\mathbb{S}$, and~$\u{\epsilon}$, respectively, with respect to the basis~$(\physe_{r}(\theta),\physe_{\theta}(\theta),\physe_{z}(\theta))$. The relations between two sets of components w.r.t different bases are given by
 \begin{align}
-\epsilon_{ij}^{\pr{\physe}} & = \sum_{k,l \in \mathcal{I}} Q^{\sf {T}}_{ik} (\varphi) Q^{\sf {T}}_{jl} (\varphi) \epsilon_{kl}^{\pr{\physf}} , \\
-\sigma_{ij}^{\pr{\physe}} & = \sum_{k,l \in \mathcal{I}} Q^{\sf {T}}_{ik}(\varphi) Q^{\sf {T}}_{jl}(\varphi) \sigma_{kl}^{\pr{\physf}} , \\
-S_{ijkl}^{\pr{\physe}} & = \sum_{p,q,r,s \in \mathcal{I}} Q^{\sf {T}}_{ip}(\varphi) Q^{\sf {T}}_{jq}(\varphi) Q^{\sf {T}}_{kr}(\varphi) Q^{\sf {T}}_{ls}(\varphi) S_{pqrs}^{\pr{\physf}}, \label{eq:SeFromSf}
+\epsilon_{ij}^{\pr{\physe}} & = \sum_{k,l \in \mathcal{I}} Q_{ki} (\varphi) Q_{lj} (\varphi) \epsilon_{kl}^{\pr{\physf}} , \\
+\sigma_{ij}^{\pr{\physe}} & = \sum_{k,l \in \mathcal{I}} Q_{ki}(\varphi) Q_{lj}(\varphi) \sigma_{kl}^{\pr{\physf}} , \\
+S_{ijkl}^{\pr{\physe}} & = \sum_{p,q,r,s \in \mathcal{I}} Q_{pi}(\varphi) Q_{qj}(\varphi) Q_{rk}(\varphi) Q_{sl}(\varphi) S_{pqrs}^{\pr{\physf}}. \label{eq:SeFromSf}
 \end{align}
-where $\pr{\cdot}^{\sf {T}}$ is the transpose operation.
 
 Therefore, $S_{ijkl}^{\pr{\physe}}$ can be obtained from $S_{ijkl}^{\pr{\physf}}$ and the helical angle $\varphi$ through relation~\eqref{eq:SeFromSf}.
 It should be noted that due to symmetry, the 81 components in neither $S_{ijkl}^{\pr{\physf}}$ nor $S_{ijkl}^{\pr{\physe}}$ are independent.
@@ -722,6 +769,7 @@ With the addtional variable $\varphi$, there should be ten independent constants
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Bending stiffness formula by Jolicoeur and Cardou}
+\todo[inline]{need to add reference}
 %The solutions of stresses are
 %\begin{equation}
 %\begin{aligned}
@@ -733,51 +781,59 @@ With the addtional variable $\varphi$, there should be ten independent constants
 %\sigma_{zz} & = \frac{1}{C_{33}} \left[ \kappa_x r \sin \theta - \kappa_y r \cos\theta + \epsilon - C_{13} \sigma_r - C_{23} \sigma_{\theta} - C_{34} \tau_{\theta z} \right]
 %\end{aligned}
 %\end{equation}
-\label{sec:bending stiffness}
+\label{sec:BendingStiffness}
 The bending stiffness of the~$N$-layer cylindrical composite is obtained by Jolicoeur and Cardou as
 \begin{subequations}
 \begin{equation}
 	\begin{aligned}
-	EI = & \sum_{n=1}^{N} \left[ \sum_{i \in \mathcal{L}} {}^{n}\!{\alpha_{i}} {}^{n}\!{K_{i}}  \pr{\p\pr{{}^{n-1}\!{r},{}^{n}\!{m_{i}}+2} - \p\pr{{}^{n}\!{r},{}^{n}\!{m_{i}} + 2}} + {}^{n}\!\gamma\pr{\p\pr{{}^{n-1}\!{r},4} - \p\pr{{}^{n}\!{r},4}} \right],
+	EI = & \sum_{n=1}^{N} \left[ \sum_{i \in \mathcal{L}} {}^{n}\!{\alpha_{i}} {}^{n}\!{K_{i}}  \pr{\p\pr{{}^{n-1}\!{r},{}^{n}\!{m_{i}}+2} - \p\pr{{}^{n}\!{r},{}^{n}\!{m_{i}} + 2}} + {}^{n}\!\gamma\pr{\p\pr{{}^{n-1}\!{r},4} - \p\pr{{}^{n}\!{r},4}} \right].
 	\end{aligned}
 	\label{eq:EI}
 \end{equation}
-with
+The symbols $\alphasub{n}{i}$, $\msub{n}{i}$, and $\gammasub{n}{i}$, where $n\inN$, and $i\infour$, denote constants that depend on material properties and the helix angles. They are, respectively, defined in \S\ref{sec:alphani}, \S\ref{sec:mni}, and \S\ref{sec:gni}.
 
 \end{subequations}
-where~$N$ denotes the total number of layers,~$\mathcal{L} := \pr{1,2,3,4}$,~${}^{n-1}\!{r}$ and~${}^{n}\!{r}$ the internal and external radii of the~$n^\text{th}$ layer,~${}^{n}\!{m_{i}}$,~${}^{n}\!{g_{i}}$,~${}^{n}\!{\mu_{1}}$, and~${}^{n}\!{\mu_{2}}$ are material constants related with elastic constants of the~$n^\text{th}$ layer (see~\ref{Appen:MatConst}). We use $\p\pr{x,y}$ to denote the power operation where $x$ is the base and $y$ is the exponent.
+~$r_{\minus{n}}$ and~$r_n$ the internal and external radii of the~$n^\text{th}$ layer, (see~\ref{Appen:MatConst}). We use $\p\pr{x,y}$ to denote the power operation where $x$ is the base and $y$ is the exponent.
 
 The coefficients~${}^{n}\!{K_{i}}$ are determined by the boundary conditions and continuity conditions of displacement and stress at the interface.
 
-\paragraph{Boundary condition.}
 
-The traction free boundaries at innermost radius~${}^{0}\!{r}$ and outermost radius~${}^{N}\!{r}$ require
-\begin{subequations}
-	\begin{align}
-	\sum_{i \in \mathcal{L}} {}^{1}\!{K_{i}} \p\pr{{}^{0}\!{r},{}^{1}\!{m_{i}} - 2} & = -{}^{1}\!{\mu_{1}}, \quad
-	\sum_{i \in \mathcal{L}} {}^{1}\!{K_{i}} {}^{1}\!{g_{i}} \p\pr{{}^{0}\!{r},{}^{1}\!{m_{i}} - 2} = -{}^{1}\!{\mu_{2}},\\
-	\sum_{i \in \mathcal{L}} {}^{N}\!{K_{i}} \p\pr{{}^{N}\!{r},{}^{N}\!{m_{i}} - 2} & = -{}^{N}\!{\mu_{1}}, \quad
-	\sum_{i \in \mathcal{L}} {}^{N}\!{K_{i}} {}^{N}\!{g_{i}} \p\pr{{}^{N}\!{r},{}^{N}\!{m_{i}} - 2} = -{}^{N}\!{\mu_{2}}.
-	\end{align}
-	\label{eq:boundary}
-\end{subequations}
 
-\paragraph{Interfacial condition: frictionless slip.}
+
+
+\subsection{Freely slipping interfaces}
 
 In the case of no friction interface,~$u_r$ and~$\sigma_{rr}$ are continuous,~$\tau_{r\theta}$ and~$\tau_{rz}$ are zero at the interface. Therefore~${}^{n}\!{K_{i}}$ satisfy following equations
-\begin{subequations}
-	\begin{align}
-	\sum_{i \in \mathcal{L}} {}^{n}\!{K_{i}} \p\pr{{}^{n}\!{r},{}^{n}\!{m_{i}} - 2} & = -{}^{n}\!{\mu_{1}}, \quad
-	\sum_{i \in \mathcal{L}} {}^{n}\!{K_{i}} {}^{n}\!{g_{i}} \p\pr{{}^{n}\!{r},{}^{n}\!{m_{i}} - 2} = -{}^{n}\!{\mu_{2}}, \\
-	\sum_{i \in \mathcal{L}} {}^{n}\!{K_{i}} \p\pr{{}^{n-1}\!{r},{}^{n}\!{m_{i}} - 2} & = -{}^{n}\!{\mu_{1}}, \quad
-	\sum_{i \in \mathcal{L}} {}^{n}\!{K_{i}} {}^{n}\!{g_{i}} \p\pr{{}^{n-1}\!{r},{}^{n}\!{m_{i}} - 2} = -{}^{n}\!{\mu_{2}},
-	\end{align}
-	\label{eq:nofriction_interface}
-\end{subequations}
+%\begin{subequations}
+%	\label{eq:nofriction_interface}
+%\end{subequations}
 for~$n = 1,2,\dots,N$.
 
+\begin{subequations}
+\noindent
+\begin{tabularx}{0.9\textwidth}{@{}XX@{}}
+  \begin{equation}
+	\sum_{i \in \mathcal{L}} {}^{n}\!{K_{i}} \p\pr{{}^{n}\!{r},{}^{n}\!{m_{i}} - 2}  = -{}^{n}\!{\mu_{1}},
+    \label{eqn:1}
+  \end{equation} &
+  \begin{equation}
+	\sum_{i \in \mathcal{L}} {}^{n}\!{K_{i}} {}^{n}\!{g_{i}} \p\pr{{}^{n}\!{r},{}^{n}\!{m_{i}} - 2} = -{}^{n}\!{\mu_{2}},
+    \label{eqn:2}
+  \end{equation} \\
+  \begin{equation}
+	\sum_{i \in \mathcal{L}} {}^{n}\!{K_{i}} \p\pr{{}^{n-1}\!{r},{}^{n}\!{m_{i}} - 2}  = -{}^{n}\!{\mu_{1}},
+    \label{eqn:3}
+  \end{equation} &
+  \begin{equation}
+  	\sum_{i \in \mathcal{L}} {}^{n}\!{K_{i}} {}^{n}\!{g_{i}} \p\pr{{}^{n-1}\!{r},{}^{n}\!{m_{i}} - 2} = -{}^{n}\!{\mu_{2}}.
+  \end{equation}
+\end{tabularx}
+\label{eq:freeslipinterfaces}
+\end{subequations}
 
-\paragraph{Interfacial condition: no slip.}
+The symbols $\gsub{n}{i}$, where $i\infour$, and  $n\inN$, and $\musub{n}{i}$, where $i\intwo$, and  $n\inN$, which, e.g., appear in \eqref{eq:freeslipinterfaces}, denote constants. They are, respectively, defined in \S\ref{sec:gni}, and \S\ref{sec:muni}.
+
+\subsection{Non slipping interfaces}
 
 In the case of perfect bonding (no slip) interface between layers, the continuity conditions of stresses~$\sigma_{rr}$,~$\tau_{r\theta}$,~$\tau_{rz}$ and displacements~$u_{r}$,~$u_{\theta}$,~$u_z$ at the interface yields
 \begin{subequations}
@@ -790,7 +846,22 @@ In the case of perfect bonding (no slip) interface between layers, the continuit
 	\end{align}
 	\label{eq:noslip_interface}
 \end{subequations}
-for~$n = 1,2,\dots,N-1$, where~$Q_i$ and~$W_i$ ($i=$1 to 5) are material constants (see~\ref{Appen:MatConst}).
+where~$n = 1,2,\dots,N-1$, and
+\begin{subequations}
+	\begin{align}
+	\sum_{i \in \mathcal{L}} {}^{1}\!{K_{i}} \p\pr{{}^{0}\!{r},{}^{1}\!{m_{i}} - 2} & = -{}^{1}\!{\mu_{1}}, \quad
+	\sum_{i \in \mathcal{L}} {}^{1}\!{K_{i}} {}^{1}\!{g_{i}} \p\pr{{}^{0}\!{r},{}^{1}\!{m_{i}} - 2} = -{}^{1}\!{\mu_{2}},\\
+	\sum_{i \in \mathcal{L}} {}^{N}\!{K_{i}} \p\pr{{}^{N}\!{r},{}^{N}\!{m_{i}} - 2} & = -{}^{N}\!{\mu_{1}}, \quad
+	\sum_{i \in \mathcal{L}} {}^{N}\!{K_{i}} {}^{N}\!{g_{i}} \p\pr{{}^{N}\!{r},{}^{N}\!{m_{i}} - 2} = -{}^{N}\!{\mu_{2}}.
+	\end{align}
+	\label{eq:boundary}
+\end{subequations}
+
+
+The symbols $\Qsub{n}{i}$, and $\Wsub{n}{i}$, where $n\inN$, and $i\infive$, which, e.g., appear in \eqref{eq:noslip_interface}, denote constants. They are, respectively, defined in \S\ref{sec:Qni}, and \S\ref{sec:Wni}.
+
+%The traction free boundaries at innermost radius~${}^{0}\!{r}$ and outermost radius~${}^{N}\!{r}$ require
+
 
 
 
@@ -813,7 +884,7 @@ We also consider cases where the helical angles are not uniform and the composed
 Based on the lamination schemes and interfacial conditions, we consider three different scenarios here. (i) Homogeneous material-No friction: the lamination scheme is~$[{}^{0}\!\varphi]_N$ and no friction exists between layers. (ii) Heterogeneous material-No friction: the lamination scheme is~$[{}^{I}\!\varphi/{}^{II}\!\varphi]_{N/2}$ and the interfaces between layers is frictionless. (iii) Heterogeneous material-No slip: the lamination scheme is~$[{}^{I}\!\varphi/{}^{II}\!\varphi]_{N/2}$ as well, but there is no slip between the interfaces.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Homogeneous material and no friction interface}
+\subsection{Uniform lamellae and freely slipping interfaces}
 \label{sec:1mat_no_friction}
 
 First we consider that the elastic property for each layer is the same. The interfaces between layers are frictionless. This is equivalent to the scenario where a homogeneous cylinder is cut into layers with uniform thickness and there is no friction between the layers. In this case, we drop the subscript~$n$ of the material constants for the sake of simplicity.
@@ -1033,19 +1104,47 @@ In Eqn.~\eqref{eq:knknm2}, we take Taylor series expansion on~$\Inv\pr{{}^{{n-1}
 Then by substituting Eqn.~\eqref{eq:bnanm1} into Eqn.~\eqref{eq:knknm2}, we obtain
 \begin{equation}
 \begin{aligned}
-	\begin{split}
 	~^{n}{\usf{A}} ~^{n}{\usf{K}} & = \left[  ~^{n}{\usf{A}} + \frac{\Delta r}{~^{n-1}\!{r}} \left( ~^{n}{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\usf{B}} ~^{n}{\usf{A}} - ~^{n}{\usf{A}} ~^{n}\tilde{\usf{m}} \right)  + O(\p\pr{\Delta r,2}) \right] ~^{{n-2}}{\usf{K}} \\
 	& \qquad + \frac{\Delta r}{~^{n-1}\!{r}} \left( 2~^{n}{\usf{D}} + ~^{n}{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\usf{B}} ~^{{n-1}}{\usf{D}} \right) + O(\p\pr{\Delta r,2}),
-	\end{split}
 \end{aligned}
 \label{eq:knknm2appr1}
 \end{equation}
 which gives the asymptotic relation between~$~^{{n-2}}{\usf{K}}$ and~$~^{n}{\usf{K}}$.
-From a set of representative plots for~$K_{i}$ versus~$n$ of a 100-layered structure (see Fig.~\ref{fig:two_material_no_slip_Ks}), we deduce that the~$K_{i}$ of odd and even layer numbers are continuous in the asymptotic sense (for~$N \to \infty$), which are indicated by red dashed lines. We use ${}^{n}{\busf{K}} (r)$ to denote the continuous representation of~${}^{n}{\usf{K}}$ as a function of radius $r$. Hence, we approximate~$~^{{n-2}}{\usf{K}}$ to the first order of~$\Delta r$ as
+From a set of representative plots for~$K_{i}$ versus~$n$ of a 100-layered structure (see Fig.~\ref{fig:two_material_no_slip_Ks}), we deduce that the~$K_{i}$ of odd layer numbers is a continuous function of $r$ in the asymptotic sense (for~$N \to \infty$), while the~$K_{i}$ of even layer numbers is a different continuous function of $r$ in the asymptotic sense, as indicated by red dashed lines. 
+We use $\Kodd (r)$ and $\Keven (r)$ to denote the continuous representation of~${}^{n}{\usf{K}}$ as a function of radius $r$ when $n$ is odd and even, respectively. 
+They satisfy the following equation:
 \begin{equation}
-	~^{{n-2}}{\busf{K}}(r) = ~^{n}{\busf{K}}(r) - 2\frac{d~^{n}{\busf{K}}(r)}{dr} \Delta r + O(\p\pr{\Delta r,2}).
-	\label{eq:knknm2appr2}
+{}^{n}{\usf{K}} = 
+\begin{cases}
+\Kodd (r_{n}), & \text{if}\, n\, \text{is odd}, \\
+\Keven (r_{n}) , & \text{if}\, n\, \text{is even},
+\end{cases}
+\label{eq:Kbarn}
 \end{equation}
+where $r_{n} = r_0 + n \Delta r$.
+Similarly,
+\begin{equation}
+{}^{n-2}{\usf{K}} = 
+\begin{cases}
+\Kodd \pr{r_{n} - 2 \Delta r}, & \text{if}\, n\, \text{is odd}, \\
+\Keven (r_{n} - 2 \Delta r) , & \text{if}\, n\, \text{is even}.
+\end{cases}
+\label{eq:Kbarnm2}
+\end{equation}
+
+We approximate~$\Kodd (r_n - 2 \Delta r)$ and $\Keven (r_n - 2 \Delta r)$ to the first order of~$\Delta r$ as
+\begin{subequations}
+\begin{align}
+\Kodd(r_n - 2 \Delta r) & = \Kodd(r_n) - 2\frac{d\,\Kodd(r_n)}{dr} \Delta r + O(\p\pr{\Delta r,2}), \\
+\Keven(r_n - 2 \Delta r) & = \Keven(r_n) - 2\frac{d\,\Keven(r_n)}{dr} \Delta r + O(\p\pr{\Delta r,2}). 
+\end{align}
+\label{eq:knknm2appr2}
+\end{subequations}
+
+% \begin{equation}
+% 	~^{{n-2}}{\busf{K}}(r) = ~^{n}{\busf{K}}(r) - 2\frac{d~^{n}{\busf{K}}(r)}{dr} \Delta r + O(\p\pr{\Delta r,2}).
+% 	\label{eq:knknm2appr2}
+% \end{equation}
 \begin{figure}[t]
 	\centering
 	\graphicspath{{../LyxFiles/figure/}}
@@ -1055,9 +1154,9 @@ From a set of representative plots for~$K_{i}$ versus~$n$ of a 100-layered struc
 \end{figure}
 
 
-For the odd and even layer numbers, ${}^{n}{\busf{K}} (r)$ are written as ${}^{\text{odd}}{\busf{K}} (r)$ and ${}^{\text{even}}{\busf{K}}(r)$. For simplicity, we drop the left superscript ``odd'' and ``even'' in the derivation of the governing equations for ${}^{\text{odd}}{\busf{K}} (r)$ and ${}^{\text{even}}{\busf{K}}(r)$ since both of them satisfy the same set of differential equations for $\busf{K}(r)$. We also drop the left superscript for other variables in the following derivations when there is no confusion.
+% For the odd and even layer numbers, ${}^{n}{\busf{K}} (r)$ are written as ${}^{\text{odd}}{\busf{K}} (r)$ and ${}^{\text{even}}{\busf{K}}(r)$. For simplicity, we drop the left superscript ``odd'' and ``even'' in the derivation of the governing equations for ${}^{\text{odd}}{\busf{K}} (r)$ and ${}^{\text{even}}{\busf{K}}(r)$ since both of them satisfy the same set of differential equations for $\busf{K}(r)$. We also drop the left superscript for other variables in the following derivations when there is no confusion.
 
-Substituting Eqn.~\eqref{eq:knknm2appr2} into Eqn.~\eqref{eq:knknm2appr1} and making simplification (see~\ref{Appen:GovernEqnKn} for details), we obtain a linear ordinary differential equation (ODE) system of~$\busf{K}(r)$
+Substituting Eqns.~\eqref{eq:Kbarn},~\eqref{eq:Kbarnm2}, and~\eqref{eq:knknm2appr2} into Eqn.~\eqref{eq:knknm2appr1} and making simplification (see~\ref{Appen:GovernEqnKn} for details), we obtain a linear ordinary differential equation (ODE) system of~$\busf{K}(r)$
 \begin{equation}
   2 r \frac{d \pr{\usf{f}(r)\busf{K}(r)}}{dr} = \pr{\tilde{\usf{M}} + \tilde{\usf{m}}} \pr{\usf{f}(r)\busf{K}(r)} + \p\pr{r,2} \tilde{\usf{F}},
 	\label{eq:GovernEqnKn}
@@ -1214,21 +1313,50 @@ In sections \S\ref{sec:mni} and \S\ref{sec:gni} we, respectively, define the con
 \texttt{In this section we give the definitions of $\alpha$, $m$ and $\gamma$. The definition of $\alpha$ depend on $m$ and $g$, and the definition of $g$ depends on $m$. Thereofe, we first give the deifnition of $m$, followed, that of $g$ and the finally give the definition}
 
 
-\subsection{Definition of $\alpha_{n\cdot i}$}
+\subsection{Definitions of  $\beta_{n\cdot i j}\,$, and $C_{n\cdot i j}\,$, where $i,~j\insix$, and $n\inN$\label{sec:betaCnij}}
+%hk done with subsection title.
 
+\subsubsection{Definitions of the constants $C_{n\cdot i j}$, where $i,~j\insix$, and $n\inN$\label{sec:Cnij}}%hk done
+
+\todo[inline]{HK to WF: complete this section}
+
+
+\subsubsection{Definitions of the constants $\beta_{n\cdot i j}$, where $i,~j\insix$, and $n\inN$\label{sec:betaCnij}\label{sec:betanij}}
+%hk done with subsubsection title.
+
+The constants $\beta_{n\cdot i j}$, where $i,~j\insix$, and $n\inN$, are defined as
+\begin{equation}
+\betasub{n}{ij} = \Csub{n}{ij}-\frac{\Csub{n}{i3} \Csub{n}{3j}}{\Csub{n}{33}}.
+\label{eq:betanijdef}
+\end{equation} %hk done
+The constants $C_{n\cdot i j}$, where $i,~j\insix$, and $n\inN$, which appear in \eqref{eq:betanijdef}, are defined in \S\ref{sec:Cnij}. %hk done
+
+
+
+
+
+\subsection{Definitions of $\alpha_{n\cdot i}$, $m_{n\cdot i}$, and $\gamma_{n}$, where $i\infour$, and $n\inN$\label{sec:alphamgni}} % hk done
+
+
+\subsubsection{Definitions of $\alpha_{n\cdot i}$, where $i\infour$, and $n\inN$\label{sec:alphani}} % hk done
+
+The constants $\alphasub{n}{i}$, where $i\infour$, and $n\inN$, are defined as
 \begin{align}
-{}^{n}\!{\alpha_{i}} & := \frac{\pi}{{}^{n}\!{C_{33}}} \frac{  {}^{n}\!{C_{13}} + {}^{n}\!{C_{23}}({}^{n}\!{m_{i}} + 1) - {}^{n}\!{C_{34}} {}^{n}\!{g_{i}} {}^{n}\!{m_{i}} }{{}^{n}\!{m_{i}}+2}, \\
-{}^{n}\!\gamma & := \frac{\pi}{{}^{n}\!{C_{33}}} \frac{ {}^{n}\!{\mu_{1}} ({}^{n}\!{C_{13}} + 3{}^{n}\!{C_{23}}) - 2{}^{n}\!{\mu_{2}} {}^{n}\!{C_{34}} - 1  }{4},
-\end{align}
+	\alphasub{n}{i} & = \frac{\pi}{\Subs{\plusplus{m}}{n}{i} \Csub{n}{33}}\left(\Csub{n}{13} + \Subs{\plus{m}}{n}{i}\Csub{n}{23} - \Csub{n}{34} \gsub{n}{i} \msub{n}{i}\right).
+\label{eq:alphani}
+\end{align}% hk done
+The constants $\msub{n}{i}$, and $\gsub{n}{i}$, where $i\infour$, and $n\inN$, which appear in \eqref{eq:alphani}, are, respectively, defined in \S\ref{sec:mni}, and \S\ref{sec:gni}.% hk done
+The constants $\Csub{n}{ij}$, where $i,~j\insix$, and $n\inN$, which  appear in \eqref{eq:alphani}, are defined in \S\ref{sec:Cnij}. %hk done
+To recall, as per the notation we introduced in \S\ref{sec:BendingStiffness}, the symbols $\Subs{\plus{m}}{n}{i}$, and $\Subs{\plusplus{m}}{n}{i}$ denote the expressions $\Subs{m}{n}{i}+1$, and $\Subs{m}{n}{i}+2$, respectively. %hk done
 
-The constants $\Csub{n}{ij}$, $\msub{n}{i}$, $\gsub{n}{i}$ are, respectively, defined in section XX, YY, and ZZ.
+\subsubsection{Definitions of $m_{n\cdot i}$, where $i\infour$, and $n\inN$\label{sec:mni}}
+%hk done
 
-\subsection{Definitions of $m_{n\cdot i}$, where $i\in (1,2,3,4)$, and $n\in(1,\ldots,N)$}
-\label{sec:mni}
 By definition
 \begin{subequations}
 	\begin{align}
-	 \m{n}{{\scriptscriptstyle 1}} & =  \sqrt{\frac{-b_n +\sqrt{\p\pr{b_n,2} - 4a_n c_n }}{2a_n}}, \\
+	 \m{n}{{\scriptscriptstyle 1}} & =  \sqrt{\frac{-b_n +\sqrt{\p\pr{b_n,2} - 4a_n c_n }}{2a_n}}, 
+	 \intertext{where note that, as per the notation we introduced in \S\ref{sec:BendingStiffness}, $\p\pr{b_n,2}$ denotes the square of $b_n$,}
 	 \m{n}{2} & =  \sqrt{\frac{-b_n -\sqrt{\p\pr{b_n,2} - 4a_n c_n}}{2a_n}}, \\
 	 \m{n}{3} & =  -\m{n}{1},
    \intertext{and}
@@ -1248,71 +1376,101 @@ where
 	c_n & :=  \betasub{n}{55}(\betasub{n}{11} + 2\betasub{n}{12} + \betasub{n}{22} + \betasub{n}{66})-\p\pr{\betasub{n}{56},2}.
 	\end{align}
   \label{eqns:anbncn}
-\end{subequations}
-The symbols $\betasub{n}{ij}$, which appear in \eqref{eqns:anbncn}, are called the reduced elastic constants and are defined such that
-\begin{equation}
-\betasub{n}{ij} = \Csub{n}{ij}-\frac{\Csub{n}{i3} \Csub{n}{3j}}{\Csub{n}{33}}.
-\end{equation}
+\end{subequations} %hk done
+The symbols $\betasub{n}{ij}$, where $i,~j\insix$, and $n\inN$, which appear in \eqref{eqns:anbncn}, are defined in \S\ref{sec:betanij}.%hk done 
 
-%hk done with section sec:mni
 
-\subsection{Definitions of $\gsub{n}{i}$, where $i\in (1,2,3,4)$, and $n\in(1,\ldots,N)$}
-\label{sec:gni}
+
+\subsubsection{Definitions of $\gamma_{n}$, where $n\inN$\label{sec:gammani}}%hk done
+
+The constants $\gamma_{n}$, where $n\inN$, are defined as
+\begin{align}
+	\gamma_{n} & = \frac{\pi}{4 \Subs{C}{n}{33}} \left( \Subs{\mu}{n}{1} \left(\Subs{C}{n}{13} + 3\Subs{C}{n}{23}\right) - 2\Subs{\mu}{n}{2} \Subs{C}{n}{34} - 1  \right),
+\end{align}
+where $\Csub{n}{ij}$, where $i,~j\insix$, and $n\inN$, are defined in \S\ref{sec:Cnij} and  $\musub{n}{i}$, where $i\intwo$, and $n\inN$, are defined in \S\ref{sec:muni}. %hk done
+
+
+
+
+
+\subsection{Definitions of $\gsub{n}{i}$, where $i\infour$, and $n\inN$, and $\musub{n}{i}$, $i\intwo $, and $n\inN$}
+\label{sec:gmuni}%hk done
+
+\subsubsection{Definitions of $\gsub{n}{i}$, where $i\infour$, and $n\inN$}
+\label{sec:gni}%hk done
 
 By definition
-\begin{subequations}
-	\begin{align}
-	\gsub{n}{i} & = \frac{\betasub{n}{24}\p\pr{\msub{n}{i},2}+(\betasub{n}{14} + \betasub{n}{24})\msub{n}{i} - \betasub{n}{56}}{\betasub{n}{44}\p\pr{\msub{n}{i},2} - \betasub{n}{55}},
-	\end{align}
-\end{subequations}
-where $i\in (1,2,3,4)$, and $n\in(1,\ldots,N)$
+	\begin{equation}
+	\gsub{n}{i} = \frac{\betasub{n}{24}\p\pr{\msub{n}{i},2}+(\betasub{n}{14} + \betasub{n}{24})\msub{n}{i} - \betasub{n}{56}}{\betasub{n}{44}\p\pr{\msub{n}{i},2} - \betasub{n}{55}},
+\label{eq:gni}
+	\end{equation}
+where $i\infour$, and $n\inN$. %hk done
+The symbols $\betasub{n}{ij}$, where $i,~j\insix$, and $n\inN$, which appear in \eqref{eq:gni}, are defined in \S\ref{sec:betanij}.%hk done
+The constants $\msub{n}{i}$, where $i\infour$, and $n\inN$, which appear in \eqref{eq:gni}, are defined in \S\ref{sec:mni}.% hk done
 
-\subsection{Definitions of $\musub{n}{i}$, where $i\in (1,2)$ and $n\in (1,\ldots,N)$}.
 
+
+\subsubsection{Definitions of $\musub{n}{i}$, where $i\in (1,2)$, and $n\in (1,\ldots,N)$}%hk done
 \label{sec:muni}
 
-\subsection{Definitions of $\Qsub{n}{i}$, where $i\in (1,\ldots,5)$ and $n\in (1,\ldots,N)$}
+The constants $\musub{n}{i}$, where $i\in (1,2)$, and $n\in (1,\ldots,N)$, are defined by the equation
+	\begin{multline}
+	\begin{bmatrix}
+		\musub{n}{1} \\ \musub{n}{2}
+	\end{bmatrix} =
+	\frac{1}{\Csub{n}{33}}
+	\Inv \pr{\begin{bmatrix}
+		\pr{-2\betasub{n}{14}-6\betasub{n}{24}+\betasub{n}{56}} & \pr{4\betasub{n}{44}-\betasub{n}{55}} \\
+		\pr{-\betasub{n}{11}-2\betasub{n}{12}+3\betasub{n}{22}-\betasub{n}{66}} & \pr{2\betasub{n}{14}-2\betasub{n}{24}+\betasub{n}{56}}
+	\end{bmatrix}}\\ 
+	\begin{bmatrix}
+			2\Csub{n}{34} \\ \Csub{n}{13}-\Csub{n}{23}
+	\end{bmatrix}.
+\label{eq:muni}	
+\end{multline} %hk done
+The constants $\betasub{n}{ij}$, and $\Csub{n}{ij}$, where $i,~j\insix$, and $n\inN$, which appear in \eqref{eq:muni}, are, respectively, defined in \S\ref{sec:betanij}, and \S\ref{sec:Cnij}. %hk done
+
+\subsection{Definitions of $\Qsub{n}{i}$, and $W_{n\cdot i}$, where $i\in (1,\ldots,5)$, and $n\in (1,\ldots,N)$} %hk done
 \label{sec:Qni}
 
-For $n\in(1,\ldots,N)$
-\begin{subequations}
-\begin{align}
-  \Qsub{n}{i}& := \frac{1}{m_i} \pr{\beta_{12}m_i + \beta_{22}m_i(m_i+1) - \beta_{24} g_i \p\pr{m_i,2}}, \\
-\intertext{where $i\in (1,2,3,4)$, and}
-\Qsub{n}{5} & = \mu_1(\beta_{12} + 3\beta_{22})-2\mu_2\beta_{24} + \frac{C_{23}}{C_{33}}.
-\end{align}
-\end{subequations}
+\subsubsection{Definitions of $\Qsub{n}{i}$, where $i\in (1,\ldots,5)$, and $n\in (1,\ldots,N)$} %hk done
+\todo{hk to wf: we can cancel mi from numerator and denominator.}
+
+For $i\infive$, and $n\in(1,\ldots,N)$
+\begin{equation}
+  \Qsub{n}{i} := 
+ \left\{ 
+	 \begin{array}{ll}
+   \pr{\betasub{n}{12}\msub{n}{i} + \betasub{n}{22}\msub{n}{i}\Subs{\plus{m}}{n}{i} - \betasub{n}{24} g_i \p\pr{\msub{n}{i},2}}/\msub{n}{i}, & i\infour, \\ \\
+\musub{n}{1}(\betasub{n}{12} + 3\betasub{n}{22})-2\musub{n}{2}\betasub{n}{24} + \Csub{n}{23}/\Csub{n}{33}, & i=5.
+	 \end{array} 
+\right.
+\label{eq:Qni}
+\end{equation}%hk done
+The constants $\Csub{n}{ij}$, and $\betasub{n}{ij}$, where $i,~j\insix$, and $n\inN$,  $\msub{n}{i}$, where $i\infour$, and $n\inN$, and $\musub{n}{i}$, where $i\intwo$, and $n\inN$, all of which appear in \eqref{eq:Qni}, are defined in \S\ref{sec:Cnij}, \S\ref{sec:betanij}, \S\ref{sec:mni}, and \S\ref{sec:muni}, respectively. % hk done
 
 
-\subsection{Definitions of $W_{n\cdot {\scriptscriptstyle i}}$, where $i\in (1,\ldots,5)$ and $n\in (1,\ldots,N)$}
+
+
+\subsubsection{Definitions of $W_{n\cdot i}$, where $i\in (1,\ldots,5)$, and $n\in (1,\ldots,N)$} %hk done
 \label{sec:Wni}
 
 
 
-\begin{subequations}
-	\begin{align}
-\Wsub{n}{i} & = \frac{1}{m_i}\pr{\beta_{55} g_i - \beta_{56}},
-\intertext{where $i\in (1,2,3,4)$, and}
-	\Wsub{n}{5} & = \frac{1}{2}(\beta_{55}\mu_2 - \beta_{56}\mu_1),
-	\end{align}
-\end{subequations}
-where
-	\begin{equation}
-	\begin{bmatrix}
-		\mu_1 \\ \mu_2
-	\end{bmatrix} :=
-	\frac{1}{C_{33}}
-	\Inv \pr{\begin{bmatrix}
-		-2\beta_{14}-6\beta_{24}+\beta_{56} & 4\beta_{44}-\beta_{55} \\
-		-\beta_{11}-2\beta_{12}+3\beta_{22}-\beta_{66} & 2\beta_{14}-2\beta_{24}+\beta_{56}
-	\end{bmatrix}}
-	\begin{bmatrix}
-			2C_{34} \\ C_{13}-C_{23}
-	\end{bmatrix}.
-	\end{equation}
+For $i\infive$, and $n\in(1,\ldots,N)$
+\begin{equation}
+  \Wsub{n}{i} := 
+ \left\{ 
+	\begin{array}{ll}
+		\pr{\betasub{n}{55} \gsub{n}{i} - \betasub{n}{56}}/\msub{n}{i}, & i\infour, \\ \\
+		(\betasub{n}{55}\musub{n}{2} - \betasub{n}{56}\musub{n}{1})/2, & i=5.
+	 \end{array} 
+\right.
+\label{eq:Wni}
+\end{equation} % hk done
+The constants $\betasub{n}{ij}$, where $i,~j\insix$, and $n\inN$,  $\msub{n}{i}$, and $\gsub{n}{i}$, where $i\infour$, and $n\inN$, and $\musub{n}{i}$, where $i\intwo$, and $n\inN$, all of which appear in \eqref{eq:Wni}, are defined in \S\ref{sec:betanij}, \S\ref{sec:mni}, \S\ref{sec:gni}, and \S\ref{sec:muni}, respectively. % hk done
 
-
-
+\todo[inline]{HK stopped here}
 \section{Expressions of~$P_i$}
 \label{Appen:Pi}
 The expressions of~$P_i$ in Eqn.~\eqref{eq:single_mat_Ks} are given by
@@ -1447,29 +1605,48 @@ Therefore, we derive the following relations by considering Eqns.~\eqref{eq:nMin
 \subsection{Derivation of ODE system given by~\eqref{eq:GovernEqnKn} and~\eqref{eq:boundary}}
 \label{Appen:GovernEqnKn}
 
-Substituting Eqn.~\eqref{eq:knknm2appr2} into Eqn.~\eqref{eq:knknm2appr1}, we obtain
+Substituting Eqns.~\eqref{eq:Kbarn},~\eqref{eq:Kbarnm2}, and~\eqref{eq:knknm2appr2} into Eqn.~\eqref{eq:knknm2appr1}, we obtain,
+\begin{subequations}
+if $n$ is odd,
 \begin{equation}
-	\begin{aligned}
-		~^{n-1}\!{r} \frac{d ~^{n}{\busf{K}(r)}}{dr} = & \left( \Inv\pr{{}^{n}\usf{A}} ~^{n}{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\usf{B}} ~^{n}{\usf{A}} - ~^{n}\tilde{\usf{m}} \right) ~^{n}{\busf{K}(r)} \\
-		& + \Inv\pr{{}^{n}\usf{A}} \left( 2~^{n}{\usf{D}} + ~^{n}{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\usf{B}} ~^{{n-1}}{\usf{D}} \right) + O(\Delta r).
-	\end{aligned}
-	\label{eq:AppendKndr1}
+    \begin{aligned}
+        2 r_{n}  \frac{d\, \Kodd(r_n)}{dr} & =  \left( \Inv\pr{{}^{n}\usf{A}} ~^{n}{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\usf{B}} ~^{n}{\usf{A}} - ~^{n}\tilde{\usf{m}} \right) \Kodd(r_n) \\
+        & + \Inv\pr{{}^{n}\usf{A}} \left( 2~^{n}{\usf{D}} + ~^{n}{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\usf{B}} ~^{{n-1}}{\usf{D}} \right) + O(\Delta r);
+    \end{aligned}
 \end{equation}
+if $n$ is even,
+\begin{equation}
+    \begin{aligned}
+        2 r_{n}  \frac{d\, \Keven(r_n)}{dr} & =  \left( \Inv\pr{{}^{n}\usf{A}} ~^{n}{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\usf{B}} ~^{n}{\usf{A}} - ~^{n}\tilde{\usf{m}} \right) \Keven(r_n) \\
+        & + \Inv\pr{{}^{n}\usf{A}} \left( 2~^{n}{\usf{D}} + ~^{n}{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\usf{B}} ~^{{n-1}}{\usf{D}} \right) + O(\Delta r).
+    \end{aligned}
+\end{equation}
+\label{eq:AppendKndr1}
+\end{subequations}
+
 
 Taking the zero order of approximation of Eqn.~\eqref{eq:AppendKndr1} around~${}^{n}\!{r}$ and noting that
 \begin{equation}
 	~^{n}{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\usf{B}} = ~^{n}\tilde{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\tilde{\usf{B}}},
 \end{equation}
 we have
+\begin{subequations}
+if $n$ is odd,
 \begin{equation}
-\begin{aligned}
-	\begin{split}
-	2 ~^{n}\!{r} \frac{d ~^{n}{\busf{K}(r)}}{dr} = & \left( \Inv\pr{{}^{n}\usf{f}({}^{n}\!r)} \Inv\pr{{}^{n}\tilde{\usf{A}}} ~^{n}\tilde{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\tilde{\usf{B}}} \tilde{\usf{A}}_n ~^{n}\usf{f}({}^{n}\!r) - ~^{n}\tilde{\usf{m}} \right) ~^{n}{\busf{K}(r)} \\
-	& + \p\pr{{}^{n}\!{r},2} \Inv\pr{{}^{n}\usf{f}({}^{n}\!r)} \Inv\pr{{}^{n}\tilde{\usf{A}}} \left( -2\usf{I}_{4\times 4} + ~^{n}\tilde{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\tilde{\usf{B}}} \right) ~^{n}\tilde{\usf{D}} + O(\Delta r),
-	\end{split}
-\end{aligned}
-\label{eq:AppendKndr2}
+    \begin{aligned}
+        2 r_n \frac{d\, \Kodd(r_n)}{dr} = & \left( \Inv\pr{{}^{n}\usf{f}({}^{n}\!r)} \Inv\pr{{}^{n}\tilde{\usf{A}}} ~^{n}\tilde{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\tilde{\usf{B}}} \tilde{\usf{A}}_n ~^{n}\usf{f}({}^{n}\!r) - ~^{n}\tilde{\usf{m}} \right)\Kodd(r_n) \\
+    & + \p\pr{{}^{n}\!{r},2} \Inv\pr{{}^{n}\usf{f}({}^{n}\!r)} \Inv\pr{{}^{n}\tilde{\usf{A}}} \left( -2\usf{I}_{4\times 4} + ~^{n}\tilde{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\tilde{\usf{B}}} \right) ~^{n}\tilde{\usf{D}} + O(\Delta r);
+    \end{aligned}
 \end{equation}
+if $n$ is even,
+\begin{equation}
+    \begin{aligned}
+    2 r_n \frac{d\, \Keven(r_n)}{dr} = & \left( \Inv\pr{{}^{n}\usf{f}({}^{n}\!r)} \Inv\pr{{}^{n}\tilde{\usf{A}}} ~^{n}\tilde{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\tilde{\usf{B}}} \tilde{\usf{A}}_n ~^{n}\usf{f}({}^{n}\!r) - ~^{n}\tilde{\usf{m}} \right)\Keven(r_n) \\
+    & + \p\pr{{}^{n}\!{r},2} \Inv\pr{{}^{n}\usf{f}({}^{n}\!r)} \Inv\pr{{}^{n}\tilde{\usf{A}}} \left( -2\usf{I}_{4\times 4} + ~^{n}\tilde{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\tilde{\usf{B}}} \right) ~^{n}\tilde{\usf{D}} + O(\Delta r),
+    \end{aligned}
+\end{equation}
+\label{eq:AppendKndr2}
+\end{subequations}
 where~$~^{n}\tilde{\usf{D}}$ is a constant vector
 \begin{equation}
 	~^{n}\tilde{\usf{D}}
@@ -1485,25 +1662,55 @@ Let
 	~^{n}\tilde{\usf{F}} & := \Inv\pr{{}^{n}\tilde{\usf{A}}} \left( -2\usf{I}_{4\times 4} + ~^{n}\tilde{\usf{B}} ~^{n-1}\tilde{\usf{m}} \Inv\pr{{}^{n}\tilde{\usf{B}}} \right) ~^{n}\tilde{\usf{D}},
 	\end{align}
 \end{subequations}
-We rewrite Eqn.~\eqref{eq:AppendKndr2} as
+We rewrite Eqn.~\eqref{eq:AppendKndr2} as,
+\begin{subequations}
+if $n$ is odd,
 \begin{equation}
-	2 ~^{n}\!{r} \frac{d ~^{n}{\busf{K}(r)}}{dr} = \left( \Inv\pr{{}^{n}\usf{f}({}^{n}\!r)} ~^{n}\tilde{\usf{M}} ~^{n}\usf{f}({}^{n}\!r) + ~^{n}\tilde{\usf{m}} \right) {}^{n}{\busf{K}(r)} + \p\pr{{}^{n}\!{r},2} \Inv\pr{{}^{n}\usf{f}({}^{n}\!r)} ~^{n}\tilde{\usf{F}}.
-	\label{eq:AppendKndr}
+    2 r_n \frac{d\, \Kodd(r_n)}{dr}= \left( \Inv\pr{{}^{n}\usf{f}({}^{n}\!r)} ~^{n}\tilde{\usf{M}} ~^{n}\usf{f}({}^{n}\!r) - ~^{n}\tilde{\usf{m}} \right)  \Kodd(r_n) + \p\pr{{}^{n}\!{r},2} \Inv\pr{{}^{n}\usf{f}({}^{n}\!r)} ~^{n}\tilde{\usf{F}};
+\end{equation}
+if $n$ is even,
+\begin{equation}
+    2 r_n \frac{d\, \Keven(r_n)}{dr}= \left( \Inv\pr{{}^{n}\usf{f}({}^{n}\!r)} ~^{n}\tilde{\usf{M}} ~^{n}\usf{f}({}^{n}\!r) - ~^{n}\tilde{\usf{m}} \right)  \Keven(r_n) + \p\pr{{}^{n}\!{r},2} \Inv\pr{{}^{n}\usf{f}({}^{n}\!r)} ~^{n}\tilde{\usf{F}},
+\end{equation}
+\label{eq:AppendKndr}
+\end{subequations}
+
+Then multiplying Eqn.~\eqref{eq:AppendKndr} by~$\usf{f}(r_n)$ on both sides, we obtain, 
+\begin{subequations}
+if $n$ is odd,
+\begin{equation}
+    2 r_n \frac{d \pr{~^{n}\usf{f}(r_n)\Kodd(r_n) }}{dr} = \left( ~^{n}\tilde{\usf{M}} + ~^{n}\tilde{\usf{m}} \right) \pr{ ~^{n}\usf{f}(r_n)\Kodd(r_n)}  + \p\pr{r_n,2} ~^{n}\tilde{\usf{F}};
+\end{equation}
+if $n$ is even,
+\begin{equation}
+    2 r_n \frac{d \pr{~^{n}\usf{f}(r_n)\Keven(r_n) }}{dr} = \left( ~^{n}\tilde{\usf{M}} + ~^{n}\tilde{\usf{m}} \right) \pr{ ~^{n}\usf{f}(r_n)\Keven(r_n)}  + \p\pr{r_n,2} ~^{n}\tilde{\usf{F}},
+\end{equation}
+\label{eq:AppendKndrn}
+\end{subequations}
+for $n \inN$.
+
+In the asymptotic case (as $N \rightarrow \infty$, $\Delta r \rightarrow 0$), Eqns.~\eqref{eq:AppendKndrn} are true for any rational number $r \in \left\{ r \in \mathbb{Q} | r_1 \leq r \leq r_N \right\}$. 
+The domain can be extended to $r \in \left\{ r \in \mathbb{R} | r_1 \leq r \leq r_N \right\}$ through construction from Cauchy sequences.
+For example, for an irrational number $r_\text{ir} \in \left\{ r \in \mathbb{R}/\mathbb{Q} | r_1 \leq r \leq r_N \right\} $, we can construct a Cauchy sequences using rational numbers, that is 
+\begin{equation}
+r_{m_1}, r_{m_2},\ldots,r_{m_n}
 \end{equation}
 
-For simplicity, we drop the left superscript in all variables in the following derivations when there is no confusion. We can rewrite Eqn.~\eqref{eq:AppendKndr} as
-\begin{equation}
-  2 r \frac{d \busf{K}(r)}{dr} = \left( \Inv\pr{\usf{f}(r)} \tilde{\usf{M}} \usf{f}(r) + \tilde{\usf{m}} \right) \busf{K}(r) + \p\pr{r,2} \Inv\pr{\usf{f}(r)} \tilde{\usf{F}}.
-  \label{eq:AppendKndrSimple}
-\end{equation}
 
 
-Then multiplying Eqn.~\eqref{eq:AppendKndrSimple} by~$\usf{f}(r)$ on both sides, we obtain a linear ODE system of~$\busf{K}(r)$
+Therefore, we obain linear ordinary differential equation (ODE) systems of $\Kodd(r)$ and $\Keven(r)$ as,
+\begin{subequations}
 \begin{equation}
-	2 r \frac{d \pr{\usf{f}(r)\busf{K}(r)}}{dr} = \pr{\tilde{\usf{M}} + \tilde{\usf{m}}} \pr{\usf{f}(r)\busf{K}(r)} + \p\pr{r,2} \tilde{\usf{F}},
-	\label{eq:AppendKn}
+    2 r \frac{d \pr{~^{\RN{1}}\usf{f}(r)\Kodd(r) }}{dr} = \left( ~^{\RN{1}}\tilde{\usf{M}} + ~^{\RN{1}}\tilde{\usf{m}} \right) \pr{ ~^{\RN{1}}\usf{f}(r)\Kodd(r)}  + \p\pr{r,2} ~^{\RN{1}}\tilde{\usf{F}},
 \end{equation}
-with boundary conditions given by~\eqref{eq:boundary}.
+and
+\begin{equation}
+    2 r \frac{d \pr{~^{\RN{2}}\usf{f}(r)\Keven(r) }}{dr} = \left( ~^{\RN{2}}\tilde{\usf{M}} + ~^{\RN{2}}\tilde{\usf{m}} \right) \pr{ ~^{\RN{2}}\usf{f}(r)\Keven(r)}  + \p\pr{r,2} ~^{\RN{2}}\tilde{\usf{F}},
+\end{equation}
+\label{eq:AppendKn}
+\end{subequations}
+with boundary conditions given by~\eqref{eq:boundary}, where $\RN{1}$ and $\RN{2}$ denote material constants of layers with odd and even layer numbers.
+
 
 
 \subsection{Solution procedures of ODE system given by~\eqref{eq:GovernEqnKn} and~\eqref{eq:boundary}}
@@ -1634,17 +1841,10 @@ where~${}^{n}\!G_{ij}$ are constants given by
 \end{subequations}
 
 \newpage
-%% If you have bibdatabase file and want bibtex to generate the
-%% bibitems, please use
-%%-
-%%  \bibliographystyle{elsarticle-harv}
-%%  \bibliography{<your bibdatabase>}
+
 \bibliographystyle{elsarticle-harv}
 \bibliography{../LyxFiles/RefsBending}
-%% else use the following coding to input the bibitems directly in the
-%% TeX file.
 
-This is
 \end{document}
 
 \endinput
