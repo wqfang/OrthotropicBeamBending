@@ -847,11 +847,11 @@ The symbols $\gsub{n}{i}$, where $i\infour$, and  $n\inN$, and $\musub{n}{i}$, w
 In the case of perfect bonding (no slip) interface between layers, the continuity conditions of stresses~$\sigma_{rr}$,~$\tau_{r\theta}$,~$\tau_{rz}$ and displacements~$u_{r}$,~$u_{\theta}$,~$u_z$ at the interface yields
 \begin{subequations}
 	\begin{align}
-	& \sum_{i \in \mathcal{L}} \left( {}^{n}\!{K_{i}} \p\pr{r,{}^{n}\!{m_{i}} - 2} - {}^{n+1}\!{K_{i}} \p\pr{r,{}^{n+1}\!{m_{i}} - 2} \right) = {}^{n+1}\!{\mu_{1}}
+	& \sum_{i \in \mathcal{L}} \left( {}^{n}\!{K_{i}} \p\pr{{}^{n}\!{r},{}^{n}\!{m_{i}} - 2} - {}^{n+1}\!{K_{i}} \p\pr{{}^{n}\!{r},{}^{n+1}\!{m_{i}} - 2} \right) = {}^{n+1}\!{\mu_{1}}
   - {}^{n}\!{\mu_{1}}, \\
-	& \sum_{i \in \mathcal{L}} \left( {}^{n}\!{K_{i}} {}^{n}\!{g_{i}} \p\pr{r,{}^{n}\!{m_{i}} - 2} - {}^{n+1}\!{K_{i}} {}^{n+1}\!{g_{i}} \p\pr{r,{}^{n+1}\!{m_{i}} - 2} \right) = {}^{n+1}\!{\mu_{2}} - {}^{n}\!{\mu_{2}}, \\
-	& \sum_{i \in \mathcal{L}} \left( {}^{n}\!{K_{i}} {}^{n}\!{Q_{i}} \p\pr{r,{}^{n}\!{m_{i}} - 2} - {}^{n+1}\!{K_{i}} {}^{n+1}\!{Q_{i}} \p\pr{r,{}^{n+1}\!{m_{i}} - 2} \right) = {}^{n+1}\!{Q_{5}} - {}^{n}\!{Q_{5}}, \\
-	& \sum_{i \in \mathcal{L}} \left( {}^{n}\!{K_{i}} {}^{n}\!{W_{i}} \p\pr{r,{}^{n}\!{m_{i}} - 2} - {}^{n+1}\!{K_{i}} {}^{n+1}\!{W_{i}} \p\pr{r,{}^{n+1}\!{m_{i}} - 2} \right) = {}^{n+1}\!{W_{5}} - {}^{n}\!{W_{5}},
+	& \sum_{i \in \mathcal{L}} \left( {}^{n}\!{K_{i}} {}^{n}\!{g_{i}} \p\pr{{}^{n}\!{r},{}^{n}\!{m_{i}} - 2} - {}^{n+1}\!{K_{i}} {}^{n+1}\!{g_{i}} \p\pr{{}^{n}\!{r},{}^{n+1}\!{m_{i}} - 2} \right) = {}^{n+1}\!{\mu_{2}} - {}^{n}\!{\mu_{2}}, \\
+	& \sum_{i \in \mathcal{L}} \left( {}^{n}\!{K_{i}} {}^{n}\!{Q_{i}} \p\pr{{}^{n}\!{r},{}^{n}\!{m_{i}} - 2} - {}^{n+1}\!{K_{i}} {}^{n+1}\!{Q_{i}} \p\pr{{}^{n}\!{r},{}^{n+1}\!{m_{i}} - 2} \right) = {}^{n+1}\!{Q_{5}} - {}^{n}\!{Q_{5}}, \\
+	& \sum_{i \in \mathcal{L}} \left( {}^{n}\!{K_{i}} {}^{n}\!{W_{i}} \p\pr{{}^{n}\!{r},{}^{n}\!{m_{i}} - 2} - {}^{n+1}\!{K_{i}} {}^{n+1}\!{W_{i}} \p\pr{{}^{n}\!{r},{}^{n+1}\!{m_{i}} - 2} \right) = {}^{n+1}\!{W_{5}} - {}^{n}\!{W_{5}},
 	\end{align}
 	\label{eq:noslip_interface}
 \end{subequations}
@@ -1707,7 +1707,7 @@ for $n \inN$.
 
 In the asymptotic case (as $N \rightarrow \infty$, $\Delta r \rightarrow 0$), Eqns.~\eqref{eq:AppendKndrn} are true for any rational number $r \in \left\{ r \in \mathbb{Q} \,|\, r_1 \leq r \leq r_N \right\}$. 
 The domain can be extended to $r \in \left\{ r \in \mathbb{R} \,|\, r_1 \leq r \leq r_N \right\}$ through construction from Cauchy sequences.
-For example, for an irrational number $r_\text{ir} \in \left\{ r \in \mathbb{R}/\mathbb{Q} \,|\, r_1 \leq r \leq r_N \right\} $, we can construct a Cauchy sequences using rational numbers, that is 
+For example, for an irrational number $r_\text{ir} \in \left\{ r \in \mathbb{R}/\mathbb{Q} \,|\, r_1 \leq r \leq r_N \right\} $, we can construct a Cauchy sequence using rational numbers, that is 
 \begin{equation}
 r_{m_1}, r_{m_2},\ldots,r_{m_n},
 \end{equation}
