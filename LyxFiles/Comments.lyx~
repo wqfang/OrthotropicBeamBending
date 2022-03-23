@@ -284,7 +284,7 @@ linkcolor = blue
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Enumerate
 
@@ -863,7 +863,7 @@ Solved from Eqn.
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 In the homogenization, we observe enhancement in bending stiffness for:
@@ -1060,9 +1060,9 @@ $^{n}m_{i}-2
 \backslash
 to 
 \backslash
-check{
+widecheck{
 \backslash
-check{m_{n
+widecheck{m_{n
 \backslash
 cdot i}}}$
 \end_layout

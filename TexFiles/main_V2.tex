@@ -62,7 +62,8 @@
 \SetSymbolFont{Nperm}{bold}{OML}{cmss}{bx}{it}
 \DeclareMathSymbol{\nw}{\mathalpha}{Nperm}{`w}
 \newcommand{\unit}[1]{\ensuremath{\, \mathrm{#1}}}
-
+\usepackage{pagecolor}
+% \pagecolor{gray}
 
 \usepackage{amssymb,amsmath,gensymb,amsthm,mathtools}
 \newtheorem{theorem}{Theorem}[section]
@@ -792,7 +793,7 @@ With the addtional variable $\varphi$, there should be ten independent constants
 %\end{equation}
 \label{sec:BendingStiffness}
 The bending stiffness of the~$N$-layer cylindrical composite is obtained by Jolicoeur and Cardou as
-\begin{subequations}
+
 \begin{equation}
 	\begin{aligned}
 	EI = & \sum_{n=1}^{N} \left[ \sum_{i \in \mathcal{L}} {}^{n}\!{\alpha_{i}} {}^{n}\!{K_{i}}  \pr{\p\pr{{}^{n-1}\!{r},{}^{n}\!{m_{i}}+2} - \p\pr{{}^{n}\!{r},{}^{n}\!{m_{i}} + 2}} + {}^{n}\!\gamma\pr{\p\pr{{}^{n-1}\!{r},4} - \p\pr{{}^{n}\!{r},4}} \right].
@@ -801,7 +802,7 @@ The bending stiffness of the~$N$-layer cylindrical composite is obtained by Joli
 \end{equation}
 The symbols $\alphasub{n}{i}$, $\msub{n}{i}$, and $\gammasub{n}{i}$, where $n\inN$, and $i\infour$, denote constants that depend on material properties and the helix angles. They are, respectively, defined in \S\ref{sec:alphani}, \S\ref{sec:mni}, and \S\ref{sec:gni}.
 
-\end{subequations}
+
 ~$r_{\minus{n}}$ and~$r_n$ the internal and external radii of the~$n^\text{th}$ layer, (see~\ref{Appen:MatConst}). We use $\p\pr{x,y}$ to denote the power operation where $x$ is the base and $y$ is the exponent.
 
 The coefficients~${}^{n}\!{K_{i}}$ are determined by the boundary conditions and continuity conditions of displacement and stress at the interface.
