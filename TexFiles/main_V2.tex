@@ -949,7 +949,7 @@ We solve for the coefficients~$\Ksub{n}{i}$ for~$n = 1,2,\dots,N$ from Eqns.~\eq
 % for~$n = 1,2,\dots,N$.
 Let layer thickness~$\Delta r := \pr{r_{N}-r_{0}}/N$, radius sequence~$r_{n} := r_{0} + n\cdot \Delta r$. Applying Taylor series expansion on the inverse of the coefficient matrix of~$\Ksub{n}{i}$ around~$r_{n}$, we have
 \begin{equation}
-	\Ksub{n}{i} = P_i \cdot \p\pr{r_{n},- \minusminus{m}_i  } + O(\Delta r), \quad \text{for}\, i \in \mathcal{L},\, n = 1,2,\dots,N,
+	\Ksub{n}{i} = P_i  \p\pr{r_{n},- \minusminus{m}_i  } + O(\Delta r), \quad \text{for}\, i \in \mathcal{L},\, n = 1,2,\dots,N,
 	\label{eq:single_mat_Ks}
 \end{equation}
 where~$P_i$ are material constants given in~\ref{Appen:Pi}. Substituting Eqn.~\eqref{eq:single_mat_Ks} into Eqn.~\eqref{eq:EI}, we have
@@ -1092,7 +1092,7 @@ For the case that the lamination scheme of the multilayered cylindrical composit
 % 	\end{bmatrix}.
 % \end{equation}
 
-Using bold san-serif font symbol to denote matrices, we rewrite Eqns.~\eqref{eq:boundary} and~\eqref{eq:noslip_interface} as
+Using bold san-serif font symbol to denote matrices, we rewrite Eqns.~\eqref{eq:noslip_interface} as
 \begin{subequations}
 \begin{equation}
 	~^{n}{\usf{B}} ~^{n-1}{\usf{K}} = ~^{n}{\usf{A}} ~^{n}{\usf{K}} - ~^{n}{\usf{D}}, \quad \text{for}\,n = 2,3,\dots,N,
