@@ -274,6 +274,7 @@ linkcolor = blue
 \newcommand{\Kodd}{\,\busf{K}_\mathrm{odd} \,}
 \newcommand{\Keven}{\,\busf{K}_\mathrm{even} \,}
 
+\newcommand{\incylinder}{\in(r,\theta, z)}
 \newcommand{\intwo}{\in(1,2)}
 \newcommand{\infour}{\in(1,\ldots,4)}
 \newcommand{\infive}{\in(1,\ldots,5)}
@@ -623,7 +624,7 @@ The solution of a single cylinder with cylindrical orthotropy subjected to pure 
 \begin{figure}[t]
   \centering
   \graphicspath{{../LyxFiles/figure/}}
-   \includegraphics[width=0.8\textwidth]{Cylinder3D_V4.pdf}
+   \includegraphics[width=\textwidth]{Cylinder3D_V4.pdf}
   \caption{Three-dimensional schematics of  $N$-layer cylindrical structure.~$\subf{A}$ General view and cross section view for $N = 1$.~$\subf{B}$ General view and cross section view for $N = 2$.~$\subf{C}$ General view and cross section view for $N = 3$.~$\subf{D}$ Cross-section view of an arbitrary $N$-layer cylindrical structure. Inner and outer Radii for the $1^\text{st}$ layer, $n^\text{th}$ layer and $N^\text{th}$ layer are marked in the figure.}
   \label{fig:Cylinder3D}
 \end{figure}
@@ -633,7 +634,7 @@ The solution of a single cylinder with cylindrical orthotropy subjected to pure 
 	\centering
 	\graphicspath{{../LyxFiles/figure/}}
 	\includegraphics[width=0.3\textwidth]{schematic_V7.pdf}
-	\caption{A single-layer cylindrical sturcture with cylindrical orthotropy.
+	\caption{A single-layer cylindrical structure with cylindrical orthotropy.
   }
 	\label{fig:schematic}
 \end{figure}
@@ -805,6 +806,60 @@ With the addtional variable $\varphi$, there should be ten independent constants
 %\caption{The radical distribution of~$\sigma_{zz}$ at~$\theta = 90\degree$ of two-layered curvilinear orthotropic cylinder under pure bending computed from finite element analysis and Eqn.XX. Inset: Contour plot of~$\sigma_{zz}$ from finite element simulation.}
 %\label{fig:verification}
 %\end{figure}
+
+
+\subsection{For the particular case of simplified transversely isotropic material}
+\label{sec:TransverselyIsotropic}
+
+For the case of transversely isotropic material, a particularization of the elastic compliance components in its material coordinate system would be $S_{ijkl}^{\pr{\physf}\cdot \mathrm{Trans}}$, where $i,j,k,l \incylinder$.
+
+
+In order to express $S_{ijkl}^{\mathrm{TI}\pr{\physf}}$, where $i,j,k,l \incylinder$ in terms of matrices, we use Voigt notation.
+We introduce elastic compliance matrix~$\usf{S} := \pr{S_{ij}}_{i,j \insix }$.
+According to the convention of Voigt notation, the non-zero elements of~$\usf{S}$ for orthotropic material are defined as
+\begin{align*}
+& S_{11} := S'_{rrrr},\quad S_{12} := S'_{rr\theta\theta},\quad S_{13} := S'_{rrzz}, \\
+& S_{22} := S'_{\theta\theta\theta\theta},\quad S_{23} := S'_{\theta\theta zz},\quad S_{33} := S'_{zzzz}, \\
+& S_{44} := 2 S'_{\theta z\theta z},\quad S_{55} := 2 S'_{rzrz},\quad S_{66} := 2 S'_{r\theta r\theta}.
+\end{align*}
+Therefore, we express the matrix form of $S_{ijkl}^{\pr{\physf}\cdot \mathrm{Trans}}$, where $i,j,k,l \incylinder$ as
+\begin{equation}
+  \usf{S}^{\pr{\physf}\cdot \mathrm{Trans}}
+  =
+  \left[
+      \begin{array}{cccccc}
+       1/E_p & -\nu_p/E_p & -\nu_{tp}/E_t & 0 & 0 & 0 \\
+       -\nu_p/E_p & 1/E_p & -\nu_{tp}/E_t & 0 & 0 & 0 \\
+       -\nu_{pt}/E_p & -\nu_{pt}/E_p & 1/E_t & 0 & 0 & 0 \\
+       0 & 0 & 0 & 1/\mu_t & 0 & 0 \\
+       0 & 0 & 0 & 0 & 1/\mu_t & 0 \\
+       0 & 0 & 0 & 0 & 0 & 1/\mu_p \\
+      \end{array}
+  \right],
+\end{equation}
+where $\mu_p  = \frac{E_p}{2(1+\nu_p)}$, $\nu_{t p} / E_{t}=\nu_{p t} / E_{p}$. 
+
+By imposing $\nu_{tp} = \nu_{p}$ and $\mu_t  = \frac{E_t}{2(1+\nu_{tp})}$, we have a simplified transversely isotropic material model that only depends on three independent parameters, $E_{t}$, $E_{p}$ and $\nu_{p}$. The matrix form of the elastic compliance tensor in the material coordinate system is expressed as
+\begin{equation}
+  \usf{S}^{\pr{\physf}\cdot \mathrm{SimTrans}}
+  =
+  \left[
+      \begin{array}{cccccc}
+       1/E_p & -\nu_p/E_p & -\nu_{p}/E_p & 0 & 0 & 0 \\
+       -\nu_p/E_p & 1/E_p & -\nu_{p}/E_p & 0 & 0 & 0 \\
+       -\nu_{p}/E_p & -\nu_{p}/E_p & 1/E_t & 0 & 0 & 0 \\
+       0 & 0 & 0 & 2(1+\nu_p)/E_{t} & 0 & 0 \\
+       0 & 0 & 0 & 0 & 2(1+\nu_p)/E_{t} & 0 \\
+       0 & 0 & 0 & 0 & 0 & 2(1+\nu_p)/E_{p} \\
+      \end{array}
+  \right].
+\end{equation}
+
+
+
+
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
