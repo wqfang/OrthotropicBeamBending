@@ -818,9 +818,9 @@ In order to express $S_{ijkl}^{\mathrm{TI}\pr{\physf}}$, where $i,j,k,l \incylin
 We introduce elastic compliance matrix~$\usf{S} := \pr{S_{ij}}_{i,j \insix }$.
 According to the convention of Voigt notation, the non-zero elements of~$\usf{S}$ for orthotropic material are defined as
 \begin{align*}
-& S_{11} := S'_{rrrr},\quad S_{12} := S'_{rr\theta\theta},\quad S_{13} := S'_{rrzz}, \\
-& S_{22} := S'_{\theta\theta\theta\theta},\quad S_{23} := S'_{\theta\theta zz},\quad S_{33} := S'_{zzzz}, \\
-& S_{44} := 2 S'_{\theta z\theta z},\quad S_{55} := 2 S'_{rzrz},\quad S_{66} := 2 S'_{r\theta r\theta}.
+& S_{11} := S_{rrrr},\quad S_{12} := S_{rr\theta\theta},\quad S_{13} := S_{rrzz}, \\
+& S_{22} := S_{\theta\theta\theta\theta},\quad S_{23} := S_{\theta\theta zz},\quad S_{33} := S_{zzzz}, \\
+& S_{44} :=  S_{\theta z\theta z},\quad S_{55} :=  S_{rzrz},\quad S_{66} := S_{r\theta r\theta}.
 \end{align*}
 Therefore, we express the matrix form of $S_{ijkl}^{\pr{\physf}\cdot \mathrm{Trans}}$, where $i,j,k,l \incylinder$ as
 \begin{equation}
@@ -838,8 +838,8 @@ Therefore, we express the matrix form of $S_{ijkl}^{\pr{\physf}\cdot \mathrm{Tra
   \right],
 \end{equation}
 where $\mu_p  = \frac{E_p}{2(1+\nu_p)}$, $\nu_{t p} / E_{t}=\nu_{p t} / E_{p}$. 
-
-By imposing $\nu_{tp} = \nu_{p}$ and $\mu_t  = \frac{E_t}{2(1+\nu_{tp})}$, we have a simplified transversely isotropic material model that only depends on three independent parameters, $E_{t}$, $E_{p}$ and $\nu_{p}$. The matrix form of the elastic compliance tensor in the material coordinate system is expressed as
+\todo[inline]{HK to WF: How the $C_{ij}$ matrix in the e-basis look for the simplified transversely isotropic material in the f-basis.}
+By imposing $\nu_{pt} = \nu_{p}$ and $\mu_t  = \frac{E_t}{2(1+\nu_{pt})}$, we have a simplified transversely isotropic material model that only depends on three independent parameters, $E_{t}$, $E_{p}$ and $\nu_{p}$. The matrix form of the elastic compliance tensor in the material coordinate system is expressed as
 \begin{equation}
   \usf{S}^{\pr{\physf}\cdot \mathrm{SimTrans}}
   =
