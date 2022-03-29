@@ -818,9 +818,9 @@ In order to express $S_{ijkl}^{\mathrm{TI}\pr{\physf}}$, where $i,j,k,l \incylin
 We introduce elastic compliance matrix~$\usf{S} := \pr{S_{ij}}_{i,j \insix }$.
 According to the convention of Voigt notation, the non-zero elements of~$\usf{S}$ for orthotropic material are defined as
 \begin{align*}
-& S_{11} := S'_{rrrr},\quad S_{12} := S'_{rr\theta\theta},\quad S_{13} := S'_{rrzz}, \\
-& S_{22} := S'_{\theta\theta\theta\theta},\quad S_{23} := S'_{\theta\theta zz},\quad S_{33} := S'_{zzzz}, \\
-& S_{44} := 2 S'_{\theta z\theta z},\quad S_{55} := 2 S'_{rzrz},\quad S_{66} := 2 S'_{r\theta r\theta}.
+& S_{11} := S_{rrrr},\quad S_{12} := S_{rr\theta\theta},\quad S_{13} := S_{rrzz}, \\
+& S_{22} := S_{\theta\theta\theta\theta},\quad S_{23} := S_{\theta\theta zz},\quad S_{33} := S_{zzzz}, \\
+& S_{44} := 2 S_{\theta z\theta z},\quad S_{55} := 2 S_{rzrz},\quad S_{66} := 2 S_{r\theta r\theta}.
 \end{align*}
 Therefore, we express the matrix form of $S_{ijkl}^{\pr{\physf}\cdot \mathrm{Trans}}$, where $i,j,k,l \incylinder$ as
 \begin{equation}
@@ -854,6 +854,8 @@ By imposing $\nu_{tp} = \nu_{p}$ and $\mu_t  = \frac{E_t}{2(1+\nu_{tp})}$, we ha
       \end{array}
   \right].
 \end{equation}
+
+The satability condition
 
 
 
