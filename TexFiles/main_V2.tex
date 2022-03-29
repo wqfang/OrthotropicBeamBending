@@ -244,7 +244,7 @@ linkcolor = blue
    \newcommand{\Csub}[2]{
    \IfEqCase{#2}{
           {xxxx}{\,\beta_{ {#1}\cdot { #2}}\,}%
-      }[\,C_{ {#1}\cdot {\scriptscriptstyle #2}}\,]}
+      }[\,S^{\pr{\physe}}_{ {#1}\cdot {\scriptscriptstyle #2}}\,]}
 
 
 \newcommand{\alphasub}[2]{
@@ -766,6 +766,16 @@ Therefore, $S_{ijkl}^{\pr{\physe}}$ can be obtained from $S_{ijkl}^{\pr{\physf}}
 It should be noted that due to symmetry, the 81 components in neither $S_{ijkl}^{\pr{\physf}}$ nor $S_{ijkl}^{\pr{\physe}}$ are independent.
 For a general orthotropic material in its matrial coordinate system, the number of independent compliance constants in~$S_{ijkl}^{\pr{\physf}}$ is nine.
 With the addtional variable $\varphi$, there should be ten independent constants in $S_{ijkl}^{\pr{\physe}}$.
+
+
+In order to express $S_{ijkl}^{\pr{\physf}}$ and $S_{ijkl}^{\pr{\physe}}$, where $i,j,k,l \incylinder$ in terms of matrices, we use Voigt notation.
+We introduce elastic compliance matrix~$\usf{S} := \pr{S_{ij}}_{i,j \insix }$.
+According to the convention of Voigt notation, the non-zero elements of~$\usf{S}$ for orthotropic material are defined as
+\begin{align*}
+& S_{11} := S_{rrrr},\quad S_{12} := S_{rr\theta\theta},\quad S_{13} := S_{rrzz}, \\
+& S_{22} := S_{\theta\theta\theta\theta},\quad S_{23} := S_{\theta\theta zz},\quad S_{33} := S_{zzzz}, \\
+& S_{44} :=  S_{\theta z\theta z},\quad S_{55} :=  S_{rzrz},\quad S_{66} := S_{r\theta r\theta}.
+\end{align*}
 % where the transformed elastic compliance matrix~$\pr{C_{ij}}_{i,j \in\mathcal{I}}$, denoted by~$\usf{C}$, should not be confused with the elastic stiffness tensor~$\mathbb{C}$. The relation between~$\usf{C}$ and~$\usf{S}$ is given by
 % \begin{subequations}
 % \begin{equation}
@@ -821,18 +831,7 @@ With the addtional variable $\varphi$, there should be ten independent constants
 \subsection{For the particular case of simplified transversely isotropic material}
 \label{sec:TransverselyIsotropic}
 
-For the case of transversely isotropic material, a particularization of the elastic compliance components in its material coordinate system would be $S_{ijkl}^{\pr{\physf}\cdot \mathrm{Trans}}$, where $i,j,k,l \incylinder$.
-
-
-In order to express $S_{ijkl}^{\mathrm{TI}\pr{\physf}}$, where $i,j,k,l \incylinder$ in terms of matrices, we use Voigt notation.
-We introduce elastic compliance matrix~$\usf{S} := \pr{S_{ij}}_{i,j \insix }$.
-According to the convention of Voigt notation, the non-zero elements of~$\usf{S}$ for orthotropic material are defined as
-\begin{align*}
-& S_{11} := S_{rrrr},\quad S_{12} := S_{rr\theta\theta},\quad S_{13} := S_{rrzz}, \\
-& S_{22} := S_{\theta\theta\theta\theta},\quad S_{23} := S_{\theta\theta zz},\quad S_{33} := S_{zzzz}, \\
-& S_{44} :=  S_{\theta z\theta z},\quad S_{55} :=  S_{rzrz},\quad S_{66} := S_{r\theta r\theta}.
-\end{align*}
-Therefore, we express the matrix form of $S_{ijkl}^{\pr{\physf}\cdot \mathrm{Trans}}$, where $i,j,k,l \incylinder$ as
+For the case of transversely isotropic material, a particularization of the elastic compliance components in its material coordinate system would be $S_{ijkl}^{\pr{\physf}\cdot \mathrm{Trans}}$, where $i,j,k,l \incylinder$, is expressed as
 \begin{equation}
   \usf{S}^{\pr{\physf}\cdot \mathrm{Trans}}
   =
@@ -865,7 +864,22 @@ By imposing $\nu_{pt} = \nu_{p}$ and $\mu_t  = \frac{E_t}{2(1+\nu_{pt})}$, we ha
   \right].
 \end{equation}
 
+Through relation~\eqref{eq:SeFromSf}, we calculate the elastic compliance tensor for the simplified transversely isotropic material in the global coordinate system as
 
+\begin{equation}
+  \usf{S}^{\pr{\physe}\cdot \mathrm{SimTrans}}
+  =
+  \left[
+      \begin{array}{cccccc}
+       1/E_p & -\nu_p/E_p & -\nu_{p}/E_p & 0 & 0 & 0 \\
+       -\nu_p/E_p &\frac{\cos ^{4}(\varphi)-2 v_{p} \sin ^{2}(\varphi) \cos ^{2}(\varphi)}{E_{p}}+\frac{\sin ^{2}(\varphi)\left(4 v_{p} \cos ^{2}(\varphi)+\cos (2 \varphi)+3\right)}{2 E_{t}}  & \frac{1}{4}\left(\frac{\sin ^{2}(2 \varphi)-v_{p}(\cos (4 \varphi)+3)}{E_{p}}-\frac{\left(2 v_{p}+1\right) \sin ^{2}(2 \varphi)}{E_{t}}\right) & \frac{\sin (2 \varphi)\left(E_{p}-E_{t}\right)\left(\left(2 v_{p}+1\right) \cos (2 \varphi)+1\right)}{2 E_{p} E_{t}} & 0 & 0 \\
+       -\nu_{p}/E_p & \frac{1}{4}\left(\frac{\sin ^{2}(2 \varphi)-v_{p}(\cos (4 \varphi)+3)}{E_{p}}-\frac{\left(2 v_{p}+1\right) \sin ^{2}(2 \varphi)}{E_{t}}\right) & \frac{\sin ^{4}(\varphi)-2 v_{p} \sin ^{2}(\varphi) \cos ^{2}(\varphi)}{E_{p}}+\frac{2\left(v_{p}+1\right) \sin ^{2}(\varphi) \cos ^{2}(\varphi)+\cos ^{4}(\varphi)}{E_{t}} & -\frac{\sin (2 \varphi)\left(E_{p}-E_{t}\right)\left(\left(2 v_{p}+1\right) \cos (2 \varphi)-1\right)}{2 E_{p} E_{t}} & 0 & 0 \\
+       0 & \frac{\sin (2 \varphi)\left(E_{p}-E_{t}\right)\left(\left(2 v_{p}+1\right) \cos (2 \varphi)+1\right)}{2 E_{p} E_{t}} & -\frac{\sin (2 \varphi)\left(E_{p}-E_{t}\right)\left(\left(2 v_{p}+1\right) \cos (2 \varphi)-1\right)}{2 E_{p} E_{t}} & \frac{\left(2 v_{p}+1\right) \sin ^{2}(2 \varphi)}{E_{p}}+\frac{4 v_{p} \cos ^{2}(2 \varphi)+\cos (4 \varphi)+3}{2 E_{t}} & 0 & 0 \\
+       0 & 0 & 0 & 0 & \frac{2\left(v_{p}+1\right)\left(E_{p} \cos ^{2}(\varphi)+E_{t} \sin ^{2}(\varphi)\right)}{E_{p} E_{t}} & \frac{\left(v_{p}+1\right) \sin (2 \varphi)\left(E_{p}-E_{t}\right)}{E_{p} E_{t}} \\
+       0 & 0 & 0 & 0 & \frac{\left(v_{p}+1\right) \sin (2 \varphi)\left(E_{p}-E_{t}\right)}{E_{p} E_{t}} & \frac{2\left(v_{p}+1\right)\left(E_{p} \sin ^{2}(\varphi)+E_{t} \cos ^{2}(\varphi)\right)}{E_{p} E_{t}} \\
+      \end{array}
+  \right].
+\end{equation}
 
 
 
@@ -1418,15 +1432,16 @@ In sections \S\ref{sec:mni} and \S\ref{sec:gni} we, respectively, define the con
 \texttt{In this section we give the definitions of $\alpha$, $m$ and $\gamma$. The definition of $\alpha$ depend on $m$ and $g$, and the definition of $g$ depends on $m$. Thereofe, we first give the deifnition of $m$, followed, that of $g$ and the finally give the definition}
 
 
-\subsection{Definitions of  $\beta_{n\cdot i j}\,$, and $C_{n\cdot i j}\,$, where $i,~j\insix$, and $n\inN$\label{sec:betaCnij}}
+% \subsection{Definitions of  $\beta_{n\cdot i j}\,$, and $C_{n\cdot i j}\,$, where $i,~j\insix$, and $n\inN$\label{sec:betaCnij}}
+\subsection{Definitions of  $\beta_{n\cdot i j}\,$, where $i,~j\insix$, and $n\inN$\label{sec:betaCnij}}
 %hk done with subsection title.
 
-\subsubsection{Definitions of the constants $C_{n\cdot i j}$, where $i,~j\insix$, and $n\inN$\label{sec:Cnij}}%hk done
+% \subsubsection{Definitions of the constants $C_{n\cdot i j}$, where $i,~j\insix$, and $n\inN$\label{sec:Cnij}}%hk done
 
-\todo[inline]{HK to WF: complete this section}
+% \todo[inline]{HK to WF: complete this section}
 
 
-\subsubsection{Definitions of the constants $\beta_{n\cdot i j}$, where $i,~j\insix$, and $n\inN$\label{sec:betaCnij}\label{sec:betanij}}
+% \subsubsection{Definitions of the constants $\beta_{n\cdot i j}$, where $i,~j\insix$, and $n\inN$\label{sec:betaCnij}\label{sec:betanij}}
 %hk done with subsubsection title.
 
 The constants $\beta_{n\cdot i j}$, where $i,~j\insix$, and $n\inN$, are defined as
@@ -1434,7 +1449,7 @@ The constants $\beta_{n\cdot i j}$, where $i,~j\insix$, and $n\inN$, are defined
 \betasub{n}{ij} = \Csub{n}{ij}-\frac{\Csub{n}{i3} \Csub{n}{3j}}{\Csub{n}{33}}.
 \label{eq:betanijdef}
 \end{equation} %hk done
-The constants $C_{n\cdot i j}$, where $i,~j\insix$, and $n\inN$, which appear in \eqref{eq:betanijdef}, are defined in \S\ref{sec:Cnij}. %hk done
+% The constants $C_{n\cdot i j}$, where $i,~j\insix$, and $n\inN$, which appear in \eqref{eq:betanijdef}, are defined in \S\ref{sec:Cnij}. %hk done
 
 
 
@@ -1490,7 +1505,7 @@ The symbols $\betasub{n}{ij}$, where $i,~j\insix$, and $n\inN$, which appear in 
 
 The constants $\gamma_{n}$, where $n\inN$, are defined as
 \begin{align}
-	\gamma_{n} & = \frac{\pi}{4 \Subs{C}{n}{33}} \left( \Subs{\mu}{n}{1} \left(\Subs{C}{n}{13} + 3\Subs{C}{n}{23}\right) - 2\Subs{\mu}{n}{2} \Subs{C}{n}{34} - 1  \right),
+	\gamma_{n} & = \frac{\pi}{4 \Csub{n}{33}} \left( \Subs{\mu}{n}{1} \left(\Csub{n}{13} + 3\Csub{n}{23}\right) - 2\Subs{\mu}{n}{2} \Csub{n}{34} - 1  \right),
 \end{align}
 where $\Csub{n}{ij}$, where $i,~j\insix$, and $n\inN$, are defined in \S\ref{sec:Cnij} and  $\musub{n}{i}$, where $i\intwo$, and $n\inN$, are defined in \S\ref{sec:muni}. %hk done
 
